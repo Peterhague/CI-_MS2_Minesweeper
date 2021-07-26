@@ -37,28 +37,28 @@ function randomise() {
     randomSquares = []; // to be populated by array of random numbers to be iterated to randomly place the "mines"
     if (selectedDifficulty == "Easy") {
         while (randomSquares.length < 15) {
-          let y = Math.floor(Math.random()*81);
-          if (randomSquares.includes(y) === false) {
-              randomSquares.push(y);
-          }  
+            let y = Math.floor(Math.random()*81);
+            if (randomSquares.includes(y) === false) {
+                randomSquares.push(y);
+            }  
         }
-      } else if (selectedDifficulty == "Medium") {
+    } else if (selectedDifficulty == "Medium") {
         while (randomSquares.length < 40) {
-          let y = Math.floor(Math.random()*225);
-          if (randomSquares.includes(y) === false) {
-              randomSquares.push(y);
-          }  
+            let y = Math.floor(Math.random()*225);
+            if (randomSquares.includes(y) === false) {
+                randomSquares.push(y);
+            }  
         }
-      } else if (selectedDifficulty == "Hard") {
+    } else if (selectedDifficulty == "Hard") {
         while (randomSquares.length < 99) {
-          let y = Math.floor(Math.random()*400);
-          if (randomSquares.includes(y) === false) {
-              randomSquares.push(y);
-          }  
-        }
-      }/*Adds random numbers to the randomSquares variable (15 for easy, 40 for medium and 99 for hard). 
-        Multiplies each random number by the number of squares on the grid, and pushes them to the array 
-        IF the random number y does NOT appear in the list already, ie so that each number in the array
-        is unique. This ensures that ultimately the grids will have the correct number of mines, and no
-        squares with > 1 mine.*/
+            let y = Math.floor(Math.random()*400);
+            if (randomSquares.includes(y) === false) {
+                randomSquares.push(y);
+        }  
+    }
+    }/*Adds random numbers to the randomSquares variable (15 for easy, 40 for medium and 99 for hard). 
+    Multiplies each random number by the number of squares on the grid, and pushes them to the array 
+    IF the random number y does NOT appear in the list already, ie so that each number in the array
+    is unique. This ensures that ultimately the grids will have the correct number of mines, and no
+    squares with > 1 mine.*/
 }
