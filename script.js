@@ -800,33 +800,32 @@ ALSO have a value of zero. */
         }
     }
 }
-
 function counter() {
     let selectedDifficulty = difficulty.value;
     if (selectedDifficulty == "Easy") {
-      if (this.classList.contains("no-bomb")) {
-      let clearedSquares = document.getElementsByClassName("selected");
-      if (clearedSquares.length > 65) {
-        console.log("winner!!");
-      }
-      console.log(clearedSquares.length);
-      }
+        if (this.classList.contains("no-bomb")) {
+            let clearedSquares = document.getElementsByClassName("selected");
+            if (clearedSquares.length > 65) {
+                console.log("winner!!");
+            }
+            console.log(clearedSquares.length);
+        }
     } else if (selectedDifficulty == "Medium") {
-      if (this.classList.contains("no-bomb")) {
-      let clearedSquares = document.getElementsByClassName("selected");
-      if (clearedSquares.length > 184) {
-        console.log("winner!!");
-      }
-      console.log(clearedSquares.length);
-      }
+        if (this.classList.contains("no-bomb")) {
+            let clearedSquares = document.getElementsByClassName("selected");
+            if (clearedSquares.length > 184) {
+                console.log("winner!!");
+            }
+            console.log(clearedSquares.length);
+        }
     } else if (selectedDifficulty == "Hard") {
-      if (this.classList.contains("no-bomb")) {
-      let clearedSquares = document.getElementsByClassName("selected");
-      if (clearedSquares.length > 300) {
-        console.log("winner!!");
-      }
-      console.log(clearedSquares.length);
-      }
+        if (this.classList.contains("no-bomb")) {
+            let clearedSquares = document.getElementsByClassName("selected");
+            if (clearedSquares.length > 300) {
+                console.log("winner!!");
+            }
+            console.log(clearedSquares.length);
+        }
     }
-  }
+}
   
