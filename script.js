@@ -829,26 +829,26 @@ function counter() {
     }
 }
 function gameOverOne() {
-  let randomSquaresBombs = [];
-  let selectedDifficulty = difficulty.value;
-  if (selectedDifficulty == "Easy") {
-    while (randomSquaresBombs.length < 15) {
-      let x = Math.floor(Math.random()*15);
-      if (randomSquaresBombs.includes(x) === false) {
-        randomSquaresBombs.push(x);
-      }
-    }
-    if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
-      let bombs = document.getElementsByClassName("bomb");  
-      for (let j = 0; j < 15; j++) {
-        task(j);
-      }
-      function task(j) {            
-        setTimeout(function() {
-          bombs[randomSquaresBombs[j]].style.color = "black";
-        }, 15 * j);
-      }
-    }
+    let randomSquaresBombs = [];
+    let selectedDifficulty = difficulty.value;
+    if (selectedDifficulty == "Easy") {
+        while (randomSquaresBombs.length < 15) {
+            let x = Math.floor(Math.random()*15);
+            if (randomSquaresBombs.includes(x) === false) {
+                randomSquaresBombs.push(x);
+            }
+        }
+        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+            let bombs = document.getElementsByClassName("bomb");  
+            for (let j = 0; j < 15; j++) {
+                task(j);
+            }
+            function task(j) {            
+                setTimeout(function() {
+                    bombs[randomSquaresBombs[j]].style.color = "black";
+                 }, 15 * j);
+            }
+        }
   } else if (selectedDifficulty == "Medium") {
     while (randomSquaresBombs.length < 40) {
       let x = Math.floor(Math.random()*40);
