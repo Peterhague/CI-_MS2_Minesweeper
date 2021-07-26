@@ -162,8 +162,7 @@ function newGame() {
                     squares.classList.add("bomb");
                 } else {
                     squares.classList.add("no-bomb");
-                } 
-                let bombSquares = document.getElementsByClassName("bomb");
+                }
                 squares.addEventListener("click", minesweep);
                 squares.addEventListener("click", counter);
                 squares.addEventListener("click", gameOverOne);
@@ -287,56 +286,63 @@ function newGame() {
         }
     }
     if (selectedDifficulty == "Easy") {
-      for (let i = 0; i < 9; i++) {
-        for (let x = 0; x < 9; x++) {
-          if (i % 2 === 0 && x % 2 === 0) {
-            gridRowsList[i].children[x].classList.add("odd-squares");
-          }   else if (i % 2 === 0 && x % 2 > 0) {
-            gridRowsList[i].children[x].classList.add("even-squares");
-          } 
-        }
-        for (let x = 0; x < 9; x++) {
-          if (i % 2 > 0 && x % 2 > 0) {
-            gridRowsList[i].children[x].classList.add("odd-squares");
-          } else if (i % 2 > 0 && x % 2 === 0) {
-            gridRowsList[i].children[x].classList.add("even-squares");
-          }
-        }
-      } 
+        /* the outer loop iterates over the rows of the grid and the nested loop iterates over the 
+        squares (ie children of the row). The code says if the row's index is even then the first square
+        of that row is given the class of "odd-squares", and every alternate square of that row is
+        given the class of "even-squares", and then the reverse for rows with indices that are odd.
+        This is purely for styling in the checkerboard pattern, and to distinguish the code applied to 
+        every alternate row of the grid. If the same code was applied to every row the grid would have
+        vertical stripes and not a chequered effect. */
+        for (let i = 0; i < 9; i++) {
+            for (let x = 0; x < 9; x++) {
+                if (i % 2 === 0 && x % 2 === 0) {
+                    gridRowsList[i].children[x].classList.add("odd-squares");
+                }   else if (i % 2 === 0 && x % 2 > 0) {
+                    gridRowsList[i].children[x].classList.add("even-squares");
+                } 
+            }
+            for (let x = 0; x < 9; x++) {
+                if (i % 2 > 0 && x % 2 > 0) {
+                    gridRowsList[i].children[x].classList.add("odd-squares");
+                } else if (i % 2 > 0 && x % 2 === 0) {
+                    gridRowsList[i].children[x].classList.add("even-squares");
+                }
+            }
+        } 
     } else if (selectedDifficulty == "Medium") {
-      for (let i = 0; i < 15; i++) {
-        for (let x = 0; x < 15; x++) {
-          if (i % 2 === 0 && x % 2 === 0) {
-            gridRowsList[i].children[x].classList.add("odd-squares");
-          }   else if (i % 2 === 0 && x % 2 > 0) {
-            gridRowsList[i].children[x].classList.add("even-squares");
-          } 
-        }
-        for (let x = 0; x < 15; x++) {
-          if (i % 2 > 0 && x % 2 > 0) {
-            gridRowsList[i].children[x].classList.add("odd-squares");
-          } else if (i % 2 > 0 && x % 2 === 0) {
-            gridRowsList[i].children[x].classList.add("even-squares");
-          }
-        }
-      } 
+        for (let i = 0; i < 15; i++) {
+            for (let x = 0; x < 15; x++) {
+                if (i % 2 === 0 && x % 2 === 0) {
+                    gridRowsList[i].children[x].classList.add("odd-squares");
+                }   else if (i % 2 === 0 && x % 2 > 0) {
+                    gridRowsList[i].children[x].classList.add("even-squares");
+                } 
+            }
+            for (let x = 0; x < 15; x++) {
+                if (i % 2 > 0 && x % 2 > 0) {
+                    gridRowsList[i].children[x].classList.add("odd-squares");
+                } else if (i % 2 > 0 && x % 2 === 0) {
+                    gridRowsList[i].children[x].classList.add("even-squares");
+                } 
+            }
+        } 
     } else if (selectedDifficulty == "Hard") {
-      for (let i = 0; i < 20; i++) {
-        for (let x = 0; x < 20; x++) {
-          if (i % 2 === 0 && x % 2 === 0) {
-            gridRowsList[i].children[x].classList.add("odd-squares");
-          }   else if (i % 2 === 0 && x % 2 > 0) {
-            gridRowsList[i].children[x].classList.add("even-squares");
-          } 
-        }
-        for (let x = 0; x < 20; x++) {
-          if (i % 2 > 0 && x % 2 > 0) {
-            gridRowsList[i].children[x].classList.add("odd-squares");
-          } else if (i % 2 > 0 && x % 2 === 0) {
-            gridRowsList[i].children[x].classList.add("even-squares");
-          }
-        }
-      } 
+        for (let i = 0; i < 20; i++) {
+            for (let x = 0; x < 20; x++) {
+                if (i % 2 === 0 && x % 2 === 0) {
+                    gridRowsList[i].children[x].classList.add("odd-squares");
+                }   else if (i % 2 === 0 && x % 2 > 0) {
+                    gridRowsList[i].children[x].classList.add("even-squares");
+                } 
+            }
+            for (let x = 0; x < 20; x++) {
+                if (i % 2 > 0 && x % 2 > 0) {
+                    gridRowsList[i].children[x].classList.add("odd-squares");
+                } else if (i % 2 > 0 && x % 2 === 0) {
+                    gridRowsList[i].children[x].classList.add("even-squares");
+                }
+            }
+        } 
     } 
-  }
+}
   
