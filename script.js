@@ -219,73 +219,72 @@ function newGame() {
             }   
         }
     } else if (selectedDifficulty == "Hard") { // repeats the code above but for Hard grid
-    for (x = 0; x < 20; x++) {
-      for (y = 0; y < 20; y++) {
-        let squares = document.createElement("button");
-        squares.innerHTML = "ok";
-        squares.classList.add("squares");
-        squares.classList.add("hovered-squares");
-        let squaresNumber = (y*20)+x;
-        if (randomSquares.includes(squaresNumber)) {
-          squares.classList.add("bomb");
-        } else {
-          squares.classList.add("no-bomb");
-        } 
-        let bombSquares = document.getElementsByClassName("bomb");
-        squares.addEventListener("click", minesweep);
-        squares.addEventListener("click", counter);
-        squares.addEventListener("click", gameOverOne);
-        squares.addEventListener("click", gameOverTwo);
-        $(squares).mousedown(function(event) {
-        if (!this.classList.contains("selected")) {
-        switch (event.which) {
-          case 3:
-            if (this.classList.contains("even-squares")) {
-              $(this).removeClass("even-squares");
-              $(this).removeClass("hovered-squares");
-              $(this).addClass("evenReserved");
-              $(this).addClass("flagged");
-              $(this).addClass("text-white");
-              $(this).addClass("grey");
-              $(this).attr("data-id", this.innerHTML);
-              $(this).html(`<i class="fas fa-flag"></i>`);
-              scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
-            } else if (this.classList.contains("odd-squares")) {
-              $(this).removeClass("odd-squares");
-              $(this).removeClass("hovered-squares");
-              $(this).addClass("oddReserved");
-              $(this).addClass("flagged");
-              $(this).addClass("text-white");
-              $(this).addClass("grey");
-              $(this).attr("data-id", this.innerHTML);
-              $(this).html(`<i class="fas fa-flag"></i>`);
-              scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
-            } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
-              $(this).removeClass("flagged");
-              $(this).removeClass("grey");
-              $(this).removeClass("text-white");
-              $(this).removeClass("evenReserved");
-              $(this).addClass("even-squares");
-              $(this).addClass("hovered-squares");
-              $(this).html($(this).attr("data-id"));
-              scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-            } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
-              $(this).removeClass("flagged");
-              $(this).removeClass("grey");
-              $(this).removeClass("text-white");
-              $(this).removeClass("oddReserved");
-              $(this).addClass("odd-squares");
-              $(this).addClass("hovered-squares");
-              $(this).html($(this).attr("data-id"));
-              scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-            }
-          }
+        for (x = 0; x < 20; x++) {
+            for (y = 0; y < 20; y++) {
+                let squares = document.createElement("button");
+                squares.innerHTML = "ok";
+                squares.classList.add("squares");
+                squares.classList.add("hovered-squares");
+                let squaresNumber = (y*20)+x;
+                if (randomSquares.includes(squaresNumber)) {
+                    squares.classList.add("bomb");
+                } else {
+                    squares.classList.add("no-bomb");
+                }
+                squares.addEventListener("click", minesweep);
+                squares.addEventListener("click", counter);
+                squares.addEventListener("click", gameOverOne);
+                squares.addEventListener("click", gameOverTwo);
+                $(squares).mousedown(function(event) {
+                    if (!this.classList.contains("selected")) {
+                        switch (event.which) {
+                        case 3:
+                            if (this.classList.contains("even-squares")) {
+                                $(this).removeClass("even-squares");
+                                $(this).removeClass("hovered-squares");
+                                $(this).addClass("evenReserved");
+                                $(this).addClass("flagged");
+                                $(this).addClass("text-white");
+                                $(this).addClass("grey");
+                                $(this).attr("data-id", this.innerHTML);
+                                $(this).html(`<i class="fas fa-flag"></i>`);
+                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
+                            } else if (this.classList.contains("odd-squares")) {
+                                $(this).removeClass("odd-squares");
+                                $(this).removeClass("hovered-squares");
+                                $(this).addClass("oddReserved");
+                                $(this).addClass("flagged");
+                                $(this).addClass("text-white");
+                                $(this).addClass("grey");
+                                $(this).attr("data-id", this.innerHTML);
+                                $(this).html(`<i class="fas fa-flag"></i>`);
+                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
+                            } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
+                                $(this).removeClass("flagged");
+                                $(this).removeClass("grey");
+                                $(this).removeClass("text-white");
+                                $(this).removeClass("evenReserved");
+                                $(this).addClass("even-squares");
+                                $(this).addClass("hovered-squares");
+                                $(this).html($(this).attr("data-id"));
+                                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                            } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
+                                $(this).removeClass("flagged");
+                                $(this).removeClass("grey");
+                                $(this).removeClass("text-white");
+                                $(this).removeClass("oddReserved");
+                                $(this).addClass("odd-squares");
+                                $(this).addClass("hovered-squares");
+                                $(this).html($(this).attr("data-id"));
+                                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                            }
+                        }
+                    }
+                });
+                squares.id = squaresNumber;
+                gridRowsList[y].appendChild(squares);
+            }   
         }
-        });
-        squares.id = squaresNumber;
-        gridRowsList[y].appendChild(squares);
-        }   
-      }
     }
     if (selectedDifficulty == "Easy") {
       for (let i = 0; i < 9; i++) {
