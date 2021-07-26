@@ -24,3 +24,4 @@ function generatedGridRows() {
         } // this loop creates 15 rows and adds them to the grid - MEDIUM mode
     }
 }
+let gridRowsList = document.getElementsByClassName("grid-rows"); // to create an array of the grid rows to iterate over
