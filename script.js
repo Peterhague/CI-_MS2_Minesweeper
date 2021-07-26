@@ -866,6 +866,7 @@ function gameOverOne() {
             function task(j) {            
                 setTimeout(function() {
                     bombs[randomSquaresBombs[j]].classList.add("text-red");
+                    bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
                 }, 15 * j);
             }
         }
@@ -884,6 +885,7 @@ function gameOverOne() {
             function task(j) {            
                 setTimeout(function() {
                     bombs[randomSquaresBombs[j]].classList.add("text-red");
+                    bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
                 }, 15 * j);
             }
         }
