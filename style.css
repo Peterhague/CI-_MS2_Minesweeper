@@ -1,7 +1,18 @@
-.squares {
+.squares { /*targets the individula squares of the minesweeper grid*/
     width: 28px;
     height: 28px;
     display: inline-block;
     font-size: 18px;
     border: none;
+}
+
+/*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
+.even-squares { 
+    background-color: rgb(21, 199, 21);
+    color: rgb(21, 199, 21);
+}
+
+.odd-squares {
+    background-color: greenyellow;
+    color: greenyellow;
 }
