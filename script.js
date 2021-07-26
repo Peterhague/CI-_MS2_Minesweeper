@@ -86,7 +86,6 @@ function newGame() {
                 } else {
                     squares.classList.add("no-bomb");
                 } 
-                /*let bombSquares = document.getElementsByClassName("bomb");*/ // ALMOST CERTAINLY TO BE DELETED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 squares.addEventListener("click", minesweep); // function to detect how many mines are in the squares surrounding the clicked square
                 squares.addEventListener("click", counter); // function counts how many squares with no mines have been clicked to determine ultimate success
                 squares.addEventListener("click", gameOverOne); // performs part of the game over "animation" sequence
@@ -111,7 +110,7 @@ function newGame() {
                                 so that it can be accessed later on if the flag is removed (the inner html will change to the
                                 flag icon)*/
                                 $(this).html(`<i class="fas fa-flag"></i>`); // square displays the flag icon
-                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
+                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1; // reduces the display of number of flags in hand by 1
                             } else if (this.classList.contains("odd-squares")) {
                                 // same process as above but for "odd-squares"
                                 $(this).removeClass("odd-squares");
@@ -124,7 +123,76 @@ function newGame() {
                                 $(this).html(`<i class="fas fa-flag"></i>`);
                                 scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
                             } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
-                                // basically reverses the process when a square already has a flag
+                                // reverses the process when an even square already has a flag
+                                $(this).removeClass("flagged");
+                                $(this).removeClass("grey");
+                                $(this).removeClass("text-white");
+                                $(this).removeClass("evenReserved");
+                                $(this).addClass("even-squares");
+                                $(this).addClass("hovered-squares");
+                                $(this).html($(this).attr("data-id"));
+                                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                            } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
+                                // reverses the process when an odd square already has a flag
+                                $(this).removeClass("flagged");
+                                $(this).removeClass("grey");
+                                $(this).removeClass("text-white");
+                                $(this).removeClass("oddReserved");
+                                $(this).addClass("odd-squares");
+                                $(this).addClass("hovered-squares");
+                                $(this).html($(this).attr("data-id"));
+                                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                            }
+                        }
+                    }
+                });
+                squares.id = squaresNumber; // assigns each square a uniqe id based on its position in the grid
+                gridRowsList[y].appendChild(squares); // adds each of the 9 squares created in each iteration of the outer loop
+            }   
+        }
+    } else if (selectedDifficulty == "Medium") { // repeats the code above but for the Medium grid
+        for (x = 0; x < 15; x++) {
+            for (y = 0; y < 15; y++) {
+                let squares = document.createElement("button");
+                squares.innerHTML = "ok";
+                squares.classList.add("squares");
+                squares.classList.add("hovered-squares");
+                let squaresNumber = (y*15)+x;
+                if (randomSquares.includes(squaresNumber)) {
+                    squares.classList.add("bomb");
+                } else {
+                    squares.classList.add("no-bomb");
+                } 
+                let bombSquares = document.getElementsByClassName("bomb");
+                squares.addEventListener("click", minesweep);
+                squares.addEventListener("click", counter);
+                squares.addEventListener("click", gameOverOne);
+                squares.addEventListener("click", gameOverTwo);
+                $(squares).mousedown(function(event) {
+                    if (!this.classList.contains("selected")) {
+                        switch (event.which) {
+                        case 3:
+                            if (this.classList.contains("even-squares")) {
+                                $(this).removeClass("even-squares");
+                                $(this).removeClass("hovered-squares");
+                                $(this).addClass("evenReserved");
+                                $(this).addClass("flagged");
+                                $(this).addClass("text-white");
+                                $(this).addClass("grey");
+                                $(this).attr("data-id", this.innerHTML);
+                                $(this).html(`<i class="fas fa-flag"></i>`);
+                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
+                            } else if (this.classList.contains("odd-squares")) {
+                                $(this).removeClass("odd-squares");
+                                $(this).removeClass("hovered-squares");
+                                $(this).addClass("oddReserved");
+                                $(this).addClass("flagged");
+                                $(this).addClass("text-white");
+                                $(this).addClass("grey");
+                                $(this).attr("data-id", this.innerHTML);
+                                $(this).html(`<i class="fas fa-flag"></i>`);
+                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
+                            } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
                                 $(this).removeClass("flagged");
                                 $(this).removeClass("grey");
                                 $(this).removeClass("text-white");
@@ -150,75 +218,7 @@ function newGame() {
                 gridRowsList[y].appendChild(squares);
             }   
         }
-    } else if (selectedDifficulty == "Medium") {
-    for (x = 0; x < 15; x++) {
-      for (y = 0; y < 15; y++) {
-        let squares = document.createElement("button");
-        squares.innerHTML = "ok";
-        squares.classList.add("squares");
-        squares.classList.add("hovered-squares");
-        let squaresNumber = (y*15)+x;
-        if (randomSquares.includes(squaresNumber)) {
-          squares.classList.add("bomb");
-        } else {
-          squares.classList.add("no-bomb");
-        } 
-        let bombSquares = document.getElementsByClassName("bomb");
-        squares.addEventListener("click", minesweep);
-        squares.addEventListener("click", counter);
-        squares.addEventListener("click", gameOverOne);
-        squares.addEventListener("click", gameOverTwo);
-        $(squares).mousedown(function(event) {
-        if (!this.classList.contains("selected")) {
-        switch (event.which) {
-          case 3:
-            if (this.classList.contains("even-squares")) {
-              $(this).removeClass("even-squares");
-              $(this).removeClass("hovered-squares");
-              $(this).addClass("evenReserved");
-              $(this).addClass("flagged");
-              $(this).addClass("text-white");
-              $(this).addClass("grey");
-              $(this).attr("data-id", this.innerHTML);
-              $(this).html(`<i class="fas fa-flag"></i>`);
-              scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
-            } else if (this.classList.contains("odd-squares")) {
-              $(this).removeClass("odd-squares");
-              $(this).removeClass("hovered-squares");
-              $(this).addClass("oddReserved");
-              $(this).addClass("flagged");
-              $(this).addClass("text-white");
-              $(this).addClass("grey");
-              $(this).attr("data-id", this.innerHTML);
-              $(this).html(`<i class="fas fa-flag"></i>`);
-              scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
-            } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
-              $(this).removeClass("flagged");
-              $(this).removeClass("grey");
-              $(this).removeClass("text-white");
-              $(this).removeClass("evenReserved");
-              $(this).addClass("even-squares");
-              $(this).addClass("hovered-squares");
-              $(this).html($(this).attr("data-id"));
-              scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-            } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
-              $(this).removeClass("flagged");
-              $(this).removeClass("grey");
-              $(this).removeClass("text-white");
-              $(this).removeClass("oddReserved");
-              $(this).addClass("odd-squares");
-              $(this).addClass("hovered-squares");
-              $(this).html($(this).attr("data-id"));
-              scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-            }
-          }
-        }
-        });
-        squares.id = squaresNumber;
-        gridRowsList[y].appendChild(squares);
-        }   
-      }
-    } else if (selectedDifficulty == "Hard") {
+    } else if (selectedDifficulty == "Hard") { // repeats the code above but for Hard grid
     for (x = 0; x < 20; x++) {
       for (y = 0; y < 20; y++) {
         let squares = document.createElement("button");
