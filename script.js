@@ -94,19 +94,26 @@ function newGame() {
                 $(squares).mousedown(function(event) {
                     // code for placing and removing "flags" on squares as mine-markers, via a right-click (hence "case 3")
                     if (!this.classList.contains("selected")) {
+                        // ie if the square hasn't already been left-clicked on to reveal no mine
                         switch (event.which) {
                         case 3:
                             if (this.classList.contains("even-squares")) {
-                                $(this).removeClass("even-squares");
-                                $(this).removeClass("hovered-squares");
-                                $(this).addClass("evenReserved");
+                                $(this).removeClass("even-squares"); // removes the styling
+                                $(this).removeClass("hovered-squares"); // removes hover pseudo class
+                                $(this).addClass("evenReserved"); 
+                                /* this purely nominal class reserves that the square DID have class of "even-squares"
+                                within the element's attributes, so that fact can be accessed later on if the flag is removed*/
                                 $(this).addClass("flagged");
                                 $(this).addClass("text-white");
                                 $(this).addClass("grey");
                                 $(this).attr("data-id", this.innerHTML);
-                                $(this).html(`<i class="fas fa-flag"></i>`);
+                                /* this custom attribute reserves the square's inner html (ie what number of mines surrounds it)
+                                so that it can be accessed later on if the flag is removed (the inner html will change to the
+                                flag icon)*/
+                                $(this).html(`<i class="fas fa-flag"></i>`); // square displays the flag icon
                                 scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
                             } else if (this.classList.contains("odd-squares")) {
+                                // same process as above but for "odd-squares"
                                 $(this).removeClass("odd-squares");
                                 $(this).removeClass("hovered-squares");
                                 $(this).addClass("oddReserved");
@@ -117,6 +124,7 @@ function newGame() {
                                 $(this).html(`<i class="fas fa-flag"></i>`);
                                 scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
                             } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
+                                // basically reverses the process when a square already has a flag
                                 $(this).removeClass("flagged");
                                 $(this).removeClass("grey");
                                 $(this).removeClass("text-white");
