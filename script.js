@@ -912,7 +912,13 @@ function gameOverTwo() {
             function task(j) {            
                 setTimeout(function() {
                     squares[j].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
-                    squares[randomSquaresAll[j]].classList.add("yellow-square");
+                    if (j % 3 === 0) {
+                        squares[randomSquaresAll[j]].classList.add("black-square");
+                    } else if (j % 3 > 0 && j % 2 === 0) {
+                        squares[randomSquaresAll[j]].classList.add("grey-square");
+                    } else {
+                        squares[randomSquaresAll[j]].classList.add("white-square");
+                    }
                     squares[j].removeEventListener("click", minesweep);                    
                 }, 5 * j);
             }

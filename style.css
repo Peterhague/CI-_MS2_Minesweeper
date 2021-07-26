@@ -15,8 +15,16 @@
     color: yellow;
   }
   
-.yellow-square {
-background-color: yellow;
+.black-square {
+    background-color: black;
+}
+
+.grey-square {
+    background-color: grey;
+}
+
+.white-square {
+    background-color: white;
 }
 
 .invisible-text {
