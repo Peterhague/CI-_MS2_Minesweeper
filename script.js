@@ -849,108 +849,107 @@ function gameOverOne() {
                  }, 15 * j);
             }
         }
-  } else if (selectedDifficulty == "Medium") {
-    while (randomSquaresBombs.length < 40) {
-      let x = Math.floor(Math.random()*40);
-      if (randomSquaresBombs.includes(x) === false) {
-        randomSquaresBombs.push(x);
-      }
+    } else if (selectedDifficulty == "Medium") {
+        while (randomSquaresBombs.length < 40) {
+            let x = Math.floor(Math.random()*40);
+            if (randomSquaresBombs.includes(x) === false) {
+                randomSquaresBombs.push(x);
+            }
+        }   
+        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+            let bombs = document.getElementsByClassName("bomb");  
+            for (let j = 0; j < 40; j++) {
+                task(j);
+            }
+            function task(j) {            
+                setTimeout(function() {
+                    bombs[randomSquaresBombs[j]].style.color = "black";
+                }, 15 * j);
+            }
+        }
+    } else if (selectedDifficulty == "Hard") {
+        while (randomSquaresBombs.length < 99) {
+            let x = Math.floor(Math.random()*99);
+            if (randomSquaresBombs.includes(x) === false) {
+                randomSquaresBombs.push(x);
+            }
+        }   
+        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+            let bombs = document.getElementsByClassName("bomb");  
+            for (let j = 0; j < 99; j++) {
+                task(j);
+            }
+            function task(j) {            
+                setTimeout(function() {
+                    bombs[randomSquaresBombs[j]].style.color = "black";
+                }, 15 * j);
+            }
+        }
     }
-    if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
-      let bombs = document.getElementsByClassName("bomb");  
-      for (let j = 0; j < 40; j++) {
-        task(j);
-      }
-      function task(j) {            
-        setTimeout(function() {
-          bombs[randomSquaresBombs[j]].style.color = "black";
-        }, 15 * j);
-      }
-    }
-  } else if (selectedDifficulty == "Hard") {
-    while (randomSquaresBombs.length < 99) {
-      let x = Math.floor(Math.random()*99);
-      if (randomSquaresBombs.includes(x) === false) {
-        randomSquaresBombs.push(x);
-      }
-    }
-    if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
-      let bombs = document.getElementsByClassName("bomb");  
-      for (let j = 0; j < 99; j++) {
-        task(j);
-      }
-      function task(j) {            
-        setTimeout(function() {
-          bombs[randomSquaresBombs[j]].style.color = "black";
-        }, 15 * j);
-      }
-    }
-  }
 }
-
 function gameOverTwo() {
-  let randomSquaresAll = [];
-  let selectedDifficulty = difficulty.value;
-  if (selectedDifficulty == "Easy") {
-    while (randomSquaresAll.length < 81) {
-      let x = Math.floor(Math.random()*81);
-      if (randomSquaresAll.includes(x) === false) {
-        randomSquaresAll.push(x);
-      }
+    let randomSquaresAll = [];
+    let selectedDifficulty = difficulty.value;
+    if (selectedDifficulty == "Easy") {
+        while (randomSquaresAll.length < 81) {
+            let x = Math.floor(Math.random()*81);
+            if (randomSquaresAll.includes(x) === false) {
+                randomSquaresAll.push(x);
+            }
+        }
+        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+            let squares = document.getElementsByClassName("squares");  
+            for (let j = 0; j < 81; j++) {
+                task(j);
+            }
+            function task(j) {            
+                setTimeout(function() {
+                    squares[randomSquaresAll[j]].classList.add("yellow-text", "yellow-square");
+                    squares[j].removeEventListener("click", minesweep);
+                    squares[j].classList.remove("hovered-squares", "selected");
+                }, 5 * j);
+            }
+        }
+    } else if (selectedDifficulty == "Medium") {
+        while (randomSquaresAll.length < 225) {
+            let x = Math.floor(Math.random()*225);
+            if (randomSquaresAll.includes(x) === false) {
+                randomSquaresAll.push(x);
+            }
+        }
+        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+            let squares = document.getElementsByClassName("squares");  
+            for (let j = 0; j < 225; j++) {
+                task(j);
+            }
+            function task(j) {            
+                setTimeout(function() {
+                    squares[randomSquaresAll[j]].classList.add("yellow-text", "yellow-square");
+                    squares[j].removeEventListener("click", minesweep);
+                    squares[j].classList.remove("hovered-squares", "selected");
+                }, 5 * j);
+            }
+        }
+    } else if (selectedDifficulty == "Hard") {
+        while (randomSquaresAll.length < 400) {
+            let x = Math.floor(Math.random()*400);
+            if (randomSquaresAll.includes(x) === false) {
+                randomSquaresAll.push(x);
+            }
+        }
+        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+            let squares = document.getElementsByClassName("squares");  
+            for (let j = 0; j < 400; j++) {
+                task(j);
+            }
+            function task(j) {            
+                setTimeout(function() {
+                    squares[randomSquaresAll[j]].classList.add("yellow-text", "yellow-square");
+                    squares[j].removeEventListener("click", minesweep);
+                    squares[j].classList.remove("hovered-squares", "selected");
+                }, 5 * j);
+            }
+        }
     }
-    if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
-      let squares = document.getElementsByClassName("squares");  
-      for (let j = 0; j < 81; j++) {
-        task(j);
-      }
-      function task(j) {            
-        setTimeout(function() {
-          squares[randomSquaresAll[j]].classList.add("yellow-text", "yellow-square");
-          squares[j].removeEventListener("click", minesweep);
-          squares[j].classList.remove("hovered-squares", "selected");
-        }, 5 * j);
-      }
-    }
-  } else if (selectedDifficulty == "Medium") {
-    while (randomSquaresAll.length < 225) {
-      let x = Math.floor(Math.random()*225);
-      if (randomSquaresAll.includes(x) === false) {
-        randomSquaresAll.push(x);
-      }
-    }
-    if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
-      let squares = document.getElementsByClassName("squares");  
-      for (let j = 0; j < 225; j++) {
-        task(j);
-      }
-      function task(j) {            
-        setTimeout(function() {
-          squares[randomSquaresAll[j]].classList.add("yellow-text", "yellow-square");
-          squares[j].removeEventListener("click", minesweep);
-          squares[j].classList.remove("hovered-squares", "selected");
-        }, 5 * j);
-      }
-    }
-  } else if (selectedDifficulty == "Hard") {
-    while (randomSquaresAll.length < 400) {
-      let x = Math.floor(Math.random()*400);
-      if (randomSquaresAll.includes(x) === false) {
-        randomSquaresAll.push(x);
-      }
-    }
-    if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
-      let squares = document.getElementsByClassName("squares");  
-      for (let j = 0; j < 400; j++) {
-        task(j);
-      }
-      function task(j) {            
-        setTimeout(function() {
-          squares[randomSquaresAll[j]].classList.add("yellow-text", "yellow-square");
-          squares[j].removeEventListener("click", minesweep);
-          squares[j].classList.remove("hovered-squares", "selected");
-        }, 5 * j);
-      }
-    }
-  }
 }
   
