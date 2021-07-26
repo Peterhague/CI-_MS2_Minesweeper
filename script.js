@@ -611,4 +611,185 @@ function flags() {
         scoreContainer.innerHTML = 99;
     }
 }
+function minesweep() {
+    let selectedDifficulty = difficulty.value;
+    this.removeEventListener("click", minesweep);
+    this.classList.remove("hovered-squares");
+    this.classList.add("selected");
+    if (parseInt(this.innerHTML) === 0) {
+      this.classList.add("text-grey");
+    } else {
+      this.classList.add("text-white");
+    }
+    let squares = document.getElementsByClassName("squares");
+    for (square of squares) {
+      square.classList.remove("clicked-square-radius");
+    }
+    let thisID = this.id;
+    if (selectedDifficulty == "Easy") {
+    if (parseInt(thisID) > 8 && parseInt(thisID) < 80 && (parseInt(thisID) + 1) % 9 === 0) {
+        squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 8].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 10].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else if (thisID > 1 && parseInt(thisID) % 9 === 0 && thisID != 72) {
+        squares[parseInt(thisID) - 9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 8].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 10].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 0) {
+        squares[parseInt(thisID) + 10].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) > 0 && thisID < 8) {
+        squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 8].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 10].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 8) {
+        squares[parseInt(thisID) + 8].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) > 72 && thisID < 80) {
+        squares[parseInt(thisID) - 9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 8].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 10].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 72) {
+        squares[parseInt(thisID) -9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) -8].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 80) {
+        squares[parseInt(thisID) -9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) -10].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else {
+        squares[parseInt(thisID) - 9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 8].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 10].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 8].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 10].classList.add("clicked-square-radius");
+    }
+    } else if (selectedDifficulty == "Medium") {
+      if (thisID > 14 && (parseInt(thisID) +1) % 15 === 0 && thisID < 224) {
+        squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 14].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 16].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else if (thisID.length > 1 && parseInt(thisID) % 15 === 0 && thisID != 210) {
+        squares[parseInt(thisID) - 15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 14].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 16].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 0) {
+        squares[parseInt(thisID) + 16].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) > 0 && thisID < 14) {
+        squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 14].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 16].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 14) {
+        squares[parseInt(thisID) + 14].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) > 210 && thisID < 224) {
+        squares[parseInt(thisID) - 15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 14].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 16].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 210) {
+        squares[parseInt(thisID) -15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) -14].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 224) {
+        squares[parseInt(thisID) -15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) -16].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else {
+        squares[parseInt(thisID) - 15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 14].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 16].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 14].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 16].classList.add("clicked-square-radius");
+    } 
+    } else if (selectedDifficulty == "Hard") {
+      if (thisID.length > 1 && parseInt(thisID[thisID.length - 1]) === 9 && thisID[thisID.length - 2] % 2 > 0 && thisID > 19 && thisID < 399) {
+        squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 19].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 21].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else if (thisID.length > 1 && parseInt(thisID[thisID.length - 1]) === 0 && thisID[thisID.length - 2] % 2 === 0 && thisID != 380) {
+        squares[parseInt(thisID) - 20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 19].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 21].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 0) {
+        squares[parseInt(thisID) + 21].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) > 0 && thisID < 19) {
+        squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 19].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 21].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 19) {
+        squares[parseInt(thisID) + 19].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) > 380 && thisID < 399) {
+        squares[parseInt(thisID) - 20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 19].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 21].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 380) {
+        squares[parseInt(thisID) -20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) -19].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (parseInt(thisID) === 399) {
+        squares[parseInt(thisID) -20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) -21].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else {
+        squares[parseInt(thisID) - 20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 19].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 21].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 19].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 21].classList.add("clicked-square-radius");
+    }
+    }
+  
+    let clickedSquareRadius = document.getElementsByClassName("clicked-square-radius");
+    for (square of clickedSquareRadius) {
+      square.classList.add(`csr-${thisID}`)
+        }   
+    let automatedClickers = document.getElementsByClassName(`csr-${thisID}`)     
+    for (clicker of automatedClickers) {   
+        if (parseInt(this.innerHTML) === 0) {
+          clicker.click();
+        }
+    }
+  }
   
