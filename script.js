@@ -611,6 +611,11 @@ function flags() {
     }
 }
 function minesweep() {
+/* This code runs when the player left clicks on any square in the grid.
+Its main function is to check if any of the surrounding squares of the clicked
+square have an innerHTML value of zero. If the value of the clicked square is zero,
+this function will then automatically "click" on any of its surrounding squares that
+ALSO have a value of zero. */
     let selectedDifficulty = difficulty.value;
     this.removeEventListener("click", minesweep);
     this.classList.remove("hovered-squares");
