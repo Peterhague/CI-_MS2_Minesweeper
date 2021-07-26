@@ -1,3 +1,11 @@
+.grey {
+    background-color: #d3d3d3;
+}
+
+.text-grey {
+    color: #d3d3d3;
+}
+
 .squares { /*targets the individula squares of the minesweeper grid*/
     width: 28px;
     height: 28px;
@@ -15,4 +23,9 @@
 .odd-squares {
     background-color: greenyellow;
     color: greenyellow;
+}
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+.selected {/*targets squares left-clicked by the user and effectively "dealt with"*/
+    background-color: #d3d3d3;
 }
