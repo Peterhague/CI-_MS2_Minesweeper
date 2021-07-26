@@ -635,7 +635,7 @@ ALSO have a value of zero. */
         square.classList.remove("clicked-square-radius");
     }
     let thisID = this.id;
-    if (selectedDifficulty == "Easy") {
+    if (selectedDifficulty == "Easy") {// defines the relevant radius based on position of square
         if (parseInt(thisID) > 8 && parseInt(thisID) < 80 && (parseInt(thisID) + 1) % 9 === 0) {
             squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
             squares[parseInt(thisID) + 8].classList.add("clicked-square-radius");
@@ -686,7 +686,7 @@ ALSO have a value of zero. */
             squares[parseInt(thisID) + 8].classList.add("clicked-square-radius");
             squares[parseInt(thisID) + 10].classList.add("clicked-square-radius");
         }
-    } else if (selectedDifficulty == "Medium") {
+    } else if (selectedDifficulty == "Medium") {// defines the relevant radius based on position of square
         if (thisID > 14 && (parseInt(thisID) +1) % 15 === 0 && thisID < 224) {
             squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
             squares[parseInt(thisID) + 14].classList.add("clicked-square-radius");
@@ -737,7 +737,7 @@ ALSO have a value of zero. */
             squares[parseInt(thisID) + 14].classList.add("clicked-square-radius");
             squares[parseInt(thisID) + 16].classList.add("clicked-square-radius");
         } 
-    } else if (selectedDifficulty == "Hard") {
+    } else if (selectedDifficulty == "Hard") {// defines the relevant radius based on position of square
         if (thisID.length > 1 && parseInt(thisID[thisID.length - 1]) === 9 && thisID[thisID.length - 2] % 2 > 0 && thisID > 19 && thisID < 399) {
             squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
             squares[parseInt(thisID) + 19].classList.add("clicked-square-radius");
@@ -800,4 +800,33 @@ ALSO have a value of zero. */
         }
     }
 }
+
+function counter() {
+    let selectedDifficulty = difficulty.value;
+    if (selectedDifficulty == "Easy") {
+      if (this.classList.contains("no-bomb")) {
+      let clearedSquares = document.getElementsByClassName("selected");
+      if (clearedSquares.length > 65) {
+        console.log("winner!!");
+      }
+      console.log(clearedSquares.length);
+      }
+    } else if (selectedDifficulty == "Medium") {
+      if (this.classList.contains("no-bomb")) {
+      let clearedSquares = document.getElementsByClassName("selected");
+      if (clearedSquares.length > 184) {
+        console.log("winner!!");
+      }
+      console.log(clearedSquares.length);
+      }
+    } else if (selectedDifficulty == "Hard") {
+      if (this.classList.contains("no-bomb")) {
+      let clearedSquares = document.getElementsByClassName("selected");
+      if (clearedSquares.length > 300) {
+        console.log("winner!!");
+      }
+      console.log(clearedSquares.length);
+      }
+    }
+  }
   
