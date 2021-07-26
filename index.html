@@ -10,6 +10,16 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    
+    <select id="difficulty"> <!--Dropdown selector for difficulty level-->
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
+      </select>
+      <button id="play"><i class="fas fa-play"></i></button> <!--Start game button-->  
+      <div>
+        <div id="score-container"></div> <!--container for the number of flags the player has in hand-->
+      </div>
+      <div id="grid" oncontextmenu="return false;"></div> <!--main div for the minesweeper grid to be populated by-->
+      <script src="script.js"></script>
 </body>
 </html>
