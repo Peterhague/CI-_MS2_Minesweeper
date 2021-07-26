@@ -18,9 +18,13 @@
 .yellow-square {
 background-color: yellow;
 }
+
+.invisible-text {
+    color: rgba(0, 0, 0, 0.0);
+}
 /*-------------------------------------------------------------------------------------------------------------------------*/
 
-.squares { /*targets the individula squares of the minesweeper grid*/
+.squares { /*targets the individual squares of the minesweeper grid*/
     width: 28px;
     height: 28px;
     display: inline-block;
@@ -31,12 +35,12 @@ background-color: yellow;
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
 .even-squares { 
     background-color: rgb(21, 199, 21);
-    color: rgb(21, 199, 21);
+    color: rgba(0, 0, 0, 0.0);
 }
 
 .odd-squares {
     background-color: greenyellow;
-    color: greenyellow;
+    color: rgba(0, 0, 0, 0.0);
 }
 /*-------------------------------------------------------------------------------------------------------------------------*/
 

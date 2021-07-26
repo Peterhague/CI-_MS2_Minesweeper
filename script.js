@@ -619,6 +619,7 @@ ALSO have a value of zero. */
     let selectedDifficulty = difficulty.value;
     this.removeEventListener("click", minesweep);// so a square can only be clicked once
     this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
+    this.classList.remove("even-squares", "odd-squares");
     this.classList.add("selected");// adds identifier to clicked squares
     if (parseInt(this.innerHTML) === 0) { // changes they styling of clicked squares
         this.classList.add("text-grey");
@@ -888,6 +889,13 @@ function gameOverOne() {
     }
 }
 function gameOverTwo() {
+    let squares = document.getElementsByClassName("squares");
+    if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+        for (square of squares) {
+            square.classList.add("invisible-text");
+            square.classList.remove("selected");
+        }
+    }
     let randomSquaresAll = [];
     let selectedDifficulty = difficulty.value;
     if (selectedDifficulty == "Easy") {
@@ -898,15 +906,14 @@ function gameOverTwo() {
             }
         }
         if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
-            let squares = document.getElementsByClassName("squares");  
             for (let j = 0; j < 81; j++) {
                 task(j);
             }
             function task(j) {            
                 setTimeout(function() {
-                    squares[randomSquaresAll[j]].classList.add("yellow-text", "yellow-square");
-                    squares[j].removeEventListener("click", minesweep);
-                    squares[j].classList.remove("hovered-squares", "selected");
+                    squares[j].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
+                    squares[randomSquaresAll[j]].classList.add("yellow-square");
+                    squares[j].removeEventListener("click", minesweep);                    
                 }, 5 * j);
             }
         }
