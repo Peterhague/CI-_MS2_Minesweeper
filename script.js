@@ -70,9 +70,9 @@ function newGame() {
     } // nulls the rows code for each press of the play button, effectively a reset
     if (selectedDifficulty == "Easy") {
         for (x = 0; x < 9; x++) {
-            for (y = 0; y < 9; y++) { /* the for x loop iterates through the rows of the grid and the nested
-                                    y loop generates 9 squares for each row, to end up with a 9x9 grid of 
-                                    squares.*/
+            for (y = 0; y < 9; y++) {
+                /* the for x loop iterates through the rows of the grid and the nested y loop generates 9 squares for each row,
+                to end up with a 9x9 grid of squares.*/ 
                 let squares = document.createElement("button"); // these are the "square" button elements created x9 for each x loop
                 squares.classList.add("squares");
                 squares.classList.add("hovered-squares"); // this class adds the highlight on hover effect 
@@ -86,12 +86,13 @@ function newGame() {
                 } else {
                     squares.classList.add("no-bomb");
                 } 
-                let bombSquares = document.getElementsByClassName("bomb");
-                squares.addEventListener("click", minesweep);
-                squares.addEventListener("click", counter);
-                squares.addEventListener("click", gameOverOne);
-                squares.addEventListener("click", gameOverTwo);
+                /*let bombSquares = document.getElementsByClassName("bomb");*/ // ALMOST CERTAINLY TO BE DELETED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                squares.addEventListener("click", minesweep); // function to detect how many mines are in the squares surrounding the clicked square
+                squares.addEventListener("click", counter); // function counts how many squares with no mines have been clicked to determine ultimate success
+                squares.addEventListener("click", gameOverOne); // performs part of the game over "animation" sequence
+                squares.addEventListener("click", gameOverTwo); // performs part of the game over "animation" sequence
                 $(squares).mousedown(function(event) {
+                    // code for placing and removing "flags" on squares as mine-markers, via a right-click (hence "case 3")
                     if (!this.classList.contains("selected")) {
                         switch (event.which) {
                         case 3:
