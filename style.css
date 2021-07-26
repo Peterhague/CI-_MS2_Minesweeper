@@ -1,3 +1,4 @@
+/*----------------------------------general text and background styling classes---------------------------------------------*/
 .grey {
     background-color: #d3d3d3;
 }
@@ -5,6 +6,19 @@
 .text-grey {
     color: #d3d3d3;
 }
+
+.text-white {
+    color: white;
+}
+
+.yellow-text {
+    color: yellow;
+  }
+  
+.yellow-square {
+background-color: yellow;
+}
+/*-------------------------------------------------------------------------------------------------------------------------*/
 
 .squares { /*targets the individula squares of the minesweeper grid*/
     width: 28px;
@@ -28,4 +42,13 @@
 
 .selected {/*targets squares left-clicked by the user and effectively "dealt with"*/
     background-color: #d3d3d3;
+}
+
+.hovered-squares:hover {/*creates a highlight while hovered effect on active squares (ie not selected)*/
+    background-color: rgb(134, 211, 18);
+    color: rgb(134, 211, 18);    
+}
+
+.flagged {/*makes the flag icon that marks mines red*/
+    color: red;
 }
