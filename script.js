@@ -10,5 +10,17 @@ function generatedGridRows() {
             gridRow.classList.add("grid-rows", `grid-row-${i}`) // to be able to identify the row precisely if necessary
             grid.appendChild(gridRow);
         } // this loop creates 9 rows and adds them to the grid - EASY mode
+    } else if (selectedDifficulty == "Medium") {
+        for (i = 0; i < 15; i++) {
+            gridRow = document.createElement("div");
+            gridRow.classList.add("grid-rows", `grid-row-${i}`) // to be able to identify the row precisely if necessary
+            grid.appendChild(gridRow);
+        } // this loop creates 15 rows and adds them to the grid - MEDIUM mode
+    } else if (selectedDifficulty == "Medium") {
+        for (i = 0; i < 20; i++) {
+            gridRow = document.createElement("div");
+            gridRow.classList.add("grid-rows", `grid-row-${i}`) // to be able to identify the row precisely if necessary
+            grid.appendChild(gridRow);
+        } // this loop creates 15 rows and adds them to the grid - MEDIUM mode
     }
 }
