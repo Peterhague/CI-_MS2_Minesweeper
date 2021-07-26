@@ -590,9 +590,9 @@ is then assigned as the sentinelSquare's inner html. */
             }  
         }
     }
-    for (square of squares) { // simple loop to assign squares with class of "bomb" the bomb font awesome icon as innerHTML
+    for (square of squares) { // simple loop to assign squares with class of "bomb" the skull font awesome icon as innerHTML
         if (square.classList.contains("bomb")) {
-            square.innerHTML = `<i class="fas fa-bomb"></i>`;
+            square.innerHTML = `<i class="fas fa-skull"></i>`;
         }
     }
 }
@@ -846,7 +846,8 @@ function gameOverOne() {
             }
             function task(j) {            
                 setTimeout(function() {
-                    bombs[randomSquaresBombs[j]].style.color = "black";
+                    bombs[randomSquaresBombs[j]].classList.add("text-red");
+                    bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
                  }, 15 * j);
             }
         }
@@ -864,7 +865,7 @@ function gameOverOne() {
             }
             function task(j) {            
                 setTimeout(function() {
-                    bombs[randomSquaresBombs[j]].style.color = "black";
+                    bombs[randomSquaresBombs[j]].classList.add("text-red");
                 }, 15 * j);
             }
         }
@@ -882,7 +883,7 @@ function gameOverOne() {
             }
             function task(j) {            
                 setTimeout(function() {
-                    bombs[randomSquaresBombs[j]].style.color = "black";
+                    bombs[randomSquaresBombs[j]].classList.add("text-red");
                 }, 15 * j);
             }
         }
@@ -937,9 +938,15 @@ function gameOverTwo() {
             }
             function task(j) {            
                 setTimeout(function() {
-                    squares[randomSquaresAll[j]].classList.add("yellow-text", "yellow-square");
-                    squares[j].removeEventListener("click", minesweep);
-                    squares[j].classList.remove("hovered-squares", "selected");
+                    squares[j].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
+                    if (j % 3 === 0) {
+                        squares[randomSquaresAll[j]].classList.add("black-square");
+                    } else if (j % 3 > 0 && j % 2 === 0) {
+                        squares[randomSquaresAll[j]].classList.add("grey-square");
+                    } else {
+                        squares[randomSquaresAll[j]].classList.add("white-square");
+                    }
+                    squares[j].removeEventListener("click", minesweep);                    
                 }, 5 * j);
             }
         }
@@ -957,9 +964,15 @@ function gameOverTwo() {
             }
             function task(j) {            
                 setTimeout(function() {
-                    squares[randomSquaresAll[j]].classList.add("yellow-text", "yellow-square");
-                    squares[j].removeEventListener("click", minesweep);
-                    squares[j].classList.remove("hovered-squares", "selected");
+                    squares[j].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
+                    if (j % 3 === 0) {
+                        squares[randomSquaresAll[j]].classList.add("black-square");
+                    } else if (j % 3 > 0 && j % 2 === 0) {
+                        squares[randomSquaresAll[j]].classList.add("grey-square");
+                    } else {
+                        squares[randomSquaresAll[j]].classList.add("white-square");
+                    }
+                    squares[j].removeEventListener("click", minesweep);                    
                 }, 5 * j);
             }
         }
