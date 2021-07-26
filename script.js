@@ -596,4 +596,19 @@ is then assigned as the sentinelSquare's inner html. */
         }
     }
 }
+
+function flags() {
+    /* Assigns the starting value of the number flags in hand counter depending on the selected difficulty*/
+    let selectedDifficulty = difficulty.value;
+    if (selectedDifficulty == "Easy") {
+        scoreContainer.innerHTML = "";
+        scoreContainer.innerHTML = 15;
+    } else if (selectedDifficulty == "Medium") {
+        scoreContainer.innerHTML = "";
+        scoreContainer.innerHTML = 40;
+    } else if (selectedDifficulty == "Hard") {
+        scoreContainer.innerHTML = "";
+        scoreContainer.innerHTML = 99;
+    }
+}
   
