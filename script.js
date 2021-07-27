@@ -1028,7 +1028,7 @@ function gameOverTwo() {
                         square.style.color = "red";
                         square.innerHTML = `<i class="fas fa-skull"></i>`;
                     };
-                }, 2000);
+                }, 1500);
             }
         } else if (selectedDifficulty == "Medium") {
             while (randomSquaresAll.length < 225) {
@@ -1059,7 +1059,7 @@ function gameOverTwo() {
                         square.style.color = "red";
                         square.innerHTML = `<i class="fas fa-skull"></i>`;
                     };
-                }, 2100);
+                }, 2000);
             }
         } else if (selectedDifficulty == "Hard") {
             while (randomSquaresAll.length < 400) {
@@ -1100,7 +1100,7 @@ function gameOverTwo() {
                 play.addEventListener("click", newGame);
                 play.addEventListener("click", assignHTML);
                 play.addEventListener("click", flags);
-            }, 2500);
+            }, 2600);
         } else {
             setTimeout(function() {
                 play.style.backgroundColor = "red";                
@@ -1109,7 +1109,7 @@ function gameOverTwo() {
                 play.addEventListener("click", newGame);
                 play.addEventListener("click", assignHTML);
                 play.addEventListener("click", flags);
-            }, 2100); 
+            }, 2000); 
         }    
     }
 }  
