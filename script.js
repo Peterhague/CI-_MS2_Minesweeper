@@ -979,6 +979,11 @@ function gameOverTwo() {
     let squares = document.getElementsByClassName("squares");// gets all the squares on the grid
     let flaggedSquares = document.getElementsByClassName("flagged");
     if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+        play.removeEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
+        play.removeEventListener("click", randomise);
+        play.removeEventListener("click", newGame);
+        play.removeEventListener("click", assignHTML);
+        play.removeEventListener("click", flags);
         //ie player has clicked on a mine without a flag, and it's game over
         for (square of squares) {
             square.classList.add("invisible-text");
@@ -1054,7 +1059,7 @@ function gameOverTwo() {
                         square.style.color = "red";
                         square.innerHTML = `<i class="fas fa-skull"></i>`;
                     };
-                }, 2000);
+                }, 2100);
             }
         } else if (selectedDifficulty == "Hard") {
             while (randomSquaresAll.length < 400) {
@@ -1087,6 +1092,24 @@ function gameOverTwo() {
                     square.innerHTML = `<i class="fas fa-skull"></i>`;
                 };
             }, 2500);
-        }  
+        }
+        if (selectedDifficulty.value == "Hard") {
+            setTimeout(function() {                
+                play.addEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
+                play.addEventListener("click", randomise);
+                play.addEventListener("click", newGame);
+                play.addEventListener("click", assignHTML);
+                play.addEventListener("click", flags);
+            }, 2500);
+        } else {
+            setTimeout(function() {
+                play.style.backgroundColor = "red";                
+                play.addEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
+                play.addEventListener("click", randomise);
+                play.addEventListener("click", newGame);
+                play.addEventListener("click", assignHTML);
+                play.addEventListener("click", flags);
+            }, 2100); 
+        }    
     }
 }  
