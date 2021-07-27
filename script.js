@@ -834,15 +834,18 @@ function counter() {
 function gameOverOne() {
     let randomSquaresBombs = [];
     let selectedDifficulty = difficulty.value;
-    if (selectedDifficulty == "Easy") {
-        while (randomSquaresBombs.length < 15) {
-            let x = Math.floor(Math.random()*15);
-            if (randomSquaresBombs.includes(x) === false) {
-                randomSquaresBombs.push(x);
-            }
+    let bombs = document.getElementsByClassName("bomb");
+    if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+        for (bomb of bombs) {
+            bomb.innerHTML = `<i class="fas fa-skull"></i>`
         }
-        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
-            let bombs = document.getElementsByClassName("bomb");  
+        if (selectedDifficulty == "Easy") {
+            while (randomSquaresBombs.length < 15) {
+                let x = Math.floor(Math.random()*15);
+                if (randomSquaresBombs.includes(x) === false) {
+                    randomSquaresBombs.push(x);
+                }
+            }
             for (let j = 0; j < 15; j++) {
                 task(j);
             }
@@ -852,16 +855,13 @@ function gameOverOne() {
                     bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
                  }, 15 * j);
             }
-        }
-    } else if (selectedDifficulty == "Medium") {
-        while (randomSquaresBombs.length < 40) {
-            let x = Math.floor(Math.random()*40);
-            if (randomSquaresBombs.includes(x) === false) {
-                randomSquaresBombs.push(x);
-            }
-        }   
-        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
-            let bombs = document.getElementsByClassName("bomb");  
+        } else if (selectedDifficulty == "Medium") {
+            while (randomSquaresBombs.length < 40) {
+                let x = Math.floor(Math.random()*40);
+                if (randomSquaresBombs.includes(x) === false) {
+                    randomSquaresBombs.push(x);
+                }
+            } 
             for (let j = 0; j < 40; j++) {
                 task(j);
             }
@@ -871,16 +871,13 @@ function gameOverOne() {
                     bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
                 }, 15 * j);
             }
-        }
-    } else if (selectedDifficulty == "Hard") {
-        while (randomSquaresBombs.length < 99) {
-            let x = Math.floor(Math.random()*99);
-            if (randomSquaresBombs.includes(x) === false) {
-                randomSquaresBombs.push(x);
-            }
-        }   
-        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
-            let bombs = document.getElementsByClassName("bomb");  
+        } else if (selectedDifficulty == "Hard") {
+            while (randomSquaresBombs.length < 99) {
+                let x = Math.floor(Math.random()*99);
+                if (randomSquaresBombs.includes(x) === false) {
+                    randomSquaresBombs.push(x);
+                }
+            }  
             for (let j = 0; j < 99; j++) {
                 task(j);
             }
@@ -891,15 +888,24 @@ function gameOverOne() {
                 }, 15 * j);
             }
         }
-    }
+    }   
 }
 function gameOverTwo() {
     let squares = document.getElementsByClassName("squares");// gets all the squares on the grid
+    let flaggedSquares = document.getElementsByClassName("flagged");
     if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
         //ie player has clicked on a mine without a flag, and it's game over
         for (square of squares) {
             square.classList.add("invisible-text");
             square.classList.remove("selected");
+        }
+        for (flag of flaggedSquares) {
+            /*if (flag.classList.contains("bomb")) {
+                flag.innerHTML = `<i class="fas fa-skull"></i>`;
+            }*/
+            if (flag.classList.contains("no-bomb")) {
+                flag.style.color = "rgba(0, 0, 0, 0.0)";
+            }
         }
         let randomSquaresAll = [];
         let selectedDifficulty = difficulty.value;
