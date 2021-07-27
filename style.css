@@ -27,6 +27,18 @@
     background-color: white;
 }
 
+.yellow-square {
+    background-color: yellow;
+}
+
+.orange-square {
+    background-color: orange;
+}
+
+.pink-square {
+    background-color: pink;
+}
+
 .invisible-text {
     color: rgba(0, 0, 0, 0.0);
 }

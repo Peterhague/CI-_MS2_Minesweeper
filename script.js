@@ -165,7 +165,6 @@ function newGame() {
                 } else {
                     squares.classList.add("no-bomb");
                 }
-                squares.addEventListener("mousedown", minesweep);
                 squares.addEventListener("click", minesweep);
                 squares.addEventListener("click", counter);
                 squares.addEventListener("click", gameOverOne);
@@ -806,11 +805,41 @@ ALSO have a value of zero. */
 }
 function counter() {
     let selectedDifficulty = difficulty.value;
+    let randomSquaresAll = [];
+    let squares = document.getElementsByClassName("squares");
     if (selectedDifficulty == "Easy") {
         if (this.classList.contains("no-bomb")) {
             let clearedSquares = document.getElementsByClassName("selected");
             if (clearedSquares.length > 65) {
-                console.log("winner!!");
+                while (randomSquaresAll.length < 81) {// populate random numbers array until it's 81 numbers long
+                    let x = Math.floor(Math.random()*81);
+                    if (randomSquaresAll.includes(x) === false) {
+                        randomSquaresAll.push(x);
+                    }
+                }
+                for (let j = 0; j < 81; j++) {
+                    task(j);
+                }
+                function task(j) {            
+                    setTimeout(function() {
+                        squares[j].innerHTML = `<i class="fas fa-laugh-squint"></i>`;
+                        squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "text-white");
+                        if (j % 3 === 0) {
+                            squares[randomSquaresAll[j]].classList.add("yellow-square");
+                        } else if (j % 3 > 0 && j % 2 === 0) {
+                            squares[randomSquaresAll[j]].classList.add("orange-square");
+                        } else {
+                            squares[randomSquaresAll[j]].classList.add("pink-square");
+                        }
+                        squares[j].removeEventListener("click", minesweep);                    
+                    }, 7 * j);
+                    setTimeout(function() {            
+                        for (square of squares) {
+                            square.style.backgroundColor = "white";
+                            square.style.color = "rgb(17, 231, 238)";
+                        };
+                    }, 2000);
+                }
             }
             console.log(clearedSquares.length);
         }
@@ -818,15 +847,70 @@ function counter() {
         if (this.classList.contains("no-bomb")) {
             let clearedSquares = document.getElementsByClassName("selected");
             if (clearedSquares.length > 184) {
-                console.log("winner!!");
+                while (randomSquaresAll.length < 225) {// populate random numbers array until it's 81 numbers long
+                    let x = Math.floor(Math.random()*225);
+                    if (randomSquaresAll.includes(x) === false) {
+                        randomSquaresAll.push(x);
+                    }
+                }
+                for (let j = 0; j < 225; j++) {
+                    task(j);
+                }
+                function task(j) {            
+                    setTimeout(function() {
+                        squares[j].innerHTML = `<i class="fas fa-laugh-squint"></i>`;
+                        squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "text-white");
+                        if (j % 3 === 0) {
+                            squares[randomSquaresAll[j]].classList.add("yellow-square");
+                        } else if (j % 3 > 0 && j % 2 === 0) {
+                            squares[randomSquaresAll[j]].classList.add("orange-square");
+                        } else {
+                            squares[randomSquaresAll[j]].classList.add("pink-square");
+                        }
+                        squares[j].removeEventListener("click", minesweep);                    
+                    }, 5 * j);
+                    setTimeout(function() {            
+                        for (square of squares) {
+                            square.style.backgroundColor = "white";
+                            square.style.color = "rgb(17, 231, 238)";
+                        };
+                    }, 2000);
+                }
             }
-            console.log(clearedSquares.length);
         }
     } else if (selectedDifficulty == "Hard") {
         if (this.classList.contains("no-bomb")) {
             let clearedSquares = document.getElementsByClassName("selected");
             if (clearedSquares.length > 300) {
-                console.log("winner!!");
+                while (randomSquaresAll.length < 400) {// populate random numbers array until it's 81 numbers long
+                    let x = Math.floor(Math.random()*400);
+                    if (randomSquaresAll.includes(x) === false) {
+                        randomSquaresAll.push(x);
+                    }
+                }
+                for (let j = 0; j < 400; j++) {
+                    task(j);
+                }
+                function task(j) {            
+                    setTimeout(function() {
+                        squares[j].innerHTML = `<i class="fas fa-laugh-squint"></i>`;
+                        squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "text-white");
+                        if (j % 3 === 0) {
+                            squares[randomSquaresAll[j]].classList.add("yellow-square");
+                        } else if (j % 3 > 0 && j % 2 === 0) {
+                            squares[randomSquaresAll[j]].classList.add("orange-square");
+                        } else {
+                            squares[randomSquaresAll[j]].classList.add("pink-square");
+                        }
+                        squares[j].removeEventListener("click", minesweep);                    
+                    }, 3 * j);
+                    setTimeout(function() {            
+                        for (square of squares) {
+                            square.style.backgroundColor = "white";
+                            square.style.color = "rgb(17, 231, 238)";
+                        };
+                    }, 2500);
+                }
             }
             console.log(clearedSquares.length);
         }
@@ -854,7 +938,7 @@ function gameOverOne() {
                 setTimeout(function() {
                     bombs[randomSquaresBombs[j]].classList.add("text-red");
                     bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
-                 }, 15 * j);
+                 }, 10 * j);
             }
         } else if (selectedDifficulty == "Medium") {
             while (randomSquaresBombs.length < 40) {
@@ -886,7 +970,7 @@ function gameOverOne() {
                 setTimeout(function() {
                     bombs[randomSquaresBombs[j]].classList.add("text-red");
                     bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
-                }, 15 * j);
+                }, 10 * j);
             }
         }
     }   
@@ -932,7 +1016,14 @@ function gameOverTwo() {
                         squares[randomSquaresAll[j]].classList.add("white-square");
                     }
                     squares[j].removeEventListener("click", minesweep);                    
-                }, 5 * j);
+                }, 7 * j);
+                setTimeout(function() {            
+                    for (square of squares) {
+                        square.style.backgroundColor = "black";
+                        square.style.color = "red";
+                        square.innerHTML = `<i class="fas fa-skull"></i>`;
+                    };
+                }, 2000);
             }
         } else if (selectedDifficulty == "Medium") {
             while (randomSquaresAll.length < 225) {
@@ -957,6 +1048,13 @@ function gameOverTwo() {
                     }
                     squares[j].removeEventListener("click", minesweep);                    
                 }, 5 * j);
+                setTimeout(function() {            
+                    for (square of squares) {
+                        square.style.backgroundColor = "black";
+                        square.style.color = "red";
+                        square.innerHTML = `<i class="fas fa-skull"></i>`;
+                    };
+                }, 2000);
             }
         } else if (selectedDifficulty == "Hard") {
             while (randomSquaresAll.length < 400) {
@@ -980,136 +1078,15 @@ function gameOverTwo() {
                         squares[randomSquaresAll[j]].classList.add("white-square");
                     }
                     squares[j].removeEventListener("click", minesweep);                    
-                }, 5 * j);
+                }, 3 * j);
             }
             setTimeout(function() {            
                 for (square of squares) {
                     square.style.backgroundColor = "black";
-                    square.innerHTML = `<i class="fas fa-skull"></i>`
-                    square.classList.remove("text-red");
+                    square.style.color = "red";
+                    square.innerHTML = `<i class="fas fa-skull"></i>`;
                 };
-                /*$("#62").css("color", "white");
-                $("#63").css("color", "white");
-                $("#64").css("color", "white");
-                $("#82").css("color", "white");
-                $("#102").css("color", "white");
-                $("#122").css("color", "white");
-                $("#142").css("color", "white");
-                $("#143").css("color", "white");
-                $("#144").css("color", "white");
-                $("#124").css("color", "white");
-                $("#104").css("color", "white");
-                $("#67").css("color", "white");
-                $("#86").css("color", "white");
-                $("#88").css("color", "white");
-                $("#107").css("color", "white");
-                $("#108").css("color", "white");
-                $("#106").css("color", "white");
-                $("#126").css("color", "white");
-                $("#128").css("color", "white");
-                $("#146").css("color", "white");
-                $("#148").css("color", "white");
-                $("#70").css("color", "white");
-                $("#72").css("color", "white");
-                $("#90").css("color", "white");
-                $("#91").css("color", "white");
-                $("#92").css("color", "white");
-                $("#110").css("color", "white");
-                $("#112").css("color", "white");
-                $("#130").css("color", "white");
-                $("#132").css("color", "white");
-                $("#150").css("color", "white");
-                $("#152").css("color", "white");
-                $("#74").css("color", "white");
-                $("#94").css("color", "white");
-                $("#114").css("color", "white");
-                $("#134").css("color", "white");
-                $("#154").css("color", "white");
-                $("#75").css("color", "white");
-                $("#115").css("color", "white");
-                $("#155").css("color", "white");
-                $("#76").css("color", "white");
-                $("#116").css("color", "white");
-                $("#156").css("color", "white");
-                $("#183").css("color", "white");
-                $("#202").css("color", "white");
-                $("#204").css("color", "white");
-                $("#222").css("color", "white");
-                $("#224").css("color", "white");
-                $("#242").css("color", "white");
-                $("#244").css("color", "white");
-                $("#263").css("color", "white");
-                $("#186").css("color", "white");
-                $("#188").css("color", "white");
-                $("#206").css("color", "white");
-                $("#208").css("color", "white");
-                $("#226").css("color", "white");
-                $("#228").css("color", "white");
-                $("#246").css("color", "white");
-                $("#248").css("color", "white");
-                $("#267").css("color", "white");
-                $("#190").css("color", "white");
-                $("#191").css("color", "white");
-                $("#192").css("color", "white");
-                $("#210").css("color", "white");
-                $("#230").css("color", "white");
-                $("#231").css("color", "white");
-                $("#232").css("color", "white");
-                $("#250").css("color", "white");
-                $("#270").css("color", "white");
-                $("#271").css("color", "white");
-                $("#272").css("color", "white");
-                $("#194").css("color", "white");
-                $("#195").css("color", "white");
-                $("#214").css("color", "white");
-                $("#216").css("color", "white");
-                $("#234").css("color", "white");
-                $("#235").css("color", "white");
-                $("#254").css("color", "white");
-                $("#256").css("color", "white");
-                $("#274").css("color", "white");
-                $("#276").css("color", "white");*/
-                $("#0").css("color", "white");
-                $("#21").css("color", "white");
-                $("#42").css("color", "white");
-                $("#63").css("color", "white");
-                $("#84").css("color", "white");
-                $("#105").css("color", "white");
-                $("#126").css("color", "white");
-                $("#147").css("color", "white");
-                $("#168").css("color", "white");
-                $("#189").css("color", "white");
-                $("#210").css("color", "white");
-                $("#231").css("color", "white");
-                $("#252").css("color", "white");
-                $("#273").css("color", "white");
-                $("#294").css("color", "white");
-                $("#315").css("color", "white");
-                $("#336").css("color", "white");
-                $("#357").css("color", "white");
-                $("#378").css("color", "white");
-                $("#399").css("color", "white");
-                $("#19").css("color", "white");
-                $("#38").css("color", "white");
-                $("#57").css("color", "white");
-                $("#76").css("color", "white");
-                $("#95").css("color", "white");
-                $("#114").css("color", "white");
-                $("#133").css("color", "white");
-                $("#152").css("color", "white");
-                $("#171").css("color", "white");
-                $("#190").css("color", "white");
-                $("#209").css("color", "white");
-                $("#228").css("color", "white");
-                $("#247").css("color", "white");
-                $("#266").css("color", "white");
-                $("#285").css("color", "white");
-                $("#304").css("color", "white");
-                $("#323").css("color", "white");
-                $("#342").css("color", "white");
-                $("#361").css("color", "white");
-                $("#380").css("color", "white");
-                }, 2500); 
+            }, 2500);
         }  
     }
 }  
