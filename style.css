@@ -50,6 +50,7 @@
     display: inline-block;
     font-size: 18px;
     border: none;
+    user-select: none;
 }
 
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
