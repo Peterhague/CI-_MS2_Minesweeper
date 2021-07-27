@@ -951,13 +951,13 @@ function gameOverTwo() {
                     squares[j].removeEventListener("click", minesweep);                    
                 }, 5 * j);
             }
-    } else if (selectedDifficulty == "Hard") {
-        while (randomSquaresAll.length < 400) {
-            let x = Math.floor(Math.random()*400);
-            if (randomSquaresAll.includes(x) === false) {
-                randomSquaresAll.push(x);
+        } else if (selectedDifficulty == "Hard") {
+            while (randomSquaresAll.length < 400) {
+                let x = Math.floor(Math.random()*400);
+                if (randomSquaresAll.includes(x) === false) {
+                    randomSquaresAll.push(x);
+                }
             }
-        }
             let squares = document.getElementsByClassName("squares");  
             for (let j = 0; j < 400; j++) {
                 task(j);
@@ -975,6 +975,6 @@ function gameOverTwo() {
                     squares[j].removeEventListener("click", minesweep);                    
                 }, 5 * j);
             }
+        }   
     }
-}
 }  
