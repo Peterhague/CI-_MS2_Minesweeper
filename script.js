@@ -894,29 +894,29 @@ function gameOverOne() {
     }
 }
 function gameOverTwo() {
-    let squares = document.getElementsByClassName("squares");
+    let squares = document.getElementsByClassName("squares");// gets all the squares on the grid
     if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+        //ie player has clicked on a mine without a flag, and it's game over
         for (square of squares) {
             square.classList.add("invisible-text");
             square.classList.remove("selected");
         }
-    }
-    let randomSquaresAll = [];
-    let selectedDifficulty = difficulty.value;
-    if (selectedDifficulty == "Easy") {
-        while (randomSquaresAll.length < 81) {
-            let x = Math.floor(Math.random()*81);
-            if (randomSquaresAll.includes(x) === false) {
-                randomSquaresAll.push(x);
+        let randomSquaresAll = [];
+        let selectedDifficulty = difficulty.value;
+        if (selectedDifficulty == "Easy") {
+            while (randomSquaresAll.length < 81) {// populate random numbers array until it's 81 numbers long
+                let x = Math.floor(Math.random()*81);
+                if (randomSquaresAll.includes(x) === false) {
+                    randomSquaresAll.push(x);
+                }
             }
-        }
-        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
+            console.log(randomSquaresAll);
             for (let j = 0; j < 81; j++) {
                 task(j);
             }
             function task(j) {            
                 setTimeout(function() {
-                    squares[j].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
+                    squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
                     if (j % 3 === 0) {
                         squares[randomSquaresAll[j]].classList.add("black-square");
                     } else if (j % 3 > 0 && j % 2 === 0) {
@@ -927,22 +927,20 @@ function gameOverTwo() {
                     squares[j].removeEventListener("click", minesweep);                    
                 }, 5 * j);
             }
-        }
-    } else if (selectedDifficulty == "Medium") {
-        while (randomSquaresAll.length < 225) {
-            let x = Math.floor(Math.random()*225);
-            if (randomSquaresAll.includes(x) === false) {
-                randomSquaresAll.push(x);
+        } else if (selectedDifficulty == "Medium") {
+            while (randomSquaresAll.length < 225) {
+                let x = Math.floor(Math.random()*225);
+                if (randomSquaresAll.includes(x) === false) {
+                    randomSquaresAll.push(x);
+                }
             }
-        }
-        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
             let squares = document.getElementsByClassName("squares");  
             for (let j = 0; j < 225; j++) {
                 task(j);
             }
             function task(j) {            
                 setTimeout(function() {
-                    squares[j].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
+                    squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
                     if (j % 3 === 0) {
                         squares[randomSquaresAll[j]].classList.add("black-square");
                     } else if (j % 3 > 0 && j % 2 === 0) {
@@ -953,7 +951,6 @@ function gameOverTwo() {
                     squares[j].removeEventListener("click", minesweep);                    
                 }, 5 * j);
             }
-        }
     } else if (selectedDifficulty == "Hard") {
         while (randomSquaresAll.length < 400) {
             let x = Math.floor(Math.random()*400);
@@ -961,14 +958,13 @@ function gameOverTwo() {
                 randomSquaresAll.push(x);
             }
         }
-        if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
             let squares = document.getElementsByClassName("squares");  
             for (let j = 0; j < 400; j++) {
                 task(j);
             }
             function task(j) {            
                 setTimeout(function() {
-                    squares[j].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
+                    squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
                     if (j % 3 === 0) {
                         squares[randomSquaresAll[j]].classList.add("black-square");
                     } else if (j % 3 > 0 && j % 2 === 0) {
@@ -979,7 +975,6 @@ function gameOverTwo() {
                     squares[j].removeEventListener("click", minesweep);                    
                 }, 5 * j);
             }
-        }
     }
 }
-  
+}  
