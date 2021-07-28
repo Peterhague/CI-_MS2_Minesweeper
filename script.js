@@ -12,6 +12,7 @@ let play = document.getElementById("play"); // gets the start game button from t
 play.addEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
 play.addEventListener("click", randomise);
 play.addEventListener("click", newGame);
+play.addEventListener("click", assignRelativePosition);
 play.addEventListener("click", assignHTML);
 play.addEventListener("click", flags);
 function variableVariables() {
@@ -31,6 +32,7 @@ function variableVariables() {
   }
 }
 function generatedGridRows() { //being the selected difficulty option in the dropdown
+  grid.innerHTML = "";
         for (i = 0; i < selectedRows; i++) {
             gridRow = document.createElement("div");
             gridRow.classList.add("grid-rows", `grid-row-${i}`) // to be able to identify the row precisely if necessary
@@ -54,9 +56,10 @@ function randomise() {
 function newGame() {
     let selectedDifficulty = difficulty.value;
     let existingRows = document.getElementsByClassName("grid-rows");
-    for (rows of existingRows) {
+    console.log(existingRows);
+    /*for (rows of existingRows) {
         rows.innerHTML = "";
-    } // nulls the rows code for each press of the play button, effectively a reset
+    }*/ // nulls the rows code for each press of the play button, effectively a reset
         for (x = 0; x < selectedRows; x++) {
             for (y = 0; y < selectedRows; y++) {
                 /* the for x loop iterates through the rows of the grid and the nested y loop generates 9 squares for each row,
@@ -163,6 +166,31 @@ function newGame() {
             }
     }
     console.log(selectedRows);
+}
+function assignRelativePosition() {
+  let squares = document.getElementsByClassName("squares");
+  for (square of squares) {
+    let sqid = parseInt(square.id);
+    if (sqid === 0) {
+      square.classList.add("top-left");
+    } else if (sqid > 0 && parseInt(square.id) < (selectedRows -1)) {
+      square.classList.add("top-edge")
+    } else if (sqid === selectedRows -1) {
+      square.classList.add("top-right");
+    } else if (sqid > 0 && sqid % selectedRows === 0 && sqid != (selectedSquares - selectedRows)) {
+      square.classList.add("left-edge");
+    } else if (sqid > 0 && (sqid +1) % selectedRows === 0 && sqid != (selectedSquares - 1)) {
+      square.classList.add("right-edge");
+    } else if (sqid === (selectedSquares - selectedRows)) {
+      square.classList.add("bottom-left");
+    } else if (sqid === (selectedSquares - 1)) {
+      square.classList.add("bottom-right");
+    } else if (sqid > (selectedSquares - selectedRows) && sqid < (selectedSquares - 1)) {
+      square.classList.add("bottom-edge");
+    } else {
+      square.classList.add("middle");
+    }
+  }
 }
 function assignHTML() {
 /* This function assigns the numbers to each square that represent how many of that square's surrounding squares
@@ -447,160 +475,57 @@ ALSO have a value of zero. */
         square.classList.remove("clicked-square-radius");
     }
     let thisID = this.id;
-    if (selectedDifficulty == "Easy") {// defines the relevant radius based on position of square
-        if (parseInt(thisID) > 8 && parseInt(thisID) < 80 && (parseInt(thisID) + 1) % 9 === 0) {
-            squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 8].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 10].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        } else if (thisID > 1 && parseInt(thisID) % 9 === 0 && thisID != 72) {
-            squares[parseInt(thisID) - 9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 8].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 10].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 0) {
-            squares[parseInt(thisID) + 10].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) > 0 && thisID < 8) {
-            squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 8].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 10].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 8) {
-            squares[parseInt(thisID) + 8].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) > 72 && thisID < 80) {
-            squares[parseInt(thisID) - 9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 8].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 10].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 72) {
-            squares[parseInt(thisID) -9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) -8].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 80) {
-            squares[parseInt(thisID) -9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) -10].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        } else {
-            squares[parseInt(thisID) - 9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 8].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 10].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 9].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 8].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 10].classList.add("clicked-square-radius");
-        }
-    } else if (selectedDifficulty == "Medium") {// defines the relevant radius based on position of square
-        if (thisID > 14 && (parseInt(thisID) +1) % 15 === 0 && thisID < 224) {
-            squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 14].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 16].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        } else if (thisID.length > 1 && parseInt(thisID) % 15 === 0 && thisID != 210) {
-            squares[parseInt(thisID) - 15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 14].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 16].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 0) {
-            squares[parseInt(thisID) + 16].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) > 0 && thisID < 14) {
-            squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 14].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 16].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 14) {
-            squares[parseInt(thisID) + 14].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) > 210 && thisID < 224) {
-            squares[parseInt(thisID) - 15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 14].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 16].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 210) {
-            squares[parseInt(thisID) -15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) -14].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 224) {
-            squares[parseInt(thisID) -15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) -16].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        } else {
-            squares[parseInt(thisID) - 15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 14].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 16].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 15].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 14].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 16].classList.add("clicked-square-radius");
-        } 
-    } else if (selectedDifficulty == "Hard") {// defines the relevant radius based on position of square
-        if (thisID.length > 1 && parseInt(thisID[thisID.length - 1]) === 9 && thisID[thisID.length - 2] % 2 > 0 && thisID > 19 && thisID < 399) {
-            squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 19].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 21].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        } else if (thisID.length > 1 && parseInt(thisID[thisID.length - 1]) === 0 && thisID[thisID.length - 2] % 2 === 0 && thisID != 380) {
-            squares[parseInt(thisID) - 20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 19].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 21].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 0) {
-            squares[parseInt(thisID) + 21].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) > 0 && thisID < 19) {
-            squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 19].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 21].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 19) {
-            squares[parseInt(thisID) + 19].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) > 380 && thisID < 399) {
-            squares[parseInt(thisID) - 20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 19].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 21].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 380) {
-            squares[parseInt(thisID) -20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) -19].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        } else if (parseInt(thisID) === 399) {
-            squares[parseInt(thisID) -20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) -21].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        } else {
-            squares[parseInt(thisID) - 20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 19].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 21].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 20].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 19].classList.add("clicked-square-radius");
-            squares[parseInt(thisID) + 21].classList.add("clicked-square-radius");
-        }
-    }  
+    if (this.classList.contains("right-edge")) {
+        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else if (this.classList.contains("left-edge")) {
+        squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (this.classList.contains("top-left")) {
+        squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (this.classList.contains("top-edge")) {
+        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (this.classList.contains("top-right")) {
+        squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else if (this.classList.contains("bottom-edge")) {
+        squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (this.classList.contains("bottom-left")) {
+        squares[parseInt(thisID) -selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+    } else if (this.classList.contains("bottom-right")) {
+        squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+    } else if (this.classList.contains("middle")) {
+        squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
+        squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
+    }
+    
     let clickedSquareRadius = document.getElementsByClassName("clicked-square-radius");
     for (square of clickedSquareRadius) {
         square.classList.add(`csr-${thisID}`)
@@ -685,6 +610,7 @@ function gameOverTwo() {
         play.removeEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
         play.removeEventListener("click", randomise);
         play.removeEventListener("click", newGame);
+        play.removeEventListener("click", assignRelativePosition);
         play.removeEventListener("click", assignHTML);
         play.removeEventListener("click", flags);
         //ie player has clicked on a mine without a flag, and it's game over
@@ -732,6 +658,7 @@ function gameOverTwo() {
                 play.addEventListener("click", generatedGridRows);
                 play.addEventListener("click", randomise);
                 play.addEventListener("click", newGame);
+                play.addEventListener("click", assignRelativePosition);
                 play.addEventListener("click", assignHTML);
                 play.addEventListener("click", flags);
             }, (selectedRows * 100) + 700);
