@@ -654,8 +654,8 @@ function counter() {
     
 }
 function gameOverOne() {
-    let randomSquaresBombs = [];
-    let selectedDifficulty = difficulty.value;
+    let randomSquaresBombs = [];/*
+    let selectedDifficulty = difficulty.value;*/
     let bombs = document.getElementsByClassName("bomb");
     if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
         for (bomb of bombs) {
@@ -681,7 +681,6 @@ function gameOverOne() {
 function gameOverTwo() {
     let squares = document.getElementsByClassName("squares");// gets all the squares on the grid
     let flaggedSquares = document.getElementsByClassName("flagged");
-    let selectedDifficulty = difficulty.value;
     if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
         play.removeEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
         play.removeEventListener("click", randomise);
@@ -694,22 +693,17 @@ function gameOverTwo() {
             square.classList.remove("selected");
         }
         for (flag of flaggedSquares) {
-            /*if (flag.classList.contains("bomb")) {
-                flag.innerHTML = `<i class="fas fa-skull"></i>`;
-            }*/
             if (flag.classList.contains("no-bomb")) {
                 flag.style.color = "rgba(0, 0, 0, 0.0)";
             }
         }
         let randomSquaresAll = [];
-        let selectedDifficulty = difficulty.value;
             while (randomSquaresAll.length < selectedSquares) {// populate random numbers array until it's 81 numbers long
                 let x = Math.floor(Math.random()*selectedSquares);
                 if (randomSquaresAll.includes(x) === false) {
                     randomSquaresAll.push(x);
                 }
             }
-            console.log(randomSquaresAll);
             for (let j = 0; j < selectedSquares; j++) {
                 task(j);
             }
@@ -725,31 +719,22 @@ function gameOverTwo() {
                     }
                     squares[j].removeEventListener("click", minesweep);                    
                 }, 7 * j);
-                setTimeout(function() {            
-                    for (square of squares) {
-                        square.style.backgroundColor = "black";
-                        square.style.color = "red";
-                        square.innerHTML = `<i class="fas fa-skull"></i>`;
-                    };
-                }, 1500);
+                
             }
-        }
-        if (selectedDifficulty.value == "Hard") {
-            setTimeout(function() {                
-                play.addEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
-                play.addEventListener("click", randomise);
-                play.addEventListener("click", newGame);
-                play.addEventListener("click", assignHTML);
-                play.addEventListener("click", flags);
-            }, 2600);
-        } else {
+            setTimeout(function() {            
+                for (square of squares) {
+                    square.style.backgroundColor = "black";
+                    square.style.color = "red";
+                    square.innerHTML = `<i class="fas fa-skull"></i>`;
+                };
+            }, (selectedRows * 100) + 500);
             setTimeout(function() {
                 play.style.backgroundColor = "red";                
-                play.addEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
+                play.addEventListener("click", generatedGridRows);
                 play.addEventListener("click", randomise);
                 play.addEventListener("click", newGame);
                 play.addEventListener("click", assignHTML);
                 play.addEventListener("click", flags);
-            }, 2000); 
-        }
-}  
+            }, (selectedRows * 100) + 700);
+    }  
+}
