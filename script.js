@@ -33,20 +33,20 @@ function removePlayFunctions() {
 }
 addPlayFunctions();
 function variableVariables() {
-  let selectedDifficulty = difficulty.value;
-  if (selectedDifficulty == "Medium") {
-    selectedRows = 15;
-    selectedBombs = 40;
-    selectedSquares = 225;
-  } else if (selectedDifficulty == "Hard") {
-    selectedRows = 20;
-    selectedBombs = 99;
-    selectedSquares = 400;
-  } else {
-    selectedRows = 9;
-    selectedBombs = 15;
-    selectedSquares = 81;
-  }
+    let selectedDifficulty = difficulty.value;
+    if (selectedDifficulty == "Medium") {
+        selectedRows = 15;
+        selectedBombs = 40;
+        selectedSquares = 225;
+    } else if (selectedDifficulty == "Hard") {
+        selectedRows = 20;
+        selectedBombs = 99;
+        selectedSquares = 400;
+    } else {
+        selectedRows = 9;
+        selectedBombs = 15;
+        selectedSquares = 81;
+    }
 }
 function generatedGridRows() {
     grid.innerHTML = "";
@@ -88,16 +88,18 @@ function newGame() {
                 squares.classList.add("bomb");
             } else {
                 squares.classList.add("no-bomb");
-            } 
-            squares.addEventListener("click", minesweep); // function to detect how many mines are in the squares surrounding the clicked square
-            squares.addEventListener("click", counter); // function counts how many squares with no mines have been clicked to determine ultimate success
-            squares.addEventListener("click", gameOverOne); // performs part of the game over "animation" sequence
-            squares.addEventListener("click", gameOverTwo); // performs part of the game over "animation" sequence
+            }
+            squaresFunctions(squares);
             squares.id = squaresNumber; // assigns each square a uniqe id based on its position in the grid
             gridRowsList[y].appendChild(squares); // adds each of the 9 squares created in each iteration of the outer loop
         }   
-    }
-        
+    }        
+}
+function squaresFunctions(squares) {
+    squares.addEventListener("click", minesweep); // function to detect how many mines are in the squares surrounding the clicked square
+    squares.addEventListener("click", counter); // function counts how many squares with no mines have been clicked to determine ultimate success
+    squares.addEventListener("click", gameOverOne); // performs part of the game over "animation" sequence
+    squares.addEventListener("click", gameOverTwo); // performs part of the game over "animation" sequence
 }
 function checkerboard() {
 /* the outer loop iterates over the rows of the grid and the nested loop iterates over the 
