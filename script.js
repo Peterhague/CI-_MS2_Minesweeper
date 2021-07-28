@@ -329,7 +329,7 @@ ALSO have a value of zero. */
     this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
     this.classList.remove("even-squares", "odd-squares");
     this.classList.add("selected");// adds identifier to clicked squares
-    if (parseInt(this.innerHTML) === 0) { // changes they styling of clicked squares
+    if (parseInt(this.innerHTML) === 0) { // changes the styling of clicked squares
         this.classList.add("text-grey");
     } else {
         this.classList.add("text-white");
@@ -343,58 +343,100 @@ ALSO have a value of zero. */
         of zero*/
         square.classList.remove("clicked-square-radius");
     }
-    let thisID = this.id;
     if (this.classList.contains("right-edge")) {
-        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        minesweepRight(squares, this);
     } else if (this.classList.contains("left-edge")) {
-        squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+        minesweepLeft(squares, this);
     } else if (this.classList.contains("top-left")) {
-        squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+        minesweepTopLeft(squares, this);
+        
     } else if (this.classList.contains("top-edge")) {
-        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+        minesweepTop(squares, this);
+        
     } else if (this.classList.contains("top-right")) {
-        squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        minesweepTopRight(squares, this);
+        
     } else if (this.classList.contains("bottom-edge")) {
-        squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+        minesweepBottom(squares, this);
+        
     } else if (this.classList.contains("bottom-left")) {
-        squares[parseInt(thisID) -selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+        minesweepBottomRight(squares, this);
+        
     } else if (this.classList.contains("bottom-right")) {
-        squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+        minesweepBottomRight(squares, this);
+        
     } else if (this.classList.contains("middle")) {
-        squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
-        squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
+        minesweepMiddle(squares, this);
+        
     }
     automatedClick(this);
+}
+function minesweepRight(squares, that) {
+  let thisID = that.id;
+  squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+}
+function minesweepLeft(squares, that) {
+  let thisID = that.id;
+  squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+}
+function minesweepTopLeft(squares, that) {
+  let thisID = that.id;
+  squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+}
+function minesweepTop(squares, that) {
+  let thisID = that.id;
+  squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+}
+function minesweepTopRight(squares, that) {
+  let thisID = that.id;
+  squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+}
+function minesweepBottom(squares, that) {
+  let thisID = that.id;
+  squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+}
+function minesweepBottomLeft(squares, that) {
+  let thisID = that.id;
+  squares[parseInt(thisID) -selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+}
+function minesweepBottomRight(squares, that) {
+  let thisID = that.id;
+  squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+}
+function minesweepMiddle(squares, that) {
+  let thisID = that.id;
+  squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - (selectedRows +1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) - 1].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
+  squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
 }
 function automatedClick(that) {
     let clickedSquareRadius = document.getElementsByClassName("clicked-square-radius");
