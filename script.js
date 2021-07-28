@@ -2,6 +2,10 @@ let randomSquares = []; //creates the array to be populated by the randomise fun
 let grid = document.getElementById("grid");
 let gridRow = ""; //these will be the rows (divs) to be appended to the minesweeper grid
 let difficulty = document.getElementById("difficulty"); //targets the dropdown selector per the html file
+difficulty.addEventListener("change", variableVariables);
+let selectedRows = 9;
+let selectedBombs = 15;
+let selectedSquares = 81;
 let gridRowsList = document.getElementsByClassName("grid-rows"); // to create an array of the grid rows to iterate over
 let scoreContainer = document.getElementById("score-container"); // gets the div to be populated by the remaining flags tally
 let play = document.getElementById("play"); // gets the start game button from the html file
@@ -10,27 +14,28 @@ play.addEventListener("click", randomise);
 play.addEventListener("click", newGame);
 play.addEventListener("click", assignHTML);
 play.addEventListener("click", flags);
-function generatedGridRows() {
-    let selectedDifficulty = difficulty.value; //being the selected difficulty option in the dropdown
-    if (selectedDifficulty == "Easy") {
-        for (i = 0; i < 9; i++) {
+function variableVariables() {
+  let selectedDifficulty = difficulty.value;
+  if (selectedDifficulty == "Medium") {
+    selectedRows = 15;
+    selectedBombs = 40;
+    selectedSquares = 225;
+  } else if (selectedDifficulty == "Hard") {
+    selectedRows = 20;
+    selectedBombs = 99;
+    selectedSquares = 400;
+  } else {
+    selectedRows = 9;
+    selectedBombs = 15;
+    selectedSquares = 81;
+  }
+}
+function generatedGridRows() { //being the selected difficulty option in the dropdown
+        for (i = 0; i < selectedRows; i++) {
             gridRow = document.createElement("div");
             gridRow.classList.add("grid-rows", `grid-row-${i}`) // to be able to identify the row precisely if necessary
             grid.appendChild(gridRow);
-        } // this loop creates 9 rows and adds them to the grid - EASY mode
-    } else if (selectedDifficulty == "Medium") {
-        for (i = 0; i < 15; i++) {
-            gridRow = document.createElement("div");
-            gridRow.classList.add("grid-rows", `grid-row-${i}`) // to be able to identify the row precisely if necessary
-            grid.appendChild(gridRow);
-        } // this loop creates 15 rows and adds them to the grid - MEDIUM mode
-    } else if (selectedDifficulty == "Hard") {
-        for (i = 0; i < 20; i++) {
-            gridRow = document.createElement("div");
-            gridRow.classList.add("grid-rows", `grid-row-${i}`) // to be able to identify the row precisely if necessary
-            grid.appendChild(gridRow);
-        } // this loop creates 20 rows and adds them to the grid - HARD mode
-    }
+        } // this loop creates 9 rows and adds them to the grid - 
 }
 function randomise() {
     /*Adds random numbers to the randomSquares variable (15 for easy, 40 for medium and 99 for hard). 
@@ -38,30 +43,13 @@ function randomise() {
     IF the random number y does NOT appear in the list already, ie so that each number in the array
     is unique. This ensures that ultimately the grids will have the correct number of mines, and no
     squares with > 1 mine.*/
-    let selectedDifficulty = difficulty.value;
     randomSquares = []; // to be populated by array of random numbers to be iterated to randomly place the "mines"
-    if (selectedDifficulty == "Easy") {
-        while (randomSquares.length < 15) {
-            let y = Math.floor(Math.random()*81);
+        while (randomSquares.length < selectedBombs) {
+            let y = Math.floor(Math.random()*selectedSquares);
             if (randomSquares.includes(y) === false) {
                 randomSquares.push(y);
             }  
-        }
-    } else if (selectedDifficulty == "Medium") {
-        while (randomSquares.length < 40) {
-            let y = Math.floor(Math.random()*225);
-            if (randomSquares.includes(y) === false) {
-                randomSquares.push(y);
-            }  
-        }
-    } else if (selectedDifficulty == "Hard") {
-        while (randomSquares.length < 99) {
-            let y = Math.floor(Math.random()*400);
-            if (randomSquares.includes(y) === false) {
-                randomSquares.push(y);
-            }  
-        }
-    }
+        }    
 }
 function newGame() {
     let selectedDifficulty = difficulty.value;
@@ -69,15 +57,14 @@ function newGame() {
     for (rows of existingRows) {
         rows.innerHTML = "";
     } // nulls the rows code for each press of the play button, effectively a reset
-    if (selectedDifficulty == "Easy") {
-        for (x = 0; x < 9; x++) {
-            for (y = 0; y < 9; y++) {
+        for (x = 0; x < selectedRows; x++) {
+            for (y = 0; y < selectedRows; y++) {
                 /* the for x loop iterates through the rows of the grid and the nested y loop generates 9 squares for each row,
                 to end up with a 9x9 grid of squares.*/ 
                 let squares = document.createElement("button"); // these are the "square" button elements created x9 for each x loop
                 squares.classList.add("squares");
                 squares.classList.add("hovered-squares"); // this class adds the highlight on hover effect 
-                let squaresNumber = (y*9)+x; 
+                let squaresNumber = (y*selectedRows)+x; 
                 /* variable to be assigned to each square as a unique id, so they can be "searched"
                 for the presence of "mines"*/
                 if (randomSquares.includes(squaresNumber)) {
@@ -152,142 +139,6 @@ function newGame() {
                 gridRowsList[y].appendChild(squares); // adds each of the 9 squares created in each iteration of the outer loop
             }   
         }
-    } else if (selectedDifficulty == "Medium") { // repeats the code above but for the Medium grid
-        for (x = 0; x < 15; x++) {
-            for (y = 0; y < 15; y++) {
-                let squares = document.createElement("button");
-                squares.innerHTML = "ok";
-                squares.classList.add("squares");
-                squares.classList.add("hovered-squares");
-                let squaresNumber = (y*15)+x;
-                if (randomSquares.includes(squaresNumber)) {
-                    squares.classList.add("bomb");
-                } else {
-                    squares.classList.add("no-bomb");
-                }
-                squares.addEventListener("click", minesweep);
-                squares.addEventListener("click", counter);
-                squares.addEventListener("click", gameOverOne);
-                squares.addEventListener("click", gameOverTwo);
-                $(squares).mousedown(function(event) {
-                    if (!this.classList.contains("selected")) {
-                        switch (event.which) {
-                        case 3:
-                            if (this.classList.contains("even-squares")) {
-                                $(this).removeClass("even-squares");
-                                $(this).removeClass("hovered-squares");
-                                $(this).addClass("evenReserved");
-                                $(this).addClass("flagged");
-                                $(this).addClass("text-white");
-                                $(this).addClass("grey");
-                                $(this).attr("data-id", this.innerHTML);
-                                $(this).html(`<i class="fas fa-flag"></i>`);
-                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
-                            } else if (this.classList.contains("odd-squares")) {
-                                $(this).removeClass("odd-squares");
-                                $(this).removeClass("hovered-squares");
-                                $(this).addClass("oddReserved");
-                                $(this).addClass("flagged");
-                                $(this).addClass("text-white");
-                                $(this).addClass("grey");
-                                $(this).attr("data-id", this.innerHTML);
-                                $(this).html(`<i class="fas fa-flag"></i>`);
-                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
-                            } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
-                                $(this).removeClass("flagged");
-                                $(this).removeClass("grey");
-                                $(this).removeClass("text-white");
-                                $(this).removeClass("evenReserved");
-                                $(this).addClass("even-squares");
-                                $(this).addClass("hovered-squares");
-                                $(this).html($(this).attr("data-id"));
-                                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-                            } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
-                                $(this).removeClass("flagged");
-                                $(this).removeClass("grey");
-                                $(this).removeClass("text-white");
-                                $(this).removeClass("oddReserved");
-                                $(this).addClass("odd-squares");
-                                $(this).addClass("hovered-squares");
-                                $(this).html($(this).attr("data-id"));
-                                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-                            }
-                        }
-                    }
-                });
-                squares.id = squaresNumber;
-                gridRowsList[y].appendChild(squares);
-            }   
-        }
-    } else if (selectedDifficulty == "Hard") { // repeats the code above but for Hard grid
-        for (x = 0; x < 20; x++) {
-            for (y = 0; y < 20; y++) {
-                let squares = document.createElement("button");
-                squares.innerHTML = "ok";
-                squares.classList.add("squares");
-                squares.classList.add("hovered-squares");
-                let squaresNumber = (y*20)+x;
-                if (randomSquares.includes(squaresNumber)) {
-                    squares.classList.add("bomb");
-                } else {
-                    squares.classList.add("no-bomb");
-                }
-                squares.addEventListener("click", minesweep);
-                squares.addEventListener("click", counter);
-                squares.addEventListener("click", gameOverOne);
-                squares.addEventListener("click", gameOverTwo);
-                $(squares).mousedown(function(event) {
-                    if (!this.classList.contains("selected")) {
-                        switch (event.which) {
-                        case 3:
-                            if (this.classList.contains("even-squares")) {
-                                $(this).removeClass("even-squares");
-                                $(this).removeClass("hovered-squares");
-                                $(this).addClass("evenReserved");
-                                $(this).addClass("flagged");
-                                $(this).addClass("text-white");
-                                $(this).addClass("grey");
-                                $(this).attr("data-id", this.innerHTML);
-                                $(this).html(`<i class="fas fa-flag"></i>`);
-                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
-                            } else if (this.classList.contains("odd-squares")) {
-                                $(this).removeClass("odd-squares");
-                                $(this).removeClass("hovered-squares");
-                                $(this).addClass("oddReserved");
-                                $(this).addClass("flagged");
-                                $(this).addClass("text-white");
-                                $(this).addClass("grey");
-                                $(this).attr("data-id", this.innerHTML);
-                                $(this).html(`<i class="fas fa-flag"></i>`);
-                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
-                            } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
-                                $(this).removeClass("flagged");
-                                $(this).removeClass("grey");
-                                $(this).removeClass("text-white");
-                                $(this).removeClass("evenReserved");
-                                $(this).addClass("even-squares");
-                                $(this).addClass("hovered-squares");
-                                $(this).html($(this).attr("data-id"));
-                                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-                            } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
-                                $(this).removeClass("flagged");
-                                $(this).removeClass("grey");
-                                $(this).removeClass("text-white");
-                                $(this).removeClass("oddReserved");
-                                $(this).addClass("odd-squares");
-                                $(this).addClass("hovered-squares");
-                                $(this).html($(this).attr("data-id"));
-                                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-                            }
-                        }
-                    }
-                });
-                squares.id = squaresNumber;
-                gridRowsList[y].appendChild(squares);
-            }   
-        }
-    }
-    if (selectedDifficulty == "Easy") {
         /* the outer loop iterates over the rows of the grid and the nested loop iterates over the 
         squares (ie children of the row). The code says if the row's index is even then the first square
         of that row is given the class of "odd-squares", and every alternate square of that row is
@@ -295,57 +146,23 @@ function newGame() {
         This is purely for styling in the checkerboard pattern, and to distinguish the code applied to 
         every alternate row of the grid. If the same code was applied to every row the grid would have
         vertical stripes and not a chequered effect. */
-        for (let i = 0; i < 9; i++) {
-            for (let x = 0; x < 9; x++) {
+        for (let i = 0; i < selectedRows; i++) {
+            for (let x = 0; x < selectedRows; x++) {
                 if (i % 2 === 0 && x % 2 === 0) {
                     gridRowsList[i].children[x].classList.add("odd-squares");
                 }   else if (i % 2 === 0 && x % 2 > 0) {
                     gridRowsList[i].children[x].classList.add("even-squares");
                 } 
             }
-            for (let x = 0; x < 9; x++) {
+            for (let x = 0; x < selectedRows; x++) {
                 if (i % 2 > 0 && x % 2 > 0) {
                     gridRowsList[i].children[x].classList.add("odd-squares");
                 } else if (i % 2 > 0 && x % 2 === 0) {
                     gridRowsList[i].children[x].classList.add("even-squares");
                 }
             }
-        } 
-    } else if (selectedDifficulty == "Medium") {
-        for (let i = 0; i < 15; i++) {
-            for (let x = 0; x < 15; x++) {
-                if (i % 2 === 0 && x % 2 === 0) {
-                    gridRowsList[i].children[x].classList.add("odd-squares");
-                }   else if (i % 2 === 0 && x % 2 > 0) {
-                    gridRowsList[i].children[x].classList.add("even-squares");
-                } 
-            }
-            for (let x = 0; x < 15; x++) {
-                if (i % 2 > 0 && x % 2 > 0) {
-                    gridRowsList[i].children[x].classList.add("odd-squares");
-                } else if (i % 2 > 0 && x % 2 === 0) {
-                    gridRowsList[i].children[x].classList.add("even-squares");
-                } 
-            }
-        } 
-    } else if (selectedDifficulty == "Hard") {
-        for (let i = 0; i < 20; i++) {
-            for (let x = 0; x < 20; x++) {
-                if (i % 2 === 0 && x % 2 === 0) {
-                    gridRowsList[i].children[x].classList.add("odd-squares");
-                }   else if (i % 2 === 0 && x % 2 > 0) {
-                    gridRowsList[i].children[x].classList.add("even-squares");
-                } 
-            }
-            for (let x = 0; x < 20; x++) {
-                if (i % 2 > 0 && x % 2 > 0) {
-                    gridRowsList[i].children[x].classList.add("odd-squares");
-                } else if (i % 2 > 0 && x % 2 === 0) {
-                    gridRowsList[i].children[x].classList.add("even-squares");
-                }
-            }
-        } 
-    } 
+    }
+    console.log(selectedRows);
 }
 function assignHTML() {
 /* This function assigns the numbers to each square that represent how many of that square's surrounding squares
@@ -441,7 +258,8 @@ is then assigned as the sentinelSquare's inner html. */
                 squareSentinel.innerHTML = total;
             }  
         }
-    } else if (selectedDifficulty == "Medium") {
+    }
+    else if (selectedDifficulty == "Medium") {
         for (squareSentinel of squares) {
             if (squareSentinel.id.length > 1 && (parseInt(squareSentinel.id) + 1) % 15 === 0) {
             /*for sqaures with ids longer than 1, and divisible by 15 after the addition of 1 to their total. This captures the squares at the right-hand edge of the grid*/
@@ -600,17 +418,8 @@ is then assigned as the sentinelSquare's inner html. */
 }
 function flags() {
     /* Assigns the starting value of the number flags in hand counter depending on the selected difficulty*/
-    let selectedDifficulty = difficulty.value;
-    if (selectedDifficulty == "Easy") {
         scoreContainer.innerHTML = "";
-        scoreContainer.innerHTML = 15;
-    } else if (selectedDifficulty == "Medium") {
-        scoreContainer.innerHTML = "";
-        scoreContainer.innerHTML = 40;
-    } else if (selectedDifficulty == "Hard") {
-        scoreContainer.innerHTML = "";
-        scoreContainer.innerHTML = 99;
-    }
+        scoreContainer.innerHTML = selectedBombs;    
 }
 function minesweep() {
 /* This code runs when the player left clicks on any square in the grid.
@@ -807,17 +616,16 @@ function counter() {
     let selectedDifficulty = difficulty.value;
     let randomSquaresAll = [];
     let squares = document.getElementsByClassName("squares");
-    if (selectedDifficulty == "Easy") {
         if (this.classList.contains("no-bomb")) {
             let clearedSquares = document.getElementsByClassName("selected");
-            if (clearedSquares.length > 65) {
-                while (randomSquaresAll.length < 81) {// populate random numbers array until it's 81 numbers long
-                    let x = Math.floor(Math.random()*81);
+            if (clearedSquares.length > (selectedSquares - selectedBombs - 1)) {
+                while (randomSquaresAll.length < selectedSquares) {// populate random numbers array until it's 81 numbers long
+                    let x = Math.floor(Math.random()*selectedSquares);
                     if (randomSquaresAll.includes(x) === false) {
                         randomSquaresAll.push(x);
                     }
                 }
-                for (let j = 0; j < 81; j++) {
+                for (let j = 0; j < selectedSquares; j++) {
                     task(j);
                 }
                 function task(j) {            
@@ -843,78 +651,7 @@ function counter() {
             }
             console.log(clearedSquares.length);
         }
-    } else if (selectedDifficulty == "Medium") {
-        if (this.classList.contains("no-bomb")) {
-            let clearedSquares = document.getElementsByClassName("selected");
-            if (clearedSquares.length > 184) {
-                while (randomSquaresAll.length < 225) {// populate random numbers array until it's 81 numbers long
-                    let x = Math.floor(Math.random()*225);
-                    if (randomSquaresAll.includes(x) === false) {
-                        randomSquaresAll.push(x);
-                    }
-                }
-                for (let j = 0; j < 225; j++) {
-                    task(j);
-                }
-                function task(j) {            
-                    setTimeout(function() {
-                        squares[j].innerHTML = `<i class="fas fa-laugh-squint"></i>`;
-                        squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "text-white");
-                        if (j % 3 === 0) {
-                            squares[randomSquaresAll[j]].classList.add("yellow-square");
-                        } else if (j % 3 > 0 && j % 2 === 0) {
-                            squares[randomSquaresAll[j]].classList.add("orange-square");
-                        } else {
-                            squares[randomSquaresAll[j]].classList.add("pink-square");
-                        }
-                        squares[j].removeEventListener("click", minesweep);                    
-                    }, 5 * j);
-                    setTimeout(function() {            
-                        for (square of squares) {
-                            square.style.backgroundColor = "white";
-                            square.style.color = "rgb(17, 231, 238)";
-                        };
-                    }, 2000);
-                }
-            }
-        }
-    } else if (selectedDifficulty == "Hard") {
-        if (this.classList.contains("no-bomb")) {
-            let clearedSquares = document.getElementsByClassName("selected");
-            if (clearedSquares.length > 300) {
-                while (randomSquaresAll.length < 400) {// populate random numbers array until it's 81 numbers long
-                    let x = Math.floor(Math.random()*400);
-                    if (randomSquaresAll.includes(x) === false) {
-                        randomSquaresAll.push(x);
-                    }
-                }
-                for (let j = 0; j < 400; j++) {
-                    task(j);
-                }
-                function task(j) {            
-                    setTimeout(function() {
-                        squares[j].innerHTML = `<i class="fas fa-laugh-squint"></i>`;
-                        squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "text-white");
-                        if (j % 3 === 0) {
-                            squares[randomSquaresAll[j]].classList.add("yellow-square");
-                        } else if (j % 3 > 0 && j % 2 === 0) {
-                            squares[randomSquaresAll[j]].classList.add("orange-square");
-                        } else {
-                            squares[randomSquaresAll[j]].classList.add("pink-square");
-                        }
-                        squares[j].removeEventListener("click", minesweep);                    
-                    }, 3 * j);
-                    setTimeout(function() {            
-                        for (square of squares) {
-                            square.style.backgroundColor = "white";
-                            square.style.color = "rgb(17, 231, 238)";
-                        };
-                    }, 2500);
-                }
-            }
-            console.log(clearedSquares.length);
-        }
-    }
+    
 }
 function gameOverOne() {
     let randomSquaresBombs = [];
@@ -924,14 +661,13 @@ function gameOverOne() {
         for (bomb of bombs) {
             bomb.innerHTML = `<i class="fas fa-skull"></i>`
         }
-        if (selectedDifficulty == "Easy") {
-            while (randomSquaresBombs.length < 15) {
-                let x = Math.floor(Math.random()*15);
+            while (randomSquaresBombs.length < selectedBombs) {
+                let x = Math.floor(Math.random()*selectedBombs);
                 if (randomSquaresBombs.includes(x) === false) {
                     randomSquaresBombs.push(x);
                 }
             }
-            for (let j = 0; j < 15; j++) {
+            for (let j = 0; j < selectedBombs; j++) {
                 task(j);
             }
             function task(j) {            
@@ -939,45 +675,13 @@ function gameOverOne() {
                     bombs[randomSquaresBombs[j]].classList.add("text-red");
                     bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
                  }, 10 * j);
-            }
-        } else if (selectedDifficulty == "Medium") {
-            while (randomSquaresBombs.length < 40) {
-                let x = Math.floor(Math.random()*40);
-                if (randomSquaresBombs.includes(x) === false) {
-                    randomSquaresBombs.push(x);
-                }
-            } 
-            for (let j = 0; j < 40; j++) {
-                task(j);
-            }
-            function task(j) {            
-                setTimeout(function() {
-                    bombs[randomSquaresBombs[j]].classList.add("text-red");
-                    bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
-                }, 15 * j);
-            }
-        } else if (selectedDifficulty == "Hard") {
-            while (randomSquaresBombs.length < 99) {
-                let x = Math.floor(Math.random()*99);
-                if (randomSquaresBombs.includes(x) === false) {
-                    randomSquaresBombs.push(x);
-                }
             }  
-            for (let j = 0; j < 99; j++) {
-                task(j);
-            }
-            function task(j) {            
-                setTimeout(function() {
-                    bombs[randomSquaresBombs[j]].classList.add("text-red");
-                    bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
-                }, 10 * j);
-            }
-        }
-    }   
+        }          
 }
 function gameOverTwo() {
     let squares = document.getElementsByClassName("squares");// gets all the squares on the grid
     let flaggedSquares = document.getElementsByClassName("flagged");
+    let selectedDifficulty = difficulty.value;
     if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
         play.removeEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
         play.removeEventListener("click", randomise);
@@ -999,15 +703,14 @@ function gameOverTwo() {
         }
         let randomSquaresAll = [];
         let selectedDifficulty = difficulty.value;
-        if (selectedDifficulty == "Easy") {
-            while (randomSquaresAll.length < 81) {// populate random numbers array until it's 81 numbers long
-                let x = Math.floor(Math.random()*81);
+            while (randomSquaresAll.length < selectedSquares) {// populate random numbers array until it's 81 numbers long
+                let x = Math.floor(Math.random()*selectedSquares);
                 if (randomSquaresAll.includes(x) === false) {
                     randomSquaresAll.push(x);
                 }
             }
             console.log(randomSquaresAll);
-            for (let j = 0; j < 81; j++) {
+            for (let j = 0; j < selectedSquares; j++) {
                 task(j);
             }
             function task(j) {            
@@ -1030,68 +733,6 @@ function gameOverTwo() {
                     };
                 }, 1500);
             }
-        } else if (selectedDifficulty == "Medium") {
-            while (randomSquaresAll.length < 225) {
-                let x = Math.floor(Math.random()*225);
-                if (randomSquaresAll.includes(x) === false) {
-                    randomSquaresAll.push(x);
-                }
-            }
-            let squares = document.getElementsByClassName("squares");  
-            for (let j = 0; j < 225; j++) {
-                task(j);
-            }
-            function task(j) {            
-                setTimeout(function() {
-                    squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
-                    if (j % 3 === 0) {
-                        squares[randomSquaresAll[j]].classList.add("black-square");
-                    } else if (j % 3 > 0 && j % 2 === 0) {
-                        squares[randomSquaresAll[j]].classList.add("grey-square");
-                    } else {
-                        squares[randomSquaresAll[j]].classList.add("white-square");
-                    }
-                    squares[j].removeEventListener("click", minesweep);                    
-                }, 5 * j);
-                setTimeout(function() {            
-                    for (square of squares) {
-                        square.style.backgroundColor = "black";
-                        square.style.color = "red";
-                        square.innerHTML = `<i class="fas fa-skull"></i>`;
-                    };
-                }, 2000);
-            }
-        } else if (selectedDifficulty == "Hard") {
-            while (randomSquaresAll.length < 400) {
-                let x = Math.floor(Math.random()*400);
-                if (randomSquaresAll.includes(x) === false) {
-                    randomSquaresAll.push(x);
-                }
-            }
-            let squares = document.getElementsByClassName("squares");  
-            for (let j = 0; j < 400; j++) {
-                task(j);
-            }
-            function task(j) {            
-                setTimeout(function() {
-                    squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
-                    if (j % 3 === 0) {
-                        squares[randomSquaresAll[j]].classList.add("black-square");
-                    } else if (j % 3 > 0 && j % 2 === 0) {
-                        squares[randomSquaresAll[j]].classList.add("grey-square");
-                    } else {
-                        squares[randomSquaresAll[j]].classList.add("white-square");
-                    }
-                    squares[j].removeEventListener("click", minesweep);                    
-                }, 3 * j);
-            }
-            setTimeout(function() {            
-                for (square of squares) {
-                    square.style.backgroundColor = "black";
-                    square.style.color = "red";
-                    square.innerHTML = `<i class="fas fa-skull"></i>`;
-                };
-            }, 2500);
         }
         if (selectedDifficulty.value == "Hard") {
             setTimeout(function() {                
@@ -1110,6 +751,5 @@ function gameOverTwo() {
                 play.addEventListener("click", assignHTML);
                 play.addEventListener("click", flags);
             }, 2000); 
-        }    
-    }
+        }
 }  
