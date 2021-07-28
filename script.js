@@ -223,74 +223,74 @@ let squares = document.getElementsByClassName("squares");
     }
 }
 function assignHTMLRight(squares, inputSquare) {
-  let total = 0;
-            for (squareTarget of squares) {
-                if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom left
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to left
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarfet is to top left
-                    total += 1;      
-                } 
-            }
-            inputSquare.innerHTML = total;
+    let total = 0;
+    for (squareTarget of squares) {
+        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom left
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to left
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarfet is to top left
+            total += 1;      
+        } 
+    }
+    inputSquare.innerHTML = total;
 }
 function assignHTMLLeft(squares, inputSquare) {
-  let total = 0;
-            for (squareTarget of squares) {
-                if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right 
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top right
-                    total += 1;
-                }
-            } 
-            inputSquare.innerHTML = total;
+    let total = 0;
+    for (squareTarget of squares) {
+        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right 
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top right
+            total += 1;
+        }
+    } 
+    inputSquare.innerHTML = total;
 }
 function assignHTMLTopLeft(squares, inputSquare) {
-  let total = 0;
-            for (squareTarget of squares) {
-                if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right
-                    total += 1;
-                } 
-            } 
-            inputSquare.innerHTML = total;
+    let total = 0;
+    for (squareTarget of squares) {
+        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right
+            total += 1;
+        } 
+    } 
+    inputSquare.innerHTML = total;
 }
 function assignHTMLMiddle(squares, inputSquare) {
-  let total = 0;
-            for (squareTarget of squares) {
-                if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {//squareTarget is to bottom right
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom left
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is top right
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top left
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to left
-                    total += 1;
-                } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
-                    total += 1;
-                }
-            }
-            inputSquare.innerHTML = total;
+    let total = 0;
+    for (squareTarget of squares) {
+        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {//squareTarget is to bottom right
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom left
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is top right
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top left
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to left
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
+            total += 1;
+        }
+    }
+    inputSquare.innerHTML = total;
 }
 function bombIcon() {
     let squares = document.getElementsByClassName("squares");  
@@ -380,14 +380,16 @@ ALSO have a value of zero. */
         squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
         squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");
     }
-    
+    automatedClick(this);
+}
+function automatedClick(that) {
     let clickedSquareRadius = document.getElementsByClassName("clicked-square-radius");
     for (square of clickedSquareRadius) {
-        square.classList.add(`csr-${thisID}`)
+        square.classList.add(`csr-${that.id}`)
     }   
-    let automatedClickers = document.getElementsByClassName(`csr-${thisID}`)     
+    let automatedClickers = document.getElementsByClassName(`csr-${that.id}`)     
     for (clicker of automatedClickers) {   
-        if (parseInt(this.innerHTML) === 0) {
+        if (parseInt(that.innerHTML) === 0) {
             clicker.click();
         }
     }
