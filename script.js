@@ -178,29 +178,29 @@ function addFlags() {
     });
 }
 function assignRelativePosition() {
-  let squares = document.getElementsByClassName("squares");
-  for (square of squares) {
-    let sqid = parseInt(square.id);
-    if (sqid === 0) {
-      square.classList.add("top-left");
-    } else if (sqid > 0 && sqid < (selectedRows -1)) {
-      square.classList.add("top-edge")
-    } else if (sqid === selectedRows -1) {
-      square.classList.add("top-right");
-    } else if (sqid > 0 && sqid % selectedRows === 0 && sqid != (selectedSquares - selectedRows)) {
-      square.classList.add("left-edge");
-    } else if (sqid > 0 && (sqid +1) % selectedRows === 0 && sqid != (selectedSquares - 1)) {
-      square.classList.add("right-edge");
-    } else if (sqid === (selectedSquares - selectedRows)) {
-      square.classList.add("bottom-left");
-    } else if (sqid === (selectedSquares - 1)) {
-      square.classList.add("bottom-right");
-    } else if (sqid > (selectedSquares - selectedRows) && sqid < (selectedSquares - 1)) {
-      square.classList.add("bottom-edge");
-    } else {
-      square.classList.add("middle");
+    let squares = document.getElementsByClassName("squares");
+    for (square of squares) {
+        let sqid = parseInt(square.id);
+        if (sqid === 0) {
+            square.classList.add("top-left");
+        } else if (sqid > 0 && sqid < (selectedRows -1)) {
+            square.classList.add("top-edge")
+        } else if (sqid === selectedRows -1) {
+            square.classList.add("top-right");
+        } else if (sqid > 0 && sqid % selectedRows === 0 && sqid != (selectedSquares - selectedRows)) {
+            square.classList.add("left-edge");
+        } else if (sqid > 0 && (sqid +1) % selectedRows === 0 && sqid != (selectedSquares - 1)) {
+            square.classList.add("right-edge");
+        } else if (sqid === (selectedSquares - selectedRows)) {
+            square.classList.add("bottom-left");
+        } else if (sqid === (selectedSquares - 1)) {
+            square.classList.add("bottom-right");
+        } else if (sqid > (selectedSquares - selectedRows) && sqid < (selectedSquares - 1)) {
+            square.classList.add("bottom-edge");
+        } else {
+            square.classList.add("middle");
+        }
     }
-  }
 }
 function assignHTML() {
 /* This function assigns the numbers to each square that represent how many of that square's surrounding squares
@@ -230,8 +230,7 @@ let squares = document.getElementsByClassName("squares");
             assignHTMLLeft(squares, squareSentinel);
         } else if (squareSentinel.classList.contains("top-left")) {
         //captures the top-left square only
-            assignHTMLTopLeft(squares, squareSentinel);
-             
+            assignHTMLTopLeft(squares, squareSentinel);             
         } else {
         /*applies to all other squares in grid not picked out above*/
             assignHTMLMiddle(squares, squareSentinel);
@@ -318,8 +317,8 @@ function bombIcon() {
 }
 function flags() {
     /* Assigns the starting value of the number flags in hand counter depending on the selected difficulty*/
-        scoreContainer.innerHTML = "";
-        scoreContainer.innerHTML = selectedBombs;    
+    scoreContainer.innerHTML = "";
+    scoreContainer.innerHTML = selectedBombs;    
 }
 function minesweep() {
 /* This code runs when the player left clicks on any square in the grid.
@@ -350,26 +349,19 @@ ALSO have a value of zero. */
     } else if (this.classList.contains("left-edge")) {
         minesweepLeft(squares, this);
     } else if (this.classList.contains("top-left")) {
-        minesweepTopLeft(squares, this);
-        
+        minesweepTopLeft(squares, this);        
     } else if (this.classList.contains("top-edge")) {
-        minesweepTop(squares, this);
-        
+        minesweepTop(squares, this);        
     } else if (this.classList.contains("top-right")) {
-        minesweepTopRight(squares, this);
-        
+        minesweepTopRight(squares, this);        
     } else if (this.classList.contains("bottom-edge")) {
-        minesweepBottom(squares, this);
-        
+        minesweepBottom(squares, this);        
     } else if (this.classList.contains("bottom-left")) {
-        minesweepBottomRight(squares, this);
-        
+        minesweepBottomRight(squares, this);        
     } else if (this.classList.contains("bottom-right")) {
-        minesweepBottomRight(squares, this);
-        
+        minesweepBottomRight(squares, this);        
     } else if (this.classList.contains("middle")) {
         minesweepMiddle(squares, this);
-        
     }
     automatedClick(this);
 }
