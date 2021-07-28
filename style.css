@@ -76,6 +76,7 @@
 
 .flagged {/*makes the flag icon that marks mines red*/
     color: red;
+    background-color: #d3d3d3;
 }
 
 
