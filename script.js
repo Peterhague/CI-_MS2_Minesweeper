@@ -211,52 +211,51 @@ The value of the the total variable is increased by one for every "mine" found. 
 is then assigned as the sentinelSquare's inner html. */
     let squares = document.getElementsByClassName("squares");
     let selectedDifficulty = difficulty.value;
-    if (selectedDifficulty == "Easy") {
         for (squareSentinel of squares) {
-            if (parseInt(squareSentinel.id) > 1 && (parseInt(squareSentinel.id) + 1) % 9 === 0) {
+            if (squareSentinel.classList.contains("right-edge") || squareSentinel.classList.contains("top-right")) {
             /*for squares with ids longer than 1 and divisible by 9 after the addition of 1 to its total.
             This captures the squares at the right-hand edge of the grid*/
                 let total = 0;
                 for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 9) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 8) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom left
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom left
                         total += 1;
                     } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to left
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 9) && squareTarget.classList.contains("bomb")) {// squareTarget is above
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 10) && squareTarget.classList.contains("bomb")) {// squareTarfet is to top left
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarfet is to top left
                         total += 1;      
                     } 
                 }
                 squareSentinel.innerHTML = total; 
-            } else if (parseInt(squareSentinel.id) > 1 && parseInt(squareSentinel.id) % 9 === 0) {
+            } else if (squareSentinel.classList.contains("left-edge") || squareSentinel.classList.contains("bottom-left")) {
             /*for squares with ids longer than 1, and divisible by 9. This captures the squares at the left-hand edge of the grid*/
                 let total = 0;
                 for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 9) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 10) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right 
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right 
                         total += 1;
                     } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 9) && squareTarget.classList.contains("bomb")) {// squareTarget is above
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 8) && squareTarget.classList.contains("bomb")) {// squareTarget is to top right
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top right
                         total += 1;
                     }
                 } 
                 squareSentinel.innerHTML = total;
-            } else if (parseInt(squareSentinel.id) === 0) {
+            } else if (squareSentinel.classList.contains("top-left")) {
             //captures the top-left square only
                 let total = 0;
                 for (squareTarget of squares) {
                     if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 9) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 10) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right
                         total += 1;
                     } 
                 } 
@@ -265,17 +264,17 @@ is then assigned as the sentinelSquare's inner html. */
             /*applies to all other squares in grid not picked out above*/
                 let total = 0;
                 for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 9) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 10) && squareTarget.classList.contains("bomb")) {//squareTarget is to bottom right
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {//squareTarget is to bottom right
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 8) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom left
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom left
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 9) && squareTarget.classList.contains("bomb")) {// squareTarget is above
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 8) && squareTarget.classList.contains("bomb")) {// squareTarget is top right
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is top right
                         total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 10) && squareTarget.classList.contains("bomb")) {// squareTarget is to top left
+                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top left
                         total += 1;
                     } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to left
                         total += 1;
@@ -285,159 +284,7 @@ is then assigned as the sentinelSquare's inner html. */
                 }
                 squareSentinel.innerHTML = total;
             }  
-        }
-    }
-    else if (selectedDifficulty == "Medium") {
-        for (squareSentinel of squares) {
-            if (squareSentinel.id.length > 1 && (parseInt(squareSentinel.id) + 1) % 15 === 0) {
-            /*for sqaures with ids longer than 1, and divisible by 15 after the addition of 1 to their total. This captures the squares at the right-hand edge of the grid*/
-                let total = 0;
-                for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 15) && squareTarget.classList.contains("bomb")) {// squareTarget is below
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 14) && squareTarget.classList.contains("bomb")) {//squareTarget is bottom left
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 1) && squareTarget.classList.contains("bomb")) {//squareTarget is left
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 15) && squareTarget.classList.contains("bomb")) {//squareTarget is above
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 16) && squareTarget.classList.contains("bomb")) {//squareTarget is top left
-                        total += 1;      
-                    } 
-                }
-                squareSentinel.innerHTML = total; 
-            } else if (squareSentinel.id.length > 1 && parseInt(squareSentinel.id) % 15 === 0) {
-            /*for sqaures with ids longer than 1, and divisible by 15. This captures the squares at the left-hand edge of the grid*/
-                let total = 0;
-                for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 15) && squareTarget.classList.contains("bomb")) {//squareTarget is below
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 16) && squareTarget.classList.contains("bomb")) {//squareTarget is bottom right
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 1) && squareTarget.classList.contains("bomb")) {//squareTarget is right
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 15) && squareTarget.classList.contains("bomb")) {//squareTarget is above
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 14) && squareTarget.classList.contains("bomb")) {//squareTarget is top right
-                        total += 1;
-                    }
-                } 
-                squareSentinel.innerHTML = total;
-            } else if (parseInt(squareSentinel.id) === 0) {
-            //captures the top-left square only
-                let total = 0;
-                for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 1) && squareTarget.classList.contains("bomb")) {//squareTarget is right
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 15) && squareTarget.classList.contains("bomb")) {//squareTarget is below
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 16) && squareTarget.classList.contains("bomb")) {//squareTarget is bottom right
-                        total += 1;
-                    }
-                } 
-                squareSentinel.innerHTML = total; 
-            } else {
-            /*applies to all other squares in grid not picked out above*/
-                let total = 0;
-                for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 15) && squareTarget.classList.contains("bomb")) {//squareTarget is below
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 16) && squareTarget.classList.contains("bomb")) {//squareTarget is bottom right
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 14) && squareTarget.classList.contains("bomb")) {//target is bottom left
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 15) && squareTarget.classList.contains("bomb")) {//target is above
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 14) && squareTarget.classList.contains("bomb")) {//target is top right
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 16) && squareTarget.classList.contains("bomb")) {//target is top left
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 1) && squareTarget.classList.contains("bomb")) {//target is left
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 1) && squareTarget.classList.contains("bomb")) {//target is right
-                        total += 1;
-                    }
-                }
-                squareSentinel.innerHTML = total;
-            }  
-        }
-    } else if (selectedDifficulty == "Hard") {
-        for (squareSentinel of squares) {
-            if (squareSentinel.id.length > 1 && parseInt(squareSentinel.id[squareSentinel.id.length - 1]) === 9 && squareSentinel.id[squareSentinel.id.length - 2] % 2 > 0) {
-            /*for sqaures with ids longer than 1, ending in 9, and with a penultimate digit that is odd, eg 19, 39, 59. 
-            This captures the squares at the right-hand edge of the grid*/
-                let total = 0;
-                for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 20) && squareTarget.classList.contains("bomb")) {//squareTarget is below
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 19) && squareTarget.classList.contains("bomb")) {//target is bottom left
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 1) && squareTarget.classList.contains("bomb")) {//target is left
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 20) && squareTarget.classList.contains("bomb")) {//target is above
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 21) && squareTarget.classList.contains("bomb")) {//target is top left
-                        total += 1;      
-                    } 
-                }
-                squareSentinel.innerHTML = total; 
-            } else if (squareSentinel.id.length > 1 && parseInt(squareSentinel.id[squareSentinel.id.length - 1]) === 0 && squareSentinel.id[squareSentinel.id.length - 2] % 2 === 0) {
-            /*for sqaures with ids longer than 1, ending in 0, and with a penultimate digit that is even, eg 20, 40, 60.
-            This captures the squares at the left-hand edge of the grid*/
-                let total = 0;
-                for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 20) && squareTarget.classList.contains("bomb")) {//squareTarget is below
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 21) && squareTarget.classList.contains("bomb")) {//target is bottom right
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 1) && squareTarget.classList.contains("bomb")) {//target is right
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 20) && squareTarget.classList.contains("bomb")) {//target is above
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 19) && squareTarget.classList.contains("bomb")) {//target is top right
-                        total += 1;
-                    }
-                } 
-                squareSentinel.innerHTML = total;
-            } else if (parseInt(squareSentinel.id) === 0) {
-            //captures the top-left square only
-                let total = 0;
-                for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 1) && squareTarget.classList.contains("bomb")) {//squareTarget is right
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 20) && squareTarget.classList.contains("bomb")) {//target is below
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 21) && squareTarget.classList.contains("bomb")) {//target is bottom right
-                        total += 1;
-                    }
-                } 
-                squareSentinel.innerHTML = total; 
-            } else {
-            /*applies to all other squares in grid not picked out above*/
-                let total = 0;
-                for (squareTarget of squares) {
-                    if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 20) && squareTarget.classList.contains("bomb")) {//squareTarget is below
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 21) && squareTarget.classList.contains("bomb")) {//target is bottom right
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 19) && squareTarget.classList.contains("bomb")) {//target is bottom left
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 20) && squareTarget.classList.contains("bomb")) {//target is above
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 19) && squareTarget.classList.contains("bomb")) {//target is top right
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 21) && squareTarget.classList.contains("bomb")) {//target is top left
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) - 1) && squareTarget.classList.contains("bomb")) {//target is left
-                        total += 1;
-                    } else if (parseInt(squareTarget.id) === (parseInt(squareSentinel.id) + 1) && squareTarget.classList.contains("bomb")) {//target is right
-                        total += 1;
-                    }
-                }
-                 squareSentinel.innerHTML = total;
-            }  
-        }
-    }
+        }    
     for (square of squares) { // simple loop to assign squares with class of "bomb" the skull font awesome icon as innerHTML
         if (square.classList.contains("bomb")) {
             square.innerHTML = `<i class="fas fa-skull"></i>`;
@@ -455,7 +302,6 @@ Its main function is to check if any of the surrounding squares of the clicked
 square have an innerHTML value of zero. If the value of the clicked square is zero,
 this function will then automatically "click" on any of its surrounding squares that
 ALSO have a value of zero. */
-    let selectedDifficulty = difficulty.value;
     this.removeEventListener("click", minesweep);// so a square can only be clicked once
     this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
     this.classList.remove("even-squares", "odd-squares");
