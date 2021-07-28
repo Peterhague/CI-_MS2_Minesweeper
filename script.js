@@ -698,7 +698,7 @@ function gameOverTwo() {
             }
         }
         let randomSquaresAll = [];
-            while (randomSquaresAll.length < selectedSquares) {// populate random numbers array until it's 81 numbers long
+            while (randomSquaresAll.length < selectedSquares) {// populate random numbers array until same length as the number of squares in grid
                 let x = Math.floor(Math.random()*selectedSquares);
                 if (randomSquaresAll.includes(x) === false) {
                     randomSquaresAll.push(x);
@@ -728,8 +728,7 @@ function gameOverTwo() {
                     square.innerHTML = `<i class="fas fa-skull"></i>`;
                 };
             }, (selectedRows * 100) + 500);
-            setTimeout(function() {
-                play.style.backgroundColor = "red";                
+            setTimeout(function() {                
                 play.addEventListener("click", generatedGridRows);
                 play.addEventListener("click", randomise);
                 play.addEventListener("click", newGame);
