@@ -12,6 +12,7 @@ let play = document.getElementById("play"); // gets the start game button from t
 play.addEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
 play.addEventListener("click", randomise);
 play.addEventListener("click", newGame);
+play.addEventListener("click", addFlags);
 play.addEventListener("click", assignRelativePosition);
 play.addEventListener("click", assignHTML);
 play.addEventListener("click", flags);
@@ -31,35 +32,29 @@ function variableVariables() {
     selectedSquares = 81;
   }
 }
-function generatedGridRows() { //being the selected difficulty option in the dropdown
-  grid.innerHTML = "";
-        for (i = 0; i < selectedRows; i++) {
-            gridRow = document.createElement("div");
-            gridRow.classList.add("grid-rows", `grid-row-${i}`) // to be able to identify the row precisely if necessary
-            grid.appendChild(gridRow);
-        } // this loop creates 9 rows and adds them to the grid - 
+function generatedGridRows() {
+    grid.innerHTML = "";
+    for (i = 0; i < selectedRows; i++) {
+        gridRow = document.createElement("div");
+        gridRow.classList.add("grid-rows", `grid-row-${i}`) // to be able to identify the row precisely when necessary
+        grid.appendChild(gridRow);
+    } // this loop creates the number of rows determined by the selected difficulty and adds them to the grid
 }
 function randomise() {
-    /*Adds random numbers to the randomSquares variable (15 for easy, 40 for medium and 99 for hard). 
-    Multiplies each random number by the number of squares on the grid, and pushes them to the array 
-    IF the random number y does NOT appear in the list already, ie so that each number in the array
-    is unique. This ensures that ultimately the grids will have the correct number of mines, and no
-    squares with > 1 mine.*/
-    randomSquares = []; // to be populated by array of random numbers to be iterated to randomly place the "mines"
-        while (randomSquares.length < selectedBombs) {
-            let y = Math.floor(Math.random()*selectedSquares);
-            if (randomSquares.includes(y) === false) {
-                randomSquares.push(y);
-            }  
-        }    
+/*Adds random numbers to the randomSquares variable (15 for easy, 40 for medium and 99 for hard). 
+Multiplies each random number by the number of squares on the grid, and pushes them to the array 
+IF the random number y does NOT appear in the list already, ie so that each number in the array
+is unique. This ensures that ultimately the grids will have the correct number of mines, and no
+squares with > 1 mine.*/
+randomSquares = []; // to be populated by array of random numbers to be iterated to randomly place the "mines"
+    while (randomSquares.length < selectedBombs) {
+        let y = Math.floor(Math.random()*selectedSquares);
+        if (randomSquares.includes(y) === false) {
+            randomSquares.push(y);
+        }  
+    }    
 }
 function newGame() {
-    let selectedDifficulty = difficulty.value;
-    let existingRows = document.getElementsByClassName("grid-rows");
-    console.log(existingRows);
-    /*for (rows of existingRows) {
-        rows.innerHTML = "";
-    }*/ // nulls the rows code for each press of the play button, effectively a reset
         for (x = 0; x < selectedRows; x++) {
             for (y = 0; y < selectedRows; y++) {
                 /* the for x loop iterates through the rows of the grid and the nested y loop generates 9 squares for each row,
@@ -82,62 +77,6 @@ function newGame() {
                 squares.addEventListener("click", counter); // function counts how many squares with no mines have been clicked to determine ultimate success
                 squares.addEventListener("click", gameOverOne); // performs part of the game over "animation" sequence
                 squares.addEventListener("click", gameOverTwo); // performs part of the game over "animation" sequence
-                $(squares).mousedown(function(event) {
-                    // code for placing and removing "flags" on squares as mine-markers, via a right-click (hence "case 3")
-                    if (!this.classList.contains("selected")) {
-                        // ie if the square hasn't already been left-clicked on to reveal no mine
-                        switch (event.which) {
-                        case 3:
-                            if (this.classList.contains("even-squares")) {
-                                $(this).removeClass("even-squares"); // removes the styling
-                                $(this).removeClass("hovered-squares"); // removes hover pseudo class
-                                $(this).addClass("evenReserved"); 
-                                /* this purely nominal class reserves that the square DID have class of "even-squares"
-                                within the element's attributes, so that fact can be accessed later on if the flag is removed*/
-                                $(this).addClass("flagged");
-                                $(this).addClass("text-white");
-                                $(this).addClass("grey");
-                                $(this).attr("data-id", this.innerHTML);
-                                /* this custom attribute reserves the square's inner html (ie what number of mines surrounds it)
-                                so that it can be accessed later on if the flag is removed (the inner html will change to the
-                                flag icon)*/
-                                $(this).html(`<i class="fas fa-flag"></i>`); // square displays the flag icon
-                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1; // reduces the display of number of flags in hand by 1
-                            } else if (this.classList.contains("odd-squares")) {
-                                // same process as above but for "odd-squares"
-                                $(this).removeClass("odd-squares");
-                                $(this).removeClass("hovered-squares");
-                                $(this).addClass("oddReserved");
-                                $(this).addClass("flagged");
-                                $(this).addClass("text-white");
-                                $(this).addClass("grey");
-                                $(this).attr("data-id", this.innerHTML);
-                                $(this).html(`<i class="fas fa-flag"></i>`);
-                                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
-                            } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
-                                // reverses the process when an even square already has a flag
-                                $(this).removeClass("flagged");
-                                $(this).removeClass("grey");
-                                $(this).removeClass("text-white");
-                                $(this).removeClass("evenReserved");
-                                $(this).addClass("even-squares");
-                                $(this).addClass("hovered-squares");
-                                $(this).html($(this).attr("data-id"));
-                                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-                            } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
-                                // reverses the process when an odd square already has a flag
-                                $(this).removeClass("flagged");
-                                $(this).removeClass("grey");
-                                $(this).removeClass("text-white");
-                                $(this).removeClass("oddReserved");
-                                $(this).addClass("odd-squares");
-                                $(this).addClass("hovered-squares");
-                                $(this).html($(this).attr("data-id"));
-                                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-                            }
-                        }
-                    }
-                });
                 squares.id = squaresNumber; // assigns each square a uniqe id based on its position in the grid
                 gridRowsList[y].appendChild(squares); // adds each of the 9 squares created in each iteration of the outer loop
             }   
@@ -165,15 +104,73 @@ function newGame() {
                 }
             }
     }
-    console.log(selectedRows);
 }
+function addFlags() {
+    let squares = document.getElementsByClassName("squares");
+    $(squares).mousedown(function(event) {
+                      // code for placing and removing "flags" on squares as mine-markers, via a right-click (hence "case 3")
+                      if (!this.classList.contains("selected")) {
+                          // ie if the square hasn't already been left-clicked on to reveal no mine
+                          switch (event.which) {
+                          case 3:
+                              if (this.classList.contains("even-squares")) {
+                                  $(this).removeClass("even-squares"); // removes the styling
+                                  $(this).removeClass("hovered-squares"); // removes hover pseudo class
+                                  $(this).addClass("evenReserved"); 
+                                  /* this purely nominal class reserves that the square DID have class of "even-squares"
+                                  within the element's attributes, so that fact can be accessed later on if the flag is removed*/
+                                  $(this).addClass("flagged");
+                                  $(this).addClass("text-white");
+                                  $(this).addClass("grey");
+                                  $(this).attr("data-id", this.innerHTML);
+                                  /* this custom attribute reserves the square's inner html (ie what number of mines surrounds it)
+                                  so that it can be accessed later on if the flag is removed (the inner html will change to the
+                                  flag icon)*/
+                                  $(this).html(`<i class="fas fa-flag"></i>`); // square displays the flag icon
+                                  scoreContainer.innerHTML = scoreContainer.innerHTML - 1; // reduces the display of number of flags in hand by 1
+                              } else if (this.classList.contains("odd-squares")) {
+                                  // same process as above but for "odd-squares"
+                                  $(this).removeClass("odd-squares");
+                                  $(this).removeClass("hovered-squares");
+                                  $(this).addClass("oddReserved");
+                                  $(this).addClass("flagged");
+                                  $(this).addClass("text-white");
+                                  $(this).addClass("grey");
+                                  $(this).attr("data-id", this.innerHTML);
+                                  $(this).html(`<i class="fas fa-flag"></i>`);
+                                  scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
+                              } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
+                                  // reverses the process when an even square already has a flag
+                                  $(this).removeClass("flagged");
+                                  $(this).removeClass("grey");
+                                  $(this).removeClass("text-white");
+                                  $(this).removeClass("evenReserved");
+                                  $(this).addClass("even-squares");
+                                  $(this).addClass("hovered-squares");
+                                  $(this).html($(this).attr("data-id"));
+                                  scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                              } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
+                                  // reverses the process when an odd square already has a flag
+                                  $(this).removeClass("flagged");
+                                  $(this).removeClass("grey");
+                                  $(this).removeClass("text-white");
+                                  $(this).removeClass("oddReserved");
+                                  $(this).addClass("odd-squares");
+                                  $(this).addClass("hovered-squares");
+                                  $(this).html($(this).attr("data-id"));
+                                  scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                              }
+                          }
+                      }
+                  });
+  }
 function assignRelativePosition() {
   let squares = document.getElementsByClassName("squares");
   for (square of squares) {
     let sqid = parseInt(square.id);
     if (sqid === 0) {
       square.classList.add("top-left");
-    } else if (sqid > 0 && parseInt(square.id) < (selectedRows -1)) {
+    } else if (sqid > 0 && sqid < (selectedRows -1)) {
       square.classList.add("top-edge")
     } else if (sqid === selectedRows -1) {
       square.classList.add("top-right");
@@ -456,6 +453,7 @@ function gameOverTwo() {
         play.removeEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
         play.removeEventListener("click", randomise);
         play.removeEventListener("click", newGame);
+        play.removeEventListener("click", addFlags);
         play.removeEventListener("click", assignRelativePosition);
         play.removeEventListener("click", assignHTML);
         play.removeEventListener("click", flags);
@@ -504,6 +502,7 @@ function gameOverTwo() {
                 play.addEventListener("click", generatedGridRows);
                 play.addEventListener("click", randomise);
                 play.addEventListener("click", newGame);
+                play.addEventListener("click", addFlags);    
                 play.addEventListener("click", assignRelativePosition);
                 play.addEventListener("click", assignHTML);
                 play.addEventListener("click", flags);
