@@ -1,13 +1,21 @@
 let headingContainer = document.getElementById("heading-container");
-for (i = 0; i < 7; i++) {
+for (i = 0; i < 14; i++) {
     let titleRows = document.createElement("div");
     titleRows.classList.add("title-rows")
-    for (x = 0; x < 70; x++) {
+    for (x = 0; x < 140; x++) {
         let titlePixels = document.createElement("div");
         titlePixels.classList.add("title-pixels");
+        titlePixels.addEventListener("click", changeColor);
         titleRows.appendChild(titlePixels);
     }
     headingContainer.appendChild(titleRows);
+}
+function changeColor() {
+    if (this.style.backgroundColor == "blue") {
+        this.style.backgroundColor = "red";
+    } else {
+        this.style.backgroundColor = "blue";
+    }
 }
 let randomSquares = []; //creates the array to be populated by the randomise function
 let grid = document.getElementById("grid");

@@ -87,20 +87,17 @@
 }
 
 #heading-container {
-    width: 1050px;
-    height: 105px;
     margin: auto;
-    border: solid 1px;
 }
 
 .title-rows {
-    height: 15px;
+    height: 8px;
 }
 
 .title-pixels {
     display: inline-block;
-    height: 15px;
-    width: 15px;
+    height: 8px;
+    width: 8px;
     background-color: red;
 }
 
