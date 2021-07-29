@@ -55,7 +55,7 @@
 
 /*-------------------------------------------------html elements---------------------------------------------------------*/
 
-.squares { /*targets the individual squares of the minesweeper grid*/
+#squares { /*targets the individual squares of the minesweeper grid*/
     width: 28px;
     height: 28px;
     display: inline-block;
@@ -64,10 +64,11 @@
     user-select: none;
 }
 
-.heading-container {
+#heading-container {
     width: 50%;
     height: 25vh;
 }
+
 
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
 .even-squares { 
