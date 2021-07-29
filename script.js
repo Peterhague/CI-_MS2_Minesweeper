@@ -1,5 +1,14 @@
-let titleContainer = document.getElementById("title-container");
-
+let headingContainer = document.getElementById("heading-container");
+for (i = 0; i < 7; i++) {
+    let titleRows = document.createElement("div");
+    titleRows.classList.add("title-rows")
+    for (x = 0; x < 70; x++) {
+        let titlePixels = document.createElement("div");
+        titlePixels.classList.add("title-pixels");
+        titleRows.appendChild(titlePixels);
+    }
+    headingContainer.appendChild(titleRows);
+}
 let randomSquares = []; //creates the array to be populated by the randomise function
 let grid = document.getElementById("grid");
 let gridRow = ""; //these will be the rows (divs) to be appended to the minesweeper grid
