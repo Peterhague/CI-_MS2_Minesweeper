@@ -15,6 +15,7 @@ function addPlayFunctions() {
     play.addEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
     play.addEventListener("click", randomise);
     play.addEventListener("click", newGame);
+    play.addEventListener("click", squareSize);
     play.addEventListener("click", checkerboard);
     play.addEventListener("click", addFlags);
     play.addEventListener("click", assignRelativePosition);
@@ -26,6 +27,7 @@ function removePlayFunctions() {
     play.removeEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
     play.removeEventListener("click", randomise);
     play.removeEventListener("click", newGame);
+    play.removeEventListener("click", squareSize);
     play.removeEventListener("click", checkerboard);
     play.removeEventListener("click", addFlags);
     play.removeEventListener("click", assignRelativePosition);
@@ -96,6 +98,19 @@ function newGame() {
             gridRowsList[y].appendChild(squares); // adds each of the 9 squares created in each iteration of the outer loop
         }   
     }        
+}
+function squareSize() {
+    let squares = document.getElementsByClassName("squares");
+    let selectedDifficulty = difficulty.value;
+    for (square of squares) {
+        if (selectedDifficulty == "Easy") {
+            square.classList.add("squaresBig");   
+        } else if (selectedDifficulty == "Medium") {
+            square.classList.add("squaresMedium") ;   
+        } else {
+            square.classList.add("squaresSmall");   
+        }
+    }
 }
 function squaresFunctions(squares) {
     squares.addEventListener("click", minesweep); // function to detect how many mines are in the squares surrounding the clicked square

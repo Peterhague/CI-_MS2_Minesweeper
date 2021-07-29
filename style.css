@@ -53,11 +53,33 @@
     position: absolute;
 }
 
+.center {
+    text-align: center;
+}
+
 /*-------------------------------------------------html elements---------------------------------------------------------*/
 
-#squares { /*targets the individual squares of the minesweeper grid*/
-    width: 28px;
+.squaresMedium { /*targets the individual squares of the minesweeper grid*/
+    width: 30px;
     height: 28px;
+    display: inline-block;
+    font-size: 18px;
+    border: none;
+    user-select: none;
+}
+
+.squaresSmall { /*targets the individual squares of the minesweeper grid*/
+    width: 27px;
+    height: 25px;
+    display: inline-block;
+    font-size: 18px;
+    border: none;
+    user-select: none;
+}
+
+.squaresBig { /*targets the individual squares of the minesweeper grid*/
+    width: 34px;
+    height: 32px;
     display: inline-block;
     font-size: 18px;
     border: none;
@@ -66,12 +88,16 @@
 
 #heading-container {
     width: 50%;
-    height: 25vh;
+    height: 15vh;
 }
 
-#grid {
+#container-game {
     margin: auto;
-    display: inline-block;
+    text-align: center;
+}
+
+#difficulty {
+    text-align: left;
 }
 
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
