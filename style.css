@@ -42,7 +42,18 @@
 .invisible-text {
     color: rgba(0, 0, 0, 0.0);
 }
-/*-------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------general positioning classes----------------------------------------------*/
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/*-------------------------------------------------html elements---------------------------------------------------------*/
 
 .squares { /*targets the individual squares of the minesweeper grid*/
     width: 28px;
@@ -51,6 +62,11 @@
     font-size: 18px;
     border: none;
     user-select: none;
+}
+
+.title-container {
+    width: 50%;
+    height: 25vh;
 }
 
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
