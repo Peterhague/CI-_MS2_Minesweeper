@@ -1,8 +1,8 @@
 let headingContainer = document.getElementById("heading-container");
-for (i = 0; i < 14; i++) {
+for (i = 0; i < 10; i++) {
     let titleRows = document.createElement("div");
     titleRows.classList.add("title-rows")
-    for (x = 0; x < 140; x++) {
+    for (x = 0; x < 100; x++) {
         let titlePixels = document.createElement("div");
         titlePixels.classList.add("title-pixels");
         titlePixels.addEventListener("click", changeColor);
@@ -11,10 +11,10 @@ for (i = 0; i < 14; i++) {
     headingContainer.appendChild(titleRows);
 }
 function changeColor() {
-    if (this.style.backgroundColor == "blue") {
-        this.style.backgroundColor = "red";
+    if (this.style.backgroundColor == "black") {
+        this.style.backgroundColor = "#d3d3d3";
     } else {
-        this.style.backgroundColor = "blue";
+        this.style.backgroundColor = "black";
     }
 }
 let randomSquares = []; //creates the array to be populated by the randomise function

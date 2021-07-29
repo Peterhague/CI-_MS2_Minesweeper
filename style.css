@@ -86,19 +86,24 @@
     user-select: none;
 }
 
+header {
+    margin-bottom: 10px;
+}
+
 #heading-container {
     margin: auto;
+    height: 22vh;
 }
 
 .title-rows {
-    height: 8px;
+    height: 10%;
 }
 
 .title-pixels {
     display: inline-block;
-    height: 8px;
-    width: 8px;
-    background-color: red;
+    height: 100%;
+    width: 10px;
+    background-color: #d3d3d3;
 }
 
 #container-game {
