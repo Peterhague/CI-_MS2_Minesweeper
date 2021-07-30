@@ -5,7 +5,7 @@ for (i = 0; i < 10; i++) {
     for (x = 0; x < 100; x++) {
         let titlePixels = document.createElement("div");
         titlePixels.classList.add("title-pixels");
-        titlePixels.style.backgroundColor = "black";
+        titlePixels.style.backgroundColor = "white";
         titlePixels.id = "pixel" + ((i*100)+x);titlePixels.addEventListener("click", changeColor);
         titleRows.appendChild(titlePixels);
     }
