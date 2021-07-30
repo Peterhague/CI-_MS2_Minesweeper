@@ -93,6 +93,8 @@ header {
 #heading-container {
     margin: auto;
     height: 22vh;
+    width: 1040px;
+    border: solid 1px;
 }
 
 .title-rows {
