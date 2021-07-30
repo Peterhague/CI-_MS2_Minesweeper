@@ -5,21 +5,15 @@ for (i = 0; i < 10; i++) {
     for (x = 0; x < 100; x++) {
         let titlePixels = document.createElement("div");
         titlePixels.classList.add("title-pixels");
-        titlePixels.addEventListener("click", changeColor);
-        titlePixels.id = "pixel" + ((i*100)+x);
+        titlePixels.style.backgroundColor = "black";
+        titlePixels.id = "pixel" + ((i*100)+x);titlePixels.addEventListener("click", changeColor);
         titleRows.appendChild(titlePixels);
     }
     headingContainer.appendChild(titleRows);
 }
 function changeColor() {
-    if (this.style.backgroundColor == "black") {
-        this.style.backgroundColor = "white";
-    } else {
-        this.style.backgroundColor = "black";
-        pixelsClicked.push(this.id);
-    }
+    this.style.backgroundColor = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
 }
-
 let randomSquares = []; //creates the array to be populated by the randomise function
 let grid = document.getElementById("grid");
 let gridRow = ""; //these will be the rows (divs) to be appended to the minesweeper grid
@@ -597,15 +591,13 @@ function gameOverTwo() {
 let titlePixelsColored = ["pixel101", "pixel102", "pixel201", "pixel301", "pixel401", "pixel301", "pixel501", "pixel601", "pixel701", "pixel801",
  "pixel802", "pixel702", "pixel602", "pixel502", "pixel402", "pixel302", "pixel202", "pixel103", "pixel203", "pixel204", "pixel304", "pixel305",
  "pixel306", "pixel405", "pixel207", "pixel206", "pixel208", "pixel108", "pixel107", "pixel109", "pixel209", "pixel308", "pixel408", "pixel508", "pixel608",
- "pixel708", "pixel808", "pixel809", "pixel609", "pixel409", "pixel309", "pixel509", "pixel709", "pixel112", "pixel113",
- "pixel312", "pixel412", "pixel512", "pixel612", "pixel712", "pixel812", "pixel813", "pixel713", "pixel613", "pixel413", "pixel313",
+ "pixel708", "pixel808", "pixel809", "pixel609", "pixel409", "pixel309", "pixel509", "pixel709", "pixel112", "pixel113", "pixel312", "pixel412", "pixel512", "pixel612", "pixel712", "pixel812", "pixel813", "pixel713", "pixel613", "pixel413", "pixel313",
  "pixel513", "pixel516", "pixel616", "pixel716", "pixel816", "pixel817", "pixel717", "pixel517", "pixel617", "pixel417", "pixel317", "pixel316","pixel416",
  "pixel216", "pixel117", "pixel116", "pixel218", "pixel217", "pixel318", "pixel219", "pixel119", "pixel120", "pixel121", "pixel122", "pixel222", "pixel223",
  "pixel323", "pixel324", "pixel423", "pixel523", "pixel423", "pixel623", "pixel723", "pixel823", "pixel824", "pixel724", "pixel624", "pixel524",
  "pixel424", "pixel427", "pixel327", "pixel227", "pixel627", "pixel527", "pixel727", "pixel728", "pixel628", "pixel228", "pixel328",
  "pixel428", "pixel528", "pixel828", "pixel829", "pixel729", "pixel830", "pixel831", "pixel832", "pixel128", "pixel129", "pixel130", "pixel229", "pixel131",
- "pixel132", "pixel429", "pixel430", "pixel132", "pixel436", "pixel435", "pixel335", "pixel336",
- "pixel436", "pixel437", "pixel237", "pixel236", "pixel137", "pixel139", "pixel138", "pixel139", "pixel240", "pixel536", "pixel537", "pixel538",
+ "pixel132", "pixel429", "pixel430", "pixel132", "pixel436", "pixel435", "pixel335", "pixel336", "pixel436", "pixel437", "pixel237", "pixel236", "pixel137", "pixel139", "pixel138", "pixel139", "pixel240", "pixel536", "pixel537", "pixel538",
  "pixel638", "pixel639", "pixel640", "pixel740", "pixel739", "pixel839", "pixel838", "pixel837", "pixel735", "pixel836", "pixel243", "pixel343", "pixel443",
  "pixel543", "pixel544", "pixel444", "pixel344", "pixel244", "pixel144", "pixel444", "pixel545", "pixel645", "pixel644", "pixel745", "pixel845", "pixel846",
  "pixel746", "pixel747", "pixel647", "pixel648", "pixel649", "pixel749", "pixel750", "pixel850", "pixel851", "pixel751", "pixel651", "pixel652", "pixel551",
@@ -625,7 +617,7 @@ let titlePixelsColored = ["pixel101", "pixel102", "pixel201", "pixel301", "pi
 let titlePixels = document.getElementsByClassName("title-pixels");
 for (pixel of titlePixels) {
     if (titlePixelsColored.includes(pixel.id)) {
-        pixel.style.backgroundColor = "black";
+        pixel.style.backgroundColor = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
     }
 }
 
