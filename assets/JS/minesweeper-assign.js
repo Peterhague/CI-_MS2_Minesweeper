@@ -103,3 +103,28 @@ function assignHTMLMiddle(squares, inputSquare) {
     }
     inputSquare.innerHTML = total;
 }
+function assignRelativePosition() {
+    let squares = document.getElementsByClassName("squares");
+    for (square of squares) {
+        let sqid = parseInt(square.id);
+        if (sqid === 0) {
+            square.classList.add("top-left");
+        } else if (sqid > 0 && sqid < (selectedRows -1)) {
+            square.classList.add("top-edge")
+        } else if (sqid === selectedRows -1) {
+            square.classList.add("top-right");
+        } else if (sqid > 0 && sqid % selectedRows === 0 && sqid != (selectedSquares - selectedRows)) {
+            square.classList.add("left-edge");
+        } else if (sqid > 0 && (sqid +1) % selectedRows === 0 && sqid != (selectedSquares - 1)) {
+            square.classList.add("right-edge");
+        } else if (sqid === (selectedSquares - selectedRows)) {
+            square.classList.add("bottom-left");
+        } else if (sqid === (selectedSquares - 1)) {
+            square.classList.add("bottom-right");
+        } else if (sqid > (selectedSquares - selectedRows) && sqid < (selectedSquares - 1)) {
+            square.classList.add("bottom-edge");
+        } else {
+            square.classList.add("middle");
+        }
+    }
+}
