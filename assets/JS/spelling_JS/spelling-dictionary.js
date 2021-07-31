@@ -65,5 +65,13 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "ptosis","habiliments","quotidian","arriviste","rarefy","hydrangea","redoubtable","indubitable","blandishment","inveterate",
 "sarsaparilla","irrespressible","seneschal","cacophany","jalousie","simpatico","choreography","nebulous","subcutaneous",
 "obfuscate","taciturn","obloquy","demsesne","onerous","pachyderm","umlaut","edelweiss","peccadillo","penumbra","eviscerate",
-"pergola","penurious","philanthropic"]
+"pergola","penurious","philanthropic","contretemps","flagellation","parsimoniously","marginalistation","ostracism","cephalic",
+"encephalitis","perfidy","codology","herbivorous","stalactite","incandescent","moribund","effectuate","sequoia","celerity",
+"noetic","perorate","brouhaha","verklempt","stentorian","encomium","insouciant","zeitgeist","velleity","infinitesimal",
+"girandole","cunctation","sacrosanct","belvedere","neophyte","inimical","farraginous","estivate","nonpareil","vermilion",
+"prothalamion","dissilient","predilection","amphibious","agglomeration","stultify","remembrancer","bovarism","palaver",
+"plenipotent","nudnik","oligopoly","obnubilate","lackadaisical","machinate","equanimity","polliniferous","exonumia","sumpsimus",
+"celluloid","olfactory","specious","pandiculation","propinquity","putative","phlegmatic","bricolage","campestral","effulgent",
+"matzo"]
 ]
+console.log(dictionary[3].length);
