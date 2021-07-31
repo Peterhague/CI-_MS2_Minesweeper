@@ -141,7 +141,6 @@ function checkerboard() {
         }
     }
 }
-
 function bombIcon() {
     let squares = document.getElementsByClassName("squares");  
     for (square of squares) { // simple loop to assign squares with class of "bomb" the skull font awesome icon as innerHTML
