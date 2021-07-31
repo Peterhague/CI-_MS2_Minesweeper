@@ -55,34 +55,6 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "insouciant","milieu","antediluvian","minichaeism","paleontologist","xenophobe","metriculate","meretricious",
 "penicillin","cogitation","apotheosis","apogee","hyperbole","anthropomorphic","onomatopoeia","pharoah","sacrilegious",
 "septuagenarian","subpoena","rimy","mendacious","ennui","potage","deciduous","seraphim","claque","periodontal",
-"effete","concubine","micturate","nomenclature","impropriety","punctilious","febrile","machiavellian"]
+"effete","concubine","micturate","nomenclature","impropriety","punctilious","febrile","machiavellian", "quotient", "mellifluous",
+"vestigial", "archaeological", "pulchritude", "deontological", "gerontocracy"]
 ]
-
-let button = document.getElementById("button");
-button.addEventListener("click", speak);
-
-let submit = document.getElementById("submit");
-submit.addEventListener("click", spellcheck);
-
-let inputTwo = document.getElementById("input-two");
-
-let output = ""
-
-function speak() {
-  let randomWordIndex = Math.floor(Math.random()*200)
-  console.log(randomWordIndex);
-  output = dictionary[0][randomWordIndex];
-  responsiveVoice.speak(output);
-}
-
-function spellcheck () {
-  if (output === inputTwo.value) {
-    inputTwo.value = "correct!";
-  } else {
-    inputTwo.value = "incorrect!"
-  }
-}
-
-
-
-
