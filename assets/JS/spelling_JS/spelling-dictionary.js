@@ -11,7 +11,9 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "petal","penalty","knee","dumb","trouble","frost","swot","gather","lazy","heron","joyful","crabby","plenty","swinging",
 "jaw","boast","wild","garden","simple","catch","stupid","brawn","spine","thigh","travelling","frankly","honest","toady",
 "fantasy","brought","classic","laser","spotty","judge","ponder","offering","roast","paddle","toddler","chainsaw","cunning",
-"cabbage"],
+"cabbage","gradient","plastic","furrier","piglet","tempered","wishful","maltreat","frighten","carrier","womanly","porous",
+"crane","massively","sneakers","gasket","certainty","grounded","dolphin","painted","strife","crayon","peril","mischief","comedian",
+"felon","corporal","attendant","based","mermaid","corset","mountain","aeroplane","wheeze","parlour"],
 ["acceptable","accidentally","accommodate","acquire","acquit","apparent","argument","calendar","category","column",
 "committed","conscience","conscious","consensus","drunkenness","dumbbell","exceed","existence","foreign","gauge",
 "guarantee","harass","hierarchy","indispensable","maintenance","medieval","millennium","miniature","misspell","neighbour",
@@ -50,7 +52,7 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "flippant","apoplectic","purveyor","cabal","munificent","comestibles","pompously","penchant","couriered","zenith",
 "quark","crampons","correlational","spatchcock","garrulous","plaintive","solicitation","fluctuate","potentiality",
 "frugal","contemporary","machete","devious","pensive","thoroughbred","pantaloons","trellis","praiseworthy","funereal",
-"ethereal","iteration","pontificate","unpretentious"],
+"ethereal","iteration","pontificate","unpretentious", "plankton", "mollusc","chandalier","fecund","bipartisanship","malnourished"],
 ["pusillanimous","tendentious","lugubrious","quixotic","sententious","chihuahua","cerise","albumen","semaphore",
 "insouciant","milieu","antediluvian","minichaeism","paleontologist","xenophobe","metriculate","meretricious",
 "penicillin","cogitation","apotheosis","apogee","hyperbole","anthropomorphic","onomatopoeia","pharoah","sacrilegious",
@@ -61,7 +63,7 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "imbroglio","impecunious","mezzanine","mezuzah","factotum","campanile","carcinogenic","picaresque","malopropism","Anachronism",
 "contemporaneous","Chiaroscurist","Surveillance","Chrysanthemum","Chauffeur","Malfeasance","Acquiesce","Pococurante",
 "Irascible","Foudroyant","Pterodactyl","milquetoast","transept","psoriasis","putrefaction","acacias","forfeiture","piccolo",
-"auspices","homegeneity","lacquer","schooner","connubial","optometry","equilibrium","veterinarian","frankincense","fulsome",
+"auspices","homogeneity","lacquer","schooner","connubial","optometry","equilibrium","veterinarian","frankincense","fulsome",
 "ptosis","habiliments","quotidian","arriviste","rarefy","hydrangea","redoubtable","indubitable","blandishment","inveterate",
 "sarsaparilla","irrespressible","seneschal","cacophany","jalousie","simpatico","choreography","nebulous","subcutaneous",
 "obfuscate","taciturn","obloquy","demsesne","onerous","pachyderm","umlaut","edelweiss","peccadillo","penumbra","eviscerate",
@@ -74,4 +76,4 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "celluloid","olfactory","specious","pandiculation","propinquity","putative","phlegmatic","bricolage","campestral","effulgent",
 "matzo"]
 ]
-console.log(dictionary[3].length);
+console.log(dictionary[0].length);

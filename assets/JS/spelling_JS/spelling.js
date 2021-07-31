@@ -1,11 +1,9 @@
-let button = document.getElementById("button");
-button.addEventListener("click", speak);
+let playButton = document.getElementById("play-button");
+playButton.addEventListener("click", speak);
 let difficultySpelling = document.getElementById("difficulty-spelling");
 let submit = document.getElementById("submit");
 submit.addEventListener("click", spellcheck);
-
 let inputTwo = document.getElementById("input-two");
-
 let output = ""
 
 function speak() {
@@ -16,10 +14,10 @@ function speak() {
     output = dictionary[1][randomWordIndex];
   } else if (difficultySpelling.value == "Hard") {
     output = dictionary[2][randomWordIndex];
-  } else if (difficultySpelling.value == "Very Hard") {
-    output = dictionary[3][randomWordIndex];
-  responsiveVoice.speak(output);
+  } else {
+    output = dictionary[3][randomWordIndex];  
   }
+  responsiveVoice.speak(output);
   console.log(difficultySpelling.value);
 }
 
