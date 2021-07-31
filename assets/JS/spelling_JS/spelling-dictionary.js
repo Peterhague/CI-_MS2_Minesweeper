@@ -56,5 +56,14 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "penicillin","cogitation","apotheosis","apogee","hyperbole","anthropomorphic","onomatopoeia","pharoah","sacrilegious",
 "septuagenarian","subpoena","rimy","mendacious","ennui","potage","deciduous","seraphim","claque","periodontal",
 "effete","concubine","micturate","nomenclature","impropriety","punctilious","febrile","machiavellian", "quotient", "mellifluous",
-"vestigial", "archaeological", "pulchritude", "deontological", "gerontocracy"]
+"vestigial", "archaeological", "pulchritude", "deontological", "gerontocracy", "machiavellian","soubriquet","omniscient",
+"bifurcate", "parentheses","autodidacticism","menshevik","misappropriate","syllogism","macchiato","gamete","miscegenation",
+"imbroglio","impecunious","mezzanine","mezuzah","factotum","campanile","carcinogenic","picaresque","malopropism","Anachronism",
+"contemporaneous","Chiaroscurist","Surveillance","Chrysanthemum","Chauffeur","Malfeasance","Acquiesce","Pococurante",
+"Irascible","Foudroyant","Pterodactyl","milquetoast","transept","psoriasis","putrefaction","acacias","forfeiture","piccolo",
+"auspices","homegeneity","lacquer","schooner","connubial","optometry","equilibrium","veterinarian","frankincense","fulsome",
+"ptosis","habiliments","quotidian","arriviste","rarefy","hydrangea","redoubtable","indubitable","blandishment","inveterate",
+"sarsaparilla","irrespressible","seneschal","cacophany","jalousie","simpatico","choreography","nebulous","subcutaneous",
+"obfuscate","taciturn","obloquy","demsesne","onerous","pachyderm","umlaut","edelweiss","peccadillo","penumbra","eviscerate",
+"pergola","penurious","philanthropic"]
 ]
