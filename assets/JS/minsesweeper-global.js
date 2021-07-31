@@ -217,9 +217,6 @@ function assignRelativePosition() {
         }
     }
 }
-
-
-
 function bombIcon() {
     let squares = document.getElementsByClassName("squares");  
     for (square of squares) { // simple loop to assign squares with class of "bomb" the skull font awesome icon as innerHTML
@@ -278,7 +275,7 @@ ALSO have a value of zero. */
     }
     automatedClick(this);
 }
-function minesweepRight(squares, that) {
+/*function minesweepRight(squares, that) {
     let thisID = that.id;
     squares[parseInt(thisID) + selectedRows].classList.add("clicked-square-radius");
     squares[parseInt(thisID) + (selectedRows -1)].classList.add("clicked-square-radius");
@@ -356,4 +353,4 @@ function automatedClick(that) {
             clicker.click();
         }
     }
-}
+}*/
