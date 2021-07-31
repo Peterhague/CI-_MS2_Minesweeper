@@ -76,4 +76,3 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "celluloid","olfactory","specious","pandiculation","propinquity","putative","phlegmatic","bricolage","campestral","effulgent",
 "matzo"]
 ]
-console.log(dictionary[0].length);
