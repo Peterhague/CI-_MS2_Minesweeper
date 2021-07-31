@@ -1,4 +1,4 @@
-let headingContainer = document.getElementById("heading-container");
+/*let headingContainer = document.getElementById("heading-container");
 for (i = 0; i < 10; i++) {
     let titleRows = document.createElement("div");
     titleRows.classList.add("title-rows")
@@ -14,7 +14,7 @@ for (i = 0; i < 10; i++) {
 function changeColor() {
     this.style.backgroundColor = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
     console.log(this.id);
-}
+}*/
 let randomSquares = []; //creates the array to be populated by the randomise function
 let grid = document.getElementById("grid");
 let gridRow = ""; //these will be the rows (divs) to be appended to the minesweeper grid
@@ -588,7 +588,7 @@ function gameOverTwo() {
         }, (selectedRows * 100) + 700);
     }  
 }
-
+/*
 let titlePixelsColored = ["pixel102", "pixel103", "pixel202", "pixel302", "pixel402", "pixel302", "pixel502", "pixel602", "pixel702", "pixel802",
  "pixel803", "pixel703", "pixel603", "pixel503", "pixel403", "pixel303", "pixel203", "pixel104", "pixel204", "pixel205", "pixel305", "pixel306",
  "pixel307", "pixel406", "pixel208", "pixel207", "pixel209", "pixel109", "pixel108", "pixel110", "pixel210", "pixel309", "pixel409", "pixel509", "pixel609",
@@ -621,6 +621,6 @@ for (pixel of titlePixels) {
     if (titlePixelsColored.includes(pixel.id)) {
         pixel.style.backgroundColor = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
     }
-}
+}*/
 
 
