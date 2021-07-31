@@ -55,42 +55,42 @@ function minesweep() {
     square have an innerHTML value of zero. If the value of the clicked square is zero,
     this function will then automatically "click" on any of its surrounding squares that
     ALSO have a value of zero. */
-        this.removeEventListener("click", minesweep);// so a square can only be clicked once
-        this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
-        this.classList.remove("even-squares", "odd-squares");
-        this.classList.add("selected");// adds identifier to clicked squares
-        if (parseInt(this.innerHTML) === 0) { // changes the styling of clicked squares
-            this.classList.add("text-grey");
-        } else {
-            this.classList.add("text-white");
-        }
-        let squares = document.getElementsByClassName("squares");
-        for (square of squares) {
-            /* removes the class identifier from the squares selected by the below code as
-            surrounding the clicked square. This prevents the automated clicking code from
-            clicking on squares previously identified as surrounding OTHER squares but which weren't
-            selected for automatic clicking because the initially clicked square didn't have a value
-            of zero*/
-            square.classList.remove("clicked-square-radius");
-        }
-        if (this.classList.contains("right-edge")) {
-            minesweepRight(squares, this);
-        } else if (this.classList.contains("left-edge")) {
-            minesweepLeft(squares, this);
-        } else if (this.classList.contains("top-left")) {
-            minesweepTopLeft(squares, this);        
-        } else if (this.classList.contains("top-edge")) {
-            minesweepTop(squares, this);        
-        } else if (this.classList.contains("top-right")) {
-            minesweepTopRight(squares, this);        
-        } else if (this.classList.contains("bottom-edge")) {
-            minesweepBottom(squares, this);        
-        } else if (this.classList.contains("bottom-left")) {
-            minesweepBottomRight(squares, this);        
-        } else if (this.classList.contains("bottom-right")) {
-            minesweepBottomRight(squares, this);        
-        } else if (this.classList.contains("middle")) {
-            minesweepMiddle(squares, this);
-        }
-        automatedClick(this);
+    this.removeEventListener("click", minesweep);// so a square can only be clicked once
+    this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
+    this.classList.remove("even-squares", "odd-squares");
+    this.classList.add("selected");// adds identifier to clicked squares
+    if (parseInt(this.innerHTML) === 0) { // changes the styling of clicked squares
+        this.classList.add("text-grey");
+    } else {
+        this.classList.add("text-white");
     }
+    let squares = document.getElementsByClassName("squares");
+    for (square of squares) {
+        /* removes the class identifier from the squares selected by the below code as
+        surrounding the clicked square. This prevents the automated clicking code from
+        clicking on squares previously identified as surrounding OTHER squares but which weren't
+        selected for automatic clicking because the initially clicked square didn't have a value
+        of zero*/
+        square.classList.remove("clicked-square-radius");
+    }
+    if (this.classList.contains("right-edge")) {
+        minesweepRight(squares, this);
+    } else if (this.classList.contains("left-edge")) {
+        minesweepLeft(squares, this);
+    } else if (this.classList.contains("top-left")) {
+        minesweepTopLeft(squares, this);        
+    } else if (this.classList.contains("top-edge")) {
+        minesweepTop(squares, this);        
+    } else if (this.classList.contains("top-right")) {
+        minesweepTopRight(squares, this);        
+    } else if (this.classList.contains("bottom-edge")) {
+        minesweepBottom(squares, this);        
+    } else if (this.classList.contains("bottom-left")) {
+        minesweepBottomRight(squares, this);        
+    } else if (this.classList.contains("bottom-right")) {
+        minesweepBottomRight(squares, this);        
+    } else if (this.classList.contains("middle")) {
+        minesweepMiddle(squares, this);
+    }
+    automatedClick(this);
+}
