@@ -86,7 +86,7 @@ function minesweep() {
     } else if (this.classList.contains("bottom-edge")) {
         minesweepBottom(squares, this);        
     } else if (this.classList.contains("bottom-left")) {
-        minesweepBottomRight(squares, this);        
+        minesweepBottomLeft(squares, this);        
     } else if (this.classList.contains("bottom-right")) {
         minesweepBottomRight(squares, this);        
     } else if (this.classList.contains("middle")) {

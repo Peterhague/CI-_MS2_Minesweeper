@@ -44,7 +44,7 @@ function minesweepBottom(squares, that) {
 }
 function minesweepBottomLeft(squares, that) {
     let thisID = that.id;
-    squares[parseInt(thisID) -selectedRows].classList.add("clicked-square-radius");
+    squares[parseInt(thisID) - selectedRows].classList.add("clicked-square-radius");
     squares[parseInt(thisID) - (selectedRows -1)].classList.add("clicked-square-radius");
     squares[parseInt(thisID) + 1].classList.add("clicked-square-radius");
 }
