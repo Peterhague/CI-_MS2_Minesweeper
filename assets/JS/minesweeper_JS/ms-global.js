@@ -36,7 +36,11 @@ function removePlayFunctions() {
 addPlayFunctions();
 function variableVariables() {
     let selectedDifficulty = difficulty.value;
-    if (selectedDifficulty == "Medium") {
+    if (selectedDifficulty == "Easy") {
+        selectedRows = 9;
+        selectedBombs = 15;
+        selectedSquares = 81;
+    } else if (selectedDifficulty == "Medium") {
         selectedRows = 15;
         selectedBombs = 40;
         selectedSquares = 225;
@@ -44,10 +48,10 @@ function variableVariables() {
         selectedRows = 20;
         selectedBombs = 99;
         selectedSquares = 400;
-    } else {
-        selectedRows = 9;
-        selectedBombs = 15;
-        selectedSquares = 81;
+    } else if (selectedDifficulty == "Custom") {
+        selectedRows = 25;
+        selectedBombs = 50;
+        selectedSquares = selectedRows*selectedRows;
     }
 }
 function generatedGridRows() {
@@ -118,7 +122,7 @@ function squaresFunctions(squares) {
 }
 function checkerboard() {
 /* the outer loop iterates over the rows of the grid and the nested loop iterates over the 
-    squares (ie children of the row). The code says if the row's index is even then the first square
+    squares (ie children of the rows). The code says if the row's index is even then the first square
     of that row is given the class of "odd-squares", and every alternate square of that row is
     given the class of "even-squares", and then the reverse for rows with indices that are odd.
     This is purely for styling in the checkerboard pattern, and to distinguish the code applied to 
