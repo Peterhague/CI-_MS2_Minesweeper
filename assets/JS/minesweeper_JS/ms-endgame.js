@@ -16,7 +16,7 @@ function counter() {
             function task(j) {            
                 setTimeout(function() {
                     squares[j].innerHTML = `<i class="fas fa-laugh-squint"></i>`;
-                    squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "text-white");
+                    squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "text-blue");
                     if (j % 3 === 0) {
                         squares[randomSquaresAll[j]].classList.add("yellow-square");
                     } else if (j % 3 > 0 && j % 2 === 0) {
@@ -87,7 +87,7 @@ function gameOverTwo() {
         }
         function task(j) {            
             setTimeout(function() {
-                squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "text-white");
+                squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "blue");
                 if (j % 3 === 0) {
                     squares[randomSquaresAll[j]].classList.add("black-square");
                 } else if (j % 3 > 0 && j % 2 === 0) {

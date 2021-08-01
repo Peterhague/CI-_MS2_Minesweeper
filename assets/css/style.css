@@ -7,12 +7,36 @@
     color: #d3d3d3;
 }
 
-.text-white {
-    color: white;
+.text-blue {
+    color: rgb(13, 133, 231);
 }
 
 .text-red {
     color: red;
+}
+
+.text-green {
+    color: rgb(25, 196, 25);
+}
+
+.text-purple {
+    color: indigo;
+}
+
+.text-orange {
+    color: rgb(218, 72, 19);
+}
+
+.text-pink {
+    color: #f81ba3;
+}
+
+.text-gold {
+    color: gold;
+}
+
+.text-black {
+    color: black;
 }
 
 .black-square {
@@ -57,31 +81,38 @@
     text-align: center;
 }
 
+.margin-auto {
+    margin: auto;
+}
+
 /*-------------------------------------------------html elements---------------------------------------------------------*/
 
 .squaresMedium { /*targets the individual squares of the minesweeper grid*/
-    width: 30px;
+    width: 28px;
     height: 28px;
     display: inline-block;
     font-size: 18px;
+    font-weight: 750;
     border: none;
     user-select: none;
 }
 
 .squaresSmall { /*targets the individual squares of the minesweeper grid*/
-    width: 27px;
+    width: 25px;
     height: 25px;
     display: inline-block;
     font-size: 18px;
+    font-weight: 750;
     border: none;
     user-select: none;
 }
 
 .squaresBig { /*targets the individual squares of the minesweeper grid*/
-    width: 34px;
+    width: 32px;
     height: 32px;
     display: inline-block;
     font-size: 18px;
+    font-weight: 750;
     border: none;
     user-select: none;
 }
@@ -128,10 +159,17 @@ header {
     margin-right: 20px;
     margin-left: 20px;
     font-size: 1.5em;
+    vertical-align: bottom;
 }
 
-.nav-items:hover {
+.nav-items-hover:hover {
     color: #f81ba3;
+}
+
+.nav-item-current {
+    text-decoration: underline;
+    text-decoration-color: #f81ba3;
+    text-decoration-thickness: 3px;
 }
 
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/

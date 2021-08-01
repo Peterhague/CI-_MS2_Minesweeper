@@ -1,30 +1,54 @@
 let playButton = document.getElementById("play-button");
-playButton.addEventListener("click", speak);
+playButton.addEventListener("click", clearAnswer);
+playButton.addEventListener("click", generateQuestions);
 let difficultySpelling = document.getElementById("difficulty-spelling");
 let submit = document.getElementById("submit");
+submit.addEventListener("click", questionCounter);
 submit.addEventListener("click", spellcheck);
 let inputTwo = document.getElementById("input-two");
-let output = ""
-
-function speak() {
+let output = "";
+let answerBox = document.getElementById("answer-box");
+function generateQuestions() {
   let randomWordIndex = Math.floor(Math.random()*200);
-  if (difficultySpelling.value == "Easy") {
-    output = dictionary[0][randomWordIndex];
-  } else if (difficultySpelling.value == "Medium") {
-    output = dictionary[1][randomWordIndex];
-  } else if (difficultySpelling.value == "Hard") {
-    output = dictionary[2][randomWordIndex];
-  } else {
-    output = dictionary[3][randomWordIndex];  
+  let randomWords = [];
+  for (i = 0; i < 10; i++) {
+    if (difficultySpelling.value == "Easy") {
+      let word = dictionary[0][randomWordIndex];
+      if (randomWords.includes(word) === false) {
+        randomWords.push(word);
+      }
+    } else if (difficultySpelling.value == "Medium") {
+      let word = dictionary[1][randomWordIndex];
+      if (randomWords.includes(word) === false) {
+        randomWords.push(word);
+      }
+    } else if (difficultySpelling.value == "Hard") {
+      let word = dictionary[2][randomWordIndex];
+      if (randomWords.includes(word) === false) {
+        randomWords.push(word);
+      }
+    } else if (difficultySpelling.value == "Very Hard") {
+      let word = dictionary[3][randomWordIndex];
+      if (randomWords.includes(word) === false) {
+        randomWords.push(word);
+      }
+    }
   }
-  responsiveVoice.speak(output);
-  console.log(difficultySpelling.value);
+  speak(randomWords);
+}
+function speak(randomWords) {
+  console.log(randomWords);
+  responsiveVoice.speak(randomWords[0]);
 }
 
 function spellcheck () {
   if (output === inputTwo.value) {
-    inputTwo.value = "correct!";
+    answerBox.innerHTML = "correct!";
   } else {
-    inputTwo.value = "incorrect!"
+    answerBox.innerHTML = "incorrect!"
   }
+}
+function clearAnswer() {
+  inputTwo.value = "";
+  answerBox.innerHTML = "";
 }

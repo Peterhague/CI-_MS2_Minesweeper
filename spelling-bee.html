@@ -16,24 +16,29 @@
         </div> 
         <div class="navigation-container">
           <nav id="navigation-bar">
-            <a class="nav-items" href="index.html">Home</a>
-            <a class="nav-items" href="minesweeper.html">Minesweeper</a>
-            <a class="nav-items" href="spelling-bee.html">Spelling Bee</a>
-            <a class="nav-items" href="guess-the-song.html">Guess the Song</a>
+            <a class="nav-items nav-items-hover" href="index.html">Home</a>
+            <a class="nav-items nav-items-hover" href="minesweeper.html">Minesweeper</a>
+            <span class="nav-items nav-item-current">Spelling Bee</span>
+            <a class="nav-items nav-items-hover" href="guess-the-song.html">Guess the Song</a>
           </nav>
         </div> 
     </header>
-    <select id="difficulty-spelling"> <!--Dropdown selector for difficulty level-->
-      <option>Easy</option>
-      <option>Medium</option>
-      <option>Hard</option>
-      <option>Very Hard</option>
-    </select>
-    <button id="play-button">Play</button>
-    <div>
-    <input id="input-two" type="text">
+    <div class="margin-auto">
+      <div id="container-game">
+        <select id="difficulty-spelling"> <!--Dropdown selector for difficulty level-->
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Hard</option>
+          <option>Very Hard</option>
+        </select>
+        <button id="play-button">Play</button>
+        <div>
+        <input id="input-two" type="text">
+        </div>
+        <button id="submit">Submit</button>
+        <div id="answer-box"></div>
+      </div>
     </div>
-    <button id="submit">Submit</button>
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=XZM7YbRW"></script>
     <script src="assets/JS/spelling_JS/spelling-dictionary.js"></script>
     <script src="assets/JS/spelling_JS/spelling.js"></script>

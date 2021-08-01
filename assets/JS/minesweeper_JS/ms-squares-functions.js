@@ -62,7 +62,8 @@ function minesweep() {
     if (parseInt(this.innerHTML) === 0) { // changes the styling of clicked squares
         this.classList.add("text-grey");
     } else {
-        this.classList.add("text-white");
+        /*this.classList.add("text-blue");*/
+        colorByNumber(this);
     }
     let squares = document.getElementsByClassName("squares");
     for (square of squares) {
@@ -93,4 +94,24 @@ function minesweep() {
         minesweepMiddle(squares, this);
     }
     automatedClick(this);
+}
+
+function colorByNumber(that) {
+    if (that.innerHTML == 1) {
+        that.classList.add("text-blue");
+    } else if (that.innerHTML == 2) {
+        that.classList.add("text-green");
+    } else if (that.innerHTML == 3) {
+        that.classList.add("text-red");
+    } else if (that.innerHTML == 4) {
+        that.classList.add("text-purple");
+    } else if (that.innerHTML == 5) {
+        that.classList.add("text-orange");
+    } else if (that.innerHTML == 6) {
+        that.classList.add("text-pink");
+    } else if (that.innerHTML == 7) {
+        that.classList.add("text-gold");
+    } else if (that.innerHTML == 8) {
+        that.classList.add("text-black");
+    }
 }
