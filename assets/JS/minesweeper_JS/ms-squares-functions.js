@@ -62,7 +62,6 @@ function minesweep() {
     if (parseInt(this.innerHTML) === 0) { // changes the styling of clicked squares
         this.classList.add("text-grey");
     } else {
-        /*this.classList.add("text-blue");*/
         colorByNumber(this);
     }
     let squares = document.getElementsByClassName("squares");

@@ -21,9 +21,13 @@ is then assigned as the sentinelSquare's inner html. */
         /*for squares with ids longer than 1 and divisible by 9 after the addition of 1 to its total.
         This captures the squares at the right-hand edge of the grid*/
             assignHTMLRight(squares, squareSentinel); 
-        } else if (squareSentinel.classList.contains("left-edge") || squareSentinel.classList.contains("bottom-left")) {
+        } else if (squareSentinel.classList.contains("left-edge")) {
         /*for squares with ids longer than 1, and divisible by 9. This captures the squares at the left-hand edge of the grid*/
             assignHTMLLeft(squares, squareSentinel);
+        } else if (squareSentinel.classList.contains("bottom-left")) {
+            assignHTMLBottomLeft(squares, squareSentinel);
+        } else if (squareSentinel.classList.contains("bottom-right")) {
+            assignHTMLBottomRight(squares, squareSentinel);
         } else if (squareSentinel.classList.contains("top-left")) {
         //captures the top-left square only
             assignHTMLTopLeft(squares, squareSentinel);             
@@ -65,6 +69,30 @@ function assignHTMLLeft(squares, inputSquare) {
             total += 1;
         }
     } 
+    inputSquare.innerHTML = total;
+}
+function assignHTMLBottomLeft(squares, inputSquare) {
+    let total = 0;
+    for (squareTarget of squares) {
+        } if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top right
+            total += 1;
+        } 
+    inputSquare.innerHTML = total;
+}
+function assignHTMLBottomRight(squares, inputSquare) {
+    let total = 0;
+    for (squareTarget of squares) {
+        } if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
+            total += 1;
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top right
+            total += 1;
+        } 
     inputSquare.innerHTML = total;
 }
 function assignHTMLTopLeft(squares, inputSquare) {

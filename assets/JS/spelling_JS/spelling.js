@@ -1,17 +1,17 @@
 let playButton = document.getElementById("play-button");
 playButton.addEventListener("click", clearAnswer);
 playButton.addEventListener("click", generateQuestions);
-playButton.onclick = function() {generateQuestions}
 let difficultySpelling = document.getElementById("difficulty-spelling");
 let submit = document.getElementById("submit");
 submit.addEventListener("click", spellcheck);
 submit.addEventListener("click", questionCounter);
+submit.onclick = function() {questionCounter(randomWords)};
 let inputTwo = document.getElementById("input-two");
 let output = "";
 let currentQuestion;
+let randomWords = [];
 let answerBox = document.getElementById("answer-box");
 function generateQuestions() {
-  let randomWords = [];
   for (let i = 0; i < 10; i++) {
     if (difficultySpelling.value == "Easy") {
       let word = dictionary[0][Math.floor(Math.random()*200)];
@@ -35,13 +35,12 @@ function generateQuestions() {
       }
     }
   }
-  speak(randomWords);
+  speak(randomWords, 0);
+  return randomWords;
 }
 function speak(randomWords, iteration) {
   responsiveVoice.speak(randomWords[iteration]);
-  for (i of randomWords) {
-    console.log(i);
-  }
+  console.log(randomWords);
 }
 function spellcheck () {
   if (output === inputTwo.value) {
@@ -54,11 +53,7 @@ function clearAnswer() {
   inputTwo.value = "";
   answerBox.innerHTML = "";
 }
-function questionInitiator() {
-  currentQuestion = 0;
-  return currentQuestion;
-}
-function questionCounter() {
+function questionCounter(randomWords) {
   currentQuestion += 1;
   speak(randomWords, currentQuestion);
 }
