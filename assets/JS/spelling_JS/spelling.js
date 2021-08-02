@@ -8,9 +8,12 @@ submit.addEventListener("click", questionCounter);
 submit.addEventListener("click", clearAnswer);// clears the answer input after each submission
 let repeat = document.getElementById("repeat");
 repeat.addEventListener("click", repeatQuestion);
+let hint = document.getElementById("hint");
+hint.addEventListener("click", giveHint);
 let inputTwo = document.getElementById("input-two");
 let output = "";
 let currentQuestion = 0;
+let addOne = 0;
 let randomWords = [];
 let answerBox = document.getElementById("answer-box");
 function generateQuestions() {
@@ -41,6 +44,7 @@ function generateQuestions() {
   }
 }
 function startGame() {
+  addOne = 0;
   speak(randomWords, 0);
 }
 function speak(randomWords, iteration) {
@@ -50,15 +54,20 @@ function speak(randomWords, iteration) {
 function spellcheck () {
   if (output === inputTwo.value) {
     answerBox.innerHTML = "correct!";
+    addOne += 1;
+    questionsCorrect(addOne);
   } else {
     answerBox.innerHTML = "incorrect!"
+    questionsCorrect(addOne);
   }
 }
 function clearAnswer() {
   inputTwo.value = "";
-  setTimeout(function() {            
-    answerBox.innerHTML = ""; 
-  }, 800);
+  if (currentQuestion < 9) {
+    setTimeout(function() {            
+      answerBox.innerHTML = ""; 
+    }, 800);
+  }
 }
 function questionCounter() {
   currentQuestion += 1;
@@ -69,4 +78,25 @@ function questionCounter() {
 function repeatQuestion() {
   speak(randomWords, currentQuestion);
 }
-
+function questionsCorrect(addOne) {
+  let totalCorrect = 0+addOne;
+  console.log(totalCorrect);
+  finalScore(totalCorrect);
+}
+function finalScore(totalCorrect) {
+  console.log(currentQuestion);
+  if (currentQuestion === 9) {
+    setTimeout(function() {
+      answerBox.innerHTML = `You scored ${totalCorrect} out of 10!`;
+    }, 1000);    
+  }
+}
+function giveHint() {
+  let outputArray = output.split("");
+  for (let i = 0; i < outputArray.length; i++) {
+    if (i % 2 > 0) {
+      outputArray.splice(i, 1, "*");
+    }
+  }
+  answerBox.innerHTML = outputArray.join("");
+}
