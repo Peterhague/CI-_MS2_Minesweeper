@@ -172,6 +172,24 @@ header {
     text-decoration-thickness: 3px;
 }
 
+#answer-box-container {
+    width: 400px;
+    height: 300px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    margin: auto;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#answer-box {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    height: 20px;
+}
+
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
 .even-squares { 
     background-color: rgb(21, 199, 21);

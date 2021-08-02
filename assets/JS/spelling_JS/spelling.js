@@ -54,10 +54,17 @@ function speak(randomWords, iteration) {
 function spellcheck () {
   if (output === inputTwo.value) {
     answerBox.innerHTML = "correct!";
-    addOne += 1;
-    questionsCorrect(addOne);
+    if (answerBox.classList.contains("hinted")) {
+      addOne += 0.5;
+      answerBox.classList.remove("hinted");
+      questionsCorrect(addOne);
+    } else {
+      addOne += 1;
+      questionsCorrect(addOne);
+    }
   } else {
-    answerBox.innerHTML = "incorrect!"
+    answerBox.innerHTML = "incorrect!";
+    answerBox.classList.remove("hinted");
     questionsCorrect(addOne);
   }
 }
@@ -99,4 +106,5 @@ function giveHint() {
     }
   }
   answerBox.innerHTML = outputArray.join("");
+  answerBox.classList.add("hinted");
 }
