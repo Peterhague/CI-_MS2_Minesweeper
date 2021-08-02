@@ -7,7 +7,6 @@ submit.addEventListener("click", spellcheck);// checks the given user input is t
 submit.addEventListener("click", questionCounter);
 /*submit.addEventListener("click", clearAnswer);*/// clears the answer input after each submission
 let inputTwo = document.getElementById("input-two");
-inputTwo.style.backgroundColor = "red";
 let output = "";
 let currentQuestion = 0;
 let randomWords = [];
@@ -59,6 +58,9 @@ function clearAnswer() {
 }
 function questionCounter() {
   currentQuestion += 1;
-  speak(randomWords, currentQuestion);
+  setTimeout(function() {            
+    speak(randomWords, currentQuestion); 
+}, 1000);
+  
 }
 
