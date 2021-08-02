@@ -13,7 +13,7 @@ let randomWords = [];
 let answerBox = document.getElementById("answer-box");
 function generateQuestions() {
   randomWords = [];
-  for (let i = 0; i < 10; i++) {
+  while (randomWords.length < 10) {
     if (difficultySpelling.value == "Easy") {
       let word = dictionary[0][Math.floor(Math.random()*200)];
       if (randomWords.includes(word) === false) {
