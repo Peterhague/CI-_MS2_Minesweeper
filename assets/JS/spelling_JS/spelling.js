@@ -1,42 +1,46 @@
 let playButton = document.getElementById("play-button");
-playButton.addEventListener("click", clearAnswer);// clears the answer input after each submission
-/*playButton.addEventListener("click", generateQuestions);*//// generates an array of 10 random words from the dictionary as the quiz questions
+playButton.addEventListener("click", generateQuestions);
+playButton.addEventListener("click", startGame);
 let difficultySpelling = document.getElementById("difficulty-spelling");
 let submit = document.getElementById("submit");
 submit.addEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
 submit.addEventListener("click", questionCounter);
+submit.addEventListener("click", clearAnswer);// clears the answer input after each submission
 let inputTwo = document.getElementById("input-two");
 let output = "";
 let currentQuestion = 0;
-let randomWords = generateQuestions();
+let randomWords = [];
 let answerBox = document.getElementById("answer-box");
 function generateQuestions() {
-  x = [];
-  while (x.length < 10) {
+  randomWords = [];
+  currentQuestion = 0;
+  while (randomWords.length < 10) {
     if (difficultySpelling.value == "Easy") {
       let word = dictionary[0][Math.floor(Math.random()*200)];
-      if (x.includes(word) === false) {
-        x.push(word);
+      if (randomWords.includes(word) === false) {
+        randomWords.push(word);
       }
     } else if (difficultySpelling.value == "Medium") {
       let word = dictionary[1][Math.floor(Math.random()*200)];
-      if (x.includes(word) === false) {
-        x.push(word);
+      if (randomWords.includes(word) === false) {
+        randomWords.push(word);
       }
     } else if (difficultySpelling.value == "Hard") {
       let word = dictionary[2][Math.floor(Math.random()*200)];
-      if (x.includes(word) === false) {
-        x.push(word);
+      if (randomWords.includes(word) === false) {
+        randomWords.push(word);
       }
     } else if (difficultySpelling.value == "Very Hard") {
       let word = dictionary[3][Math.floor(Math.random()*200)];
-      if (x.includes(word) === false) {
-        x.push(word);
+      if (randomWords.includes(word) === false) {
+        randomWords.push(word);
       }
     }
   }
-  speak(x, 0);
-  return x;
+  console.log(randomWords);
+}
+function startGame() {
+  speak(randomWords, 0);
 }
 function speak(randomWords, iteration) {
   responsiveVoice.speak(randomWords[iteration]);
@@ -59,4 +63,3 @@ function questionCounter() {
   console.log(randomWords[1]);
 }
 
-console.log(randomWords);
