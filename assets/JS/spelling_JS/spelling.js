@@ -1,9 +1,9 @@
 let playButton = document.getElementById("play-button");
-playButton.addEventListener("click", clearAnswer);
-playButton.addEventListener("click", generateQuestions);
+playButton.addEventListener("click", clearAnswer);// clears the answer input after each submission
+playButton.addEventListener("click", generateQuestions);// generates an array of 10 random words from the dictionary as the quiz questions
 let difficultySpelling = document.getElementById("difficulty-spelling");
 let submit = document.getElementById("submit");
-submit.addEventListener("click", spellcheck);
+submit.addEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
 submit.addEventListener("click", questionCounter);
 submit.onclick = function() {questionCounter(randomWords)};
 let inputTwo = document.getElementById("input-two");
