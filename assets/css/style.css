@@ -1,7 +1,6 @@
 /*----------------------------------general text and background styling classes---------------------------------------------*/
 .grey {
     background-color: #d3d3d3;
-    background-color: yellow;
 }
 
 .text-grey {
@@ -177,13 +176,11 @@ header {
 .even-squares { 
     background-color: rgb(21, 199, 21);
     color: rgba(0, 0, 0, 0.0);
-    color: white;
 }
 
 .odd-squares {
     background-color: greenyellow;
     color: rgba(0, 0, 0, 0.0);
-    color: white;
 }
 /*-------------------------------------------------------------------------------------------------------------------------*/
 

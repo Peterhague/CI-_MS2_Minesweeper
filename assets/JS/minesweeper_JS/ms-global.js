@@ -49,8 +49,8 @@ function variableVariables() {
         selectedBombs = 99;
         selectedSquares = 400;
     } else if (selectedDifficulty == "Custom") {
-        selectedRows = 25;
-        selectedBombs = 50;
+        selectedRows = 16;
+        selectedBombs = 10;
         selectedSquares = selectedRows*selectedRows;
     }
 }
