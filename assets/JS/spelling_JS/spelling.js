@@ -5,8 +5,9 @@ let difficultySpelling = document.getElementById("difficulty-spelling");
 let submit = document.getElementById("submit");
 submit.addEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
 submit.addEventListener("click", questionCounter);
-submit.addEventListener("click", clearAnswer);// clears the answer input after each submission
+/*submit.addEventListener("click", clearAnswer);*/// clears the answer input after each submission
 let inputTwo = document.getElementById("input-two");
+inputTwo.style.backgroundColor = "red";
 let output = "";
 let currentQuestion = 0;
 let randomWords = [];
@@ -37,12 +38,12 @@ function generateQuestions() {
       }
     }
   }
-  console.log(randomWords);
 }
 function startGame() {
   speak(randomWords, 0);
 }
 function speak(randomWords, iteration) {
+  output = randomWords[iteration];
   responsiveVoice.speak(randomWords[iteration]);
 }
 function spellcheck () {
@@ -58,8 +59,6 @@ function clearAnswer() {
 }
 function questionCounter() {
   currentQuestion += 1;
-  console.log(currentQuestion);
   speak(randomWords, currentQuestion);
-  console.log(randomWords[1]);
 }
 
