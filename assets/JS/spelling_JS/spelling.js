@@ -3,9 +3,7 @@ playButton.addEventListener("click", generateQuestions);
 playButton.addEventListener("click", startGame);
 let difficultySpelling = document.getElementById("difficulty-spelling");
 let submit = document.getElementById("submit");
-submit.addEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
-submit.addEventListener("click", questionCounter);
-submit.addEventListener("click", clearAnswer);// clears the answer input after each submission
+
 let repeat = document.getElementById("repeat");
 repeat.addEventListener("click", repeatQuestion);
 let hint = document.getElementById("hint");
@@ -44,6 +42,9 @@ function generateQuestions() {
   }
 }
 function startGame() {
+  submit.addEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
+  submit.addEventListener("click", questionCounter);
+  submit.addEventListener("click", clearAnswer);// clears the answer input after each submission
   addOne = 0;
   speak(randomWords, 0);
 }
@@ -91,8 +92,10 @@ function questionsCorrect(addOne) {
   finalScore(totalCorrect);
 }
 function finalScore(totalCorrect) {
-  console.log(currentQuestion);
-  if (currentQuestion === 9) {
+  if (currentQuestion === 9) {    
+    submit.removeEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
+    submit.removeEventListener("click", questionCounter);
+    submit.removeEventListener("click", clearAnswer);
     setTimeout(function() {
       answerBox.innerHTML = `You scored ${totalCorrect} out of 10!`;
     }, 1000);    
