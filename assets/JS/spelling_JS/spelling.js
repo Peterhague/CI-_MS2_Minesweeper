@@ -12,6 +12,7 @@ let currentQuestion;
 let randomWords = [];
 let answerBox = document.getElementById("answer-box");
 function generateQuestions() {
+  randomWords = [];
   for (let i = 0; i < 10; i++) {
     if (difficultySpelling.value == "Easy") {
       let word = dictionary[0][Math.floor(Math.random()*200)];
@@ -36,11 +37,10 @@ function generateQuestions() {
     }
   }
   speak(randomWords, 0);
-  return randomWords;
+  console.log(randomWords);
 }
 function speak(randomWords, iteration) {
   responsiveVoice.speak(randomWords[iteration]);
-  console.log(randomWords);
 }
 function spellcheck () {
   if (output === inputTwo.value) {
