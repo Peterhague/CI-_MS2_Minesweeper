@@ -67,6 +67,18 @@
     color: rgba(0, 0, 0, 0.0);
 }
 
+.cairo {
+    font-family: 'Cairo', sans-serif;
+}
+
+.text-medium {
+    font-size: 1.25em;
+}
+
+.text-big {
+    font-size: 1.5em;
+}
+
 /*------------------------------------------------general positioning classes----------------------------------------------*/
 
 .relative {
@@ -83,6 +95,18 @@
 
 .margin-auto {
     margin: auto;
+}
+
+.min-width {
+    min-width: 150px;
+}
+
+.margin-top-big {
+    margin-top: 20vh;
+}
+
+.margin-top-medium {
+    margin-top: 8vh;
 }
 
 /*-------------------------------------------------html elements---------------------------------------------------------*/
@@ -146,21 +170,47 @@ header {
     margin: auto;
     text-align: center;
     display: inline-block;
+    min-width: 150px;
 }
 
 #score-bar {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 #selector-start {
     display: inline-block;
     position: absolute;
     left: 0;
+    bottom: 4px;
 }
 
 #difficulty {
     text-align: left;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+#play {
+    border: none;
+    background-color: white;
+}
+
+
+#score-container {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    color: red;
+    display: inline-block;
+}
+
+#call-to-play {
+    font-family: 'Cairo', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.5em;
 }
 
 .navigation-container {

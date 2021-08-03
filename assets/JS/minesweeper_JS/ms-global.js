@@ -10,6 +10,7 @@ let gridRowsList = document.getElementsByClassName("grid-rows"); // to create an
 let scoreContainer = document.getElementById("score-container"); // gets the div to be populated by the remaining flags tally
 let play = document.getElementById("play"); // gets the start game button from the html file
 function addPlayFunctions() {
+    play.addEventListener("click", stylingChanges);
     play.addEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
     play.addEventListener("click", randomise);
     play.addEventListener("click", newGame);
@@ -53,6 +54,17 @@ function variableVariables() {
         selectedBombs = 10;
         selectedSquares = selectedRows*selectedRows;
     }
+}
+function stylingChanges() {    
+    let selectorStart = document.getElementById("selector-start");
+    selectorStart.classList.remove("min-width");
+    difficulty.classList.remove("cairo", "text-medium");
+    let playIcon = document.getElementById("play-icon");
+    playIcon.classList.remove("text-big");
+    let outerContainer = document.getElementById("outer-container");
+    outerContainer.classList.remove("margin-top-big");
+    let callToPlay = document.getElementById("call-to-play");
+    callToPlay.innerHTML = "";
 }
 function generatedGridRows() {
     grid.innerHTML = "";
@@ -156,5 +168,5 @@ function bombIcon() {
 function flags() {
     /* Assigns the starting value of the number flags in hand counter depending on the selected difficulty*/
     scoreContainer.innerHTML = "";
-    scoreContainer.innerHTML = selectedBombs;    
+    scoreContainer.innerHTML = `<i id="play-icon" class="fas fa-play text-big"></i>${selectedBombs}`;
 }

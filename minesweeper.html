@@ -25,24 +25,23 @@
         </nav>
       </div>
     </header>
-    <div id="outer-container">
+    <div id="outer-container" class="margin-top-big">
       <div id="container-game">
         <div id="score-bar">
-          <div id="selector-start">
-            <select id="difficulty"> <!--Dropdown selector for difficulty level-->
-              <option>Easy</option>
-              <option>Medium</option>
-              <option>Hard</option>
-              <option>Custom</option>
-            </select>
-            <button id="play"><i class="fas fa-play"></i></button> <!--Start game button-->  
+            <div id="selector-start" class="min-width">
+                <select id="difficulty" class ="cairo text-medium"> <!--Dropdown selector for difficulty level-->
+                  <option>Easy</option>
+                  <option>Medium</option>
+                  <option>Hard</option>
+                  <option>Custom</option>
+                </select>
+                <button id="play"><i id="play-icon" class="fas fa-play text-big"></i></button> <!--Start game button-->  
           </div>
-          <div>
-            <div id="score-container"></div> <!--container for the number of flags the player has in hand-->
-          </div>
+          <div id="score-container"></div> <!--container for the number of flags the player has in hand-->
         </div>
         <div id="grid" oncontextmenu="return false;"></div> <!--main div for the minesweeper grid to be populated by-->
       </div>
+      <div id="call-to-play" class="margin-top-medium">LET'S MINESWEEP!</div>
     </div>
     <script src="assets/JS/title.js"></script>    
     <script src="assets/JS/minesweeper_JS/ms-assign.js"></script>
