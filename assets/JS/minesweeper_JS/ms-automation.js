@@ -73,8 +73,9 @@ function automatedClick(that) {
     }   
     let automatedClickers = document.getElementsByClassName(`csr-${that.id}`)     
     for (clicker of automatedClickers) {   
-        if (parseInt(that.innerHTML) === 0) {
+        if (parseInt(that.innerHTML) === 0 && !clicker.classList.contains("selected")) {
             clicker.click();
         }
     }
 }
+

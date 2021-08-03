@@ -92,7 +92,9 @@ function minesweep() {
     } else if (this.classList.contains("middle")) {
         minesweepMiddle(squares, this);
     }
-    automatedClick(this);
+    if (parseInt(this.innerHTML) === 0) {
+        automatedClick(this);
+    }
 }
 
 function colorByNumber(that) {
