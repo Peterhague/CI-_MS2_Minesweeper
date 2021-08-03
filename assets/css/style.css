@@ -101,7 +101,7 @@
     width: 25px;
     height: 25px;
     display: inline-block;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 750;
     border: none;
     user-select: none;
@@ -138,9 +138,25 @@ header {
     width: 10px;
 }
 
+#outer-container {
+    text-align: center;
+}
+
 #container-game {
     margin: auto;
     text-align: center;
+    display: inline-block;
+}
+
+#score-bar {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#selector-start {
+    display: inline-block;
+    position: absolute;
+    left: 0;
 }
 
 #difficulty {
