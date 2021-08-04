@@ -66,6 +66,7 @@ function stylingChanges() {
     playIcon.classList.add("score-bar-bg");
     let outerContainer = document.getElementById("outer-container");
     outerContainer.classList.remove("margin-top-big");
+    outerContainer.classList.add("margin-top-small");
     let callToPlay = document.getElementById("call-to-play");
     callToPlay.innerHTML = "";
     let scoreBar = document.getElementById("score-bar");

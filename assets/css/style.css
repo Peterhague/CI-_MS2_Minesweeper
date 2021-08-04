@@ -121,6 +121,10 @@
     margin-top: 20vh;
 }
 
+.margin-top-small {
+    margin-top: 40px;
+}
+
 .margin-top-medium {
     margin-top: 8vh;
 }
