@@ -9,6 +9,11 @@ repeat.addEventListener("click", repeatQuestion);
 let hint = document.getElementById("hint");
 hint.addEventListener("click", giveHint);
 let inputTwo = document.getElementById("input-two");
+inputTwo.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    submit.click();
+  }
+});
 let output = "";
 let currentQuestion = 0;
 let addOne = 0;
@@ -44,24 +49,26 @@ function generateQuestions() {
 function setFocus() {
   inputTwo.focus();
 }
-function startGame() {
-  inputTwo.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      submit.click();
-    }
-  });    
+function startGame() {    
   submit.addEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
   submit.addEventListener("click", questionCounter);
   submit.addEventListener("click", clearAnswer);// clears the answer input after each submission
   submit.addEventListener("click", setFocus);
+  answerBox.innerHTML = 1;
+  setTimeout(function() {            
+    answerBox.innerHTML = ""; 
+  }, 800);
   addOne = 0;
-  speak(randomWords, 0);
+  setTimeout(function() {            
+    speak(randomWords, 0); 
+  }, 600);
 }
 function speak(randomWords, iteration) {
   output = randomWords[iteration];
   responsiveVoice.speak(randomWords[iteration]);
 }
 function spellcheck () {
+  console.log(output);
   if (output === inputTwo.value) {
     answerBox.innerHTML = "correct!";
     if (answerBox.classList.contains("hinted")) {
@@ -80,31 +87,33 @@ function spellcheck () {
 }
 function clearAnswer() {
   inputTwo.value = "";
-  if (currentQuestion < 9) {
+  if (currentQuestion < 10) {
     setTimeout(function() {            
       answerBox.innerHTML = ""; 
-    }, 800);
+    }, 2500);
   }
 }
 function questionCounter() {
   currentQuestion += 1;
   setTimeout(function() {            
     speak(randomWords, currentQuestion); 
-  }, 1000);  
+  }, 2000);
+  console.log(currentQuestion);
+  setTimeout(function() {            
+    answerBox.innerHTML = currentQuestion+1; 
+  }, 1000);
 }
 function repeatQuestion() {
   speak(randomWords, currentQuestion);
 }
 function questionsCorrect(addOne) {
   let totalCorrect = 0+addOne;
-  console.log(totalCorrect);
   finalScore(totalCorrect);
 }
 function finalScore(totalCorrect) {
   if (currentQuestion === 9) {    
     submit.removeEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
     submit.removeEventListener("click", questionCounter);
-    submit.removeEventListener("click", clearAnswer);
     setTimeout(function() {
       answerBox.innerHTML = `You scored ${totalCorrect} out of 10!`;
     }, 1000);    

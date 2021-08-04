@@ -205,6 +205,7 @@ header {
     border-radius: 10px;
     font-family: 'Cairo', sans-serif;
     font-size: 1em;
+    padding-left: 5px;
 }
 
 #play {
@@ -268,7 +269,7 @@ header {
 
 #answer-box-container {
     width: 400px;
-    height: 300px;
+    height: 280px;
     border-radius: 50px;
     background-color: black;
     color: white;
@@ -298,6 +299,7 @@ header {
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
     font-size: 1em;
+    padding-left: 5px;
 }
 
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
