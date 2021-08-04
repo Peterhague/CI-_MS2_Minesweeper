@@ -67,7 +67,7 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "ptosis","habiliments","quotidian","arriviste","rarefy","hydrangea","redoubtable","indubitable","blandishment","inveterate",
 "sarsaparilla","irrespressible","seneschal","cacophany","jalousie","simpatico","choreography","nebulous","subcutaneous",
 "obfuscate","taciturn","obloquy","demsesne","onerous","pachyderm","umlaut","edelweiss","peccadillo","penumbra","eviscerate",
-"pergola","penurious","philanthropic","contretemps","flagellation","parsimoniously","marginalistation","ostracism","cephalic",
+"pergola","penurious","philanthropic","contretemps","flagellation","parsimoniously","marginalisation","ostracism","cephalic",
 "encephalitis","perfidy","codology","herbivorous","stalactite","incandescent","moribund","effectuate","sequoia","celerity",
 "noetic","perorate","brouhaha","verklempt","stentorian","encomium","insouciant","zeitgeist","velleity","infinitesimal",
 "girandole","cunctation","sacrosanct","belvedere","neophyte","inimical","farraginous","estivate","nonpareil","vermilion",

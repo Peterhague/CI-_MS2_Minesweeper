@@ -69,6 +69,7 @@ function speak(randomWords, iteration) {
 }
 function spellcheck () {
   console.log(output);
+  console.log(inputTwo.value);
   if (output === inputTwo.value) {
     answerBox.innerHTML = "correct!";
     if (answerBox.classList.contains("hinted")) {
@@ -87,7 +88,7 @@ function spellcheck () {
 }
 function clearAnswer() {
   inputTwo.value = "";
-  if (currentQuestion < 10) {
+  if (currentQuestion < 9) {
     setTimeout(function() {            
       answerBox.innerHTML = ""; 
     }, 2500);
@@ -113,10 +114,12 @@ function questionsCorrect(addOne) {
 function finalScore(totalCorrect) {
   if (currentQuestion === 9) {    
     submit.removeEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
+    submit.removeEventListener("click", clearAnswer);
     submit.removeEventListener("click", questionCounter);
     setTimeout(function() {
       answerBox.innerHTML = `You scored ${totalCorrect} out of 10!`;
-    }, 1000);    
+    }, 1000);
+    inputTwo.value = "";    
   }
 }
 function giveHint() {

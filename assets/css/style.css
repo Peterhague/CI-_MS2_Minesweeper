@@ -292,6 +292,10 @@ header {
     margin-top: 10px;
 }
 
+.play-spelling {
+    font-size: 1.35em;
+}
+
 #input-two {
     background-color: yellow;
     border-radius: 5px;
