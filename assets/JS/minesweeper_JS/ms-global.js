@@ -62,15 +62,14 @@ function stylingChanges() {
     difficulty.classList.remove("cairo", "text-medium", "bg-green");
     difficulty.classList.add("bg-black");
     let playIcon = document.getElementById("play-icon");
-    playIcon.classList.remove("text-big");
+    playIcon.classList.remove("text-big", "bg-pink");
+    playIcon.classList.add("score-bar-bg");
     let outerContainer = document.getElementById("outer-container");
     outerContainer.classList.remove("margin-top-big");
     let callToPlay = document.getElementById("call-to-play");
     callToPlay.innerHTML = "";
     let scoreBar = document.getElementById("score-bar");
     scoreBar.classList.add("score-bar-bg");
-    playIcon.classList.remove("bg-pink");
-    playIcon.classList.add("score-bar-bg");
     let play = document.getElementById("play");
     play.classList.add("score-bar-bg")
     let flagContianer = document.getElementById("flag-container");

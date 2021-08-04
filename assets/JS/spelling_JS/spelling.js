@@ -6,8 +6,10 @@ let difficultySpelling = document.getElementById("difficulty-spelling");
 let submit = document.getElementById("submit");
 let repeat = document.getElementById("repeat");
 repeat.addEventListener("click", repeatQuestion);
+repeat.addEventListener("click", setFocus);
 let hint = document.getElementById("hint");
 hint.addEventListener("click", giveHint);
+hint.addEventListener("click", setFocus);
 let inputTwo = document.getElementById("input-two");
 inputTwo.addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
