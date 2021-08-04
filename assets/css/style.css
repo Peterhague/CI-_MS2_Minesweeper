@@ -31,6 +31,22 @@
     color: #f81ba3;
 }
 
+.bg-pink {
+    background-color: #f81ba3;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-greenyellow {
+    background-color: greenyellow;
+}
+
+.bg-black {
+    background-color: black;
+}
+
 .text-gold {
     color: gold;
 }
@@ -189,10 +205,17 @@ header {
     top: 6px;
 }
 
+.selector-start-onload {
+    background-color: greenyellow;
+    padding-top: 8px;
+    height: 50px;
+    border-radius: 5px;
+    border: solid;
+}
+
 #difficulty {
     text-align: left;
     font-weight: 700;
-    background-color: black;
     color: white;
     border-radius: 10px;
 }
@@ -251,7 +274,7 @@ header {
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
     font-size: 1.5em;
-    color: #f81ba3;
+    color: green;
 }
 
 .navigation-container {

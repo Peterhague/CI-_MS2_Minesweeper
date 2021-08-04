@@ -57,8 +57,9 @@ function variableVariables() {
 }
 function stylingChanges() {    
     let selectorStart = document.getElementById("selector-start");
-    selectorStart.classList.remove("min-width");
-    difficulty.classList.remove("cairo", "text-medium");
+    selectorStart.classList.remove("min-width", "selector-start-onload");
+    difficulty.classList.remove("cairo", "text-medium", "bg-green");
+    difficulty.classList.add("bg-black");
     let playIcon = document.getElementById("play-icon");
     playIcon.classList.remove("text-big");
     let outerContainer = document.getElementById("outer-container");
@@ -67,7 +68,7 @@ function stylingChanges() {
     callToPlay.innerHTML = "";
     let scoreBar = document.getElementById("score-bar");
     scoreBar.classList.add("score-bar-bg");
-    playIcon.classList.remove("white-square");
+    playIcon.classList.remove("bg-pink");
     playIcon.classList.add("score-bar-bg");
     let play = document.getElementById("play");
     play.classList.add("score-bar-bg")
