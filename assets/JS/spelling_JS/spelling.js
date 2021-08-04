@@ -68,9 +68,9 @@ function speak(randomWords, iteration) {
   responsiveVoice.speak(randomWords[iteration]);
 }
 function spellcheck () {
-  console.log(output);
+  console.log(output.toLowerCase);
   console.log(inputTwo.value);
-  if (output === inputTwo.value) {
+  if (output.toLowerCase() === inputTwo.value.toLowerCase()) {
     answerBox.innerHTML = "correct!";
     if (answerBox.classList.contains("hinted")) {
       addOne += 0.5;
