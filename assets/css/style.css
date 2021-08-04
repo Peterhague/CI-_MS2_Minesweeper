@@ -200,7 +200,6 @@ header {
 
 #selector-start {
     display: inline-block;
-    position: absolute;
     left: 4px;
     top: 6px;
 }

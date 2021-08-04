@@ -58,6 +58,7 @@ function variableVariables() {
 function stylingChanges() {    
     let selectorStart = document.getElementById("selector-start");
     selectorStart.classList.remove("min-width", "selector-start-onload");
+    selectorStart.classList.add("absolute");
     difficulty.classList.remove("cairo", "text-medium", "bg-green");
     difficulty.classList.add("bg-black");
     let playIcon = document.getElementById("play-icon");
