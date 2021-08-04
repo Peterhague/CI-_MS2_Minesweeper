@@ -13,31 +13,34 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <header>
-      <div id="heading-container" class="center">
-      </div>  
-      <div class="navigation-container">
-        <nav id="navigation-bar">
-          <a class="nav-items nav-items-hover" href="index.html">Home</a>
-          <a class="nav-items nav-item-current" href="minesweeper.html"></i> Minesweeper</a>
-          <a class="nav-items nav-items-hover" href="spelling-bee.html">Spelling Bee</a>
-          <a class="nav-items nav-items-hover" href="guess-the-song.html">Guess the Song</a>
-        </nav>
-      </div>
+  <header>
+    <div id="heading-container" class="center">
+    </div>  
+    <div class="navigation-container">
+      <nav id="navigation-bar">
+        <a class="nav-items nav-items-hover" href="index.html">Home</a>
+        <a class="nav-items nav-item-current" href="minesweeper.html"></i> Minesweeper</a>
+        <a class="nav-items nav-items-hover" href="spelling-bee.html">Spelling Bee</a>
+        <a class="nav-items nav-items-hover" href="guess-the-song.html">Guess the Song</a>
+      </nav>
+    </div>
     </header>
     <div id="outer-container" class="margin-top-big">
       <div id="container-game">
         <div id="score-bar">
-            <div id="selector-start" class="min-width">
-                <select id="difficulty" class ="cairo text-medium"> <!--Dropdown selector for difficulty level-->
-                  <option>Easy</option>
-                  <option>Medium</option>
-                  <option>Hard</option>
-                  <option>Custom</option>
-                </select>
-                <button id="play"><i id="play-icon" class="fas fa-play text-big"></i></button> <!--Start game button-->  
+          <div id="selector-start" class="min-width">
+            <select id="difficulty" class ="cairo text-medium"> <!--Dropdown selector for difficulty level-->
+              <option>Easy</option>
+              <option>Medium</option>
+              <option>Hard</option>
+              <option>Custom</option>
+            </select>
+            <button id="play" class="white-square"><i id="play-icon" class="fas fa-play text-big white-square"></i></button> <!--Start game button-->  
           </div>
-          <div id="score-container"></div> <!--container for the number of flags the player has in hand-->
+          <div id="score-flag-container">
+            <div id="flag-container" class="fas fa-flag invisible-text"></div>
+            <div id="score-container"></div> <!--container for the number of flags the player has in hand-->        
+          </div>
         </div>
         <div id="grid" oncontextmenu="return false;"></div> <!--main div for the minesweeper grid to be populated by-->
       </div>

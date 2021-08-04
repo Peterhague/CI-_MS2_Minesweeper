@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,24 +24,24 @@
           </nav>
         </div> 
     </header>
-    <div class="margin-auto">
+    <div class="margin-auto center">
       <div id="container-game">
+        <div id="answer-box-container">
+          <div id="answer-box"></div>
+        </div>
         <select id="difficulty-spelling"> <!--Dropdown selector for difficulty level-->
           <option>Easy</option>
           <option>Medium</option>
           <option>Hard</option>
           <option>Very Hard</option>
         </select>
-        <button id="play-button">Play</button>
-        <div>
-        <input id="input-two" type="text">
+        <button id="play-button"><i class="fas fa-play play-spelling"></i></button>
+        <div id="input-spelling">
+          <input id="input-two" type="text">
         </div>
-        <button id="submit">Submit</button>
-        <button id="repeat">Repeat</button>
-        <button id="hint">Hint</button>
-        <div id="answer-box-container">
-          <div id="answer-box"></div>
-        </div>
+        <button id="repeat" class="buttons-spelling">Repeat</button>
+        <button id="hint" class="buttons-spelling">Hint</button>
+        <button id="submit" class="buttons-spelling">Submit</button>
       </div>
     </div>
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=XZM7YbRW"></script>

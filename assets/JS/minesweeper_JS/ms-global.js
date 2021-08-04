@@ -65,6 +65,15 @@ function stylingChanges() {
     outerContainer.classList.remove("margin-top-big");
     let callToPlay = document.getElementById("call-to-play");
     callToPlay.innerHTML = "";
+    let scoreBar = document.getElementById("score-bar");
+    scoreBar.classList.add("score-bar-bg");
+    playIcon.classList.remove("white-square");
+    playIcon.classList.add("score-bar-bg");
+    let play = document.getElementById("play");
+    play.classList.add("score-bar-bg")
+    let flagContianer = document.getElementById("flag-container");
+    flagContianer.classList.remove("invisible-text");
+    flagContianer.classList.add("text-red");
 }
 function generatedGridRows() {
     grid.innerHTML = "";
@@ -168,5 +177,5 @@ function bombIcon() {
 function flags() {
     /* Assigns the starting value of the number flags in hand counter depending on the selected difficulty*/
     scoreContainer.innerHTML = "";
-    scoreContainer.innerHTML = `<i id="play-icon" class="fas fa-play text-big"></i>${selectedBombs}`;
+    scoreContainer.innerHTML = selectedBombs;
 }

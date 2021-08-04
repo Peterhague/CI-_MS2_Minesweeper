@@ -1,9 +1,9 @@
 let playButton = document.getElementById("play-button");
 playButton.addEventListener("click", generateQuestions);
+playButton.addEventListener("click", setFocus);
 playButton.addEventListener("click", startGame);
 let difficultySpelling = document.getElementById("difficulty-spelling");
 let submit = document.getElementById("submit");
-
 let repeat = document.getElementById("repeat");
 repeat.addEventListener("click", repeatQuestion);
 let hint = document.getElementById("hint");
@@ -41,10 +41,19 @@ function generateQuestions() {
     }
   }
 }
+function setFocus() {
+  inputTwo.focus();
+}
 function startGame() {
+  inputTwo.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      submit.click();
+    }
+  });    
   submit.addEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
   submit.addEventListener("click", questionCounter);
   submit.addEventListener("click", clearAnswer);// clears the answer input after each submission
+  submit.addEventListener("click", setFocus);
   addOne = 0;
   speak(randomWords, 0);
 }

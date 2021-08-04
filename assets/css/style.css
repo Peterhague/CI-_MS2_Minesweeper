@@ -175,14 +175,18 @@ header {
 
 #score-bar {
     position: relative;
-    margin-bottom: 6px;
+    padding-bottom: 6px;
+}
+
+.score-bar-bg {
+    background-color: hsla(0, 0%, 83%, 0.89);
 }
 
 #selector-start {
     display: inline-block;
     position: absolute;
-    left: 0;
-    bottom: 4px;
+    left: 4px;
+    top: 6px;
 }
 
 #difficulty {
@@ -193,11 +197,35 @@ header {
     border-radius: 10px;
 }
 
+#difficulty-spelling {
+    text-align: left;
+    font-weight: 700;
+    background-color: black;
+    color: yellow;
+    border-radius: 10px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1em;
+}
+
 #play {
     border: none;
+}
+
+#play-button {
+    border:none;
     background-color: white;
 }
 
+.buttons-spelling {
+    border: none;
+    font-family: 'Cairo', sans-serif;
+    background-color: black;
+    color: yellow;
+    font-weight: 700;
+    font-size: 1.15em;
+    border-radius: 10px;
+    min-width: 75px;
+}
 
 #score-container {
     font-family: 'Cairo', sans-serif;
@@ -208,9 +236,9 @@ header {
 
 #call-to-play {
     font-family: 'Cairo', sans-serif;
-    font-style: italic;
     font-weight: 700;
     font-size: 1.5em;
+    color: #f81ba3;
 }
 
 .navigation-container {
@@ -247,6 +275,7 @@ header {
     margin: auto;
     position: relative;
     font-family: 'Press Start 2P', cursive;
+    margin-bottom: 10px;
 }
 
 #answer-box {
@@ -255,6 +284,20 @@ header {
     margin: auto;
     height: 20px;
     font-size: 16px;
+}
+
+#input-spelling {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#input-two {
+    background-color: yellow;
+    border-radius: 5px;
+    border: solid;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
 }
 
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/

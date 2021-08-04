@@ -45,12 +45,22 @@ let titlePixelsColored = ["pixel802","pixel702","pixel803","pixel804","pixel805"
 "pixel576","pixel577","pixel578","pixel879","pixel567","pixel572","pixel776","pixel676","pixel476","pixel376","pixel276","pixel487","pixel785","pixel685","pixel585",
 "pixel385","pixel285","pixel189","pixel889","pixel197","pixel293","pixel393","pixel495","pixel593","pixel693","pixel793","pixel897","pixel579","pixel480","pixel381",
 "pixel281","pixel180","pixel880","pixel781","pixel681"]
-let pixelsBlack = ["pixel202","pixel302","pixel702","pixel802","pixel105","pixel106","pixel606","pixel706","pixel806","pixel805","pixel605","pixel505","pixel111","pixel211","pixel311","pixel411","pixel511","pixel611","pixel711","pixel811","pixel512","pixel412","pixel212","pixel112","pixel515","pixel415","pixel215","pixel115","pixel216","pixel316","pixel416","pixel121","pixel221","pixel321","pixel421","pixel521","pixel621","pixel721","pixel821","pixel822","pixel422","pixel122","pixel125","pixel825","pixel129","pixel229","pixel329","pixel429","pixel529","pixel629","pixel729","pixel829","pixel830","pixel833","pixel137","pixel237","pixel337","pixel437","pixel537","pixel637","pixel737","pixel837","pixel838","pixel841","pixel145","pixel345","pixel445","pixel545","pixel645","pixel745","pixel845","pixel149","pixel249","pixel250","pixel350","pixel349","pixel449","pixel549","pixel649","pixel749","pixel849","pixel153","pixel154","pixel254","pixel253","pixel260","pixel360","pixel460","pixel560","pixel660","pixel760","pixel860","pixel759","pixel659","pixel559","pixel459","pixel359","pixel164","pixel165","pixel565","pixel564","pixel665","pixel765","pixel865","pixel864","pixel571","pixel176","pixel276","pixel376","pixel476","pixel576","pixel676","pixel776","pixel876","pixel877","pixel577","pixel177","pixel180","pixel280","pixel380","pixel480","pixel381","pixel281","pixel681","pixel681","pixel681","pixel680","pixel780","pixel880","pixel781","pixel185","pixel285","pixel385","pixel485","pixel585","pixel685","pixel785","pixel885","pixel886","pixel486","pixel186","pixel189","pixel889","pixel193","pixel194","pixel293","pixel393","pixel494","pixel493","pixel593","pixel693","pixel793","pixel893","pixel894","pixel897","pixel197"
-]
+let pixelsBlack = ["pixel202","pixel302","pixel702","pixel802","pixel105","pixel106","pixel606","pixel706","pixel806","pixel805","pixel605","pixel505","pixel111",
+"pixel211","pixel311","pixel411","pixel511","pixel611","pixel711","pixel811","pixel512","pixel412","pixel212","pixel112","pixel515","pixel415","pixel215","pixel115",
+"pixel216","pixel316","pixel416","pixel121","pixel221","pixel321","pixel421","pixel521","pixel621","pixel721","pixel821","pixel822","pixel422","pixel122","pixel125",
+"pixel825","pixel129","pixel229","pixel329","pixel429","pixel529","pixel629","pixel729","pixel829","pixel830","pixel833","pixel137","pixel237","pixel337","pixel437",
+"pixel537","pixel637","pixel737","pixel837","pixel838","pixel841","pixel145","pixel345","pixel445","pixel545","pixel645","pixel745","pixel845","pixel149","pixel249",
+"pixel250","pixel350","pixel349","pixel449","pixel549","pixel649","pixel749","pixel849","pixel154","pixel254","pixel260","pixel360","pixel460",
+"pixel560","pixel660","pixel760","pixel860","pixel759","pixel659","pixel559","pixel459","pixel359","pixel164","pixel165","pixel565","pixel564","pixel665","pixel765",
+"pixel865","pixel864","pixel571","pixel176","pixel276","pixel376","pixel476","pixel576","pixel676","pixel776","pixel876","pixel877","pixel577","pixel177","pixel180",
+"pixel280","pixel380","pixel480","pixel381","pixel281","pixel681","pixel681","pixel681","pixel680","pixel780","pixel880","pixel781","pixel185","pixel285","pixel385",
+"pixel485","pixel585","pixel685","pixel785","pixel885","pixel886","pixel486","pixel186","pixel189","pixel889","pixel193","pixel194","pixel293","pixel393","pixel494",
+"pixel493","pixel593","pixel693","pixel793","pixel893","pixel894","pixel897","pixel197","pixel155","pixel255","pixel355","pixel455","pixel555","pixel655","pixel755",
+"pixel855"]
 let pixelsYellow = ["pixel878","pixel877","pixel577","pixel578","pixel177","pixel178","pixel185","pixel184","pixel284","pixel384","pixel484","pixel584","pixel684",
 "pixel784","pixel884","pixel885","pixel785","pixel685","pixel585","pixel485","pixel385","pixel285","pixel188","pixel189","pixel889","pixel888","pixel893","pixel892",
 "pixel792","pixel692","pixel592","pixel492","pixel392","pixel292","pixel192","pixel193","pixel293","pixel393","pixel493","pixel593","pixel693","pixel793","pixel897",
-"pixel896","pixel196","pixel197"]
+"pixel896","pixel196","pixel197","pixel153","pixel253"]
 let titlePixels = document.getElementsByClassName("title-pixels");
 for (pixel of titlePixels) {
     if (titlePixelsColored.includes(pixel.id)) {
