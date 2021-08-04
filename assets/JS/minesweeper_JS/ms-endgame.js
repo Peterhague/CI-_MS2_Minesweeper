@@ -16,7 +16,10 @@ function counter() {
             function task(j) {            
                 setTimeout(function() {
                     squares[j].innerHTML = `<i class="fas fa-laugh-squint"></i>`;
-                    squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "text-blue");
+                    squares[j].style.color = rgba(0,0,0,0.0);
+                    squares[randomSquaresAll[j]].classList.add("text-black");
+                    squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", 
+                    "odd-squares", "text-blue", "text-orange", "text-green", "text-purple", "text-pink");
                     if (j % 3 === 0) {
                         squares[randomSquaresAll[j]].classList.add("yellow-square");
                     } else if (j % 3 > 0 && j % 2 === 0) {
