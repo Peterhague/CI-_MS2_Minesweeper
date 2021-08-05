@@ -104,7 +104,7 @@ function newGame() {
         for (y = 0; y < selectedRows; y++) {
             /* the for x loop iterates through the rows of the grid and the nested y loop generates 9 squares for each row,
             to end up with a 9x9 grid of squares.*/ 
-            let squares = document.createElement("button"); // these are the "square" button elements created x9 for each x loop
+            let squares = document.createElement("div"); // these are the "square" button elements created x9 for each x loop
             squares.classList.add("squares");
             squares.classList.add("hovered-squares"); // this class adds the highlight on hover effect 
             let squaresNumber = (y*selectedRows)+x; 
