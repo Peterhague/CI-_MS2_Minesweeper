@@ -4,6 +4,14 @@ function counter() {
     if (this.classList.contains("no-bomb")) {
         let clearedSquares = document.getElementsByClassName("selected");
         if (clearedSquares.length > (selectedSquares - selectedBombs - 1)) {
+            for (square of squares) {
+                square.style.color = "rgba(0,0,0,0.0)";
+                square.innerHTML = `<i class="fas fa-laugh-squint"></i>`;
+                square.removeEventListener("click", minesweep);
+                square.removeEventListener("click", addFlags);
+                square.removeEventListener("click", gameOverOne);
+                square.removeEventListener("click", gameOverTwo);
+            }
             while (randomSquaresAll.length < selectedSquares) {// populate random numbers array until it's 81 numbers long
                 let x = Math.floor(Math.random()*selectedSquares);
                 if (randomSquaresAll.includes(x) === false) {
@@ -15,17 +23,16 @@ function counter() {
             }
             function task(j) {            
                 setTimeout(function() {
-                    squares[j].innerHTML = `<i class="fas fa-laugh-squint"></i>`;
-                    squares[j].style.color = rgba(0,0,0,0.0);
-                    squares[randomSquaresAll[j]].classList.add("text-black");
-                    squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", 
-                    "odd-squares", "text-blue", "text-orange", "text-green", "text-purple", "text-pink");
+                    squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "flagged");
                     if (j % 3 === 0) {
                         squares[randomSquaresAll[j]].classList.add("yellow-square");
+                        squares[randomSquaresAll[j]].style.color = "rgba(0,0,0,1)";
                     } else if (j % 3 > 0 && j % 2 === 0) {
                         squares[randomSquaresAll[j]].classList.add("orange-square");
+                        squares[randomSquaresAll[j]].style.color = "rgba(0,0,0,1)";
                     } else {
                         squares[randomSquaresAll[j]].classList.add("pink-square");
+                        squares[randomSquaresAll[j]].style.color = "rgba(0,0,0,1)";
                     }
                     squares[j].removeEventListener("click", minesweep);                    
                 }, 7 * j);
