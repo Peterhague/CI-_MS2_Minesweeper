@@ -12,11 +12,17 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>    
+    <script src="assets/JS/homepage_JS/homepage.js"></script>
+    <script type="text/javascript">
+      (function() {
+      emailjs.init("user_TnGv5LfOGP5Nqwj1AQR0U");
+      })();
+    </script>
 </head>
 <body>
     <header>
-      <div id="heading-container" class="center">
-      </div>  
+      <div id="heading-container" class="center"></div>  
       <div class="navigation-container">
         <nav id="navigation-bar">
           <a class="nav-items nav-item-current" href="index.html">Home</a>
@@ -26,12 +32,12 @@
         </nav>
       </div>
     </header>
-    </div>
-    <script src="assets/JS/title.js"></script>    
-    <script src="assets/JS/minesweeper_JS/ms-assign.js"></script>
-    <script src="assets/JS/minesweeper_JS/ms-squares-functions.js"></script>
-    <script src="assets/JS/minesweeper_JS/ms-global.js"></script>     
-    <script src="assets/JS/minesweeper_JS/ms-automation.js"></script>   
-    <script src="assets/JS/minesweeper_JS/ms-endgame.js"></script>
+    <form>
+      <input type="text" id="toName">
+      <input type="text" id="fromName">
+      <input type="text" name="" id="msg">
+      <button onclick="sendMail()">Send email</button>
+    </form>
+    <script src="assets/JS/title.js"></script>
 </body>
 </html>

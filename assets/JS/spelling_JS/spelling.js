@@ -90,7 +90,7 @@ function spellcheck () {
 }
 function clearAnswer() {
   inputTwo.value = "";
-  if (currentQuestion < 9) {
+  if (currentQuestion < 10) {
     setTimeout(function() {            
       answerBox.innerHTML = ""; 
     }, 2500);
