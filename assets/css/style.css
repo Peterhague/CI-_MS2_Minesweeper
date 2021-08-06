@@ -508,6 +508,14 @@ header {
         font-size: 14px;
         padding-top: 2px;
     }
+
+    #answer-box-container {
+        width: 320px;
+        height: 240px;
+    }
+    .header-spelling {
+        margin-bottom: 10vh;
+    }
   }
 
 @media screen and (min-width: 551px) {
@@ -529,6 +537,9 @@ header {
     }
     #heading-container {
         width: 100%;
+    }
+    .header-spelling {
+        margin-bottom: 8vh;
     }
 }
 
@@ -572,6 +583,9 @@ header {
     #score-container {
         font-size: 1.2em;
     }
+    .header-spelling {
+        margin-bottom: 10vh;
+    }
 }
   
 @media screen and (max-width: 320px) {
@@ -584,5 +598,12 @@ header {
     }
     .margin-top-small {
         margin-top: 20px;
+    }
+    #answer-box-container {
+        width: 300px;
+        height: 210px;
+    }
+    .header-spelling {
+        margin-bottom: 8vh;
     }
 }
