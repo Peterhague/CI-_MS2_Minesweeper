@@ -143,7 +143,7 @@
 #contact-form {
     display: inline-block;
     text-align: left;
-    background-color: #f81ba3;
+    background-color: #54c6f3;
     padding: 20px;
     border-radius: 10px;
     border: solid;
@@ -451,4 +451,22 @@ header {
     background-color: #d3d3d3;
 }
 
+/*----------------------------------------------------------------MEDIA QUERIES---------------------------------------------------------*/
+
+@media screen and (max-width: 400px) {
+    .title-pixels {
+        width: 3px;
+    }
+
+    #heading-container {
+        width: 75%;
+        height: 16vh;
+        position: absolute;
+        left: 0;
+    }
+
+    .title-rows {
+        height: 8%;
+    }
+  }
 
