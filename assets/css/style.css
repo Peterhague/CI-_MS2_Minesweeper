@@ -586,6 +586,10 @@ header {
     .header-spelling {
         margin-bottom: 10vh;
     }
+    #answer-box-container {
+        width: 480px;
+        height: 360px;
+    }
 }
   
 @media screen and (max-width: 320px) {
@@ -606,4 +610,5 @@ header {
     .header-spelling {
         margin-bottom: 8vh;
     }
+    
 }
