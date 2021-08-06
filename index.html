@@ -14,9 +14,9 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
-    (function() {
-      emailjs.init("user_TnGv5LfOGP5Nqwj1AQR0U");
-    })();
+      (function() {
+        emailjs.init("user_TnGv5LfOGP5Nqwj1AQR0U");
+      })();
     </script>
 </head>
 <body>
@@ -31,11 +31,12 @@
         </nav>
       </div>
     </header>
-    <form>
-      <input type="text" id="toName">
-      <input type="text" id="fromName">
-      <input type="text" name="" id="msg">
-      <button onclick="sendMail()">Send email</button>
+    <form onsubmit="return sendMail(this);">
+      <input type="text" name="toName" id="toName" placeholder="toName">
+      <input type="text" name="fromName" id="fromName" placeholder="fromName">
+      <input type="text" name="message" id="msg" placeholder="message">
+      <input type="text" name="fromEmail" id="fromEmail" placeholder="fromEmail">
+      <button type="submit">Send email</button>
     </form>
     <script src="assets/JS/title.js"></script>   
     <script src="assets/JS/homepage_JS/homepage.js"></script>
