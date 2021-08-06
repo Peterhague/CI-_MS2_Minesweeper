@@ -1,7 +1,8 @@
 let headingContainer = document.getElementById("heading-container");
 for (i = 0; i < 10; i++) {
     let titleRows = document.createElement("div");
-    titleRows.classList.add("title-rows")
+    titleRows.classList.add("title-rows");    
+    titleRows.id = `title-row${i}`;
     for (x = 0; x < 100; x++) {
         let titlePixels = document.createElement("div");
         titlePixels.classList.add("title-pixels");

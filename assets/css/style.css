@@ -453,7 +453,7 @@ header {
 
 /*----------------------------------------------------------------MEDIA QUERIES---------------------------------------------------------*/
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
     .title-pixels {
         width: 3px;
     }
@@ -497,9 +497,20 @@ header {
     #title-row9 {
         display: none;
     }
+
+    .squaresMedium {
+        width: 22px;
+        font-size: 15px;
+    }
+
+    .squaresSmall {
+        width: 16px;
+        font-size: 14px;
+        padding-top: 2px;
+    }
   }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 551px) {
 
     .navigation-container-mobile {
         display: none;
@@ -507,6 +518,9 @@ header {
     #navigation-bar-mobile {
         display: none;
     }  
+    #heading-container {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
@@ -517,4 +531,58 @@ header {
         width: 100%;
     }
 }
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {
+    .nav-items {
+        font-size: 2em;
+    }
+
+    .contact-form-items {
+        width: 400px;
+        font-size: 1.5em;
+    }
+
+    #contact-submit {
+        font-size: 1.5em;
+    }
+    .squaresMedium {
+        width: 40px;
+        font-size: 32px;
+    }
+    .squaresSmall {
+        width: 40px;
+        font-size: 32px;
+    }
+    .squaresBig {
+        width: 40px;
+        font-size: 30px;
+    }
+    .margin-top-small {
+        margin-top: 100px;
+    }
+    #difficulty {
+        font-size: 1.2em;
+    }
+    #play {
+        font-size: 1.2em;
+    }
+    #flag-container {
+        font-size: 1.2em;
+    }
+    #score-container {
+        font-size: 1.2em;
+    }
+}
   
+@media screen and (max-width: 320px) {
+    .squaresMedium {
+        width: 20px;
+    }
+    .squaresSmall {
+        width: 15px;
+        padding-top: 1px;
+    }
+    .margin-top-small {
+        margin-top: 20px;
+    }
+}
