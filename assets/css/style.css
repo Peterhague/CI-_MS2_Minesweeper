@@ -453,20 +453,68 @@ header {
 
 /*----------------------------------------------------------------MEDIA QUERIES---------------------------------------------------------*/
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .title-pixels {
         width: 3px;
     }
 
     #heading-container {
-        width: 75%;
-        height: 16vh;
-        position: absolute;
-        left: 0;
+        width: 100%;
+        height: 12vh;
+        border-bottom: none;
     }
 
     .title-rows {
-        height: 8%;
+        height: 10%;
+    }
+
+    .navigation-container {
+        display: none;
+    }
+
+    .contact-form-items {
+        display: block;
+        color: #f81ba3;
+        background-color: black;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        border: none;
+        width: 180px;
+        font-family: 'Cairo', sans-serif;
+        font-weight: 400;
+        padding-left: 10px;
+        font-size: 1em;
+    }
+
+    #navigation-bar-mobile {
+        text-align: center;
+    }
+
+    #title-row0 {
+        display: none;
+    }
+
+    #title-row9 {
+        display: none;
     }
   }
 
+@media screen and (min-width: 700px) {
+
+    .navigation-container-mobile {
+        display: none;
+    }
+    #navigation-bar-mobile {
+        display: none;
+    }  
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    .title-pixels {
+        width: 7px;
+    }
+    #heading-container {
+        width: 100%;
+    }
+}
+  
