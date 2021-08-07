@@ -41,7 +41,7 @@ let flagObjects = [{'code': 'ad', 'name': 'andorra'},{'code': 'ae', 'name': 'uni
 {'code': 'kh', 'name': 'cambodia'},{'code': 'ki', 'name': 'kiribati'},{'code': 'km', 'name': 'comoros'},
 {'code': 'kn', 'name': 'saint kitts and nevis'},{'code': 'kp', 'name': 'north korea'},{'code': 'kr', 'name': 'south korea'},
 {'code': 'kw', 'name': 'kuwait'},{'code': 'kz', 'name': 'kazakhstan'},{'code': 'la', 'name': 'laos'},
-{'code': 'lb', 'name': 'lebanon'},{'code': 'lc', 'name': 'saint lucoa'},{'code': 'li', 'name': 'liechtenstein'},
+{'code': 'lb', 'name': 'lebanon'},{'code': 'lc', 'name': 'saint lucia'},{'code': 'li', 'name': 'liechtenstein'},
 {'code': 'lk', 'name': 'sri lanka'},{'code': 'lr', 'name': 'liberia'},{'code': 'ls', 'name': 'lesotho'},
 {'code': 'lt', 'name': 'lithuania'},{'code': 'lu', 'name': 'luxembourg'},{'code': 'lv', 'name': 'latvia'},
 {'code': 'ly', 'name': 'libya'},{'code': 'ma', 'name': 'morocco'},{'code': 'md', 'name': 'moldova'},
