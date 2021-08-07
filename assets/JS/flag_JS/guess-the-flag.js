@@ -20,7 +20,15 @@ function displayFlags(randomFlags) {
     submitFlagsAnswer.addEventListener("click", checkAnswers);
 }
 function checkAnswers() {
-    console.log("hello there");
+    let flagInputs = document.getElementsByClassName("flagInputs");
+    for (input of flagInputs) {
+        if (input.value === input.previousElementSibling.getAttribute("data-flag-name")) {
+            input.value = "correct";
+        } else {
+            input.value = "incorrect";
+        }
+    }
+    
 }
 
 
