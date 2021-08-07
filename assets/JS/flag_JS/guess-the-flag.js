@@ -14,8 +14,13 @@ function randomiseFlags(displayFlags) {
 function displayFlags(randomFlags) {
     for (let i = 0; i < 10; i++) {
         flagContainers[i].innerHTML = `<img style="width: 96px;" src="https://www.countryflags.io/${flagObjects[randomFlags[i]].code}/flat/64.png"></img>`;
+        flagContainers[i].setAttribute("data-flag-name", flagObjects[randomFlags[i]].name);
     }
+    let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
+    submitFlagsAnswer.addEventListener("click", checkAnswers);
 }
-
+function checkAnswers() {
+    console.log("hello there");
+}
 
 
