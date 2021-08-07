@@ -48,17 +48,18 @@ function checkAnswers() {
             input.value = "incorrect";
         }
     }
-    displayCorrectAnswers(correctAnswers);    
+    displayCorrectAnswers(correctAnswers);
+    console.log(correctAnswers);    
 }
 function displayCorrectAnswers(correctAnswers) {
     if (correctAnswers < 4) {        
-        flagsDisplayBox.innerHTML = `Unlucky! You scored ${correctAnswers} out of 10`;
+        flagsDisplayBox.innerHTML = `Unlucky! You scored ${correctAnswers} out of 10<br><i class="far fa-frown scoreSmileys"></i>`;
     } else if (correctAnswers > 3 && correctAnswers < 7) {
-        flagsDisplayBox.innerHTML = `Not bad, you scored ${correctAnswers} out of 10`;
+        flagsDisplayBox.innerHTML = `Not bad, you scored ${correctAnswers} out of 10<br><i class="far fa-meh scoreSmileys"></i>`;
     } else if (correctAnswers > 6 && correctAnswers < 10) {
-        flagsDisplayBox.innerHTML = `Well done! You scored ${correctAnswers} out of 10`;
+        flagsDisplayBox.innerHTML = `Well done! You scored ${correctAnswers} out of 10<br><i class="far fa-smile scoreSmileys"></i>`;
     } else if (correctAnswers === 10) {
-        flagsDisplayBox.innerHTML = `Perfect! You scored ${correctAnswers} out of 10!!`;
+        flagsDisplayBox.innerHTML = `Perfect! You scored ${correctAnswers} out of 10!!<br><i class="far fa-laugh-squint scoreSmileys"></i>`;
     }
 }
 
