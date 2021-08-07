@@ -133,6 +133,10 @@
     display: inline-block;
 }
 
+.block {
+    display: block;
+}
+
 /*-------------------------------------------------html elements---------------------------------------------------------*/
 
 #container-form {
@@ -428,6 +432,20 @@ header {
 .flagContainers {
     margin-left: 50px;
     margin-right: 50px;
+}
+
+.flagContainersOuter {
+    position: relative;
+}
+
+.flagInputs {
+    width: 100px;
+    position: absolute;
+    left: 22.5%;
+}
+
+#flagsRowOne {
+    margin-bottom: 50px;
 }
 
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
