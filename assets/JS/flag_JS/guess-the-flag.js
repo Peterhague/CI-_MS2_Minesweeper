@@ -1,5 +1,7 @@
 let flagContainers = document.getElementsByClassName("flagContainers");
 let playFlags = document.getElementById("playFlags");
+/*This function is called from user clicking on the play button, and is passed
+the next two functions as parameters to be called from within the function.*/
 function randomiseFlags(displayFlags, displayInputs) {
     let randomFlags = [];
     while (randomFlags.length < 10) {
@@ -8,9 +10,8 @@ function randomiseFlags(displayFlags, displayInputs) {
             randomFlags.push(flag);
         }
     }
-    console.log(randomFlags);
     displayFlags(randomFlags);
-    displayInputs();
+    displayInputs(stylingChanges);
 }
 function displayFlags(randomFlags) {
     for (let i = 0; i < 10; i++) {
@@ -20,7 +21,7 @@ function displayFlags(randomFlags) {
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.addEventListener("click", checkAnswers);
 }
-function displayInputs() {
+function displayInputs(stylingChanges) {
     let submitButton = document.getElementById("flagsSubmitAnswer");
     submitButton.classList.remove("hide");
     let flagInputs = document.getElementsByClassName("flagInputs");
@@ -28,16 +29,37 @@ function displayInputs() {
         input.classList.add("block");
         input.classList.remove("hide");
     }
+    stylingChanges();
+}
+function stylingChanges() {    
+    let playFlags = document.getElementById("playFlags");
+    playFlags.classList.remove("playFlagsInitial");
+    let flagsDisplayBox = document.getElementById("flagsDisplayBox");
+    flagsDisplayBox.innerHTML = "Click Submit to check your answers";
 }
 function checkAnswers() {
     let flagInputs = document.getElementsByClassName("flagInputs");
+    let correctAnswers = 0;
     for (input of flagInputs) {
         if (input.value === input.previousElementSibling.getAttribute("data-flag-name")) {
             input.value = "correct";
+            correctAnswers += 1;
         } else {
             input.value = "incorrect";
         }
-    }    
+    }
+    displayCorrectAnswers(correctAnswers);    
+}
+function displayCorrectAnswers(correctAnswers) {
+    if (correctAnswers < 4) {        
+        flagsDisplayBox.innerHTML = `Unlucky! You scored ${correctAnswers} out of 10`;
+    } else if (correctAnswers > 3 && correctAnswers < 7) {
+        flagsDisplayBox.innerHTML = `Not bad, you scored ${correctAnswers} out of 10`;
+    } else if (correctAnswers > 6 && correctAnswers < 10) {
+        flagsDisplayBox.innerHTML = `Well done! You scored ${correctAnswers} out of 10`;
+    } else if (correctAnswers === 10) {
+        flagsDisplayBox.innerHTML = `Perfect! You scored ${correctAnswers} out of 10!!`;
+    }
 }
 
 

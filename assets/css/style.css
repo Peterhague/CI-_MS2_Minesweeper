@@ -452,7 +452,7 @@ header {
     margin-bottom: 50px;
 }
 
-#playFlags {
+.playFlagsInitial {
     border: none;
     width: 10vmax;
     height: 10vmax;
@@ -462,6 +462,12 @@ header {
     background-color: rgb(54, 68, 228);
     padding-left: 1.5%;
     padding-top: 0.5%;
+}
+
+#flagsDisplayBox {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
 }
 
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
