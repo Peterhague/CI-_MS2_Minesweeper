@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <header>
@@ -32,22 +33,25 @@
       </header>
       <div>
         <div id="flagsRowOne" class="center">
-          <div class="inlineBlock flagContainersOuter"><div id="flagOne" class="inlineBlock flagContainers"></div><input id="flagOneInput" class="block flagInputs" type="text"></div>
-          <div class="inlineBlock flagContainersOuter"><div id="flagTwo" class="inlineBlock flagContainers"></div><input id="flagTwoInput" class="block flagInputs" type="text"></div>
-          <div class="inlineBlock flagContainersOuter"><div id="flagThree" class="inlineBlock flagContainers"></div><input id="flagThreeInput" class="block flagInputs" type="text"></div>
-          <div class="inlineBlock flagContainersOuter"><div id="flagFour" class="inlineBlock flagContainers"></div><input id="flagFourInput" class="block flagInputs" type="text"></div>
-          <div class="inlineBlock flagContainersOuter"><div id="flagFive" class="inlineBlock flagContainers"></div><input id="flagFiveInput" class="block flagInputs" type="text"></div>
+          <div class="inlineBlock flagContainersOuter"><div id="flagOne" class="inlineBlock flagContainers"></div><input id="flagOneInput" class="flagInputs hide" type="text"></div>
+          <div class="inlineBlock flagContainersOuter"><div id="flagTwo" class="inlineBlock flagContainers"></div><input id="flagTwoInput" class="flagInputs hide" type="text"></div>
+          <div class="inlineBlock flagContainersOuter"><div id="flagThree" class="inlineBlock flagContainers"></div><input id="flagThreeInput" class="flagInputs hide" type="text"></div>
+          <div class="inlineBlock flagContainersOuter"><div id="flagFour" class="inlineBlock flagContainers"></div><input id="flagFourInput" class="flagInputs hide" type="text"></div>
+          <div class="inlineBlock flagContainersOuter"><div id="flagFive" class="inlineBlock flagContainers"></div><input id="flagFiveInput" class="flagInputs hide" type="text"></div>
         </div>
         <div id="flagsRowTwo" class="center">
-          <div class="inlineBlock flagContainersOuter"><div id="flagSix" class="inlineBlock flagContainers"></div><input id="flagSixInput" class="block flagInputs" type="text"></div>
-          <div class="inlineBlock flagContainersOuter"><div id="flagSeven" class="inlineBlock flagContainers"></div><input id="flagSevenInput" class="block flagInputs" type="text"></div>
-          <div class="inlineBlock flagContainersOuter"><div id="flagEight" class="inlineBlock flagContainers"></div><input id="flagEightInput" class="block flagInputs" type="text"></div>
-          <div class="inlineBlock flagContainersOuter"><div id="flagNine" class="inlineBlock flagContainers"></div><input id="flagNineInput" class="block flagInputs" type="text"></div>
-          <div class="inlineBlock flagContainersOuter"><div id="flagTen" class="inlineBlock flagContainers"></div><input id="flagTenInput" class="block flagInputs" type="text"></div>
+          <div class="inlineBlock flagContainersOuter"><div id="flagSix" class="inlineBlock flagContainers"></div><input id="flagSixInput" class="flagInputs hide" type="text"></div>
+          <div class="inlineBlock flagContainersOuter"><div id="flagSeven" class="inlineBlock flagContainers"></div><input id="flagSevenInput" class="flagInputs hide" type="text"></div>
+          <div class="inlineBlock flagContainersOuter"><div id="flagEight" class="inlineBlock flagContainers"></div><input id="flagEightInput" class="flagInputs hide" type="text"></div>
+          <div class="inlineBlock flagContainersOuter"><div id="flagNine" class="inlineBlock flagContainers"></div><input id="flagNineInput" class="flagInputs hide" type="text"></div>
+          <div class="inlineBlock flagContainersOuter"><div id="flagTen" class="inlineBlock flagContainers"></div><input id="flagTenInput" class="flagInputs hide" type="text"></div>
         </div>
       </div> 
-      <button id="playFlags" onclick="randomiseFlags(displayFlags)">PLAY</button> 
-      <button id="flagsSubmitAnswer">SUBMIT</button>    
+      <div class="center margin-top-medium">
+        <button id="playFlags" onclick="randomiseFlags(displayFlags, displayInputs)"><i id="flagsPlayIcon" class="fas fa-play"></i></button> 
+        <button id="flagsSubmitAnswer" class="hide">SUBMIT</button>  
+      </div>
+        
       <script src="assets/JS/flag_JS/flag-library.js"></script>
       <script src="assets/JS/flag_JS/guess-the-flag.js"></script>
 </body>

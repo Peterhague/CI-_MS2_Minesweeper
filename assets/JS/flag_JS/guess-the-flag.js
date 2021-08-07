@@ -1,6 +1,6 @@
 let flagContainers = document.getElementsByClassName("flagContainers");
 let playFlags = document.getElementById("playFlags");
-function randomiseFlags(displayFlags) {
+function randomiseFlags(displayFlags, displayInputs) {
     let randomFlags = [];
     while (randomFlags.length < 10) {
         let flag = Math.floor(Math.random()*193);
@@ -10,6 +10,7 @@ function randomiseFlags(displayFlags) {
     }
     console.log(randomFlags);
     displayFlags(randomFlags);
+    displayInputs();
 }
 function displayFlags(randomFlags) {
     for (let i = 0; i < 10; i++) {
@@ -19,6 +20,15 @@ function displayFlags(randomFlags) {
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.addEventListener("click", checkAnswers);
 }
+function displayInputs() {
+    let submitButton = document.getElementById("flagsSubmitAnswer");
+    submitButton.classList.remove("hide");
+    let flagInputs = document.getElementsByClassName("flagInputs");
+    for (input of flagInputs) {
+        input.classList.add("block");
+        input.classList.remove("hide");
+    }
+}
 function checkAnswers() {
     let flagInputs = document.getElementsByClassName("flagInputs");
     for (input of flagInputs) {
@@ -27,8 +37,7 @@ function checkAnswers() {
         } else {
             input.value = "incorrect";
         }
-    }
-    
+    }    
 }
 
 
