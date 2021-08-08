@@ -75,6 +75,10 @@ function checkAnswers() {
         div.classList.remove("hide");
         div.innerHTML = `<i class="fas fa-times text-red"></i>`;
     }
+    let inputContainers = document.getElementsByClassName("inputContainer");
+    for (container of inputContainers) {
+        container.classList.add("hide");
+    }
     let correctAnswers = 0;
     for (input of flagInputs) {
         input.classList.remove("block");
