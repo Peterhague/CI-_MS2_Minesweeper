@@ -10,6 +10,14 @@ function randomiseFlags(displayFlags, displayInputs) {
             randomFlags.push(flag);
         }
     }
+    if (playFlags.classList.contains("playFlagsSubsequent")) {
+        let mainContainer = document.getElementById("mainContainer");
+        mainContainer.classList.add("hide");
+        console.log("hidden");
+        setTimeout(function() {                
+            mainContainer.classList.remove("hide");
+        }, 50);
+    }
     displayFlags(randomFlags);
     displayInputs(stylingChanges);
 }
@@ -53,6 +61,7 @@ function stylingChanges() {
     }
     let playFlags = document.getElementById("playFlags");
     playFlags.classList.remove("playFlagsInitial");
+    playFlags.classList.add("playFlagsSubsequent");
     let flagsDisplayBox = document.getElementById("flagsDisplayBox");
     flagsDisplayBox.innerHTML = "Click Submit to check your answers";
 }
