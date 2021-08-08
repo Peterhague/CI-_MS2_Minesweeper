@@ -31,7 +31,12 @@ function displayInputs(stylingChanges) {
     }
     stylingChanges();
 }
-function stylingChanges() {    
+function stylingChanges() {
+    let flagInputs = document.getElementsByClassName("flagInputs");
+    console.log("hello");
+    for (input of flagInputs) {
+        input.value = "";
+    }
     let playFlags = document.getElementById("playFlags");
     playFlags.classList.remove("playFlagsInitial");
     let flagsDisplayBox = document.getElementById("flagsDisplayBox");
@@ -49,7 +54,7 @@ function checkAnswers() {
         }
     }
     displayCorrectAnswers(correctAnswers);
-    console.log(correctAnswers);    
+    console.log(correctAnswers);
 }
 function displayCorrectAnswers(correctAnswers) {
     if (correctAnswers < 4) {        
