@@ -38,6 +38,11 @@ function displayInputs(stylingChanges) {
     stylingChanges();
 }
 function stylingChanges() {
+    let answerDivs = document.getElementsByClassName("answerDiv");
+    for (div of answerDivs) {
+        div.classList.add("hide");
+        div.innerHTML = "";
+    }
     let flagInputs = document.getElementsByClassName("flagInputs");
     for (input of flagInputs) {
         input.classList.add("inlineBlock");
@@ -45,11 +50,6 @@ function stylingChanges() {
     }
     for (input of flagInputs) {
         input.value = "";
-    }
-    let answerDivs = document.getElementsByClassName("answerDiv");
-    for (div of answerDivs) {
-        div.classList.add("hide");
-        div.innerHTML = "";
     }
     let playFlags = document.getElementById("playFlags");
     playFlags.classList.remove("playFlagsInitial");
