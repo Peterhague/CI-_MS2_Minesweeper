@@ -27,8 +27,12 @@ function displayInputs(stylingChanges) {
     let flagsRowTwo = document.getElementById("flagsRowTwo");
     flagsRowTwo.classList.remove("hide");
     let controlsDiv = document.getElementById("controlsDiv");
+    let inputContainers = document.getElementsByClassName("inputContainer");
+    for (container of inputContainers) {
+        container.classList.remove("hide");
+    }
     controlsDiv.classList.remove("margin-top-big");
-    controlsDiv.classList.add("margin-top-small");
+    controlsDiv.classList.add("margin-top-vsmall");
     let submitButton = document.getElementById("flagsSubmitAnswer");
     submitButton.classList.remove("hide");
     stylingChanges();
@@ -75,18 +79,12 @@ function checkAnswers() {
         div.classList.remove("hide");
         div.innerHTML = `<i class="fas fa-times text-red"></i>`;
     }
-    let inputContainers = document.getElementsByClassName("inputContainer");
-    for (container of inputContainers) {
-        container.classList.add("hide");
-    }
     let correctAnswers = 0;
     for (input of flagInputs) {
-        input.classList.remove("block");
+        input.classList.remove("inlineBlock");
         input.classList.add("hide");
         for (container of flagContainers) {
             if (input.getAttribute("data-input") == container.getAttribute("data-input") && input.value === container.getAttribute("data-flag-name")) {
-                input.classList.remove("block");
-                input.classList.add("hide");
                 for (div of answerDivs) {
                     if (div.getAttribute("data-input") === input.getAttribute("data-input")) {
                         div.innerHTML = `<i class="fas fa-check text-green"></i>`;

@@ -129,6 +129,10 @@
     margin-top: 40px;
 }
 
+.margin-top-vsmall {
+    margin-top: 20px;
+}
+
 .margin-top-medium {
     margin-top: 8vh;
 }
