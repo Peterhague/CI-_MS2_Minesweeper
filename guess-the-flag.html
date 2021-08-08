@@ -32,61 +32,82 @@
         </div>
       </header>
       <div>
-        <div id="flagsRowOne" class="center">
+        <div id="flagsRowOne" class="center hide">
           <div class="inlineBlock flagContainersOuter">
             <div data-input="0" id="flagOne" class="inlineBlock flagContainers"></div>
-            <div class="answerDiv"></div>
-            <input data-input="0" id="flagOneInput" class="flagInputs hide" type="text">
+            <div class="answerDiv hide" data-input="0"></div>
+            <div class="inputContainer">
+              <input data-input="0" id="flagOneInput" class="flagInputs hide" type="text">
+            </div>
           </div>
           <div class="inlineBlock flagContainersOuter">
             <div data-input="1" id="flagTwo" class="inlineBlock flagContainers"></div>
-            <div class="answerDiv"></div>
-            <input data-input="1" id="flagTwoInput" class="flagInputs hide" type="text">
+            <div class="answerDiv hide" data-input="1"></div>
+            <div class="inputContainer">
+              <input data-input="1" id="flagTwoInput" class="flagInputs hide" type="text">
+            </div>
           </div>
           <div class="inlineBlock flagContainersOuter">
             <div data-input="2" id="flagThree" class="inlineBlock flagContainers"></div>
-            <div class="answerDiv"></div>
-            <input data-input="2" id="flagThreeInput" class="flagInputs hide" type="text">
+            <div class="answerDiv hide" data-input="2"></div>
+            <div class="inputContainer">
+              <input data-input="2" id="flagThreeInput" class="flagInputs hide" type="text">
+            </div> 
           </div>
           <div class="inlineBlock flagContainersOuter">
             <div data-input="3" id="flagFour" class="inlineBlock flagContainers"></div>
-            <div class="answerDiv"></div>
-            <input data-input="3" id="flagFourInput" class="flagInputs hide" type="text">
+            <div class="answerDiv hide" data-input="3"></div>
+            <div class="inputContainer">
+              <input data-input="3" id="flagFourInput" class="flagInputs hide" type="text">
+            </div>
           </div>
           <div class="inlineBlock flagContainersOuter">
             <div data-input="4" id="flagFive" class="inlineBlock flagContainers"></div>
-            <div class="answerDiv"></div>
-            <input data-input="4" id="flagFiveInput" class="flagInputs hide" type="text"></div>
+            <div class="answerDiv hide" data-input="4"></div>
+            <div class="inputContainer">
+              <input data-input="4" id="flagFiveInput" class="flagInputs hide" type="text">
+            </div>
+          </div>
         </div>
-        <div id="flagsRowTwo" class="center">
+        <div id="flagsRowTwo" class="center hide">
           <div class="inlineBlock flagContainersOuter">
             <div data-input="5" id="flagSix" class="inlineBlock flagContainers"></div>
-            <div class="answerDiv"></div>
-            <input data-input="5" id="flagSixInput" class="flagInputs hide" type="text">
+            <div class="answerDiv hide" data-input="5"></div>
+            <div class="inputContainer">
+              <input data-input="5" id="flagSixInput" class="flagInputs hide" type="text">
+            </div>
           </div>
           <div class="inlineBlock flagContainersOuter">
             <div data-input="6" id="flagSeven" class="inlineBlock flagContainers"></div>
-            <div class="answerDiv"></div>
-            <input data-input="6" id="flagSevenInput" class="flagInputs hide" type="text">
+            <div class="answerDiv hide" data-input="6"></div>
+            <div class="inputContainer">
+              <input data-input="6" id="flagSevenInput" class="flagInputs hide" type="text">
+            </div>
           </div>
           <div class="inlineBlock flagContainersOuter">
             <div data-input="7" id="flagEight" class="inlineBlock flagContainers"></div>
-            <div class="answerDiv"></div>
-            <input data-input="7" id="flagEightInput" class="flagInputs hide" type="text">
+            <div class="answerDiv hide" data-input="7"></div>
+            <div class="inputContainer">
+              <input data-input="7" id="flagEightInput" class="flagInputs hide" type="text">
+            </div>
           </div>
           <div class="inlineBlock flagContainersOuter">
             <div data-input="8" id="flagNine" class="inlineBlock flagContainers"></div>
-            <div class="answerDiv"></div>
-            <input data-input="8" id="flagNineInput" class="flagInputs hide" type="text">
+            <div class="answerDiv hide" data-input="8"></div>
+            <div class="inputContainer">
+              <input data-input="8" id="flagNineInput" class="flagInputs hide" type="text">
+            </div>
           </div>
           <div class="inlineBlock flagContainersOuter">
             <div data-input="9" id="flagTen" class="inlineBlock flagContainers"></div>
-            <div class="answerDiv"></div>
-            <input data-input="9" id="flagTenInput" class="flagInputs hide" type="text">
+            <div class="answerDiv hide" data-input="9"></div>
+            <div class="inputContainer">
+              <input data-input="9" id="flagTenInput" class="flagInputs hide" type="text">
+            </div>
           </div>
         </div>
       </div> 
-      <div class="center margin-top-medium">
+      <div id="controlsDiv" class="center margin-top-big">
         <button id="playFlags"  class="playFlagsInitial" onclick="randomiseFlags(displayFlags, displayInputs)"><i id="flagsPlayIcon" class="fas fa-play"></i></button> 
         <button id="flagsSubmitAnswer" class="hide">SUBMIT</button>  
       </div>

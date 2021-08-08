@@ -22,20 +22,30 @@ function displayFlags(randomFlags) {
     submitFlagsAnswer.addEventListener("click", checkAnswers);
 }
 function displayInputs(stylingChanges) {
+    let flagsRowOne = document.getElementById("flagsRowOne");
+    flagsRowOne.classList.remove("hide");
+    let flagsRowTwo = document.getElementById("flagsRowTwo");
+    flagsRowTwo.classList.remove("hide");
+    let controlsDiv = document.getElementById("controlsDiv");
+    controlsDiv.classList.remove("margin-top-big");
+    controlsDiv.classList.add("margin-top-small");
     let submitButton = document.getElementById("flagsSubmitAnswer");
     submitButton.classList.remove("hide");
+    stylingChanges();
+}
+function stylingChanges() {
     let flagInputs = document.getElementsByClassName("flagInputs");
     for (input of flagInputs) {
         input.classList.add("block");
         input.classList.remove("hide");
     }
-    stylingChanges();
-}
-function stylingChanges() {
-    let flagInputs = document.getElementsByClassName("flagInputs");
-    console.log("hello");
     for (input of flagInputs) {
         input.value = "";
+    }
+    let answerDivs = document.getElementsByClassName("answerDiv");
+    for (div of answerDivs) {
+        div.classList.add("hide");
+        div.innerHTML = "";
     }
     let playFlags = document.getElementById("playFlags");
     playFlags.classList.remove("playFlagsInitial");
@@ -59,17 +69,25 @@ function stylingChanges() {
     console.log(correctAnswers);
 }*/
 function checkAnswers() {
-    let flagInputs = document.getElementsByClassName("flagInputs");
+    let flagInputs = document.getElementsByClassName("flagInputs");    
+    let answerDivs = document.getElementsByClassName("answerDiv");
+    for (div of answerDivs) {
+        div.classList.remove("hide");
+        div.innerHTML = `<i class="fas fa-times text-red"></i>`;
+    }
     let correctAnswers = 0;
     for (input of flagInputs) {
         input.classList.remove("block");
         input.classList.add("hide");
-        input.previousElementSibling.innerHTML = `<i class="fas fa-cross"></i>`;
         for (container of flagContainers) {
             if (input.getAttribute("data-input") == container.getAttribute("data-input") && input.value === container.getAttribute("data-flag-name")) {
                 input.classList.remove("block");
                 input.classList.add("hide");
-                input.previousElementSibling.innerHTML = `<i class="fas fa-check"></i>`;
+                for (div of answerDivs) {
+                    if (div.getAttribute("data-input") === input.getAttribute("data-input")) {
+                        div.innerHTML = `<i class="fas fa-check text-green"></i>`;
+                    }
+                }
                 correctAnswers += 1;
             }
         }
