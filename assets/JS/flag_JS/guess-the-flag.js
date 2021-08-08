@@ -36,7 +36,7 @@ function displayInputs(stylingChanges) {
 function stylingChanges() {
     let flagInputs = document.getElementsByClassName("flagInputs");
     for (input of flagInputs) {
-        input.classList.add("block");
+        input.classList.add("inlineBlock");
         input.classList.remove("hide");
     }
     for (input of flagInputs) {

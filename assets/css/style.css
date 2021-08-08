@@ -433,7 +433,7 @@ header {
     padding-left: 5px;
 }
 
-.flagContainers {
+.flagCotainers {
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -441,7 +441,7 @@ header {
 .flagContainersOuter {
     position: relative;
     min-height: 150px;
-    min-width: 150px;
+    min-width: 180px;
 }
 
 .flagInputs {
@@ -451,7 +451,7 @@ header {
 }
 
 #flagsRowOne {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .playFlagsInitial {
@@ -478,6 +478,10 @@ header {
 
 .answerDiv, .inputContainer {
     height: 15px;
+}
+
+.inputContainer {
+    text-align: center;
 }
 
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
