@@ -42,12 +42,14 @@ function stylingChanges() {
     let flagsDisplayBox = document.getElementById("flagsDisplayBox");
     flagsDisplayBox.innerHTML = "Click Submit to check your answers";
 }
-function checkAnswers() {
+/*function checkAnswers() {
     let flagInputs = document.getElementsByClassName("flagInputs");
     let correctAnswers = 0;
     for (input of flagInputs) {
         if (input.value === input.previousElementSibling.getAttribute("data-flag-name")) {
             input.value = "correct";
+            input.classList.remove("block");
+            input.classList.add("hide");
             correctAnswers += 1;
         } else {
             input.value = "incorrect";
@@ -55,6 +57,24 @@ function checkAnswers() {
     }
     displayCorrectAnswers(correctAnswers);
     console.log(correctAnswers);
+}*/
+function checkAnswers() {
+    let flagInputs = document.getElementsByClassName("flagInputs");
+    let correctAnswers = 0;
+    for (input of flagInputs) {
+        input.classList.remove("block");
+        input.classList.add("hide");
+        input.previousElementSibling.innerHTML = `<i class="fas fa-cross"></i>`;
+        for (container of flagContainers) {
+            if (input.getAttribute("data-input") == container.getAttribute("data-input") && input.value === container.getAttribute("data-flag-name")) {
+                input.classList.remove("block");
+                input.classList.add("hide");
+                input.previousElementSibling.innerHTML = `<i class="fas fa-check"></i>`;
+                correctAnswers += 1;
+            }
+        }
+    }
+    displayCorrectAnswers(correctAnswers);
 }
 function displayCorrectAnswers(correctAnswers) {
     if (correctAnswers < 4) {        
