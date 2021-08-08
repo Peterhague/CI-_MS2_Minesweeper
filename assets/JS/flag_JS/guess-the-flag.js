@@ -16,7 +16,7 @@ function randomiseFlags(displayFlags, displayInputs) {
         console.log("hidden");
         setTimeout(function() {                
             mainContainer.classList.remove("hide");
-        }, 50);
+        }, 100);
     }
     displayFlags(randomFlags);
     displayInputs(stylingChanges);
