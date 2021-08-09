@@ -16,15 +16,16 @@ function randomiseFlags(displayFlags, displayInputs) {
         console.log("hidden");
         setTimeout(function() {                
             mainContainer.classList.remove("hide");
-        }, 100);
+        }, 200);
     }
     displayFlags(randomFlags);
     displayInputs(stylingChanges);
 }
 function displayFlags(randomFlags) {
     for (let i = 0; i < 10; i++) {
-        flagContainers[i].innerHTML = `<img style="width: 96px;" src="https://www.countryflags.io/${flagObjects[randomFlags[i]].code}/flat/64.png"></img>`;
+        flagContainers[i].innerHTML = `<img class="flagImages" style="width: 96px;" src="https://www.countryflags.io/${flagObjects[randomFlags[i]].code}/flat/64.png"></img>`;
         flagContainers[i].setAttribute("data-flag-name", flagObjects[randomFlags[i]].name);
+        flagContainers[i].setAttribute("data-flag-alt-names", flagObjects[randomFlags[i]].altNames);
     }
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.addEventListener("click", checkAnswers);
@@ -79,7 +80,7 @@ function checkAnswers() {
         input.classList.remove("inlineBlock");
         input.classList.add("hide");
         for (container of flagContainers) {
-            if (input.getAttribute("data-input") == container.getAttribute("data-input") && input.value === container.getAttribute("data-flag-name")) {
+            if (input.getAttribute("data-input") == container.getAttribute("data-input") && (input.value.toLowerCase() === container.getAttribute("data-flag-name") || input.value === container.getAttribute("data-flag-alt-names"))) {
                 for (div of answerDivs) {
                     if (div.getAttribute("data-input") === input.getAttribute("data-input")) {
                         div.innerHTML = `<i class="fas fa-check text-green"></i>`;

@@ -484,6 +484,7 @@ header {
     text-align: center;
 }
 
+
 /*-------------------------------target "every other" square to create a checkerboard effect-------------------------------*/
 .even-squares { 
     background-color: rgb(21, 199, 21);
