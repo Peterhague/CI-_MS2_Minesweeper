@@ -67,7 +67,7 @@ function stylingChanges() {
     let flagsDisplayBox = document.getElementById("flagsDisplayBox");
     flagsDisplayBox.innerHTML = "Click Submit to check your answers";
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
-    submitFlagsAnswer.innerHTML = "SUBMIT";
+    submitFlagsAnswer.innerHTML = "Submit";
     setFocus();
 }
 function setFocus() {
@@ -116,7 +116,7 @@ function displayCorrectAnswers(correctAnswers) {
 }
 function changeButton() {
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
-    submitFlagsAnswer.innerHTML = "Show Answers";
+    submitFlagsAnswer.innerHTML = "Reveal";
     submitFlagsAnswer.removeEventListener("click", checkAnswers);
     submitFlagsAnswer.addEventListener("click", revealAnswers);
 }

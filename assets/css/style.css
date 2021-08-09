@@ -450,8 +450,11 @@ header {
 
 .flagInputs {
     width: 100px;
-    position: absolute;
-    left: 22.5%;
+    background-color: #d3d3d3;
+    border: solid 2px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .playFlagsInitial {
@@ -467,7 +470,25 @@ header {
 }
 
 .playFlagsSubsequent {
-    background-color: red;
+    color: white;
+    background-color: rgb(54, 68, 228);
+    border: none;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 10px;
+    min-width: 80px;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+#flagsSubmitAnswer {
+    background-color: green;
+    color: white;
+    border: none;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 10px;
+    min-width: 80px;
+    font-weight: 700;
+    font-size: 1.1em;
 }
 
 #flagsDisplayBox {
@@ -478,6 +499,11 @@ header {
 
 .scoreSmileys {
     font-size: 1.5em;
+}
+
+.answerDiv {
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
 }
 
 .answerDiv, .inputContainer {
