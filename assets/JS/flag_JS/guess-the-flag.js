@@ -67,22 +67,6 @@ function stylingChanges() {
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.innerHTML = "SUBMIT";
 }
-/*function checkAnswers() {
-    let flagInputs = document.getElementsByClassName("flagInputs");
-    let correctAnswers = 0;
-    for (input of flagInputs) {
-        if (input.value === input.previousElementSibling.getAttribute("data-flag-name")) {
-            input.value = "correct";
-            input.classList.remove("block");
-            input.classList.add("hide");
-            correctAnswers += 1;
-        } else {
-            input.value = "incorrect";
-        }
-    }
-    displayCorrectAnswers(correctAnswers);
-    console.log(correctAnswers);
-}*/
 function checkAnswers() {
     let flagInputs = document.getElementsByClassName("flagInputs");    
     let answerDivs = document.getElementsByClassName("answerDiv");
