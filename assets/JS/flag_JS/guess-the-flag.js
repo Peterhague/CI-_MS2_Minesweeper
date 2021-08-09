@@ -47,6 +47,8 @@ function displayInputs(stylingChanges) {
     stylingChanges();
 }
 function stylingChanges() {
+    let mainContainer = document.getElementById("mainContainer");
+    mainContainer.classList.add("margin-top-small");
     let answerDivs = document.getElementsByClassName("answerDiv");
     for (div of answerDivs) {
         div.classList.add("hide");
