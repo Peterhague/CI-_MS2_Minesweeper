@@ -10,7 +10,7 @@ let flags = ['ad','ae','af','ag','ai','al','am','ao','ar','at','au','az','ba','b
 
 let flagObjects = [{'code': 'ad', 'name': 'andorra'},{'code': 'ae', 'name': 'united arab emirates'},
 {'code': 'af', 'name': 'afghanistan'},{'code': 'ag', 'name': 'antigua and barbuda'},{'code': 'ai', 'name': 'anguilla'},
-{'code': 'al', 'name': 'albania'},{'code': 'am', 'name': 'armenia'},{'code': 'ao', 'name': 'angloa'},
+{'code': 'al', 'name': 'albania'},{'code': 'am', 'name': 'armenia'},{'code': 'ao', 'name': 'angola'},
 {'code': 'ar', 'name': 'argentina'},{'code': 'at', 'name': 'austria'},{'code': 'au', 'name': 'australia'},
 {'code': 'az', 'name': 'azerbaijan'},{'code': 'ba', 'name': 'bosnia and herzegovina'},{'code': 'bb', 'name': 'barbados'},
 {'code': 'bd', 'name': 'bangladesh'},{'code': 'be', 'name': 'belgium'},{'code': 'bf', 'name': 'burkina faso'},

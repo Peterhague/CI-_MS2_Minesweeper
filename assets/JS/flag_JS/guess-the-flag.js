@@ -64,6 +64,8 @@ function stylingChanges() {
     playFlags.classList.add("playFlagsSubsequent");
     let flagsDisplayBox = document.getElementById("flagsDisplayBox");
     flagsDisplayBox.innerHTML = "Click Submit to check your answers";
+    let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
+    submitFlagsAnswer.innerHTML = "SUBMIT";
 }
 /*function checkAnswers() {
     let flagInputs = document.getElementsByClassName("flagInputs");
@@ -104,6 +106,7 @@ function checkAnswers() {
         }
     }
     displayCorrectAnswers(correctAnswers);
+    changeButton();
 }
 function displayCorrectAnswers(correctAnswers) {
     if (correctAnswers < 4) {        
@@ -116,5 +119,18 @@ function displayCorrectAnswers(correctAnswers) {
         flagsDisplayBox.innerHTML = `Perfect! You scored ${correctAnswers} out of 10!!<br><i class="far fa-laugh-squint scoreSmileys"></i>`;
     }
 }
-
+function changeButton() {
+    let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
+    submitFlagsAnswer.innerHTML = "Show Answers";
+    submitFlagsAnswer.removeEventListener("click", checkAnswers);
+    submitFlagsAnswer.addEventListener("click", revealAnswers);
+}
+function revealAnswers() {
+    let answerDivs = document.getElementsByClassName("answerDiv");
+    for (div of answerDivs) {
+        if (div.innerHTML == `<i class="fas fa-times text-red"></i>`) {
+            div.innerHTML = div.parentNode.previousElementSibling.getAttribute("data-flag-name");
+        }
+    }
+}
 
