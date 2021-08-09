@@ -45,4 +45,19 @@ for (pixel of titlePixels) {
     if (titlePixelsColored.includes(pixel.id)) {
         pixel.style.backgroundColor = "black";
     }
+    if (pixel.id == "pixel505" || pixel.id == "pixel803" || pixel.id == "pixel805" || pixel.id == "pixel813") {
+        pixel.style.backgroundColor = "green";
+    }
+    if (pixel.id == "pixel506" || pixel.id == "pixel104" || pixel.id == "pixel804" || pixel.id == "pixel814" || pixel.id == "pixel125") {
+        pixel.style.backgroundColor = "white";
+    }
+    if (pixel.id == "pixel507" || pixel.id == "pixel105" || pixel.id == "pixel124" || pixel.id == "pixel126") {
+        pixel.style.backgroundColor = "red";
+    }
+    if (pixel.id == "pixel103") {
+        pixel.style.backgroundColor = "blue";
+    }
+    if (pixel.id == "pixel815") {
+        pixel.style.backgroundColor = "orange";
+    }
 }
