@@ -491,6 +491,11 @@ header {
     font-size: 1.1em;
 }
 
+.playFlagsSubsequent:hover, #flagsSubmitAnswer:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 #flagsDisplayBox {
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
