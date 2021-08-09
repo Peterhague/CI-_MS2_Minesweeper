@@ -15,6 +15,7 @@ function randomiseFlags(displayFlags, displayInputs) {
         mainContainer.classList.add("hide");
         setTimeout(function() {                
             mainContainer.classList.remove("hide");
+            setFocus();
         }, 200);
     }
     displayFlags(randomFlags);
