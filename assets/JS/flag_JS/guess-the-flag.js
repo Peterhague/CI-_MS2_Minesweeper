@@ -13,7 +13,6 @@ function randomiseFlags(displayFlags, displayInputs) {
     if (playFlags.classList.contains("playFlagsSubsequent")) {
         let mainContainer = document.getElementById("mainContainer");
         mainContainer.classList.add("hide");
-        console.log("hidden");
         setTimeout(function() {                
             mainContainer.classList.remove("hide");
         }, 200);
@@ -67,6 +66,12 @@ function stylingChanges() {
     flagsDisplayBox.innerHTML = "Click Submit to check your answers";
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.innerHTML = "SUBMIT";
+    setFocus();
+}
+function setFocus() {
+    let flagOneInput = document.getElementById("flagOneInput");
+    flagOneInput.focus();
+    console.log("focus set");
 }
 function checkAnswers() {
     let flagInputs = document.getElementsByClassName("flagInputs");    
@@ -80,7 +85,7 @@ function checkAnswers() {
         input.classList.remove("inlineBlock");
         input.classList.add("hide");
         for (container of flagContainers) {
-            if (input.getAttribute("data-input") == container.getAttribute("data-input") && (input.value.toLowerCase() === container.getAttribute("data-flag-name") || input.value === container.getAttribute("data-flag-alt-names"))) {
+            if (input.getAttribute("data-input") == container.getAttribute("data-input") && (input.value.toLowerCase() === container.getAttribute("data-flag-name").toLowerCase() || input.value === container.getAttribute("data-flag-alt-names"))) {
                 for (div of answerDivs) {
                     if (div.getAttribute("data-input") === input.getAttribute("data-input")) {
                         div.innerHTML = `<i class="fas fa-check text-green"></i>`;
