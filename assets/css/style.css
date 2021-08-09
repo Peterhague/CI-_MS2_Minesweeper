@@ -466,6 +466,10 @@ header {
     padding-top: 0.5%;
 }
 
+.playFlagsSubsequent {
+    background-color: red;
+}
+
 #flagsDisplayBox {
     font-family: 'Cairo', sans-serif;
     font-weight: 700;

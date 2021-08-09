@@ -63,6 +63,7 @@ function stylingChanges() {
     let playFlags = document.getElementById("playFlags");
     playFlags.classList.remove("playFlagsInitial");
     playFlags.classList.add("playFlagsSubsequent");
+    playFlags.innerHTML = "Play Again";
     let flagsDisplayBox = document.getElementById("flagsDisplayBox");
     flagsDisplayBox.innerHTML = "Click Submit to check your answers";
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
@@ -73,6 +74,9 @@ function setFocus() {
     let flagOneInput = document.getElementById("flagOneInput");
     flagOneInput.focus();
     console.log("focus set");
+}
+function setFocusPlay() {
+    playFlags.focus();
 }
 function checkAnswers() {
     let flagInputs = document.getElementsByClassName("flagInputs");    
@@ -86,7 +90,7 @@ function checkAnswers() {
         input.classList.remove("inlineBlock");
         input.classList.add("hide");
         for (container of flagContainers) {
-            if (input.getAttribute("data-input") == container.getAttribute("data-input") && (input.value.toLowerCase() === container.getAttribute("data-flag-name").toLowerCase() || input.value === container.getAttribute("data-flag-alt-names"))) {
+            if (input.getAttribute("data-input") == container.getAttribute("data-input") && (input.value.toLowerCase() === container.getAttribute("data-flag-name").toLowerCase() || input.value.toLowerCase() === container.getAttribute("data-flag-alt-names").toLowerCase())) {
                 for (div of answerDivs) {
                     if (div.getAttribute("data-input") === input.getAttribute("data-input")) {
                         div.innerHTML = `<i class="fas fa-check text-green"></i>`;
@@ -117,6 +121,9 @@ function changeButton() {
     submitFlagsAnswer.addEventListener("click", revealAnswers);
 }
 function revealAnswers() {
+    let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer")
+    submitFlagsAnswer.removeEventListener("click", revealAnswers);
+    setFocusPlay();
     let answerDivs = document.getElementsByClassName("answerDiv");
     for (div of answerDivs) {
         if (div.innerHTML == `<i class="fas fa-times text-red"></i>`) {
