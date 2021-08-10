@@ -148,8 +148,8 @@
 /*-------------------------------------------------html elements---------------------------------------------------------*/
 
 #welcomeMessage {
+    height: 100%;
     min-width: 260px;
-    width: 35vw;
     background-color: #f81ba3;
     color: white;
     text-align: center;
@@ -157,32 +157,51 @@
     font-weight: 700;
     font-size: 1.3em;
     display: inline-block;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding-top: 3vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
     border: solid black 3px;
     border-radius: 20px;
 }
-/*
-#welcomeImagesContainerLeft {
-    display: inline-block;
-    width: 200px;
-    height: 100%;
-}
-
-#welcomeImagesContainerRight {
-    display: inline-block;
-    width: 200px;
-    height: 100%;
-}
-
-.welcomeImageContainer {
-    display: block;
+.imageRows {
     height: 33%;
-    width: 100%;
-    background-color: red;
-    border: solid;
 }
-*/
+#imageLeftOne {
+    background-image: url("../images/bee.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imageRightOne {
+    background-image: url("../images/bombflipped.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imageLeftTwo {
+    background-image: url("../images/unionjack.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imageRightTwo {
+    background-image: url("../images/unionjackflipped.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imageLeftThree {
+    background-image: url("../images/bomb.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imageRightThree {
+    background-image: url("../images/beeflipped.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 #container-form {
     text-align: center;
     margin-top: 20vh;
