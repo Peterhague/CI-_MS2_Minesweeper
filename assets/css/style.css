@@ -164,7 +164,7 @@
     border-radius: 20px;
 }
 #welcomeMessageContainer{
-    margin-top: 12vh;
+    margin-top: 8vh;
 }
 .imageRows {
     height: 33%;
@@ -631,8 +631,8 @@ header {
 @media screen and (max-width: 550px) {
 
     #welcomeMessage {
-        font-size: 1.1em;
-        width: 90%;
+        font-size: 1em;
+        width: 80%;
         padding: 3vh;
     }
 
@@ -660,7 +660,7 @@ header {
     }
 
     #contact-form {
-        width: 80%;
+        width: 70%;
         text-align: center;
         display: inline-block;
     }
@@ -743,10 +743,17 @@ header {
 
     #welcomeMessage {
         width: 60vw;
-        padding-bottom: 5vh;
+        padding-bottom: 2vh;
     }
     #welcomeMessageContainer {
-        margin-top: 15vh;
+        margin-top: 6vh;
+    }
+    #container-form {
+        margin-top: 6vh;
+    }
+    #contact-form {
+        width: 40%;
+        display: inline-block;
     }
     .title-pixels {
         width: 7px;
@@ -777,7 +784,6 @@ header {
 @media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {/* ie Ipad Pro*/
 
     #welcomeMessage {
-        width: 60vw;
         padding-bottom: 5vh;
         font-size: 1.7em;
         padding-top: 2vh;
@@ -791,8 +797,17 @@ header {
         font-size: 2em;
     }
 
+    #containerFormDesktop {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+    #contact-form {
+        text-align: center;
+    }
+
     .contact-form-items {
-        width: 400px;
+        width: 100%;
         font-size: 1.5em;
     }
 
