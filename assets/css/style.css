@@ -162,7 +162,27 @@
     border: solid black 3px;
     border-radius: 20px;
 }
+/*
+#welcomeImagesContainerLeft {
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+}
 
+#welcomeImagesContainerRight {
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+}
+
+.welcomeImageContainer {
+    display: block;
+    height: 33%;
+    width: 100%;
+    background-color: red;
+    border: solid;
+}
+*/
 #container-form {
     text-align: center;
     margin-top: 20vh;
