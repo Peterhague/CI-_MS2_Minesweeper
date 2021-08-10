@@ -50,7 +50,7 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "riotous","gazebo","pergola","marionette","melancholy","precarious","fraught","pestilential","apprehend","comprehend",
 "musculature","turpitude","palatial","fragmentation","attritional","aspiration","perplexing","mandible","garishly",
 "flippant","apoplectic","purveyor","cabal","munificent","comestibles","pompously","penchant","couriered","zenith",
-"quark","crampons","correlational","spatchcock","garrulous","plaintive","solicitation","fluctuate","potentiality",
+"quark","crampons","correlational","spatchcock","garrulous","plaintive","manipulation","fluctuate","potentiality",
 "frugal","contemporary","machete","devious","pensive","thoroughbred","pantaloons","trellis","praiseworthy","funereal",
 "ethereal","iteration","pontificate","unpretentious", "plankton", "mollusc","chandalier","fecund","bipartisanship","malnourished"],
 ["pusillanimous","tendentious","lugubrious","quixotic","sententious","chihuahua","cerise","albumen","semaphore",
