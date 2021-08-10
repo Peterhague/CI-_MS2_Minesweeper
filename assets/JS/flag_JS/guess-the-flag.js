@@ -67,7 +67,7 @@ function stylingChanges() {
     playFlags.classList.add("playFlagsSubsequent");
     playFlags.innerHTML = "Play Again";
     let flagsDisplayBox = document.getElementById("flagsDisplayBox");
-    flagsDisplayBox.innerHTML = "Click Submit to check your answers";
+    flagsDisplayBox.innerHTML = `Click Submit to check your answers<br><i class="fas fa-smile invisible-text"></i>`;
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.innerHTML = "Submit";
     setFocus();
@@ -75,7 +75,6 @@ function stylingChanges() {
 function setFocus() {
     let flagOneInput = document.getElementById("flagOneInput");
     flagOneInput.focus();
-    console.log("focus set");
 }
 function setFocusPlay() {
     playFlags.focus();
@@ -118,7 +117,9 @@ function displayCorrectAnswers(correctAnswers) {
 }
 function changeButton() {
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
-    submitFlagsAnswer.innerHTML = "Reveal";
+    submitFlagsAnswer.innerHTML = "Reveal";/*
+    let flagsDisplayBox = document.getElementById("flagsDisplayBox");
+    flagsDisplayBox.focus();*/
     submitFlagsAnswer.removeEventListener("click", checkAnswers);
     submitFlagsAnswer.addEventListener("click", revealAnswers);
 }
