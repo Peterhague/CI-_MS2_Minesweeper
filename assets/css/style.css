@@ -779,6 +779,21 @@ header {
     #heading-container {
         height: 13vh;
     }
+    #outer-container {
+        margin-top: 10vh;
+    }
+    .squaresBig {
+        width: 40px;
+        font-size: 28px;
+    }
+    .squaresMedium {
+        width: 36px;
+        font-size: 27px;
+    }
+    .squaresSmall {
+        width: 32px;
+        font-size: 25px;
+    }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {/* ie Ipad Pro*/
