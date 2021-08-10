@@ -163,6 +163,9 @@
     border: solid black 3px;
     border-radius: 20px;
 }
+#welcomeMessageContainer{
+    margin-top: 12vh;
+}
 .imageRows {
     height: 33%;
 }
@@ -207,9 +210,24 @@
     margin-top: 20vh;
     margin-bottom: 20vh;
 }
+#containerFormDesktop{
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+#formImageLeft{
+    background-image: url("../images/rodinthink.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#formImageRight{
+    background-image: url("../images/rodinthinkflipped.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 #contact-form {
-    display: inline-block;
     text-align: left;
     background-color: #54c6f3;
     padding: 20px;
@@ -224,7 +242,7 @@
     border-radius: 5px;
     margin-bottom: 10px;
     border: none;
-    width: 250px;
+    width: 90%;
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
     font-size: 1.1em;
@@ -613,11 +631,14 @@ header {
 @media screen and (max-width: 550px) {
 
     #welcomeMessage {
-        font-size: 1em;
+        font-size: 1.1em;
+        width: 90%;
+        padding: 3vh;
     }
 
     #welcomeHeading {
-        font-size: 1.4em;
+        font-size: 1.5em;
+        padding-bottom: 2vh;
     }
 
     .title-pixels {
@@ -639,8 +660,9 @@ header {
     }
 
     #contact-form {
-        width: 240px;
+        width: 80%;
         text-align: center;
+        display: inline-block;
     }
 
     .contact-form-items {
