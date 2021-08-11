@@ -42,7 +42,7 @@ function formValidation(that) {
         showMessage.click();
         return false;
     }  else {
-        errormsg.innerHTML = "The name fields should only contain characters A-Z";
+        errormsg.innerHTML = "**The name fields should only contain characters A-Z**";
         showMessage.click();
         return false;
     }

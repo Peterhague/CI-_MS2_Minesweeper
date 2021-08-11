@@ -19,6 +19,7 @@ function addPlayFunctions() {
     play.addEventListener("click", addFlags);
     play.addEventListener("click", assignRelativePosition);
     play.addEventListener("click", assignHTML);
+    play.addEventListener("click", setDelay);
     play.addEventListener("click", bombIcon);
     play.addEventListener("click", flags);
     play.addEventListener("click", setFocus);
@@ -32,6 +33,7 @@ function removePlayFunctions() {
     play.removeEventListener("click", addFlags);
     play.removeEventListener("click", assignRelativePosition);
     play.removeEventListener("click", assignHTML);
+    play.removeEventListener("click", setDelay);
     play.removeEventListener("click", bombIcon);
     play.removeEventListener("click", flags);
     play.removeEventListener("click", setFocus);
