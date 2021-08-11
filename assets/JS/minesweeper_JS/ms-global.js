@@ -21,6 +21,7 @@ function addPlayFunctions() {
     play.addEventListener("click", assignHTML);
     play.addEventListener("click", bombIcon);
     play.addEventListener("click", flags);
+    play.addEventListener("click", setFocus);
 }
 function removePlayFunctions() {
     play.removeEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
@@ -33,6 +34,7 @@ function removePlayFunctions() {
     play.removeEventListener("click", assignHTML);
     play.removeEventListener("click", bombIcon);
     play.removeEventListener("click", flags);
+    play.removeEventListener("click", setFocus);
 }
 addPlayFunctions();
 function variableVariables() {
@@ -184,4 +186,9 @@ function flags() {
     /* Assigns the starting value of the number flags in hand counter depending on the selected difficulty*/
     scoreContainer.innerHTML = "";
     scoreContainer.innerHTML = selectedBombs;
+}
+function setFocus() {
+    let minesweeperBottom = document.getElementById("minesweeperBottom");
+    minesweeperBottom.focus();
+    console.log("focused");
 }
