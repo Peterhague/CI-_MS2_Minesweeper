@@ -314,6 +314,21 @@
     padding-top: 4px;
 }
 
+.imageUnderlineBombs {
+    background-image: url("../images/bomb.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5vw;
+    height: 5vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+}
+
+#overlineBombs {
+    margin-bottom: 3vh;
+}
+
 header {
     margin-bottom: 10px;
 }
@@ -691,6 +706,13 @@ header {
         display: none;
     }
 
+    .imageUnderlineBombs {
+        width: 15vw;
+        height: 15vw;
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
+
     .squaresMedium {
         width: 22px;
         font-size: 15px;
@@ -794,6 +816,12 @@ header {
         width: 32px;
         font-size: 25px;
     }
+    .imageUnderlineBombs {
+        width: 15vw;
+        height: 15vw;
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {/* ie Ipad Pro*/
@@ -829,6 +857,12 @@ header {
     #contact-submit {
         font-size: 1.5em;
     }
+    .imageUnderlineBombs {
+        width: 15vw;
+        height: 15vw;
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
     .squaresMedium {
         width: 40px;
         font-size: 32px;
@@ -838,14 +872,17 @@ header {
         font-size: 32px;
     }
     .squaresBig {
-        width: 40px;
-        font-size: 30px;
+        width: 60px;
+        font-size: 45px;
     }
     .margin-top-small {
-        margin-top: 100px;
+        margin-top: 180px;
     }
     #difficulty {
-        font-size: 1.2em;
+        font-size: 1.4em;
+    }
+    #call-to-play {
+        font-size: 1.8em;
     }
     #play {
         font-size: 1.2em;

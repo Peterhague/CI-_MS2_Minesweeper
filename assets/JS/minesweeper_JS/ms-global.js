@@ -76,6 +76,10 @@ function stylingChanges() {
     let flagContianer = document.getElementById("flag-container");
     flagContianer.classList.remove("invisible-text");
     flagContianer.classList.add("text-red");
+    let bombsMotif = document.getElementsByClassName("bombsMotif");
+    for (item of bombsMotif) {
+        item.classList.add("hide");
+    }
 }
 function generatedGridRows() {
     grid.innerHTML = "";
