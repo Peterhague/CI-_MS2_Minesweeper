@@ -212,7 +212,7 @@
 }
 #containerFormDesktop{
     margin-top: 20vh;
-    margin-bottom: 20vh;
+    margin-bottom: 6vh;
 }
 #formImageLeft{
     background-image: url("../images/rodinthink.jpg");
@@ -273,6 +273,12 @@
     color: black;
     font-weight: 700;
     border: solid;
+}
+
+#formErrorMessage {
+    font-weight: 700;
+    margin-bottom: 10vh;
+    font-size: 1.3em;
 }
 
 .squaresMedium { /*targets the individual squares of the minesweeper grid*/

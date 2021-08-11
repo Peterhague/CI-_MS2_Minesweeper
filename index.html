@@ -80,24 +80,28 @@
         <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="contact-form-items">
         <input type="email" name="emailAddress" id="emailAddress" placeholder="Your Email Address" class="contact-form-items">
         <textarea name="suggestion" id="suggestion" placeholder="Suggest a game we should make!" class="contact-form-items" rows="4"></textarea>      
-        <button id="contact-submit" type="submit">Submit</button>
+        <button id="contact-submit" type="submit">Submit</button><a id="navigateToFooter" class="hide" href="#footer"></a>
       </form>
     </div>
     <div class="container d-none d-lg-block" id="containerFormDesktop">
       <div class="row">
         <div id="formImageLeft" class="col-xl-4 col-lg-3"></div>
         <div class="col-xl-4 col-lg-6">
-          <form id="contact-form" onsubmit="return sendMail(this);">
+          <form name="ideasForm" id="contact-form" onsubmit="return formValidation(this)">
             <input type="text" name="firstName" id="firstName" placeholder="First Name" class="contact-form-items">
             <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="contact-form-items">
             <input type="email" name="emailAddress" id="emailAddress" placeholder="Your Email Address" class="contact-form-items">
-            <textarea name="suggestion" id="suggestion" placeholder="Suggest a game we should make!" class="contact-form-items" rows="4"></textarea>      
+            <textarea name="suggestion" id="suggestion" placeholder="Suggest a game we should make!" class="contact-form-items" rows="4" required></textarea>      
             <button id="contact-submit" type="submit">Submit</button>
           </form>
         </div>
         <div id="formImageRight" class="col-xl-4 col-lg-3"></div>
       </div>
     </div>   
+    <div id="formErrorMessageContainer" class="center">
+      <div id="formErrorMessage" class="text-red cairo"></div>
+    </div>
+    <div id="footer"></div>
     <script src="assets/JS/title-home.js"></script>   
     <script src="assets/JS/homepage_JS/homepage.js"></script>
 </body>
