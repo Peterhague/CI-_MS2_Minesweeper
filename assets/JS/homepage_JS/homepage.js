@@ -15,6 +15,7 @@ function formValidation(that) {
     let email = document.forms["ideasForm"]["emailAddress"].value;
     let errormsg = document.getElementById("formErrorMessage");
     let showMessage = document.getElementById("navigateToFooter");
+    let letters = /^[A-Za-z]+$/;
     if (fName == "") {
         errormsg.innerHTML = "**Please enter your first name**";
         errormsg.classList.add("text-red");
@@ -33,11 +34,15 @@ function formValidation(that) {
         errormsg.classList.remove("text-green");
         showMessage.click();
         return false;
-    } else {
+    } else if (fName.match(letters) && lName.match(letters)) {
         sendMail(that);
         errormsg.innerHTML = `Thanks for getting in touch!<br>We'll get back to you soon <i class="far fa-smile"></i>`
         errormsg.classList.remove("text-red");
         errormsg.classList.add("text-green");
+        showMessage.click();
+        return false;
+    }  else {
+        errormsg.innerHTML = "The name fields should only contain characters A-Z";
         showMessage.click();
         return false;
     }
