@@ -19,7 +19,6 @@ function addPlayFunctions() {
     play.addEventListener("click", addFlags);
     play.addEventListener("click", assignRelativePosition);
     play.addEventListener("click", assignHTML);
-    play.addEventListener("click", setDelay);
     play.addEventListener("click", bombIcon);
     play.addEventListener("click", flags);
     play.addEventListener("click", setFocus);
@@ -33,7 +32,6 @@ function removePlayFunctions() {
     play.removeEventListener("click", addFlags);
     play.removeEventListener("click", assignRelativePosition);
     play.removeEventListener("click", assignHTML);
-    play.removeEventListener("click", setDelay);
     play.removeEventListener("click", bombIcon);
     play.removeEventListener("click", flags);
     play.removeEventListener("click", setFocus);
@@ -147,6 +145,8 @@ function squareSize() {
 }
 function squaresFunctions(squares) {
     squares.addEventListener("click", minesweep); // function to detect how many mines are in the squares surrounding the clicked square
+    squares.addEventListener("mousedown", longPressDown);
+    squares.addEventListener("mouseup", longPressUp);
     squares.addEventListener("click", counter); // function counts how many squares with no mines have been clicked to determine ultimate success
     squares.addEventListener("click", gameOverOne); // performs part of the game over "animation" sequence
     squares.addEventListener("click", gameOverTwo); // performs part of the game over "animation" sequence

@@ -46,53 +46,112 @@ function addFlags() {
                     scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
                 }
             }
+        } else {
+            switch (event.which) {
+                case 3:
+                    if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
+                        // reverses the process when an even square already has a flag
+                        $(this).removeClass("flagged");
+                        $(this).removeClass("evenReserved");
+                        $(this).addClass("even-squares");
+                        $(this).addClass("hovered-squares");
+                        $(this).html($(this).attr("data-id"));
+                        $(this).removeClass("selected");
+                        scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                    } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
+                        // reverses the process when an odd square already has a flag
+                        $(this).removeClass("flagged");
+                        $(this).removeClass("oddReserved");
+                        $(this).addClass("odd-squares");
+                        $(this).addClass("hovered-squares");
+                        $(this).html($(this).attr("data-id"));
+                        $(this).removeClass("selected");
+                        scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                    }
+                }
         }
     });
 }
+let downPress;
+let release;
+function longPressDown() {
+    downPress = "";
+    downPress = Date.now();
+}
+function longPressUp() {
+    release = "";
+    release = Date.now();
+    if ((release - downPress) > 500) {
+        addFlagsLong(this);
+    }/* else {
+        minesweep(this);
+    }*/
+}
 function addFlagsLong(that) {
-    console.log("hello from long");
-    if (!that.classList.contains("selected")) {
-        // ie if the square hasn't already been left-clicked on to reveal no mine
-            if (that.classList.contains("even-squares")) {
-                $(that).removeClass("even-squares"); // removes the styling
-                $(that).removeClass("hovered-squares"); // removes hover pseudo class
-                $(that).addClass("evenReserved"); 
-                /* this purely nominal class reserves that the square DID have class of "even-squares"
-                within the element's attributes, so that fact can be accessed later on if the flag is removed*/
-                $(that).addClass("flagged");
-                $(that).attr("data-id", that.innerHTML);
-                /* this custom attribute reserves the square's inner html (ie what number of mines surrounds it)
-                so that it can be accessed later on if the flag is removed (the inner html will change to the
-                flag icon)*/
-                $(that).html(`<i class="fas fa-flag"></i>`); // square displays the flag icon
-                scoreContainer.innerHTML = scoreContainer.innerHTML - 1; // reduces the display of number of flags in hand by 1
-            } else if (that.classList.contains("odd-squares")) {
-                // same process as above but for "odd-squares"
-                $(that).removeClass("odd-squares");
-                $(that).removeClass("hovered-squares");
-                $(that).addClass("oddReserved");
-                $(that).addClass("flagged");
-                $(that).attr("data-id", that.innerHTML);
-                $(that).html(`<i class="fas fa-flag"></i>`);
-                scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
-            } else if (that.classList.contains("flagged") && that.classList.contains("evenReserved")) {
-                // reverses the process when an even square already has a flag
-                $(that).removeClass("flagged");
-                $(that).removeClass("evenReserved");
-                $(that).addClass("even-squares");
-                $(that).addClass("hovered-squares");
-                $(that).html($(that).attr("data-id"));
-                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-            } else if (that.classList.contains("flagged") && that.classList.contains("oddReserved")) {
-                // reverses the process when an odd square already has a flag
-                $(that).removeClass("flagged");
-                $(that).removeClass("oddReserved");
-                $(that).addClass("odd-squares");
-                $(that).addClass("hovered-squares");
-                $(that).html($(that).attr("data-id"));
-                scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
-            }
-        }
+    console.log("long working 3");
+        // code for placing and removing "flags" on squares as mine-markers, via a right-click (hence "case 3")
+        if (!that.classList.contains("selected")) {
+            // ie if the square hasn't already been left-clicked on to reveal no mine
+                if (that.classList.contains("even-squares")) {
+                    $(that).removeClass("even-squares"); // removes the styling
+                    $(that).removeClass("hovered-squares"); // removes hover pseudo class
+                    $(that).addClass("evenReserved"); 
+                    /* this purely nominal class reserves that the square DID have class of "even-squares"
+                    within the element's attributes, so that fact can be accessed later on if the flag is removed*/
+                    $(that).addClass("flagged");
+                    $(that).attr("data-id", that.innerHTML);
+                    /* this custom attribute reserves the square's inner html (ie what number of mines surrounds it)
+                    so that it can be accessed later on if the flag is removed (the inner html will change to the
+                    flag icon)*/
+                    $(that).html(`<i class="fas fa-flag"></i>`); // square displays the flag icon
+                    scoreContainer.innerHTML = scoreContainer.innerHTML - 1; // reduces the display of number of flags in hand by 1
+                } else if (that.classList.contains("odd-squares")) {
+                    // same process as above but for "odd-squares"
+                    $(that).removeClass("odd-squares");
+                    $(that).removeClass("hovered-squares");
+                    $(that).addClass("oddReserved");
+                    $(that).addClass("flagged");
+                    $(that).attr("data-id", that.innerHTML);
+                    $(that).html(`<i class="fas fa-flag"></i>`);
+                    scoreContainer.innerHTML = scoreContainer.innerHTML - 1;
+                } else if (that.classList.contains("flagged") && that.classList.contains("evenReserved")) {
+                    // reverses the process when an even square already has a flag
+                    $(that).removeClass("flagged");
+                    $(that).removeClass("evenReserved");
+                    $(that).addClass("even-squares");
+                    $(that).addClass("hovered-squares");
+                    $(that).html($(that).attr("data-id"));
+                    scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                } else if (that.classList.contains("flagged") && that.classList.contains("oddReserved")) {
+                    // reverses the process when an odd square already has a flag
+                    $(that).removeClass("flagged");
+                    $(that).removeClass("oddReserved");
+                    $(that).addClass("odd-squares");
+                    $(that).addClass("hovered-squares");
+                    $(that).html($(that).attr("data-id"));
+                    scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                } 
+        } else {
+                if (that.classList.contains("flagged") && that.classList.contains("evenReserved")) {
+                    // reverses the process when an even square already has a flag
+                    $(that).removeClass("flagged");
+                    $(that).removeClass("evenReserved");
+                    $(that).addClass("even-squares");
+                    $(that).addClass("hovered-squares");
+                    $(that).html($(that).attr("data-id"));
+                    $(that).removeClass("selected");
+                    scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                } else if (that.classList.contains("flagged") && that.classList.contains("oddReserved")) {
+                    // reverses the process when an odd square already has a flag
+                    $(that).removeClass("flagged");
+                    $(that).removeClass("oddReserved");
+                    $(that).addClass("odd-squares");
+                    $(that).addClass("hovered-squares");
+                    $(that).html($(that).attr("data-id"));
+                    $(that).removeClass("selected");
+                    scoreContainer.innerHTML = parseInt(scoreContainer.innerHTML) + 1;
+                }
+            }      
 }
 function minesweep() {
     /* This code runs when the player left clicks on any square in the grid.
@@ -100,7 +159,8 @@ function minesweep() {
     square have an innerHTML value of zero. If the value of the clicked square is zero,
     this function will then automatically "click" on any of its surrounding squares that
     ALSO have a value of zero. */
-    this.removeEventListener("click", minesweep);// so a square can only be clicked once
+    /*this.removeEventListener("click", minesweep)*/;// so a square can only be clicked once
+    console.log("yeo");
     this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
     this.classList.remove("even-squares", "odd-squares");
     this.classList.add("selected");// adds identifier to clicked squares
@@ -139,9 +199,24 @@ function minesweep() {
     }
     if (parseInt(this.innerHTML) === 0) {
         automatedClick(this);
+        console.log("ze wcc");
+    }
+}/*
+function automatedClick(thisSquare) {
+    console.log(thisSquare);
+    thisSquare.style.color = "black";
+    let clickedSquareRadius = document.getElementsByClassName("clicked-square-radius");
+    for (square of clickedSquareRadius) {
+        square.classList.add(`csr-${thisSquare.id}`)
+    }   
+    let automatedClickers = document.getElementsByClassName(`csr-${thisSquare.id}`)     
+    for (clicker of automatedClickers) {   
+        if (parseInt(thisSquare.innerHTML) === 0 && !clicker.classList.contains("selected")) {
+            clicker.click();
+        }
     }
 }
-
+*/
 function colorByNumber(that) {
     if (that.innerHTML == 1) {
         that.classList.add("text-blue");
@@ -159,39 +234,5 @@ function colorByNumber(that) {
         that.classList.add("text-gold");
     } else if (that.innerHTML == 8) {
         that.classList.add("text-black");
-    }
-}
-
-function setDelay() {
-    console.log("fn working");
-    // Create variable for setTimeout
-    var delay;
-    
-    // Set number of milliseconds for longpress
-    var longpress = 500;
-    
-    var listItems = document.getElementsByClassName('squares');
-    var listItem;
-    
-    for (var i = 0, j = listItems.length; i < j; i++) {
-      listItem = listItems[i];
-      listItem.addEventListener('mousedown', function (e) {
-        var _this = this;
-        setTimeout(function() {
-            addFlagsLong(_this);
-            _this.style.backgroundColor = "red";
-            console.log("delay working");
-        }, 500);
-      
-        listItem.addEventListener('mouseup', function (e) {
-            // On mouse up, we know it is no longer a longpress
-        clearTimeout(delay);
-        });
-      
-        listItem.addEventListener('mouseout', function (e) {
-        clearTimeout(delay);
-         });
-      
-      });
     }
 }
