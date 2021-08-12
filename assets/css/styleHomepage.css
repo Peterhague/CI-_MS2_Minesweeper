@@ -1,0 +1,221 @@
+#welcomeMessage {
+    height: 100%;
+    min-width: 260px;
+    background-color: #f81ba3;
+    color: white;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    display: inline-block;
+    padding-top: 3vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border: solid black 3px;
+    border-radius: 20px;
+}
+#welcomeMessageContainer{
+    margin-top: 8vh;
+}
+.imageRows {
+    height: 33%;
+}
+#imageLeftOne {
+    background-image: url("../images/bee.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imageRightOne {
+    background-image: url("../images/bombflipped.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imageLeftTwo {
+    background-image: url("../images/unionjack.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imageRightTwo {
+    background-image: url("../images/unionjackflipped.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imageLeftThree {
+    background-image: url("../images/bomb.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imageRightThree {
+    background-image: url("../images/beeflipped.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#container-form {
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+#containerFormDesktop{
+    margin-top: 20vh;
+    margin-bottom: 6vh;
+}
+#formImageLeft{
+    background-image: url("../images/rodinthink.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#formImageRight{
+    background-image: url("../images/rodinthinkflipped.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#contact-form {
+    text-align: left;
+    background-color: #54c6f3;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid;
+}
+
+.contact-form-items {
+    display: block;
+    color: #f81ba3;
+    background-color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none;
+    width: 90%;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding-left: 10px;
+}
+
+.contact-form-items::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+#contact-submit {
+    font-family: 'Cairo', sans-serif;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid black;
+}
+
+#contact-submit:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    border: solid;
+}
+
+#formErrorMessage {
+    font-weight: 700;
+    margin-bottom: 10vh;
+    font-size: 1.3em;
+}
+
+
+
+
+/*----------------------------------------------------------------MEDIA QUERIES---------------------------------------------------------*/
+
+@media screen and (max-width: 550px) {
+
+    #welcomeMessage {
+        font-size: 1em;
+        width: 80%;
+        padding: 3vh;
+    }
+
+    #welcomeHeading {
+        font-size: 1.5em;
+        padding-bottom: 2vh;
+    }
+
+    #contact-form {
+        width: 80%;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .contact-form-items {
+        display: inline-block;
+        color: #f81ba3;
+        background-color: black;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        border: none;
+        width: 90%;
+        font-family: 'Cairo', sans-serif;
+        font-weight: 400;
+        padding-left: 10px;
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) { /*e.g. Ipad*/
+
+    #welcomeMessage {
+        width: 60vw;
+        padding-bottom: 2vh;
+    }
+    #welcomeMessageContainer {
+        margin-top: 6vh;
+    }
+    #container-form {
+        margin-top: 6vh;
+    }
+    #contact-form {
+        width: 40%;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {/* ie Ipad Pro*/
+
+    #welcomeMessage {
+        padding-bottom: 5vh;
+        font-size: 1.7em;
+        padding-top: 2vh;
+    }
+
+    #welcomeMessageContainer {
+        margin-top: 15vh;
+    }
+
+    #containerFormDesktop {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+    #contact-form {
+        text-align: center;
+    }
+
+    .contact-form-items {
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    #contact-submit {
+        font-size: 1.5em;
+    }
+}

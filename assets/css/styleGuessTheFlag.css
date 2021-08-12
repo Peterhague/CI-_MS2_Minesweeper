@@ -1,0 +1,150 @@
+.flagContainersOuter {
+    position: relative;
+    min-height: 150px;
+    min-width: 180px;
+}
+
+.flagInputs {
+    width: 100px;
+    background-color: #d3d3d3;
+    border: solid 2px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.playFlagsInitial {
+    border: none;
+    width: 10vmax;
+    height: 10vmax;
+    border-radius: 50%;
+    font-size: 5vmax;
+    color: green;
+    background-color: rgb(54, 68, 228);
+    padding-left: 1.5vmax;
+    padding-top: 0.5%;
+    border: solid white 4px;
+}
+
+.playFlagsInitial:hover {
+    cursor: pointer;
+    border: solid rgb(134, 233, 240) 4px;
+}
+
+.playFlagsSubsequent {
+    color: white;
+    background-color: rgb(54, 68, 228);
+    border: none;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 10px;
+    min-width: 80px;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+#flagsSubmitAnswer {
+    background-color: green;
+    color: white;
+    border: none;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 10px;
+    min-width: 80px;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.playFlagsSubsequent:hover, #flagsSubmitAnswer:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#flagsDisplayBox {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.scoreSmileys {
+    font-size: 1.5em;
+}
+
+.answerDiv {
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.answerDiv, .inputContainer {
+    height: 15px;
+}
+
+.inputContainer {
+    text-align: center;
+}
+
+/*----------------------------------------------------------------MEDIA QUERIES---------------------------------------------------------*/
+
+@media screen and (max-width: 550px) {
+
+    .playFlagsInitial {
+        border: none;
+        width: 15vmax;
+        height: 15vmax;
+        border-radius: 50%;
+        font-size: 7.5vmax;
+        color: green;
+        background-color: rgb(54, 68, 228);
+        padding-left: 2.5vmax;
+        padding-top: 0.5%;
+        border: solid white 4px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) { /*e.g. Ipad*/
+
+    .playFlagsInitial {
+        border: none;
+        width: 20vmax;
+        height: 20vmax;
+        border-radius: 50%;
+        font-size: 10vmax;
+        color: green;
+        background-color: rgb(54, 68, 228);
+        padding-left: 2.5vmax;
+        padding-top: 0.5%;
+        border: solid white 4px;
+    }
+    #flagsDisplayBox {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {/* ie Ipad Pro*/
+
+    .playFlagsInitial {
+        border: none;
+        width: 18vmax;
+        height: 18vmax;
+        border-radius: 50%;
+        font-size: 10vmax;
+        color: green;
+        background-color: rgb(54, 68, 228);
+        padding-left: 2.5vmax;
+        padding-top: 0.5%;
+        border: solid white 4px;
+    }
+    #flagsDisplayBox {
+        font-size: 2em;
+    }
+
+    #flagsRowTwo {
+        margin-top: 8vh;
+        margin-bottom: 8vh;
+    }
+    #flagsRowOne {
+        margin-top: 10vh;
+    }
+    .playFlagsSubsequent, #flagsSubmitAnswer {
+        font-size: 1.5em;
+        min-width: 130px;
+    }
+}

@@ -1,0 +1,129 @@
+#difficulty-spelling {
+    text-align: left;
+    font-weight: 700;
+    background-color: black;
+    color: yellow;
+    border-radius: 10px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1em;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#difficulty-container-spelling {
+    display: inline-block;
+    width: 150px;
+    background-color: yellow;
+    height: 40px;
+    border-radius: 5px;
+    margin: auto;
+    padding-top: 6px;
+    border: solid;
+}
+#play-button {
+    border:none;
+    background-color: yellow;
+}
+
+#play-button:hover {
+    cursor: pointer;
+}
+
+.buttons-spelling {
+    border: none;
+    font-family: 'Cairo', sans-serif;
+    background-color: black;
+    color: yellow;
+    font-weight: 700;
+    font-size: 1.15em;
+    border-radius: 10px;
+    min-width: 75px;
+}
+
+.buttons-spelling:hover {
+    color: black;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#answer-box-container {
+    width: 400px;
+    height: 280px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    margin: auto;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 10px;
+}
+
+#answer-box {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    height: 20px;
+    font-size: 16px;
+}
+
+#input-spelling {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.play-spelling {
+    font-size: 1.35em;
+}
+
+#input-two {
+    background-color: yellow;
+    border-radius: 5px;
+    border: solid;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding-left: 5px;
+}
+
+/*----------------------------------------------------------------MEDIA QUERIES---------------------------------------------------------*/
+
+@media screen and (max-width: 550px) {
+
+    #answer-box-container {
+        width: 320px;
+        height: 240px;
+    }
+    .header-spelling {
+        margin-bottom: 10vh;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) { /*e.g. Ipad*/
+
+    .header-spelling {
+        margin-bottom: 8vh;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {/* ie Ipad Pro*/
+
+    .header-spelling {
+        margin-bottom: 10vh;
+    }
+    #answer-box-container {
+        width: 480px;
+        height: 360px;
+    }
+}
+  
+@media screen and (max-width: 320px) {
+    
+    #answer-box-container {
+        width: 300px;
+        height: 210px;
+    }
+    .header-spelling {
+        margin-bottom: 8vh;
+    }
+    
+}
