@@ -78,15 +78,6 @@
     margin-bottom: 3vh;
 }
 
-.title-rows {
-    height: 9.5%;
-}
-
-.title-pixels {
-    display: inline-block;
-    height: 100%;
-    width: 10px;
-}
 
 #score-bar {
     position: relative;

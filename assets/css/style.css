@@ -147,10 +147,6 @@
 
 /*-------------------------------------------------html elements---------------------------------------------------------*/
 
-
-
-
-
 header {
     margin-bottom: 10px;
 }
@@ -162,18 +158,15 @@ header {
     border-bottom: solid 3px;
 }
 
+.title-rows {
+    height: 9.5%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.title-pixels {
+    display: inline-block;
+    height: 100%;
+    width: 10px;
+}
 
 .navigation-container {
     text-align: center;
@@ -200,31 +193,9 @@ header {
     text-decoration-thickness: 3px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------------------------------------------------MEDIA QUERIES---------------------------------------------------------*/
 
 @media screen and (max-width: 550px) {
-
-    #welcomeMessage {
-        font-size: 1em;
-        width: 80%;
-        padding: 3vh;
-    }
-
-    #welcomeHeading {
-        font-size: 1.5em;
-        padding-bottom: 2vh;
-    }
 
     .title-pixels {
         width: 3px;
@@ -244,26 +215,6 @@ header {
         display: none;
     }
 
-    #contact-form {
-        width: 80%;
-        text-align: center;
-        display: inline-block;
-    }
-
-    .contact-form-items {
-        display: inline-block;
-        color: #f81ba3;
-        background-color: black;
-        border-radius: 5px;
-        margin-bottom: 5px;
-        border: none;
-        width: 90%;
-        font-family: 'Cairo', sans-serif;
-        font-weight: 400;
-        padding-left: 10px;
-        font-size: 1em;
-    }
-
     #navigation-bar-mobile {
         text-align: center;
     }
@@ -274,44 +225,6 @@ header {
 
     #title-row9 {
         display: none;
-    }
-
-    .imageUnderlineBombs {
-        width: 15vw;
-        height: 15vw;
-        margin-right: 1vw;
-        margin-left: 1vw;
-    }
-
-    .squaresMedium {
-        width: 22px;
-        font-size: 15px;
-    }
-
-    .squaresSmall {
-        width: 16px;
-        font-size: 14px;
-        padding-top: 2px;
-    }
-
-    #answer-box-container {
-        width: 320px;
-        height: 240px;
-    }
-    .header-spelling {
-        margin-bottom: 10vh;
-    }
-    .playFlagsInitial {
-        border: none;
-        width: 15vmax;
-        height: 15vmax;
-        border-radius: 50%;
-        font-size: 7.5vmax;
-        color: green;
-        background-color: rgb(54, 68, 228);
-        padding-left: 2.5vmax;
-        padding-top: 0.5%;
-        border: solid white 4px;
     }
 }
 
@@ -333,191 +246,35 @@ header {
 
 @media screen and (min-width: 700px) and (max-width: 1000px) { /*e.g. Ipad*/
 
-    #welcomeMessage {
-        width: 60vw;
-        padding-bottom: 2vh;
-    }
-    #welcomeMessageContainer {
-        margin-top: 6vh;
-    }
-    #container-form {
-        margin-top: 6vh;
-    }
-    #contact-form {
-        width: 40%;
-        display: inline-block;
-    }
     .title-pixels {
         width: 7px;
     }
     .header-spelling {
         margin-bottom: 8vh;
     }
-    .playFlagsInitial {
-        border: none;
-        width: 20vmax;
-        height: 20vmax;
-        border-radius: 50%;
-        font-size: 10vmax;
-        color: green;
-        background-color: rgb(54, 68, 228);
-        padding-left: 2.5vmax;
-        padding-top: 0.5%;
-        border: solid white 4px;
-    }
-    #flagsDisplayBox {
-        font-size: 1.8em;
-    }
     #heading-container {
         height: 13vh;
-    }
-    #outer-container {
-        margin-top: 10vh;
-    }
-    .squaresBig {
-        width: 40px;
-        font-size: 28px;
-    }
-    .squaresMedium {
-        width: 36px;
-        font-size: 27px;
-    }
-    .squaresSmall {
-        width: 32px;
-        font-size: 25px;
-    }
-    .imageUnderlineBombs {
-        width: 15vw;
-        height: 15vw;
-        margin-right: 1vw;
-        margin-left: 1vw;
     }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {/* ie Ipad Pro*/
 
-    #welcomeMessage {
-        padding-bottom: 5vh;
-        font-size: 1.7em;
-        padding-top: 2vh;
-    }
-
-    #welcomeMessageContainer {
-        margin-top: 15vh;
-    }
-
     .nav-items {
         font-size: 2em;
     }
 
-    #containerFormDesktop {
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-    }
-
-    #contact-form {
-        text-align: center;
-    }
-
-    .contact-form-items {
-        width: 100%;
-        font-size: 1.5em;
-    }
-
-    #contact-submit {
-        font-size: 1.5em;
-    }
-    .imageUnderlineBombs {
-        width: 15vw;
-        height: 15vw;
-        margin-right: 1vw;
-        margin-left: 1vw;
-    }
-    .squaresMedium {
-        width: 40px;
-        font-size: 32px;
-    }
-    .squaresSmall {
-        width: 40px;
-        font-size: 32px;
-    }
-    .squaresBig {
-        width: 60px;
-        font-size: 45px;
-    }
     .margin-top-small {
         margin-top: 180px;
     }
-    #difficulty {
-        font-size: 1.4em;
-    }
-    #call-to-play {
-        font-size: 1.8em;
-    }
-    #play {
-        font-size: 1.2em;
-    }
-    #flag-container {
-        font-size: 1.2em;
-    }
-    #score-container {
-        font-size: 1.2em;
-    }
-    .header-spelling {
-        margin-bottom: 10vh;
-    }
-    #answer-box-container {
-        width: 480px;
-        height: 360px;
-    }
-    .playFlagsInitial {
-        border: none;
-        width: 18vmax;
-        height: 18vmax;
-        border-radius: 50%;
-        font-size: 10vmax;
-        color: green;
-        background-color: rgb(54, 68, 228);
-        padding-left: 2.5vmax;
-        padding-top: 0.5%;
-        border: solid white 4px;
-    }
-    #flagsDisplayBox {
-        font-size: 2em;
-    }
+    
     #heading-container {
         height: 15vh;
-    }
-    #flagsRowTwo {
-        margin-top: 8vh;
-        margin-bottom: 8vh;
-    }
-    #flagsRowOne {
-        margin-top: 10vh;
-    }
-    .playFlagsSubsequent, #flagsSubmitAnswer {
-        font-size: 1.5em;
-        min-width: 130px;
     }
 }
   
 @media screen and (max-width: 320px) {
-    .squaresMedium {
-        width: 20px;
-    }
-    .squaresSmall {
-        width: 15px;
-        padding-top: 1px;
-    }
+   
     .margin-top-small {
         margin-top: 20px;
-    }
-    #answer-box-container {
-        width: 300px;
-        height: 210px;
-    }
-    .header-spelling {
-        margin-bottom: 8vh;
-    }
-    
+    }    
 }
