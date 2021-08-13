@@ -1,8 +1,22 @@
+console.log("twats");
 let playButton = document.getElementById("play-button");
 playButton.addEventListener("click", generateQuestions);
 playButton.addEventListener("click", setFocus);
 playButton.addEventListener("click", startGame);
 let difficultySpelling = document.getElementById("difficulty-spelling");
+difficultySpelling.addEventListener("change", dictionarySet);
+let dictionaryNumber = 0;
+function dictionarySet() {
+  if (difficultySpelling.value == "Easy") {
+    dictionaryNumber = 0;
+  } else if (difficultySpelling.value == "Medium") {
+    dictionaryNumber = 1;
+  } else if (difficultySpelling.value == "Hard") {
+    dictionaryNumber = 2;
+  } else if (difficultySpelling.value == "Very Hard") {
+    dictionaryNumber = 3;
+  }
+}
 let submit = document.getElementById("submit");
 let repeat = document.getElementById("repeat");
 repeat.addEventListener("click", repeatQuestion);
@@ -25,28 +39,11 @@ function generateQuestions() {
   randomWords = [];
   currentQuestion = 0;
   while (randomWords.length < 10) {
-    if (difficultySpelling.value == "Easy") {
-      let word = dictionary[0][Math.floor(Math.random()*200)];
-      if (randomWords.includes(word) === false) {
-        randomWords.push(word);
-      }
-    } else if (difficultySpelling.value == "Medium") {
-      let word = dictionary[1][Math.floor(Math.random()*200)];
-      if (randomWords.includes(word) === false) {
-        randomWords.push(word);
-      }
-    } else if (difficultySpelling.value == "Hard") {
-      let word = dictionary[2][Math.floor(Math.random()*200)];
-      if (randomWords.includes(word) === false) {
-        randomWords.push(word);
-      }
-    } else if (difficultySpelling.value == "Very Hard") {
-      let word = dictionary[3][Math.floor(Math.random()*200)];
-      if (randomWords.includes(word) === false) {
-        randomWords.push(word);
-      }
+    let word = dictionary[dictionaryNumber][Math.floor(Math.random()*200)];
+    if (randomWords.includes(word) === false) {
+      randomWords.push(word);
     }
-  }
+  } 
 }
 function setFocus() {
   inputTwo.focus();
@@ -70,8 +67,6 @@ function speak(randomWords, iteration) {
   responsiveVoice.speak(randomWords[iteration]);
 }
 function spellcheck () {
-  console.log(output.toLowerCase);
-  console.log(inputTwo.value);
   if (output.toLowerCase() === inputTwo.value.toLowerCase()) {
     answerBox.innerHTML = "correct!";
     if (answerBox.classList.contains("hinted")) {
