@@ -3,48 +3,61 @@ function counter() {
     let squares = document.getElementsByClassName("squares");
     if (this.classList.contains("no-bomb")) {
         let clearedSquares = document.getElementsByClassName("selected");
-        if (clearedSquares.length > (selectedSquares - selectedBombs - 1)) {
-            for (square of squares) {
-                square.style.color = "rgba(0,0,0,0.0)";
-                square.innerHTML = `<i class="fas fa-laugh-squint"></i>`;
-                square.removeEventListener("click", minesweep);
-                square.removeEventListener("click", addFlags);
-                square.removeEventListener("click", gameOverOne);
-                square.removeEventListener("click", gameOverTwo);
-            }
-            while (randomSquaresAll.length < selectedSquares) {// populate random numbers array until it's 81 numbers long
-                let x = Math.floor(Math.random()*selectedSquares);
-                if (randomSquaresAll.includes(x) === false) {
-                    randomSquaresAll.push(x);
-                }
-            }
-            for (let j = 0; j < selectedSquares; j++) {
-                task(j);
-            }
-            function task(j) {            
-                setTimeout(function() {
-                    squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "flagged");
-                    if (j % 3 === 0) {
-                        squares[randomSquaresAll[j]].classList.add("yellow-square");
-                        squares[randomSquaresAll[j]].style.color = "rgba(0,0,0,1)";
-                    } else if (j % 3 > 0 && j % 2 === 0) {
-                        squares[randomSquaresAll[j]].classList.add("orange-square");
-                        squares[randomSquaresAll[j]].style.color = "rgba(0,0,0,1)";
-                    } else {
-                        squares[randomSquaresAll[j]].classList.add("pink-square");
-                        squares[randomSquaresAll[j]].style.color = "rgba(0,0,0,1)";
-                    }
-                    squares[j].removeEventListener("click", minesweep);                    
-                }, 7 * j);
-                setTimeout(function() {            
-                    for (square of squares) {
-                        square.style.backgroundColor = "white";
-                        square.style.color = "rgb(17, 231, 238)";
-                    };
-                }, 2000);
-            }
-        }
+        gameOverClassifier(randomSquaresAll, squares, clearedSquares);
     }    
+}
+function gameOverClassifier(randomSquaresAll, squares, clearedSquares) {
+    if (clearedSquares.length > (selectedSquares - selectedBombs - 1)) {
+        victorySquaresSmiley(squares);
+        generateArrayRandomSquares(randomSquaresAll);
+        for (let j = 0; j < selectedSquares; j++) {
+            victoryStyleSquaresSequentially(j, randomSquaresAll, squares);
+        }
+    }
+}
+function victorySquaresSmiley(squares) {
+    for (square of squares) {
+        square.style.color = "rgba(0,0,0,0.0)";
+        square.innerHTML = `<i class="fas fa-laugh-squint"></i>`;
+        square.removeEventListener("click", minesweep);
+        square.removeEventListener("click", addFlags);
+        square.removeEventListener("click", gameOverOne);
+        square.removeEventListener("click", gameOverTwo);
+    }
+}
+function generateArrayRandomSquares(randomSquaresAll) {
+    while (randomSquaresAll.length < selectedSquares) {// populate random numbers array until it's 81 numbers long
+        let x = Math.floor(Math.random()*selectedSquares);
+        if (randomSquaresAll.includes(x) === false) {
+            randomSquaresAll.push(x);
+        }
+    }
+}
+function victoryStyleSquaresSequentially(j, randomSquaresAll, squares) {      
+    setTimeout(function() {
+        squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "flagged");
+        if (j % 3 === 0) {
+            squares[randomSquaresAll[j]].classList.add("yellow-square");
+            squares[randomSquaresAll[j]].style.color = "rgba(0,0,0,1)";
+        } else if (j % 3 > 0 && j % 2 === 0) {
+            squares[randomSquaresAll[j]].classList.add("orange-square");
+            squares[randomSquaresAll[j]].style.color = "rgba(0,0,0,1)";
+        } else {
+            squares[randomSquaresAll[j]].classList.add("pink-square");
+            squares[randomSquaresAll[j]].style.color = "rgba(0,0,0,1)";
+        }
+        squares[j].removeEventListener("click", minesweep);                    
+    }, 7 * j);
+    victorySquaresSmileysWhite(squares);
+} 
+function victorySquaresSmileysWhite(squares) {
+    setTimeout(function() {            
+        for (square of squares) {
+            square.style.backgroundColor = "white";
+            square.style.color = "rgb(17, 231, 238)";
+        };
+    }, 2000);
+
 }
 function gameOverOne() {
     let randomSquaresBombs = [];

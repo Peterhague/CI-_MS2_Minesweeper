@@ -6,8 +6,7 @@ function sendMail(contactForm) {
         "message": contactForm.suggestion.value,
     })
     console.log("pass thru working");
-    return false;
-    
+    return false;    
 }
 function formValidation(that) {
     let fName = document.forms["ideasForm"]["firstName"].value;

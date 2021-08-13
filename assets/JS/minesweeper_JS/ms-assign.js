@@ -1,4 +1,3 @@
-function assignHTML() {
 /* This function assigns the numbers to each square that represent how many of that square's surrounding squares
 contain mines. It does so by getting each square's id and checking the "mine" content of squares with ids that 
 define them as being in the checking square's radius/orbit etc. This can be achieved because each square has an id
@@ -15,6 +14,7 @@ This is a complex function because the number and relative position of the squar
 
 The value of the the total variable is increased by one for every "mine" found. This value at the end of the outer loop
 is then assigned as the sentinelSquare's inner html. */
+function assignHTML() {
     let squares = document.getElementsByClassName("squares");
     for (squareSentinel of squares) {
         if (squareSentinel.classList.contains("right-edge") || squareSentinel.classList.contains("top-right")) {
@@ -48,7 +48,7 @@ function assignHTMLRight(squares, inputSquare) {
             total += 1;
         } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarfet is to top left
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top left
             total += 1;      
         } 
     }
