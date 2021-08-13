@@ -45,13 +45,20 @@ for (pixel of titlePixels) {
     if (titlePixelsColored.includes(pixel.id)) {
         pixel.style.backgroundColor = "black";
     }
-    if (pixel.id == "pixel505" || pixel.id == "pixel170" || pixel.id == "pixel187" || pixel.id == "pixel195" || pixel.id == "pixel878" || pixel.id == "pixel897" || pixel.id == "pixel813" || pixel.id == "pixel429" || pixel.id == "pixel431" || pixel.id == "pixel840") {
+    if (pixel.id == "pixel505" || pixel.id == "pixel170" || pixel.id == "pixel187" || pixel.id == "pixel195" 
+    || pixel.id == "pixel878" || pixel.id == "pixel897" || pixel.id == "pixel813" || pixel.id == "pixel429" 
+    || pixel.id == "pixel431" || pixel.id == "pixel840") {
         pixel.style.backgroundColor = "green";
     }
-    if (pixel.id == "pixel506" || pixel.id == "pixel171" || pixel.id == "pixel896" || pixel.id == "pixel586" || pixel.id == "pixel879" || pixel.id == "pixel839" || pixel.id == "pixel104" || pixel.id == "pixel814" || pixel.id == "pixel125" || pixel.id == "pixel430" || pixel.id == "pixel140") {
+    if (pixel.id == "pixel506" || pixel.id == "pixel171" || pixel.id == "pixel896" || pixel.id == "pixel586" 
+    || pixel.id == "pixel879" || pixel.id == "pixel839" || pixel.id == "pixel104" || pixel.id == "pixel814" 
+    || pixel.id == "pixel125" || pixel.id == "pixel430" || pixel.id == "pixel140") {
         pixel.style.backgroundColor = "white";
     }
-    if (pixel.id == "pixel507" || pixel.id == "pixel585" || pixel.id == "pixel599" || pixel.id == "pixel587" || pixel.id == "pixel185" || pixel.id == "pixel197" || pixel.id == "pixel471" || pixel.id == "pixel105" || pixel.id == "pixel172" || pixel.id == "pixel141" || pixel.id == "pixel124" || pixel.id == "pixel126" || pixel.id == "pixel805" || pixel.id == "pixel826" || pixel.id == "pixel634") {
+    if (pixel.id == "pixel507" || pixel.id == "pixel585" || pixel.id == "pixel599" || pixel.id == "pixel587" 
+    || pixel.id == "pixel185" || pixel.id == "pixel197" || pixel.id == "pixel471" || pixel.id == "pixel105" 
+    || pixel.id == "pixel172" || pixel.id == "pixel141" || pixel.id == "pixel124" || pixel.id == "pixel126" 
+    || pixel.id == "pixel805" || pixel.id == "pixel826" || pixel.id == "pixel634") {
         pixel.style.backgroundColor = "red";
     }
     if (pixel.id == "pixel103" || pixel.id == "pixel803" || pixel.id == "pixel632" || pixel.id == "pixel139") {
@@ -60,7 +67,8 @@ for (pixel of titlePixels) {
     if (pixel.id == "pixel815" || pixel.id == "pixel838" || pixel.id == "pixel880" || pixel.id == "pixel895") {
         pixel.style.backgroundColor = "orange";
     }
-    if (pixel.id == "pixel804" || pixel.id == "pixel825" || pixel.id == "pixel633" || pixel.id == "pixel470" || pixel.id == "pixel186" || pixel.id == "pixel598" || pixel.id == "pixel196") {
+    if (pixel.id == "pixel804" || pixel.id == "pixel825" || pixel.id == "pixel633" || pixel.id == "pixel470" 
+    || pixel.id == "pixel186" || pixel.id == "pixel598" || pixel.id == "pixel196") {
         pixel.style.backgroundColor = "yellow";
     }
 }
