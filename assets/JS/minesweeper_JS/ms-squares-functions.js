@@ -19,17 +19,6 @@ function addFlags() {
                     squareUnflagged(this, "odd");
                 }
             }
-        } else {
-            switch (event.which) {
-            case 3:
-                if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
-                    // reverses the process when an even square already has a flag
-                    squareUnflagged(this, "even");
-                } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
-                    // reverses the process when an odd square already has a flag
-                    squareUnflagged(this, "odd");
-                }
-            }
         }
     });
 }
@@ -84,13 +73,7 @@ function addFlagsLong(that) {
         } else if (that.classList.contains("flagged") && that.classList.contains("oddReserved")) {
             squareUnflagged(that, "odd");
         } 
-    } else {
-        if (that.classList.contains("flagged") && that.classList.contains("evenReserved")) {
-            squareUnflagged(that, "even");
-        } else if (that.classList.contains("flagged") && that.classList.contains("oddReserved")) {
-            squareUnflagged(that, "odd");
-        }
-    }   
+    } 
     setTimeout(function() {            
         that.addEventListener("click", minesweep); 
         that.addEventListener("click", gameOverOne);
@@ -103,24 +86,26 @@ function addFlagsLong(that) {
     this function will then automatically "click" on any of its surrounding squares that
     ALSO have a value of zero. */
 function minesweep() {
-    this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
-    this.classList.remove("even-squares", "odd-squares");
-    this.classList.add("selected");// adds identifier to clicked squares
-    if (parseInt(this.innerHTML) === 0) { // changes the styling of clicked squares
-        this.classList.add("text-grey");
-    } else {
-        colorByNumber(this);
-    }
-    let squares = document.getElementsByClassName("squares");
-    for (square of squares) {
+    if (!this.classList.contains("flagged")) {
+        this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
+        this.classList.remove("even-squares", "odd-squares");
+        this.classList.add("selected");// adds identifier to clicked squares
+        if (parseInt(this.innerHTML) === 0) { // changes the styling of clicked squares
+            this.classList.add("text-grey");
+        } else {
+            colorByNumber(this);
+        }
+        let squares = document.getElementsByClassName("squares");
+        for (square of squares) {
         /* removes the class identifier from the squares selected by the below code as
         surrounding the clicked square. This prevents the automated clicking code from
         clicking on squares previously identified as surrounding OTHER squares but which weren't
         selected for automatic clicking because the initially clicked square didn't have a value
         of zero*/
-        square.classList.remove("clicked-square-radius");
-    }
-    minesweepRoutineDetector(this,squares);  
+            square.classList.remove("clicked-square-radius");
+        }
+        minesweepRoutineDetector(this,squares);
+    }      
 }
 function minesweepRoutineDetector(that, squares) {
     if (that.classList.contains("right-edge")) {
