@@ -9,7 +9,7 @@ function counter() {
 function gameOverClassifier(randomSquaresAll, squares, clearedSquares) {
     if (clearedSquares.length > (selectedSquares - selectedBombs - 1)) {
         victorySquaresSmiley(squares);
-        generateArrayRandomSquares(randomSquaresAll);
+        generateArrayRandomSquares(randomSquaresAll,selectedSquares);
         for (let j = 0; j < selectedSquares; j++) {
             victoryStyleSquaresSequentially(j, randomSquaresAll, squares);
         }
@@ -25,11 +25,11 @@ function victorySquaresSmiley(squares) {
         square.removeEventListener("click", gameOverTwo);
     }
 }
-function generateArrayRandomSquares(randomSquaresAll) {
-    while (randomSquaresAll.length < selectedSquares) {// populate random numbers array until it's 81 numbers long
-        let x = Math.floor(Math.random()*selectedSquares);
-        if (randomSquaresAll.includes(x) === false) {
-            randomSquaresAll.push(x);
+function generateArrayRandomSquares(emptyArray, arrayLength) {
+    while (emptyArray.length < arrayLength) {// populate random numbers array until it's 81 numbers long
+        let x = Math.floor(Math.random()*arrayLength);
+        if (emptyArray.includes(x) === false) {
+            emptyArray.push(x);
         }
     }
 }
@@ -57,7 +57,6 @@ function victorySquaresSmileysWhite(squares) {
             square.style.color = "rgb(17, 231, 238)";
         };
     }, 2000);
-
 }
 function gameOverOne() {
     let randomSquaresBombs = [];
@@ -66,22 +65,17 @@ function gameOverOne() {
         for (bomb of bombs) {
             bomb.innerHTML = `<i class="fas fa-skull"></i>`
         }
-        while (randomSquaresBombs.length < selectedBombs) {
-            let x = Math.floor(Math.random()*selectedBombs);
-            if (randomSquaresBombs.includes(x) === false) {
-                randomSquaresBombs.push(x);
-            }
-        }
+        generateArrayRandomSquares(randomSquaresBombs,selectedBombs);
         for (let j = 0; j < selectedBombs; j++) {
-            task(j);
+            defeatStyleBombSquaresSequentially(j, bombs, randomSquaresBombs);
         }
-        function task(j) {            
-            setTimeout(function() {
-                bombs[randomSquaresBombs[j]].classList.add("text-red");
-                bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
-                }, 10 * j);
-        }  
     }          
+}
+function defeatStyleBombSquaresSequentially(j, bombs, randomSquaresBombs) {
+    setTimeout(function() {
+        bombs[randomSquaresBombs[j]].classList.add("text-red");
+        bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
+        }, 10 * j);
 }
 function gameOverTwo() {
     let squares = document.getElementsByClassName("squares");// gets all the squares on the grid
