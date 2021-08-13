@@ -86,7 +86,6 @@ function longPressUp() {
     }
 }
 function addFlagsLong(that) {
-        // code for placing and removing "flags" on squares as mine-markers, via a right-click (hence "case 3")
         if (!that.classList.contains("selected")) {
             // ie if the square hasn't already been left-clicked on to reveal no mine
                 if (that.classList.contains("even-squares")) {
@@ -150,13 +149,12 @@ function addFlagsLong(that) {
                 }
             }      
 }
-function minesweep() {
-    /* This code runs when the player left clicks on any square in the grid.
+/* This code runs when the player left clicks on any square in the grid.
     Its main function is to check if any of the surrounding squares of the clicked
     square have an innerHTML value of zero. If the value of the clicked square is zero,
     this function will then automatically "click" on any of its surrounding squares that
     ALSO have a value of zero. */
-    /*this.removeEventListener("click", minesweep)*/;// so a square can only be clicked once
+function minesweep() {
     this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
     this.classList.remove("even-squares", "odd-squares");
     this.classList.add("selected");// adds identifier to clicked squares
@@ -174,27 +172,30 @@ function minesweep() {
         of zero*/
         square.classList.remove("clicked-square-radius");
     }
-    if (this.classList.contains("right-edge")) {
-        minesweepRight(squares, this);
-    } else if (this.classList.contains("left-edge")) {
-        minesweepLeft(squares, this);
-    } else if (this.classList.contains("top-left")) {
-        minesweepTopLeft(squares, this);        
-    } else if (this.classList.contains("top-edge")) {
-        minesweepTop(squares, this);        
-    } else if (this.classList.contains("top-right")) {
-        minesweepTopRight(squares, this);        
-    } else if (this.classList.contains("bottom-edge")) {
-        minesweepBottom(squares, this);        
-    } else if (this.classList.contains("bottom-left")) {
-        minesweepBottomLeft(squares, this);        
-    } else if (this.classList.contains("bottom-right")) {
-        minesweepBottomRight(squares, this);        
-    } else if (this.classList.contains("middle")) {
-        minesweepMiddle(squares, this);
+    minesweepRoutineDetector(this,squares);
+}
+function minesweepRoutineDetector(that, squares) {
+    if (that.classList.contains("right-edge")) {
+        minesweepRight(squares, that);
+    } else if (that.classList.contains("left-edge")) {
+        minesweepLeft(squares, that);
+    } else if (that.classList.contains("top-left")) {
+        minesweepTopLeft(squares, that);        
+    } else if (that.classList.contains("top-edge")) {
+        minesweepTop(squares, that);        
+    } else if (that.classList.contains("top-right")) {
+        minesweepTopRight(squares, that);        
+    } else if (that.classList.contains("bottom-edge")) {
+        minesweepBottom(squares, that);        
+    } else if (that.classList.contains("bottom-left")) {
+        minesweepBottomLeft(squares, that);        
+    } else if (that.classList.contains("bottom-right")) {
+        minesweepBottomRight(squares, that);        
+    } else if (that.classList.contains("middle")) {
+        minesweepMiddle(squares, that);
     }
-    if (parseInt(this.innerHTML) === 0) {
-        automatedClick(this);
+    if (parseInt(that.innerHTML) === 0) {
+        automatedClick(that);
     }
 }
 function colorByNumber(that) {
