@@ -81,11 +81,10 @@ function longPressDown() {
 function longPressUp() {
     release = "";
     release = Date.now();
-    if ((release - downPress) > 500) {
+    if ((release - downPress) > 300) {
         addFlagsLong(this);
-    }/* else {
-        minesweep(this);
-    }*/
+    }
+    console.log("oh yes god!");
 }
 function addFlagsLong(that) {
     console.log("long working 3");
