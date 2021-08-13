@@ -65,13 +65,15 @@ function longPressDown() {
 function longPressUp() {
     release = "";
     release = Date.now();
-    if ((release - downPress) > 300) {
+    if ((release - downPress) > 300) {        
+        this.removeEventListener("click", minesweep); 
+        this.removeEventListener("click", gameOverOne);
+        this.removeEventListener("click", gameOverTwo);
         addFlagsLong(this);
     }
 }
 function addFlagsLong(that) {
     if (!that.classList.contains("selected")) {
-        console.log("crumbs");
         // ie if the square hasn't already been left-clicked on to reveal no mine
         if (that.classList.contains("even-squares")) {
             squareFlagged(that, "even");
@@ -88,7 +90,12 @@ function addFlagsLong(that) {
         } else if (that.classList.contains("flagged") && that.classList.contains("oddReserved")) {
             squareUnflagged(that, "odd");
         }
-    }      
+    }   
+    setTimeout(function() {            
+        that.addEventListener("click", minesweep); 
+        that.addEventListener("click", gameOverOne);
+        that.addEventListener("click", gameOverTwo);
+    }, 200);
 }
 /* This code runs when the player left clicks on any square in the grid.
     Its main function is to check if any of the surrounding squares of the clicked
@@ -113,7 +120,7 @@ function minesweep() {
         of zero*/
         square.classList.remove("clicked-square-radius");
     }
-    minesweepRoutineDetector(this,squares);
+    minesweepRoutineDetector(this,squares);  
 }
 function minesweepRoutineDetector(that, squares) {
     if (that.classList.contains("right-edge")) {
