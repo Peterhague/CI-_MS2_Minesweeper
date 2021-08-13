@@ -10,14 +10,12 @@ function randomiseFlags(displayFlags, displayInputs) {
             randomFlags.push(flag);
         }
     }
-    if (playFlags.classList.contains("playFlagsSubsequent")) {
-        let mainContainer = document.getElementById("mainContainer");
-        mainContainer.classList.add("hide");
-        setTimeout(function() {                
-            mainContainer.classList.remove("hide");
-            setFocus();
-        }, 200);
-    }
+    let mainContainer = document.getElementById("mainContainer");
+    mainContainer.classList.add("hide");
+    setTimeout(function() {                
+        mainContainer.classList.remove("hide");
+        setFocus();
+    }, 200);
     displayFlags(randomFlags);
     displayInputs(stylingChanges);
 }
@@ -50,18 +48,7 @@ function stylingChanges() {
     let mainContainer = document.getElementById("mainContainer");
     mainContainer.classList.add("margin-top-small");
     let answerDivs = document.getElementsByClassName("answerDiv");
-    for (div of answerDivs) {
-        div.classList.add("hide");
-        div.innerHTML = "";
-    }
     let flagInputs = document.getElementsByClassName("flagInputs");
-    for (input of flagInputs) {
-        input.classList.add("inlineBlock");
-        input.classList.remove("hide");
-    }
-    for (input of flagInputs) {
-        input.value = "";
-    }
     let playFlags = document.getElementById("playFlags");
     playFlags.classList.remove("playFlagsInitial");
     playFlags.classList.add("playFlagsSubsequent");
@@ -70,7 +57,19 @@ function stylingChanges() {
     flagsDisplayBox.innerHTML = `Click Submit to check your answers<br><i class="fas fa-smile invisible-text"></i>`;
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.innerHTML = "Submit";
+    stylingChangesLoops(answerDivs, flagInputs);
     setFocus();
+}
+function stylingChangesLoops(answerDivs, flagInputs) {
+    for (div of answerDivs) {
+        div.classList.add("hide");
+        div.innerHTML = "";
+    }
+    for (input of flagInputs) {
+        input.classList.add("inlineBlock");
+        input.classList.remove("hide");
+        input.value = "";
+    }
 }
 function setFocus() {
     let flagOneInput = document.getElementById("flagOneInput");

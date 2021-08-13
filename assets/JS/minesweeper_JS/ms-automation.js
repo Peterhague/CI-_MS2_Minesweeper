@@ -67,7 +67,6 @@ function minesweepMiddle(squares, that) {
     squares[parseInt(thisID) + (selectedRows +1)].classList.add("clicked-square-radius");//square bottom-right of clicked square
 }
 function automatedClick(that) {
-    console.log("hello");
     let clickedSquareRadius = document.getElementsByClassName("clicked-square-radius");
     for (square of clickedSquareRadius) {
         square.classList.add(`csr-${that.id}`)

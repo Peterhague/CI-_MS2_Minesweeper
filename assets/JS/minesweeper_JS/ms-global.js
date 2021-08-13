@@ -192,5 +192,4 @@ function flags() {
 function setFocus() {
     let minesweeperBottom = document.getElementById("minesweeperBottom");
     minesweeperBottom.focus();
-    console.log("focused");
 }

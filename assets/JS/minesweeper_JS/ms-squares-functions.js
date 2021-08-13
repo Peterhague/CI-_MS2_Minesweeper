@@ -84,10 +84,8 @@ function longPressUp() {
     if ((release - downPress) > 300) {
         addFlagsLong(this);
     }
-    console.log("oh yes god!");
 }
 function addFlagsLong(that) {
-    console.log("long working 3");
         // code for placing and removing "flags" on squares as mine-markers, via a right-click (hence "case 3")
         if (!that.classList.contains("selected")) {
             // ie if the square hasn't already been left-clicked on to reveal no mine
@@ -159,7 +157,6 @@ function minesweep() {
     this function will then automatically "click" on any of its surrounding squares that
     ALSO have a value of zero. */
     /*this.removeEventListener("click", minesweep)*/;// so a square can only be clicked once
-    console.log("yeo");
     this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
     this.classList.remove("even-squares", "odd-squares");
     this.classList.add("selected");// adds identifier to clicked squares
@@ -198,24 +195,8 @@ function minesweep() {
     }
     if (parseInt(this.innerHTML) === 0) {
         automatedClick(this);
-        console.log("ze wcc");
-    }
-}/*
-function automatedClick(thisSquare) {
-    console.log(thisSquare);
-    thisSquare.style.color = "black";
-    let clickedSquareRadius = document.getElementsByClassName("clicked-square-radius");
-    for (square of clickedSquareRadius) {
-        square.classList.add(`csr-${thisSquare.id}`)
-    }   
-    let automatedClickers = document.getElementsByClassName(`csr-${thisSquare.id}`)     
-    for (clicker of automatedClickers) {   
-        if (parseInt(thisSquare.innerHTML) === 0 && !clicker.classList.contains("selected")) {
-            clicker.click();
-        }
     }
 }
-*/
 function colorByNumber(that) {
     if (that.innerHTML == 1) {
         that.classList.add("text-blue");
