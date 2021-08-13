@@ -71,6 +71,17 @@ function gameOverOne() {
         }
     }          
 }
+function defeatStyleBombs(squares, flaggedSquares) {
+    for (square of squares) {
+        square.classList.add("invisible-text");
+        square.classList.remove("selected");
+    }
+    for (flag of flaggedSquares) {
+        if (flag.classList.contains("no-bomb")) {
+            flag.style.color = "rgba(0, 0, 0, 0.0)";
+        }
+    }
+}
 function defeatStyleBombSquaresSequentially(j, bombs, randomSquaresBombs) {
     setTimeout(function() {
         bombs[randomSquaresBombs[j]].classList.add("text-red");
@@ -83,47 +94,37 @@ function gameOverTwo() {
     if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
         removePlayFunctions();
         //ie player has clicked on a mine without a flag, and it's game over
-        for (square of squares) {
-            square.classList.add("invisible-text");
-            square.classList.remove("selected");
-        }
-        for (flag of flaggedSquares) {
-            if (flag.classList.contains("no-bomb")) {
-                flag.style.color = "rgba(0, 0, 0, 0.0)";
-            }
-        }
+        defeatStyleBombs(squares, flaggedSquares);
         let randomSquaresAll = [];
-        while (randomSquaresAll.length < selectedSquares) {// populate random numbers array until same length as the number of squares in grid
-            let x = Math.floor(Math.random()*selectedSquares);
-            if (randomSquaresAll.includes(x) === false) {
-                randomSquaresAll.push(x);
-            }
-        }
+        generateArrayRandomSquares(randomSquaresAll, selectedSquares);
         for (let j = 0; j < selectedSquares; j++) {
-            task(j);
+            defeatStyleSquaresSequentially(j, squares, randomSquaresAll);
         }
-        function task(j) {            
-            setTimeout(function() {
-                squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "blue");
-                if (j % 3 === 0) {
-                    squares[randomSquaresAll[j]].classList.add("black-square");
-                } else if (j % 3 > 0 && j % 2 === 0) {
-                    squares[randomSquaresAll[j]].classList.add("grey-square");
-                } else {
-                    squares[randomSquaresAll[j]].classList.add("white-square");
-                }
-                squares[j].removeEventListener("click", minesweep);                    
-            }, 5 * j);                
-        }
-        setTimeout(function() {            
-            for (square of squares) {
-                square.style.backgroundColor = "black";
-                square.style.color = "red";
-                square.innerHTML = `<i class="fas fa-skull"></i>`;
-            };
-        }, (selectedRows * 100) + 500);
+        defeatStyleChangesFinal(squares);
         setTimeout(function() {                
             addPlayFunctions();
         }, (selectedRows * 100) + 700);
     }  
+}
+function defeatStyleSquaresSequentially(j, squares, randomSquaresAll) {
+    setTimeout(function() {
+        squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "blue");
+        if (j % 3 === 0) {
+            squares[randomSquaresAll[j]].classList.add("black-square");
+        } else if (j % 3 > 0 && j % 2 === 0) {
+            squares[randomSquaresAll[j]].classList.add("grey-square");
+        } else {
+            squares[randomSquaresAll[j]].classList.add("white-square");
+        }
+        squares[j].removeEventListener("click", minesweep);                    
+    }, 5 * j);
+}
+function defeatStyleChangesFinal(squares) {
+    setTimeout(function() {            
+        for (square of squares) {
+            square.style.backgroundColor = "black";
+            square.style.color = "red";
+            square.innerHTML = `<i class="fas fa-skull"></i>`;
+        };
+    }, (selectedRows * 100) + 500);
 }
