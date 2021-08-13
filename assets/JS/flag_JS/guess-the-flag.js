@@ -86,6 +86,10 @@ function checkAnswers() {
         div.innerHTML = `<i class="fas fa-times text-red"></i>`;
     }
     let correctAnswers = 0;
+    iterateCorrectAnswers(correctAnswers, flagInputs, answerDivs);
+    changeButton();
+}
+function iterateCorrectAnswers(correctAnswers, flagInputs, answerDivs) {
     for (input of flagInputs) {
         input.classList.remove("inlineBlock");
         input.classList.add("hide");
@@ -101,7 +105,6 @@ function checkAnswers() {
         }
     }
     displayCorrectAnswers(correctAnswers);
-    changeButton();
 }
 function displayCorrectAnswers(correctAnswers) {
     if (correctAnswers < 4) {        
