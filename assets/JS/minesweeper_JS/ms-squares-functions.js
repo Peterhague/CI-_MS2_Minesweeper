@@ -86,7 +86,7 @@ function addFlagsLong(that) {
     this function will then automatically "click" on any of its surrounding squares that
     ALSO have a value of zero. */
 function minesweep() {
-    if (!this.classList.contains("flagged")) {
+    if (!this.classList.contains("flagged") && !this.classList.contains("automaticallyClicked")) {
         this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
         this.classList.remove("even-squares", "odd-squares");
         this.classList.add("selected");// adds identifier to clicked squares

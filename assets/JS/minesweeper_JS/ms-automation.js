@@ -93,6 +93,7 @@ function automatedClick(that) {
     for (clicker of automatedClickers) {   
         if (parseInt(that.innerHTML) === 0 && !clicker.classList.contains("selected")) {
             clicker.click();
+            clicker.classList.add("automaticallyClicked");
         }
     }
 }
