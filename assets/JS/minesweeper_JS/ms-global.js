@@ -9,9 +9,10 @@ let selectedSquares = 81;
 let gridRowsList = document.getElementsByClassName("grid-rows"); // to create an array of the grid rows to iterate over
 let scoreContainer = document.getElementById("score-container"); // gets the div to be populated by the remaining flags tally
 let play = document.getElementById("play"); // gets the start game button from the html file
+//adds all event listeners to the play button
 function addPlayFunctions() {
     play.addEventListener("click", stylingChanges);
-    play.addEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
+    play.addEventListener("click", generatedGridRows);
     play.addEventListener("click", randomise);
     play.addEventListener("click", newGame);
     play.addEventListener("click", squareSize);
@@ -23,8 +24,9 @@ function addPlayFunctions() {
     play.addEventListener("click", flags);
     play.addEventListener("click", setFocus);
 }
+//removes all event listeners from the play button, except stylingChanges
 function removePlayFunctions() {
-    play.removeEventListener("click", generatedGridRows); // generates the number of rows as per the difficulty selected
+    play.removeEventListener("click", generatedGridRows);
     play.removeEventListener("click", randomise);
     play.removeEventListener("click", newGame);
     play.removeEventListener("click", squareSize);
@@ -37,6 +39,7 @@ function removePlayFunctions() {
     play.removeEventListener("click", setFocus);
 }
 addPlayFunctions();
+//event handler for change in difficulty. Ajusts the number of rows/squares etc to be used in various other functions
 function variableVariables() {
     let selectedDifficulty = difficulty.value;
     if (selectedDifficulty == "Easy") {
@@ -57,6 +60,7 @@ function variableVariables() {
         selectedSquares = selectedRows*selectedRows;
     }
 }
+//code mainly changes CSS rules applied to various elements on load to what they should be during the game
 function stylingChanges() {    
     let selectorStart = document.getElementById("selector-start");
     selectorStart.classList.remove("min-width", "selector-start-onload");
@@ -64,7 +68,7 @@ function stylingChanges() {
     difficulty.classList.remove("cairo", "text-medium", "bg-green");
     difficulty.classList.add("bg-black");
     let playIcon = document.getElementById("play-icon");
-    playIcon.classList.remove("text-big", "bg-pink");
+    playIcon.classList.remove("text-big");
     playIcon.classList.add("score-bar-bg");
     let outerContainer = document.getElementById("outer-container");
     outerContainer.classList.remove("margin-top-big");
@@ -83,21 +87,23 @@ function stylingChanges() {
         item.classList.add("hide");
     }
 }
+/* this loop creates the number of rows determined by the selected difficulty and adds them to the grid.
+Also adds unique class to each row to be able to identify them precisely if necessary*/
 function generatedGridRows() {
     grid.innerHTML = "";
     for (i = 0; i < selectedRows; i++) {
         gridRow = document.createElement("div");
-        gridRow.classList.add("grid-rows", `grid-row-${i}`) // to be able to identify the row precisely when necessary
+        gridRow.classList.add("grid-rows", `grid-row-${i}`) 
         grid.appendChild(gridRow);
-    } // this loop creates the number of rows determined by the selected difficulty and adds them to the grid
+    } 
 }
-function randomise() {
-/*Adds random numbers to the randomSquares variable (15 for easy, 40 for medium and 99 for hard). 
+/*Adds random numbers to the randomSquares variable (15 for easy, 40 for medium and 99 for hard).
 Multiplies each random number by the number of squares on the grid, and pushes them to the array 
 IF the random number y does NOT appear in the list already, ie so that each number in the array
-is unique. This ensures that ultimately the grids will have the correct number of mines, and no
-squares with > 1 mine.*/
-randomSquares = []; // to be populated by array of random numbers to be iterated to randomly place the "mines"
+is unique. These numbers will be used to randomly place the mines, and this ensures that ultimately the 
+grids will have the correct number of mines, and no squares with > 1 mine.*/
+function randomise() {
+    randomSquares = [];
     while (randomSquares.length < selectedBombs) {
         let y = Math.floor(Math.random()*selectedSquares);
         if (randomSquares.includes(y) === false) {
@@ -105,27 +111,24 @@ randomSquares = []; // to be populated by array of random numbers to be iterated
         }  
     }    
 }
+/* the for y loop iterates through the rows of the grid and its parent x loop generates the same number of
+squares for each row, to end up with a square grid of 'squares'.
+Each square is assigned a unique id based on its place in the grid, ie its row number (y) multiplied by the
+total number of rows, plus its position in the row (x).*/
 function newGame() {
     for (x = 0; x < selectedRows; x++) {
-        for (y = 0; y < selectedRows; y++) {
-            /* the for x loop iterates through the rows of the grid and the nested y loop generates 9 squares for each row,
-            to end up with a 9x9 grid of squares.*/ 
-            let squares = document.createElement("div"); // these are the "square" button elements created x9 for each x loop
+        for (y = 0; y < selectedRows; y++) { 
+            let squares = document.createElement("div");
             squares.classList.add("squares");
-            squares.classList.add("hovered-squares"); // this class adds the highlight on hover effect 
+            squares.classList.add("hovered-squares");
             let squaresNumber = (y*selectedRows)+x; 
-            /* variable to be assigned to each square as a unique id, so they can be "searched"
-            for the presence of "mines"*/
             if (randomSquares.includes(squaresNumber)) {
-                /* This code whether the list of random numbers generated by the randomise function includes the number assigned 
-                to the squaresNumber variable, and if so to assign the square the class of "bomb" and if not the class of 
-                "no-bomb". This effectively checks whether the square's id is included in the list of random numbers. */ 
                 squares.classList.add("bomb");
             } else {
                 squares.classList.add("no-bomb");
             }
             squaresFunctions(squares);
-            squares.id = squaresNumber; // assigns each square a uniqe id based on its position in the grid
+            squares.id = squaresNumber; // assigns each square a unique id based on its position in the grid
             gridRowsList[y].appendChild(squares); // adds each of the 9 squares created in each iteration of the outer loop
         }   
     }        

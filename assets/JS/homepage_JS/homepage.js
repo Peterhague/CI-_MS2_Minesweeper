@@ -11,7 +11,7 @@ function sendMail(contactForm) {
 }
 /*function to validate the form for user idea submissions.
 Checks that all fields are populated.
-Checks that the name fiels contain only letters.
+Checks that the name fields contain only letters.
 If all the conditions are met then the sendMail function is called and an email is sent via emailJS.*/
 function formValidation(that) {
     let fName = document.forms["ideasForm"]["firstName"].value;
