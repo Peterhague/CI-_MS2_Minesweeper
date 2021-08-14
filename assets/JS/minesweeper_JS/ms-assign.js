@@ -1,115 +1,124 @@
-/* This function assigns the numbers to each square that represent how many of that square's surrounding squares
-contain mines. It does so by getting each square's id and checking the "mine" content of squares with ids that 
-define them as being in the checking square's radius/orbit etc. This can be achieved because each square has an id
-that can identify its position in the grid, and therefore its position relative to every other square. In a 400 square
-"Hard" grid, the top left square has an id of 0 and the bottom right has an id of 399, with the sequence running left
-to right along each row in turn.
-
-This is a complex function because the number and relative position of the squares to evaluate vary depending on
-(a) the size of the grid and
-(b) whether the square is in the middle of the grid, on the edge, or in a corner.
-
--- squareSentinel is the square checking its neighbours
--- squareTarget are the squares being checked
-
-The value of the the total variable is increased by one for every "mine" found. This value at the end of the outer loop
-is then assigned as the sentinelSquare's inner html. */
+/* This function iterates through the squares of the grid and checks its position by reference to the class
+attributed to it via the assignRelativePosition function. It then calls the appropriate function to
+'count' the mines in its surrounding squares and assign the square an innerHTML of that number (of mines).
+There are different functions depending on position because the number of surrounding mines and their
+relative ids change depending on the square's position in the grid.*/
 function assignHTML() {
     let squares = document.getElementsByClassName("squares");
     for (squareSentinel of squares) {
         if (squareSentinel.classList.contains("right-edge") || squareSentinel.classList.contains("top-right")) {
-        /*for squares with ids longer than 1 and divisible by 9 after the addition of 1 to its total.
-        This captures the squares at the right-hand edge of the grid*/
             assignHTMLRight(squares, squareSentinel); 
         } else if (squareSentinel.classList.contains("left-edge")) {
-        /*for squares with ids longer than 1, and divisible by 9. This captures the squares at the left-hand edge of the grid*/
             assignHTMLLeft(squares, squareSentinel);
         } else if (squareSentinel.classList.contains("bottom-left")) {
             assignHTMLBottomLeft(squares, squareSentinel);
         } else if (squareSentinel.classList.contains("bottom-right")) {
             assignHTMLBottomRight(squares, squareSentinel);
         } else if (squareSentinel.classList.contains("top-left")) {
-        //captures the top-left square only
             assignHTMLTopLeft(squares, squareSentinel);             
         } else {
-        /*applies to all other squares in grid not picked out above*/
             assignHTMLMiddle(squares, squareSentinel);
         }        
     }
 }
+//counts the surrounding squares for mines and assigns HTML if the square is on the right edge of the grid
 function assignHTMLRight(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
-        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is below
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom left
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows -1)) &&
+        squareTarget.classList.contains("bomb")) {// squareTarget is to bottom left
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to left
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - 1) &&
+        squareTarget.classList.contains("bomb")) {// squareTarget is to left
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is above
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top left
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is to top left
             total += 1;      
         } 
     }
     inputSquare.innerHTML = total;
 }
+//counts the surrounding squares for mines and assigns HTML if the square is on the left edge of the grid
 function assignHTMLLeft(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
-        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is below
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right 
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows +1)) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right 
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is to right
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is above
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is above
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to top right
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows -1)) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is to top right
             total += 1;
         }
     } 
     inputSquare.innerHTML = total;
 }
+//counts the surrounding squares for mines and assigns HTML if the square is in the bottom left corner of the grid
 function assignHTMLBottomLeft(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
-        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
+        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is to right
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is below
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows -1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows -1)) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right
             total += 1;
         } 
     } 
     inputSquare.innerHTML = total;
 }
+//counts the surrounding squares for mines and assigns HTML if the square is in the bottom right corner of the grid
 function assignHTMLBottomRight(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
-        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
+        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - 1) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is to right
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - selectedRows) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is below
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) - (selectedRows +1)) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right
             total += 1;
         } 
     } 
     inputSquare.innerHTML = total;
 }
+//counts the surrounding squares for mines and assigns HTML if the square is in the top left corner of the grid
 function assignHTMLTopLeft(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
-        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && squareTarget.classList.contains("bomb")) {// squareTarget is to right
+        if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + 1) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is to right
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && squareTarget.classList.contains("bomb")) {// squareTarget is below
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + selectedRows) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is below
             total += 1;
-        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows +1)) && squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right
+        } else if (parseInt(squareTarget.id) === (parseInt(inputSquare.id) + (selectedRows +1)) && 
+        squareTarget.classList.contains("bomb")) {// squareTarget is to bottom right
             total += 1;
         } 
     } 
     inputSquare.innerHTML = total;
 }
+//counts the surrounding squares for mines and assigns HTML if the square is anywhere in the middle of the grid
 function assignHTMLMiddle(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
@@ -133,20 +142,21 @@ function assignHTMLMiddle(squares, inputSquare) {
     }
     inputSquare.innerHTML = total;
 }
+//assigns each square a descriptive class for its position in the grid, based on its id (iself based on its position)
 function assignRelativePosition() {
     let squares = document.getElementsByClassName("squares");
     for (square of squares) {
         let sqid = parseInt(square.id);
-        if (sqid === 0) {
+        if (sqid === 0) {//if square is top left corner
             square.classList.add("top-left");
-        } else if (sqid > 0 && sqid < (selectedRows -1)) {
-            square.classList.add("top-edge")
-        } else if (sqid === selectedRows -1) {
+        } else if (sqid > 0 && sqid < (selectedRows -1)) {//if square has id between 1 and the number of squares in each row -1
+            square.classList.add("top-edge")//ie it's on top row but not left corner and not right corner
+        } else if (sqid === selectedRows -1) {//if square has id = to number of squares in each row, -1
             square.classList.add("top-right");
-        } else if (sqid > 0 && sqid % selectedRows === 0 && sqid != (selectedSquares - selectedRows)) {
-            square.classList.add("left-edge");
-        } else if (sqid > 0 && (sqid +1) % selectedRows === 0 && sqid != (selectedSquares - 1)) {
-            square.classList.add("right-edge");
+        } else if (sqid > 0 && sqid % selectedRows === 0 && sqid != (selectedSquares - selectedRows)) {//if it's not top left,
+            square.classList.add("left-edge");//but its id is divisible by the # of rows, and it's not bottom left
+        } else if (sqid > 0 && (sqid +1) % selectedRows === 0 && sqid != (selectedSquares - 1)) {//its id+1 is divisible by
+            square.classList.add("right-edge");//the # of rows and its id isn't the # of squares -1 ie not bottom right
         } else if (sqid === (selectedSquares - selectedRows)) {
             square.classList.add("bottom-left");
         } else if (sqid === (selectedSquares - 1)) {
