@@ -148,6 +148,8 @@ function iterateCorrectAnswers(correctAnswers, flagInputs, answerDivs) {
     }
     displayCorrectAnswers(correctAnswers);
 }
+/*simple function to determine which score message to display based on how many correct answers (ie value of correctAnswers
+variable)*/
 function displayCorrectAnswers(correctAnswers) {
     if (correctAnswers < 4) {        
         flagsDisplayBox.innerHTML = `Unlucky! You scored ${correctAnswers} out of 10<br><i class="far fa-frown scoreSmileys"></i>`;
@@ -159,12 +161,16 @@ function displayCorrectAnswers(correctAnswers) {
         flagsDisplayBox.innerHTML = `Perfect! You scored ${correctAnswers} out of 10!!<br><i class="far fa-laugh-squint scoreSmileys"></i>`;
     }
 }
+/*code changes the wording of the submit answers button once pressed, to 'reveal', and changes the event listener
+to the revealAnswers event handler*/
 function changeButton() {
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.innerHTML = "Reveal";
     submitFlagsAnswer.removeEventListener("click", checkAnswers);
     submitFlagsAnswer.addEventListener("click", revealAnswers);
 }
+/* function displays the correct answer by getting the answerDiv's parent's previous sibling element (ie the flag) and accessing
+its stored country name in the data-flag-name attribute and displaying it to the user as the answer*/
 function revealAnswers() {
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer")
     submitFlagsAnswer.removeEventListener("click", revealAnswers);
