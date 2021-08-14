@@ -42,6 +42,15 @@ function generateArrayRandomSquares(emptyArray, arrayLength) {
         }
     }
 }
+/* arguments: j is just the iteration of a loop of all the squares in the grid, as per the code in the gameOverClassifier
+function. randomSquaresAll is the array of random numbers per the generateArrayRandomSquares function. Squares is just all the
+squares on the grid. The code takes each of the squares and assigns it an index of the random array (randomSquaresAll) for each
+of those indices in turn (j). It removes certain classes from ALL of the squares, to change their styling appropriately for the
+victory 'animation'. It then applies a test to determine what the square's background color should be, in order to divide them into 
+3 roughly equal groups of squares: those divisible by 3; those not divisble but divisible by 2, ie the remaining even numbers; and
+then the remainder, ie those not divisible by 2 or 3. Each of these 3 groups are assigned a different background color to create
+a random patterns. Finally, this process is separated by 7ms for each assignment by the containing setTimeout function. This 
+creates a randomised 'colouring in' effect. */
 function victoryStyleSquaresSequentially(j, randomSquaresAll, squares) {      
     setTimeout(function() {
         squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "flagged");
@@ -59,6 +68,7 @@ function victoryStyleSquaresSequentially(j, randomSquaresAll, squares) {
     }, 7 * j);
     victorySquaresSmileysWhite(squares);
 } 
+// function changes all squares to their final 'victory' state following the previous cascade of colours
 function victorySquaresSmileysWhite(squares) {
     setTimeout(function() {            
         for (square of squares) {
