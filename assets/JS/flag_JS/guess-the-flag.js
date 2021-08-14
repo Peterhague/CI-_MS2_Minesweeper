@@ -27,11 +27,15 @@ function hideResetProcess() {
         setFocus();
     }, 300);
 }
-/*This code loops throught the flag container divs which display the flags in the game, and assigns each one a flag
-image from the library at countryflags.io. It does so by using each of the random numbers generated in the randomiseFlags
-function as an index of the flagObjects array stored in flag-library.js file. 
-It firstly accesses the given country code via that object's "code" key. This code is then inserted into the img src attribute
+/*function runs on click of new game and loops throught the flag container divs which display the flags in the game, and 
+assigns each one a flag image from the library at countryflags.io. It does so by using each of the random numbers generated 
+in the randomiseFlags function as an index of the flagObjects array stored in flag-library.js file. Then does the following:
+1. accesses the given country code via that object's "code" key. This code is then inserted into the img src attribute
 at the appropriate location to access the flag image stored with that code.
+2. each container is given a custom attribute of data-flag-name, being the actual name of country to which the flag 
+belongs, to check against the user's answer.
+3. each container is given an optional alt-names attribute, which some of the objects in the library have where countries 
+have multiple commonly used names, eg USA and United States.
 */
 function displayFlags(randomFlags) {
     for (let i = 0; i < 10; i++) {
@@ -42,6 +46,9 @@ function displayFlags(randomFlags) {
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.addEventListener("click", checkAnswers);
 }
+/*function runs on click of new game and displays some of the elements defined in the html by removing
+their display: none CSS attributes.
+*/
 function displayInputs(stylingChanges) {
     let flagsRowOne = document.getElementById("flagsRowOne");
     flagsRowOne.classList.remove("hide");
@@ -58,6 +65,9 @@ function displayInputs(stylingChanges) {
     submitButton.classList.remove("hide");
     stylingChanges();
 }
+/*function runs on click of new game and changes the styling of some of the elements displayed on page load,
+and then sets the focus on the first flag answer input via the setFocus function.
+*/
 function stylingChanges() {
     let mainContainer = document.getElementById("mainContainer");
     mainContainer.classList.add("margin-top-small");
@@ -74,6 +84,8 @@ function stylingChanges() {
     stylingChangesLoops(answerDivs, flagInputs);
     setFocus();
 }
+/*this code just runs more of the styling changes on trigger of a new game, but where it's necessary to iterate over multiple
+elements. Effectively it hides the divs that display the answers and shows the divs containing the input divs.*/
 function stylingChangesLoops(answerDivs, flagInputs) {
     for (div of answerDivs) {
         div.classList.add("hide");
@@ -133,9 +145,7 @@ function displayCorrectAnswers(correctAnswers) {
 }
 function changeButton() {
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
-    submitFlagsAnswer.innerHTML = "Reveal";/*
-    let flagsDisplayBox = document.getElementById("flagsDisplayBox");
-    flagsDisplayBox.focus();*/
+    submitFlagsAnswer.innerHTML = "Reveal";
     submitFlagsAnswer.removeEventListener("click", checkAnswers);
     submitFlagsAnswer.addEventListener("click", revealAnswers);
 }
