@@ -1,3 +1,4 @@
+/*passes the emailJS API the necessary inputs to send the automated email*/
 function sendMail(contactForm) {
     emailjs.send("service_epz8iti", "contact_form", {
         "first_name": contactForm.firstName.value,
@@ -8,6 +9,10 @@ function sendMail(contactForm) {
     console.log("pass thru working");
     return false;    
 }
+/*function to validate the form for user idea submissions.
+Checks that all fields are populated.
+Checks that the name fiels contain only letters.
+If all the conditions are met then the sendMail function is called and an email is sent via emailJS.*/
 function formValidation(that) {
     let fName = document.forms["ideasForm"]["firstName"].value;
     let lName = document.forms["ideasForm"]["lastName"].value;
