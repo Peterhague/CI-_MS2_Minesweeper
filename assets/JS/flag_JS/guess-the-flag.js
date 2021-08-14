@@ -1,7 +1,8 @@
 let flagContainers = document.getElementsByClassName("flagContainers");
 let playFlags = document.getElementById("playFlags");
-/*This function is called from user clicking on the play button, and is passed
-the next two functions as parameters to be called from within the function.*/
+/*This function is called on user clicking the play button, and creates a random
+list of 10 unique numbers, between 0 and 192. It then calls the next 3 functions in
+the play game process.*/
 function randomiseFlags(displayFlags, displayInputs) {
     let randomFlags = [];
     while (randomFlags.length < 10) {
@@ -10,15 +11,28 @@ function randomiseFlags(displayFlags, displayInputs) {
             randomFlags.push(flag);
         }
     }
+    hideResetProcess();
+    displayFlags(randomFlags);
+    displayInputs(stylingChanges);
+}
+/*Function hides the process of resetting the flags diplayed on trigger of a new game: there's
+a very brief chnage of div dimensions etc with different sized content applied, and this created
+and ugly 'bounce' effect. This code just hides that by displaying a completely blank div for 0.3s while
+the reload takes place*/
+function hideResetProcess() {
     let mainContainer = document.getElementById("mainContainer");
     mainContainer.classList.add("hide");
     setTimeout(function() {                
         mainContainer.classList.remove("hide");
         setFocus();
-    }, 200);
-    displayFlags(randomFlags);
-    displayInputs(stylingChanges);
+    }, 300);
 }
+/*This code loops throught the flag container divs which display the flags in the game, and assigns each one a flag
+image from the library at countryflags.io. It does so by using each of the random numbers generated in the randomiseFlags
+function as an index of the flagObjects array stored in flag-library.js file. 
+It firstly accesses the given country code via that object's "code" key. This code is then inserted into the img src attribute
+at the appropriate location to access the flag image stored with that code.
+*/
 function displayFlags(randomFlags) {
     for (let i = 0; i < 10; i++) {
         flagContainers[i].innerHTML = `<img class="flagImages" style="width: 96px;" src="https://www.countryflags.io/${flagObjects[randomFlags[i]].code}/flat/64.png"></img>`;
