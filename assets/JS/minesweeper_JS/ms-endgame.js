@@ -1,3 +1,5 @@
+/* event handler for click of square. If the square clicked on doesn't have a bomb, this and all other
+successfully cleared squares are collected in a variable clearedSquares*/
 function counter() {
     let randomSquaresAll = [];
     let squares = document.getElementsByClassName("squares");
@@ -6,6 +8,9 @@ function counter() {
         gameOverClassifier(randomSquaresAll, squares, clearedSquares);
     }    
 }
+/*called from counter fn: checks the length of the clearedSquares variable. If it's greater than the total number of
+squares, less than the total amount of 'mine' squares, then all non-mine squares have been successfully cleared.
+The code then calls the various 'victory' functions to indicate success*/
 function gameOverClassifier(randomSquaresAll, squares, clearedSquares) {
     if (clearedSquares.length > (selectedSquares - selectedBombs - 1)) {
         victorySquaresSmiley(squares);
@@ -15,6 +20,8 @@ function gameOverClassifier(randomSquaresAll, squares, clearedSquares) {
         }
     }
 }
+/* on winning the game: all event listeners removed from the squares, inner html changed to a smiley icon,
+and their colour changed to 'invisible' text.*/
 function victorySquaresSmiley(squares) {
     for (square of squares) {
         square.style.color = "rgba(0,0,0,0.0)";
@@ -25,8 +32,10 @@ function victorySquaresSmiley(squares) {
         square.removeEventListener("click", gameOverTwo);
     }
 }
+/* generates an array of unique random numbers between 0 and the # of squares on the grid, until it's the same
+length as the number of squares on the grid (ie a random list of the square's ids).*/
 function generateArrayRandomSquares(emptyArray, arrayLength) {
-    while (emptyArray.length < arrayLength) {// populate random numbers array until it's 81 numbers long
+    while (emptyArray.length < arrayLength) {
         let x = Math.floor(Math.random()*arrayLength);
         if (emptyArray.includes(x) === false) {
             emptyArray.push(x);

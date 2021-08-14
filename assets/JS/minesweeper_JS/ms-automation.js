@@ -99,8 +99,6 @@ function automatedClick(that) {
     for (clicker of automatedClickers) {   
         clicker.click();
         clicker.classList.add("automaticallyClicked");
-        clicker.style.backgroundColor = "yellow";
-        console.log("yeeeeep");
     }
 }
 
