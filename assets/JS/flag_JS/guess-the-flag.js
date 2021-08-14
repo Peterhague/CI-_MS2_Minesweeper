@@ -97,13 +97,19 @@ function stylingChangesLoops(answerDivs, flagInputs) {
         input.value = "";
     }
 }
+/*sets focus on first answer input*/
 function setFocus() {
     let flagOneInput = document.getElementById("flagOneInput");
     flagOneInput.focus();
 }
+/*sets focus on the play again button after the reveal answers button is clicked. This just helps UX for those people
+playing a PC/keyboard, so they don't have to use the mouse to select replay, or indeed the back tab key.*/
 function setFocusPlay() {
     playFlags.focus();
 }
+/*event handler for click of submit button. Removes the display:none CSS from the answer divs (ie the containers for 
+showing a tick or cross). Assigns each div an "incorrect" state by default (ie red text and the cross icon).
+Calls a further 2 functions.*/
 function checkAnswers() {
     let flagInputs = document.getElementsByClassName("flagInputs");    
     let answerDivs = document.getElementsByClassName("answerDiv");
@@ -115,12 +121,22 @@ function checkAnswers() {
     iterateCorrectAnswers(correctAnswers, flagInputs, answerDivs);
     changeButton();
 }
+/* for each of the user's answers (flagInputs), code removes the user input fields.
+It then checks the answers are correct via a complicated if statement. This says that if the input elements' data-input
+attribute is the same as the flag containers' data-input attribute (ie 0-9, and the same if the input is literally 
+below the flag: effectively, are the input and flag associated?) AND if the answer is the same as the flag container's
+data-flag-name attribute, OR if it's the same as the flag container's data-flag-alt-names attribute, THEN the answer is
+correct.
+If this condition is met, then the associated answerDivs are assigned the tick icon and green text, and 1 is added
+to the value of the correctAnswers variable.*/ 
 function iterateCorrectAnswers(correctAnswers, flagInputs, answerDivs) {
     for (input of flagInputs) {
         input.classList.remove("inlineBlock");
         input.classList.add("hide");
         for (container of flagContainers) {
-            if (input.getAttribute("data-input") == container.getAttribute("data-input") && (input.value.toLowerCase() === container.getAttribute("data-flag-name").toLowerCase() || input.value.toLowerCase() === container.getAttribute("data-flag-alt-names").toLowerCase())) {
+            if (input.getAttribute("data-input") == container.getAttribute("data-input") && (input.value.toLowerCase()
+             === container.getAttribute("data-flag-name").toLowerCase() || input.value.toLowerCase() === 
+             container.getAttribute("data-flag-alt-names").toLowerCase())) {
                 for (div of answerDivs) {
                     if (div.getAttribute("data-input") === input.getAttribute("data-input")) {
                         div.innerHTML = `<i class="fas fa-check text-green"></i>`;
