@@ -10,6 +10,7 @@ for (i = 0; i < 10; i++) {
         let titlePixels = document.createElement("div");
         titlePixels.classList.add("title-pixels");
         titlePixels.style.backgroundColor = "white";
+        titlePixels.id = "pixel" + ((i*100)+x);
         titleRows.appendChild(titlePixels);
     }
     headingContainer.appendChild(titleRows);
@@ -42,8 +43,10 @@ let titlePixelsColored = ["pixel102", "pixel103", "pixel202", "pixel302", "pi
  "pixel897", "pixel141", "pixel836", "pixel137", "pixel128", "pixel828", "pixel157", "pixel857", "pixel865", "pixel165", "pixel173", "pixel183", "pixel883",
  "pixel144", "pixel154", "pixel549", "pixel124", "pixel225", "pixel236", "pixel898"]
 let titlePixels = document.getElementsByClassName("title-pixels");
+/*assigns background color to the title divs based on their position to spell out a title, and coloured at random*/
 for (pixel of titlePixels) {
     if (titlePixelsColored.includes(pixel.id)) {
+        console.log("hello");
         pixel.style.backgroundColor = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
     }
 }
