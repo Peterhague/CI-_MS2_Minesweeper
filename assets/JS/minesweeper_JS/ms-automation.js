@@ -89,13 +89,7 @@ function automatedClick(that) {
     for (square of clickedSquareRadius) {
         square.classList.add(`csr-${that.id}`);
     }   
-    let automatedClickers = document.getElementsByClassName(`csr-${that.id}`)     
-    /*for (clicker of automatedClickers) {   
-        if (!clicker.classList.contains("selected")) {
-            clicker.click();
-            clicker.classList.add("automaticallyClicked");
-        }
-    }*/
+    let automatedClickers = document.getElementsByClassName(`csr-${that.id}`)
     for (clicker of automatedClickers) {   
         clicker.click();
         clicker.classList.add("automaticallyClicked");
