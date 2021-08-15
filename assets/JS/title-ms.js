@@ -1,4 +1,7 @@
 let headingContainer = document.getElementById("heading-container");
+/*generates 10 rows of 100 'pixel-esque' divs and adds them to the heading container.
+Each div is given a unique id so these can then be styled to give a different 'pixel-art' effect 
+for each of the page's titles.*/
 for (i = 0; i < 10; i++) {
     let titleRows = document.createElement("div");
     titleRows.classList.add("title-rows");    
@@ -7,14 +10,9 @@ for (i = 0; i < 10; i++) {
         let titlePixels = document.createElement("div");
         titlePixels.classList.add("title-pixels");
         titlePixels.style.backgroundColor = "white";
-        titlePixels.id = "pixel" + ((i*100)+x);titlePixels.addEventListener("click", changeColor);
         titleRows.appendChild(titlePixels);
     }
     headingContainer.appendChild(titleRows);
-}
-function changeColor() {
-    this.style.backgroundColor = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
-    console.log(this.id);
 }
 let titlePixelsColored = ["pixel102", "pixel103", "pixel202", "pixel302", "pixel402", "pixel302", "pixel502", "pixel602", "pixel702", "pixel802",
  "pixel803", "pixel703", "pixel603", "pixel503", "pixel403", "pixel303", "pixel203", "pixel104", "pixel204", "pixel205", "pixel305", "pixel306",

@@ -1,4 +1,7 @@
 let headingContainer = document.getElementById("heading-container");
+/*generates 10 rows of 100 'pixel-esque' divs and adds them to the heading container.
+Each div is given a unique id so these can then be styled to give a different 'pixel-art' effect 
+for each of the page's titles.*/
 for (i = 0; i < 10; i++) {
     let titleRows = document.createElement("div");
     titleRows.classList.add("title-rows");    
@@ -7,14 +10,10 @@ for (i = 0; i < 10; i++) {
         let titlePixels = document.createElement("div");
         titlePixels.classList.add("title-pixels");
         titlePixels.style.backgroundColor = "white";
-        titlePixels.id = "pixel" + ((i*100)+x);titlePixels.addEventListener("click", changeColor);
+        titlePixels.id = "pixel" + ((i*100)+x);
         titleRows.appendChild(titlePixels);
     }
     headingContainer.appendChild(titleRows);
-}
-function changeColor() {
-    this.style.backgroundColor = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
-    console.log(this.id);
 }
 let titlePixelsColored = ["pixel500","pixel600","pixel700","pixel701","pixel601","pixel501","pixel702","pixel801","pixel802","pixel803",
 "pixel804","pixel805","pixel806","pixel706","pixel807","pixel707","pixel606","pixel506","pixel507","pixel607","pixel505","pixel401","pixel301",
@@ -41,6 +40,9 @@ let titlePixelsColored = ["pixel500","pixel600","pixel700","pixel701","pixel601"
 "pixel898","pixel798","pixel698","pixel699","pixel799","pixel899","pixel597","pixel598","pixel599","pixel293","pixel294","pixel194","pixel195",
 "pixel196","pixel197","pixel198","pixel199","pixel299", "pixel142","pixel837","pixel829","pixel134"]
 let titlePixels = document.getElementsByClassName("title-pixels");
+/*assigns background color to the title divs based on their position to spell out a title. The divs in the titlePixelsColored
+array are the ones spelling out the words. Additionally, certain divs are coloured differently in order to create the effect
+of mini tricolour flags occupying parts of the title*/
 for (pixel of titlePixels) {
     if (titlePixelsColored.includes(pixel.id)) {
         pixel.style.backgroundColor = "black";

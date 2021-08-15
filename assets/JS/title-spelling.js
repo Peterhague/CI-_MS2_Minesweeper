@@ -1,4 +1,7 @@
 let headingContainer = document.getElementById("heading-container");
+/*generates 10 rows of 100 'pixel-esque' divs and adds them to the heading container.
+Each div is given a unique id so these can then be styled to give a different 'pixel-art' effect 
+for each of the page's titles.*/
 for (i = 0; i < 10; i++) {
     let titleRows = document.createElement("div");
     titleRows.classList.add("title-rows");
@@ -8,19 +11,9 @@ for (i = 0; i < 10; i++) {
         titlePixels.classList.add("title-pixels");
         titlePixels.style.backgroundColor = "white";
         titlePixels.id = "pixel" + ((i*100)+x);
-        titlePixels.addEventListener("click", changeColor);
         titleRows.appendChild(titlePixels);
     }
     headingContainer.appendChild(titleRows);
-}
-function changeColor() {
-    if (this.style.backgroundColor == "white") {
-        this.style.backgroundColor = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
-        console.log(this.id);
-    } else {
-        this.style.backgroundColor = "white";
-    }
-    console.log(this.id)
 }
 let titlePixelsColored = ["pixel802","pixel702","pixel803","pixel804","pixel805","pixel806","pixel706","pixel707","pixel605",
 "pixel607","pixel606","pixel505","pixel504","pixel503","pixel403","pixel404","pixel302","pixel303","pixel202","pixel203","pixel204","pixel103","pixel105","pixel104",
@@ -58,16 +51,15 @@ let pixelsBlack = ["pixel202","pixel302","pixel702","pixel802","pixel105","pixel
 "pixel485","pixel585","pixel685","pixel785","pixel885","pixel886","pixel486","pixel186","pixel189","pixel889","pixel193","pixel194","pixel293","pixel393","pixel494",
 "pixel493","pixel593","pixel693","pixel793","pixel893","pixel894","pixel897","pixel197","pixel155","pixel255","pixel355","pixel455","pixel555","pixel655","pixel755",
 "pixel855"]
-let pixelsYellow = ["pixel878","pixel877","pixel577","pixel578","pixel177","pixel178","pixel185","pixel184","pixel284","pixel384","pixel484","pixel584","pixel684",
-"pixel784","pixel884","pixel885","pixel785","pixel685","pixel585","pixel485","pixel385","pixel285","pixel188","pixel189","pixel889","pixel888","pixel893","pixel892",
-"pixel792","pixel692","pixel592","pixel492","pixel392","pixel292","pixel192","pixel193","pixel293","pixel393","pixel493","pixel593","pixel693","pixel793","pixel897",
-"pixel896","pixel196","pixel197","pixel153","pixel253"]
 let titlePixels = document.getElementsByClassName("title-pixels");
+/*assigns background color to the title divs based on their position to spell out a title, and colours them yellow.*/
 for (pixel of titlePixels) {
     if (titlePixelsColored.includes(pixel.id)) {
         pixel.style.backgroundColor = "yellow";
     }
 }
+/*assigns colour of black to the divs in the pixelsBlack array to create a 'bee' like yellow and black striped effect on the 
+title*/
 for (pixel of titlePixels) {
     if (pixelsBlack.includes(pixel.id)) {
         pixel.style.backgroundColor = "black";
