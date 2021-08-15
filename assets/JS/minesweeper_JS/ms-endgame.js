@@ -47,9 +47,9 @@ function. randomSquaresAll is the array of random numbers per the generateArrayR
 squares on the grid. The code takes each of the squares and assigns it an index of the random array (randomSquaresAll) for each
 of those indices in turn (j). It removes certain classes from ALL of the squares, to change their styling appropriately for the
 victory 'animation'. It then applies a test to determine what the square's background color should be, in order to divide them into 
-3 roughly equal groups of squares: those divisible by 3; those not divisble but divisible by 2, ie the remaining even numbers; and
+3 roughly equal groups of squares: those divisible by 3; those not divisble by 3 but divisible by 2, ie the remaining even numbers; and
 then the remainder, ie those not divisible by 2 or 3. Each of these 3 groups are assigned a different background color to create
-a random patterns. Finally, this process is separated by 7ms for each assignment by the containing setTimeout function. This 
+random patterns. Finally, this process is separated by 7ms for each assignment by the containing setTimeout function. This 
 creates a randomised 'colouring in' effect. */
 function victoryStyleSquaresSequentially(j, randomSquaresAll, squares) {      
     setTimeout(function() {
@@ -77,6 +77,8 @@ function victorySquaresSmileysWhite(squares) {
         };
     }, 2000);
 }
+/*if the square clicked on contains a mine, generates a random array of all mined squares and passes it to the next function
+in the game over sequence*/
 function gameOverOne() {
     let randomSquaresBombs = [];
     let bombs = document.getElementsByClassName("bomb");
@@ -90,6 +92,7 @@ function gameOverOne() {
         }
     }          
 }
+// on defeat, all squares assigned invisible text
 function defeatStyleBombs(squares, flaggedSquares) {
     for (square of squares) {
         square.classList.add("invisible-text");
@@ -101,12 +104,15 @@ function defeatStyleBombs(squares, flaggedSquares) {
         }
     }
 }
+// on game over assigns all mined squares red text in random order
 function defeatStyleBombSquaresSequentially(j, bombs, randomSquaresBombs) {
     setTimeout(function() {
         bombs[randomSquaresBombs[j]].classList.add("text-red");
         bombs[randomSquaresBombs[j]].classList.remove("invisible-text");
         }, 10 * j);
 }
+/* on game over, calls the defeatStyleBombs function and passes a random list of all the squares to the defeatStyleSquaresSequentially
+function. Once the game over sequence has return, the play button's event listeners are reinstated after a 0.7s pause.*/
 function gameOverTwo() {
     let squares = document.getElementsByClassName("squares");// gets all the squares on the grid
     let flaggedSquares = document.getElementsByClassName("flagged");
@@ -125,6 +131,8 @@ function gameOverTwo() {
         }, (selectedRows * 100) + 700);
     }  
 }
+/*called from gameOverTwo, when the player clicks on a mine. Square background colour is changed to either white, black, or
+grey in the same random fashion as for a victory sequence as per the victoryStyleSquaresSequentially function*/
 function defeatStyleSquaresSequentially(j, squares, randomSquaresAll) {
     setTimeout(function() {
         squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "blue");
@@ -138,6 +146,7 @@ function defeatStyleSquaresSequentially(j, squares, randomSquaresAll) {
         squares[j].removeEventListener("click", minesweep);                    
     }, 5 * j);
 }
+// changes the grid to black with red skull icons on each square as the final defeat state for each game
 function defeatStyleChangesFinal(squares) {
     setTimeout(function() {            
         for (square of squares) {
