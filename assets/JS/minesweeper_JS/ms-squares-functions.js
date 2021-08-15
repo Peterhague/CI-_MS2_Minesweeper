@@ -1,3 +1,8 @@
+/* event handler for a right click on each grid square. Determines whether the squares has already been left clicked on and hence
+'cleared' and if not, then distinguishes between flags that already have a flag (following a previous right click) and those
+that are 'even' squares and 'odd' squares. The former is to allow a right click to toggle the placement of the flag and the latter
+allows the code to 'remember' the square's previous state, so it can return to that if the flag is then toggled off.
+Once these conditions are defined the appropriate function is callled and passed the necessary arguments.*/
 function addFlags() {
     let squares = document.getElementsByClassName("squares");
     $(squares).mousedown(function(event) {
@@ -22,20 +27,22 @@ function addFlags() {
         }
     });
 }
+/* called from addFlags function to place a flag in the square clicked. The function is passed 'this' as the first argument
+(ie the square clicked on) and either even or od depending on the square clicked. It then removes the odd/even class that defines
+its styling and replaces it with a nominal class of even/oddReserved, so that the distinction between odd and even can be accessed
+by JS later on if the flag needs to be replaced and the original styling reinstated.
+It also replaces the square's inner html (ie the number of mines in its surrounding squares) with a flag icon and stores the 
+information about the # of mines in a cutom attribute 'data-id', again so this can potentially be retrieved later.*/
 function squareFlagged(that, evenOrOdd) {
-    $(that).removeClass(`${evenOrOdd}-squares`); // removes the styling
-    $(that).removeClass("hovered-squares"); // removes hover pseudo class
-    $(that).addClass(`${evenOrOdd}Reserved`); 
-    /* this purely nominal class reserves that the square DID have class of "even-squares"
-    within the element's attributes, so that fact can be accessed later on if the flag is removed*/
+    $(that).removeClass(`${evenOrOdd}-squares`);
+    $(that).removeClass("hovered-squares");
+    $(that).addClass(`${evenOrOdd}Reserved`);
     $(that).addClass("flagged");
     $(that).attr("data-id", that.innerHTML);
-    /* this custom attribute reserves the square's inner html (ie what number of mines surrounds it)
-    so that it can be accessed later on if the flag is removed (the inner html will change to the
-    flag icon)*/
     $(that).html(`<i class="fas fa-flag"></i>`); // square displays the flag icon
     scoreContainer.innerHTML = scoreContainer.innerHTML - 1; // reduces the display of number of flags in hand by 1
 }
+//literally reverses the process of the squareFlagged function to remove the flags on a second right click on a square
 function squareUnflagged(that, evenOrOdd) {
     $(that).removeClass("flagged");
     $(that).removeClass(`${evenOrOdd}Reserved`);
@@ -47,10 +54,14 @@ function squareUnflagged(that, evenOrOdd) {
 }
 let downPress;
 let release;
+//event handler for a touchstart event on a square. Stores the time at the start of a press in a variable
 function longPressDown() {
     downPress = "";
     downPress = Date.now();
 }
+/*event handler for a touchend event on a square. Stores the time at the end of a press in variable 'release', and compares
+it to the time at the start. If it's more than 300ms then this is essentially defined as a long press and the addFlagsLong fn
+is called. The square's normal event listeners are temporarily removed to stop them interfering with the long press process.*/
 function longPressUp() {
     release = "";
     release = Date.now();
@@ -61,6 +72,7 @@ function longPressUp() {
         addFlagsLong(this);
     }
 }
+//essentially the same code as the addFlags function but reinstates the event listeners 200ms after the touchend event
 function addFlagsLong(that) {
     if (!that.classList.contains("selected")) {
         // ie if the square hasn't already been left-clicked on to reveal no mine
@@ -80,11 +92,11 @@ function addFlagsLong(that) {
         that.addEventListener("click", gameOverTwo);
     }, 200);
 }
-/* This code runs when the player left clicks on any square in the grid.
-    Its main function is to check if any of the surrounding squares of the clicked
-    square have an innerHTML value of zero. If the value of the clicked square is zero,
-    this function will then automatically "click" on any of its surrounding squares that
-    ALSO have a value of zero. */
+/* This code runs when the player left clicks on any square in the grid. It checks whether a square has been 'flagged' and
+if it's already been clicked, and if not starts running through the processes for a normal click event. Firstly the squares
+are changed in colour to signify that they've been cleared, and assigned a text colour based on the number of mines around
+them, and then the signifying class 'clicked-square-radius' is removed from all other squares, to facilitate the autoamted clicking
+code that will be triggered in certain cases. The function minesweepRoutineDetector is then called.*/
 function minesweep() {
     if (!this.classList.contains("flagged") && !this.classList.contains("automaticallyClicked")) {
         this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
@@ -97,16 +109,13 @@ function minesweep() {
         }
         let squares = document.getElementsByClassName("squares");
         for (square of squares) {
-        /* removes the class identifier from the squares selected by the below code as
-        surrounding the clicked square. This prevents the automated clicking code from
-        clicking on squares previously identified as surrounding OTHER squares but which weren't
-        selected for automatic clicking because the initially clicked square didn't have a value
-        of zero*/
             square.classList.remove("clicked-square-radius");
         }
         minesweepRoutineDetector(this,squares);
     }      
 }
+/*determines where the square is in the grid and therefore which squares' ids relative to its own will be identified as belonging
+to squares that 'surround' it in terms of what the user actually sees on the grid*/
 function minesweepRoutineDetector(that, squares) {
     if (that.classList.contains("right-edge")) {
         minesweepRight(squares, that);
@@ -131,6 +140,7 @@ function minesweepRoutineDetector(that, squares) {
         automatedClick(that);
     }
 }
+//called from the minesweep function, and assigns each square a text color depending on its inner html
 function colorByNumber(that) {
     if (that.innerHTML == 1) {
         that.classList.add("text-blue");
