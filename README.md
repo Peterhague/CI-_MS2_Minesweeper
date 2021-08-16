@@ -188,27 +188,15 @@ from larger images and had their backgrounds removed with online software. There
 
 <h3>Current Features</h3>
 
-<h4>Feature 1: Home Page</h4>
+<h4>Feature 1: Pixel Art Header</h4>
 
-<p>The home page has two sections:
+<p>Every page has a bespoke title using the same basic html elements but with modified CSS via Javascript code.</p>
 
-<ol>
-    <li>A carousel with various testimonies from DJR's current clients praising the firm</li>
-    <li>A news section with three stories from related to the accountancy industry</li>
-</ol>
+<p>The heading-container div contains ten rows of one hundred small divs, which when coloured were designed to resemble familiar 'blocky' pixellated graphics.
+These divs are coloured differently on each page to make up the title, for example spelling out 'Spelling Bee' and coloured in yellow and black stripes to resemble a
+bee. Each page has its own fun and bespoke design.</p>
 
-The page is fully responsive on mobile and tablet screen sizes.</p>
-<p>
-The news stories were taken from similar websites and then tailored to the needs of the website - in terms of length, and content.
-The testimonials were written by me.
-</p>
-<p>This page, like all the pages, was constructed using Bootstrap grids, to aid responsiveness to various screen sizes.</p>
-
-<h4>Section 1: the carousel</h4>
-
-<p>This component was taken from the Bootstrap CDN, and then tailored for size, background colour, position on the page, and prominence of the left and right indicators.</p>
-
-<p>I chose the black, slightly opaque background, and the hard rectangle container, for consistency with the overall design philosophy mentioned above.</p>
+<p>This design is meant to be colourful and irreverent, appealing to younger users, and evocative of computer games in general.</p>
 
 <img src="assets/images/home-page-carousel.png" alt="home page carousel">
 
