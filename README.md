@@ -104,7 +104,7 @@ There are two main categories of user anticipated for the website: existing and 
 
 <h4>Responsible Adults</h4>
 
-<ol start="8">
+<ol start="6">
     <li>As a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate
     for children.</li>
     <li>As a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but
@@ -116,10 +116,11 @@ There are two main categories of user anticipated for the website: existing and 
 
 <h4>Site Owner</h4>
 
-<ol start="12">
+<ol start="10">
     <li>As a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</li>
     <li>As a site owner, I want players to find the games on the website fun and rewarding.</li>
     <li>As a site owner, I want players to feel at home on the website and to be happy spending time there.</li>
+    <li>As a site owner, I want the website to be attractive to younger users and keen gamers in particular.</li>
     <li>As a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us of
     their own volition.</li>    
     <li>As a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for yooung
@@ -176,7 +177,7 @@ used for the "display" in the Spelling game, to give an old-fashioned monitor ef
 <h3>Imagery</h3>
 
 <p>The images on the website take the form of large icons on the homepage to represent the 3 available games. They were taken
-from larger images and had their backgrounds removed with online software. There are also cartoons of Rodin's The Thinker statue to decorate the call to get in touch on the homepage, and to focus the user on the form. The images on the website do not form a major part of the aesthetic and are used for minor emphasis of the prevailing design language.</p>
+from larger images and had their backgrounds removed with online software. There are also cartoons of Rodin's The Thinker statue to decorate the call to get in touch on the homepage, and to focus the user on the form. The images on the website do not form a major part of the aesthetic and are used for emphasis of the prevailing design language.</p>
 
 <h2 id="wireframes">Wireframes</h2>
 
@@ -198,62 +199,29 @@ bee. Each page has its own fun and bespoke design.</p>
 
 <p>This design is meant to be colourful and irreverent, appealing to younger users, and evocative of computer games in general.</p>
 
-<img src="assets/images/All_Titles.png" alt="all page titles">
+<img src="assets/images/all_Titles.png" alt="all page titles">
 
-<h4>Section 2: Latest Industry News</h4>
-<p>This section consists of three relevant news stories, with informative headlines and images, accessed by collapsible modals, which display full screen on mobiles and tablets with a light
-background and dark text. I chose this because the dark theme seemed too oppresive when fully covering a smaller screen.</p>
-<img src="assets/images/home-page-news-section.png" alt="home page news section">
 <h4>User stories covered by this feature:</h4>
-<p>User story 3: as a potential stakeholder, I want to find out what the firm does and what it can offer me.</p>
-<p>User story 7: as a potential stakeholder, I want to know about the firm's competencies and how its existing clients view its services.</p>
-<p>User story 9: as a current stakeholder, I want to be able to qucikly and easily log in to the client portal.</p>
-<p>User story 11, as a current stakeholder, I want to see what the latest industry news is.</p>
+<p>User story 12: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
+<p>User story 14: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
+<p>User story 15: as a site owner, I want the website to be attractive to younger users and keen gamers in particular.</p>
 
-<h4>Feature 2: Contact Us page</h4>
+<h4>Feature 2: Navigation Bar for Desktop and Mobile</h4>
 
-<p>The Contact Us page has three sections:
+<p>Every page has a navigation bar designed to be easy to use and clearly separated from its surrounding elements.</p>
 
-<ol>
-    <li>A call to action to users to sign up to the firm's weekly newsletter, with an embedded form to input the necessary details.</li>
-    <li>A call to action to users to sign up tot he firm's cloud-based client portal. This has a much longer and more sophisticated embedded form.</li>
-    <li>A section detailing all relevant contact information, including directions, and an embedded Google Map.</li>
-</ol>
+<p>To this end, a minimalist aesthetic has been employed, with no background colour, stark black type, and bold bright pink underlining for the current page.</p>
 
-The page is fully responsive on mobile and tablet screen sizes.</p>
-<p>
-The copy for the two calls to action was written by me.
-</p>
+<p>For smaller screens, I chose to replace the wording with icons, but kept the basic layout rather than cluttering the design with a collapsible menu/burger-icon
+combination. The colour scheme is maintained, as well as the distance from other elements. The pink underline is replaced with highlighting.</p>
 
-<p>The social media and other icons were taken from the FontAwesome library.</p>
-<p>This page, like all the pages, was constructed using Bootstrap grids, to aid responsiveness to various screen sizes.</p>
+<p>The navigation bar is easily accessible and almost always present on screen on both mobile and desktop, to facilitate good user experience and fast navigation.</p>
 
-<h4>Section 1: the newsletter call to action</h4>
+<img src="assets/images/navbar_comparison.png" alt="comparison of navigation bar on mobile and desktop">
 
-<p>This component includes a title and subtitle, calling to action and explaining the imperative, and a longer summary of the benefits of the newsletter, and finally a simple form.
-The form is fully functional and won't submit until all the necessary fields are completed.</p>
-
-<p>The submit button is deliberately large and prominent and I chose a circular form to try to convey a relatively fun, informal tone, which seemed appropriate for a free newsletter.
-The inpput fields are rounded to continue that theme.</p>
-
-<img src="assets/images/newsletter-sign-up-call-to-action.png" alt="newsletter sign up call to action">
-
-<p>I chose the black, slightly opaque background, for consistency with the overall design philosophy mentioned above. I used slightly rounded corners for this componentto achieve a
-slightly softer look.</p>
-
-<p>The form maintains its basic structure across all devices sizes, albeit moves to a portrait format on mobiles and tablets. This is achieved by it populating more Bootstrap columns as the 
-screen size reduces, as well as some fine-tuning via CSS media queries.</p>
-
-<h4>Section 2: portal registration call to action</h4>
-<p>This component includes a title and subtitle, calling to action and explaining the imperative, and a form with fourteen fields.
-The form is fully functional and won't submit until all the necessary fields are completed, and it includes various different input types, such as date, text, email, password etc.</p>
-
-<p>I chose the black, slightly opaque background, for consistency with the overall design philosophy mentioned above. I again used slightly rounded corners for this component, but made
-the input fields only very slightly rounded, because that seemed to better suit the more business-like function of the form.</p>
-
-<p>The form maintains its two-column structure on tablets, but becomes a single column on mobile: this is achieved via the Bootstrap responsive grid system, as well as some fine-tuning via CSS media queries.</p>
-
-<img src="assets/images/portal-registration-form.png" alt="portal registration form call to action">
+<h4>User stories covered by this feature:</h4>
+<p>User story 12: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
+<p>User story 14: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
 
 <h4>Section 3: contact information</h4>
 
