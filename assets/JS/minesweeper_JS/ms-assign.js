@@ -118,7 +118,7 @@ function assignHTMLTopLeft(squares, inputSquare) {
     } 
     inputSquare.innerHTML = total;
 }
-//counts the surrounding squares for mines and assigns HTML if the square is anywhere in the middle of the grid
+/*counts the surrounding squares for mines and assigns HTML if the square is anywhere in the middle of the grid*/
 function assignHTMLMiddle(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
