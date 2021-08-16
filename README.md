@@ -68,88 +68,99 @@ The user goals:
 
 <h2 id="user-experience">User Experience</h2>
 
-<p>The website is designed for ease of use on any screen size, with clearly separated and uncluttered content.
-This has been achieved by avoiding long chunks of text and by keeping the pages short: auxillary content can often be accessed via modals and different carousel slides.</p>
-<p>The main goals of the user experience design are, firstly, to attract them to become clients of DJR, and secondly, to allow existing clients to regsiter for and sign in to DJR's cloud-based client portal.</p>
-<p>The first goal is achieved via prominent branding, and information about the company and its services as the first content of every page. The second goal is achieved by a prominent "Sign in" button call to action visible on every page load, on every device.</p>
+<p>The website is primarily designed for use on mobile and tablet devices, with a simple, clean layout with plenty of white
+space. It is anticipated that the site's users will largely be under 16 and will tend access it via such devices. Where
+images and additional graphics have been added for larger screens, these have been deployed mainly to break up some of that
+white space created by the additional pixels, and where the feel had slipped from 'clean' to slightly 'empty'.</p>
+<p>The main goals of the user experience design are to make clear immediately that this is a website offering educational
+ games and to tempt users to play the games.</p>
+<p>The first goal is achieved via the simple title advertising the Games Inc brand, in a typical "pixel art" style that 
+users recognise as part of the gaming design language, as well as the prominent welcome message. The second is via bright, strong colours and cartoony imagery,
+ designed to be attractive to younger users in particular, and a very clear, pared-down navigation bar offering clear access
+ to the various games.</p>
 
 <h3 id="target-audience">Target Audience</h3>
 
 <ul>
-    <li>Existing clients</li>
-    <li>Prospective clients</li>
-    <li>Potential employees</li>
-    <li>Local businesspeople</li>
+    <li>Existing users in target market</li>
+    <li>Potential users in target market</li>
+    <li>Parents and care providers of potential users</li>
 </ul>
 
 <h3 id="user-stories">User Stories</h3>
 <p>
-There are two main categories of user anticipated for the website: potential clients and employees (henceforth "potential stakeholders"), and existing clients and interested local businesspeople (henceforth "current stakeholders").
+There are two main categories of user anticipated for the website: existing and potential players of the games, generally anticipated to be 14 and younger (henceforth "players"), and adults who would potentially recommend the site to children in their care (henceforth "responsible adults").
 </p>
 
-<h4>Potential Stakeholders</h4>
+<h4>Players</h4>
 
 <ol>
-    <li>As a potential stakeholder, I want to know where the firm is located.</li>
-    <li>As a potential stakeholder, I want to know how to contact the firm and its key management personnel ("KMP").</li>
-    <li>As a potential stakeholder, I want to find out what the firm does and what it can offer me.</li>
-    <li>As a potential stakeholder, I want to know who the KMP are, what their skills and experience are, and links to their social media presence.</li>
-    <li>As a potential stakeholder, I want to find out about the firm's membership scheme and its benefits.</li>
-    <li>As a potential stakeholder, I want to discover the firm's culture and the personalities of the KMP.</li>
-    <li>As a potential stakeholder, I want to know about the firm's competencies and how its existing clients view its services.</li>
+    <li>As a player, I want to be able to easily navigate to the game of my choosing.</li>
+    <li>As a player, I want to be able to test my reasoning abilities.</li>
+    <li>As a player, I want to be able to test my spelling skills.</li>
+    <li>As a player, I want to be able to test my general knowledge and memory.</li>
+    <li>As a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</li>
 </ol>
 
-<h4>Current Stakeholders</h4>
+<h4>Responsible Adults</h4>
 
 <ol start="8">
-    <li>As a current stakeholder, I want to be able to sign up to use the client portal.</li>
-    <li>As a current stakeholder, I want to be able to qucikly and easily log in to the client portal.</li>
-    <li>As a current stakeholder, I want to be able to easily sign up for the firm's weekly newsletter.</li>
-    <li>As a current stakeholder, I want to see what the latest industry news is.</li>    
+    <li>As a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate
+    for children.</li>
+    <li>As a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but
+    educational.</li>
+    <li>As a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage
+    with their users.</li>
+    <li>As a responsible adult, I want to be assured that they will not exploit or misuse their users' private information/</li> 
 </ol>
 
 <h4>Site Owner</h4>
 
 <ol start="12">
-    <li>As a site owner, I want potential stakeholders to understand what my firm does and encourage them to become clients or employees.</li>
-    <li>As a site owner, I want potential stakeholders to understand that existing clients are happy and receive an excellent service.</li>
-    <li>As a site owner, I want potential and existing stakeholders to understand that my firm plays an active part in the local business community and that its main specialism is agribusiness.</li>    
-    <li>As a site owner, I want existing clients to be able to register for and log in to our client portal.</li>
-    <li>As a site owner, I want all users to be as engaged with my business as possible, by reading our articles, signing up for services, and following us on social media.</li>
+    <li>As a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</li>
+    <li>As a site owner, I want players to find the games on the website fun and rewarding.</li>
+    <li>As a site owner, I want players to feel at home on the website and to be happy spending time there.</li>
+    <li>As a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us of
+    their own volition.</li>    
+    <li>As a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for yooung
+    users to play, and to be happy to recommend it to them.</li>
 </ol>
 
 <h2 id="scope">Scope</h2>
 <p>The project's scope in its initial release is limited to the following features:</p>
 <ul>
-<li>Navigation bar to allow users to navigate the site quickly and easily, with contrasting text to show them which page they are currently looking at.</li>
-<li>A footer (fixed to bottom on larger devices) with the firm's address, some statutory information, and links to the firm's social media pages.</li>
-<li>Modal allowing users to sign in to the client portal, accessed via a "Sign In" button.</li>
-<li>A home page with testimonials and a news section, from which users can easily navigate the site<./li>
-<li>Carousel on the home page with three slides each giving three different testimonies from satisfied current clients.</li>
-<li>"Latest Industry News" section with headlines, summaries, and full stories expandable via "Read more" buttons and full page modals.</li>
-<li>A "Contact Us" page with all relevant information on how to find the firm, including an embedded Google map, directions to the office, and contact details.</li>
-<li>A prominently displayed form calling users to sign up for the firm's free weekly newsletter</li>
-<li>A large but easily readable form calling users to sign up for the firm's secure online portal.</li>
-<li>A "Meet the Team" page with biographies of the key individuals of the firm, along with prominent and attractve photographs.</li>
-<li>An "Our Services" page describing the different services the firm provides, in four broad categories.</li>
-<li>A table advertising the firm's membership scheme, with a list of benefits cross-referenced to three different membership levels.</li>
+<li>Navigation bar to allow users to navigate the site quickly and easily, with bold underlining to show them which page they are currently looking at.</li>
+<li>A brightly coloured footer with links to the firm's social media presence.</li>
+<li>A home page with a large and prominent welcome message, and a form encouraging users to contact the owners with their suggestions for future games. The form is validated by Javascript code and interfaces with the emailJS API, informing the owners
+of the new message and automatically sending the user a response.</li>
+<li>"Minesweeper" page with a version of the popular logic-based game, with 3 selectable difficulty levels. The page loads to a
+colourful call to action to play the game. The pixel art title is decorated with different randomly coloured tiles to recall the 
+appearance of a minsweeper grid, and to add vibrancy and contrast with the white space.</li>
+<li>"Spelling Bee" page with a spelling contest game, with 3 selectable difficulty levels. This page accesses the Responsive 
+Voice API, to "speak" the words that the user has to attempt to spell. The elements are arranged to resemble and old-fashioned
+computer monitor, with the game's messages displayed as if they were the monitor's text. The whole page is decorated in a 
+yellow and black "bee" aesthetic, as a pun on the spelling bee title.</li>
+<li>"Guess the Flag" page with a game quizzing players on their knowledge of world flags. This page uses the Country Flags API
+to access a library of flag images that is randomised and displayed on each click of the play button. Each flag has a user input
+for the player to type their guess at each flag's country. The page uses a blue and green "globe" aesthetic to match the flags theme, and the title has a fun flags motif with miniature flags adorning its letters.</li>
 <li>A custom 404 "page does not exist" error page, with an error message and a prominent link to return to the home page.</li>
 </ul>
 
 <p>Features considered for later releases:</p>
 
 <ul>
-    <li>A section on the homepage with case studies of work done for clients, detailing how specific problems were solved.</li>
-    <li>A button in the navigation bar allowing users to book appointments with different team members, via a live calendar.</li>
-    <li>A dynamic landing page which would load once on the first visit to the website in any one session, with animated elements giving a welcome and a brief summary of the firm and its unique offerings.</li>
-    <li>A section about the firm's trainees and more junior staff, providing updates on their qualification progress and the support the firm offers, partly to further familiarise users with all aspects of the firm and partly to encourage prospective trainees to join the firm.
+    <li>A section on the homepage with news about upcoming projects.</li>
+    <li>A custom version of the minesweeper game, with users able to select the number of rows and mines.</li>
+    <li>A timer on the minesweeper game showing the seconds elapsed since the start of the game.</li>
+    <li>The ability for users to sign up and log in, so they can keep track of their scores and look at live leaderboards.</li>
 </ul>
 
 <h2 id="design">Design</h2>
 
-<p>The general aesthetic is designed to be a mix of the modern and traditional, to reflect the nature of a dynamic professional practice which has deep roots in a legacy industry like agriculture.</p>
+<p>The general aesthetic is colourful, retro, pixel art. It is meant to evoke 1980s video games as well as provide lots of
+strong colours to appeal to younger users.</p>
 
-<p>As such, there are minimalist and modern elements, such as the simple logo, and the extended use of angular containers, contrasted with background images of attractive local environments. These are in turn filtered through opaque coloured squares arranged in a four-pane window pattern as a deliberate homage to the famous Microsoft logo, to subtly impress on the user that this is a technologically fluent practice.</p>
+<p>This design language influences every element of the site, from the bold, "pixelalted" titles, to the simple and virbant footers, to the content of the games themselves. Almost all the colours on the website are bright and vividly contrasting with each other. Images are used sparingly, but where considered necessary to aid visual flow, have been chosen for their strong colours and cartoon aesthetic to sustain the overall appearance.</p>
 
 <h3>Colour Scheme</h3>
 
