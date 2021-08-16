@@ -48,6 +48,7 @@
 
 #answer-box-container {
     width: 400px;
+    max-width: 95%;
     height: 280px;
     border-radius: 50px;
     background-color: black;

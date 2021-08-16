@@ -198,6 +198,12 @@ header {
     width: 10px;
 }
 
+.title-pixels-flags {
+    display: inline-block;
+    height: 100%;
+    width: 10px;
+}
+
 .navigation-container {
     text-align: center;
 }
@@ -262,7 +268,11 @@ header {
 @media screen and (max-width: 550px) {
 
     .title-pixels {
-        width: 3px;
+        width: 1vw;
+    }
+
+    .title-pixels-flags{
+        width: 0.95vw;
     }
 
     #heading-container {
@@ -311,6 +321,9 @@ header {
 @media screen and (min-width: 700px) and (max-width: 1000px) { /*e.g. Ipad*/
 
     .title-pixels {
+        width: 7px;
+    }
+    .title-pixels-flags {
         width: 7px;
     }
     .header-spelling {
