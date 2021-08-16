@@ -149,6 +149,14 @@
     margin-top: 8vh;
 }
 
+.marginBottomSmall {
+    margin-bottom: 5vh;
+}
+
+.marginBottomMedium {
+    margin-bottom: 10vh;
+}
+
 .inlineBlock {
     display: inline-block;
 }
@@ -214,12 +222,16 @@ header {
 .footerContainer {
     position: absolute;
     bottom: 0;
-    min-width: 100vw;
+    min-width: 100%;
 }
 
 #footer {
     padding-top: 1.5vmin;
     padding-bottom: 1.5vmin;
+}
+
+.footerMargin {
+    height: 20vh;
 }
 
 #footerFlags {
