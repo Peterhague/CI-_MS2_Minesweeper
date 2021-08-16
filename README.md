@@ -48,22 +48,22 @@
 
 <h2 id="project-goals">Project Goals</h2>
 
-The business goals of De Jong-Read Chartered Accountants and Agribusiness Consultants (DJR) are as follows:
+The business goals of Games Inc. are as follows:
 <ul>
-<li>To evidence that DJR is an integral part of the local business community</li>
-<li>Explain the firm's unique services and offerings to potential clients</li>
-<li>Introduce potential clients and employees to its key people in an attractive and no-nonsense manner</li>
-<li>Provide an easy way for their existing clients to log on to the firm's cloud-based portal</li>
-<li>Provide key contact information for interested parties</li>
+<li>To provide an online resource of educational games to its target market of 8 to 14 year olds</li>
+<li>To provide an selection of different games to test various aspects of users' cognitive functioning</li>
+<li>Provide a means of users contacting them with their suggestions for new games</li>
+<li>Encourage users to get in touch and provide their contact details, to build a database of engaged customers</li>
+<li>Provide links to the firm's social media presence</li>
 </ul>
 
 The user goals:
 <ul>
-<li>To find out what services the firm offers</li>
-<li>To discover where DJR is based and how to get there</li>
-<li>To be able to log in to the client portal easily and quickly</li>
-<li>To understand the benefits of becoming a member at the various different membership levels</li>
-<li>To be assured that DJR is a professional firm which provides excellent outcomes for its clients</li>
+<li>To test their reasoning faculties via the Minesweeper game</li>
+<li>To test their spelling ability via the Spelling Bee game</li>
+<li>To test their general knowledge and memory via the Guess the Flags game</li>
+<li>To be able to find out more about Games Inc. and keep in touch with them via their social media presence</li>
+<li>To be able to get in touch with Games Inc. and contact them with their feedback</li>
 </ul>
 
 <h2 id="user-experience">User Experience</h2>
