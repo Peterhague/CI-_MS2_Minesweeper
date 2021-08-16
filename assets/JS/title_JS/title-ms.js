@@ -46,7 +46,6 @@ let titlePixels = document.getElementsByClassName("title-pixels");
 /*assigns background color to the title divs based on their position to spell out a title, and coloured at random*/
 for (pixel of titlePixels) {
     if (titlePixelsColored.includes(pixel.id)) {
-        console.log("hello");
         pixel.style.backgroundColor = `rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
     }
 }
