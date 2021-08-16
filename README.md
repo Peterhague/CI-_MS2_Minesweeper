@@ -220,68 +220,43 @@ combination. The colour scheme is maintained, as well as the distance from other
 <img src="assets/images/navbar_comparison.png" alt="comparison of navigation bar on mobile and desktop">
 
 <h4>User stories covered by this feature:</h4>
+<p>User story 1: as a player, I want to be able to easily navigate to the game of my choosing.</p>
+<p>User story 6: as a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate for children.</p>
+<p>User story 7: as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
 <p>User story 12: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
 <p>User story 14: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
 
-<h4>Section 3: contact information</h4>
+<h4>Feature 3: Homepage Welcome Message</h4>
 
-<p>This component consists of a Bootstrap-defined container with two columnar sections: left for the directions and contact information, and right for the map embedded via an iframe element.</p>
+<p>The homepage features a prominent and very colourful welcome message, explaining to users what the site is for and inviting them to try its content.</p>
 
-<p>This means that the section is fully responsive for mobile and tablet, with smaller screens adopting a single column configuration, with the map beneath the directions. This has been fine-tuned
-via media queries so that the directions and the map are visible on a mobile's roughly 9:16 aspect ratio without the need to scroll.</p>
+<p>It also prompts users to fill in the form below it if they have any suggestions for games they would like to play.</p>
 
-<p>I chose the black, slightly opaque background, for consistency with the overall design philosophy mentioned above. I chose unrounded corners for this component, as that was a better fit as a frame for the map.</p>
-<img src="assets/images/contact-details-section.png" alt="contact details section and map">
+<p>This is an easy and unmissable introduction to the site, easily digestible for younger users.</p>
 
-<h4>User stories covered by this feature:</h4>
-<p>User story 1: as a potential stakeholder, I want to know where the firm is located.</p>
-<p>User story 2: as a potential stakeholder, I want to know how to contact the firm and its key management personnel ("KMP").</p>
-<p>User story 8: as a current stakeholder, I want to be able to sign up to use the client portal.</p>
-<p>User story 9, as a current stakeholder, I want to be able to qucikly and easily log in to the client portal.</p>
-<p>User story 10, as a current stakeholder, I want to be able to easily sign up for the firm's weekly newsletter.</p>
+<p>The main container is surrounded with decorative images that give visual representations of each of the games on offer. As well as being attractive, these
+draw teh eye to the actual message. These images are foregone on smaller screens to keep the design clean.</p>
 
-<h4>Feature 3: Meet the Team page</h4>
-
-<p>The meet the Team page has one section: it introduces users to the firm's five key members of staff. This is written as a single Bootstrap container, with one row for each of the staff in
-desktop format, and two rows for mobile and tablet.</p>
-
-<p>The responsive design was achieved by writing one section for desktop and then copying and editing that for mobile, and then again for tablet. Different display classes were then applied
-to each of the classes as necessary. I did this because the designs were different enough that this was quicker than writing media queries (e.g. the name of the staff member is in a different row depending on the screen size).</p>
-
-<p>The slanted boxes on this page were achieved via transform:skew CSS rules, and chosen to add variety and visual dynamism to the website.</p>
-
-<p>I chose the black, slightly opaque background, for consistency with the overall design philosophy mentioned above.</p>
-
-<p>The page is fully responsive on mobile and tablet screen sizes.</p>
-
-<img src="assets/images/staff-profiles.png" alt="staff profile example">
+<img src="assets/images/homepage.png" alt="home page with welcome message">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 3: as a potential stakeholder, I want to find out what the firm does and what it can offer me.</p>
-<p>User story 4: as a potential stakeholder, I want to know who the KMP are, what their skills and experience are, and links to their social media presence.</p>
-<p>User story 6, as a potential stakeholder, I want to discover the firm's culture and the personalities of the KMP.</p>
-<p>User story 9, as a current stakeholder, I want to be able to qucikly and easily log in to the client portal.</p>
+<p>User story 5: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
+<p>User story 10: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
+<p>User story 12, as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
 
-<h4>Feature 4: Our Services page</h4>
+<h4>Feature 4: Page Footer with Social Media Links</h4>
 
-<p>The Our Services page has two sections:
+<p>Every page has a brightly coloured footer with links to Game Inc.'s social media pages.</p>
 
-<ol>
-    <li>A section describing the four broad categories of services the firm provides</li>
-    <li>A table detailing the firm's membership programme, and the benefits attached to its three different levels.</li>
-</ol>
+<p>Each page's footer is coloured differently to tie in with the visual language of its page. The design has deliberately been kept simple, bold, and uncluttered,
+with no more information than necessary. The object is to attractively enclose the page's other content and push users towards the prominent social media links.</p>
 
-<h4>Section 1: the firm's services</h4>
+<img src="assets/images/footers.png" alt="footers of every page">
 
-<p>The responsive design was achieved by writing one section for desktop and then copying and editing that for mobile and tablet. Different display classes were then applied
-to each of the sections as necessary. I did this because the designs were different enough that this was quicker than writing media queries (e.g. the left hand panes on desktop are resized and become headings on mobile and tablet).</p>
-
-<p>I chose the black, slightly opaque background, for consistency with the overall design philosophy mentioned above. I opted for strict rectangles with no rounding because I wanted the title
-panels to evoke the feeling of peering through windows to the scenery behind, and their counterpart descriptive panels therefore had to be the same shape for a pleasing symmetry.</p>
-
-<p>All copy on the page was written by me.</p>
-
-<img src="assets/images/services-panels.png" alt="our services panels: title and description">
+<h4>User stories covered by this feature:</h4>
+<p>User story 5: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
+<p>User story 8: as a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage with their users.</p>
+<p>User story 14, as a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for yooung users to play, and to be happy to recommend it to them.</p>
 
 <h4>Section 2: table summarising membership benefits</h4>
 
