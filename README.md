@@ -198,7 +198,7 @@ bee. Each page has its own fun and bespoke design.</p>
 
 <p>This design is meant to be colourful and irreverent, appealing to younger users, and evocative of computer games in general.</p>
 
-<img src="assets/images/home-page-carousel.png" alt="home page carousel">
+<img src="assets/images/All_Titles.png" alt="all page titles">
 
 <h4>Section 2: Latest Industry News</h4>
 <p>This section consists of three relevant news stories, with informative headlines and images, accessed by collapsible modals, which display full screen on mobiles and tablets with a light
