@@ -47,6 +47,10 @@
     background-color: rgb(119, 236, 10);
 }
 
+.bg-blue {
+    background-color: rgb(54, 68, 228);
+}
+
 .bg-yellow {
     background-color: yellow;
 }
