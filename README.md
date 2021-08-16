@@ -164,21 +164,19 @@ strong colours to appeal to younger users.</p>
 
 <h3>Colour Scheme</h3>
 
-<p>There is a deliberate contrast of austere black backgrounds and white text (and occasionally vice versa) with colourful backgrounds, to continue the "old and new" motif.</p>
+<p>In general colours were chosen for their vibrancy and their appeal to younger users, with the home page dominated by bright pinks and blues. The game pages have themed colour schemes, but always with an eye on the guiding vividness.</p>
 
-<p>The new is represented by the minimalism of the black and white, and the old by the colourful backgrounds. The latter choice was also motivated by a desire to provide a source of colour, and to evoke a traditional tartan design: a visual language practically synonymous with countryside life.</p>
+<p>The Minesweeper page is largely dominated by the grid itself, which has a bright green checkered effect. This grid does not appear on load, but the call to action uses the same colours to keep the look consistent. The Spelling Bee page is entirely yellow and black, as a fun play on the "Bee" in the title. The Guess the Flags page similarly echoes the blue and green of Earth to tie in with its subject matter.</p>
 
 <h3>Typography</h3>
 
-<p>For the heading, I used Lato from Google Fonts, and for most of the other text I used Quattrocento, also from Google Fonts</p>
-
-<p>I chose Quattrocento because it seemed modern without being too rounded, to convery a relatively serious tone. I chose Lato in order to give a contrast from the main body of the page, and also because it is rather less plain than Quattrocento, and stylish enough to draw the eye to the business name.</p>
+<p>Cairo from Google Fonts is used for most of the text on the website, as it seemed to mesh well with the retro style of much of the site, while itself being readable but still pleasantly informal. Roboto from Google Fonts is used for the answers in the Flags game as it used less screen space than Cairo while maintaining a similar aesthetic. Press Start 2P from Google Fonts was 
+used for the "display" in the Spelling game, to give an old-fashioned monitor effect.</p>
 
 <h3>Imagery</h3>
 
-<p>The images on the website are of two kinds: four different background images showing scenes of Lancaster and the surrounding countryside, and black and white photgraphs of the key team members.</p>
-
-<p>The background images are deliberately beautiful, in order to establish in users' minds that this is a local firm, with a rural slant, and the pictures of the staff are black and white in order to contrast with the colourful background.</p>
+<p>The images on the website take the form of large icons on the homepage to represent the 3 available games. They were taken
+from larger images and had their backgrounds removed with online software. There are also cartoons of Rodin's The Thinker statue to decorate the call to get in touch on the homepage, and to focus the user on the form. The images on the website do not form a major part of the aesthetic and are used for minor emphasis of the prevailing design language.</p>
 
 <h2 id="wireframes">Wireframes</h2>
 
@@ -186,7 +184,7 @@ strong colours to appeal to younger users.</p>
 
 <h2 id="features">Features</h2>
 
-<p>The website has thirteen features across four pages.</p>
+<p>The website has fifteen features across five pages (including a 404 error page).</p>
 
 <h3>Current Features</h3>
 
