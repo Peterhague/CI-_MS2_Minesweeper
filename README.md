@@ -438,19 +438,66 @@ word in the array. This process repeats until all the words have been spoken to 
 <p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
 <p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
 
-<h4>Feature 12: Table of Membership Programme benefits</h4>
+<h4>Feature 12: Spelling Bee Game Repeat and Hint Functions</h4>
 
-<p>This component also uses Bootstrap grid system to produce a responsive design for tablet and mobile. The headings feature colourful, attractive icons, and data is displayed in large, easily legible fonts for maximal accessibility.</p>
+<p>The Spelling Bee game features Repeat and Hint buttons.</p>
 
-<img src="assets/images/membership-programme-table.png" alt="table detailing the benefits of membership across three different levels">
+<p>The Repeat button makes a call to the Responsive Voice API and repeats the current question to the user.</p>
+
+<p>The Hint button presents the answer to the user as the content of the game display element, but with every other letter
+replaced with an asterisk. The fact that the player has asked for a hint is stored in the variable, so that if the user 
+subsequently submits a correct answer, only 0.5 points are added to their total score, rather than 1 point.</p>
+
+<img src="docs/images/spelling-hint.png" alt="spelling bee game hint offered to player">
+
+<img src="docs/images/spelling-hinted.png" alt="spelling bee game final score with half a point deducted for a hint given">
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
-<p>User story 4, as a player, I want to be able to test my spelling skills.</p>
+<p>User story 6, as a player, I want games that are responsive to my abilities</p>
 <p>User story 7, player, I want games that give me feedback on my performance to encourage me to improve.</p>
+<p>User story 13, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
 <p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
 <p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
-<p>User story22, as a site owner, I want the games to be responsive to every kind of device.</p>
+<p>User story 21, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
+
+<h4>Feature 13: Guess the Flags Game</h4>
+
+<p>The Guess the Flags game presents an array of ten randomly selected images of national flags from the Country Flags API.</p>
+
+<p>On each click of the play button the array will be repopulated at random.</p>
+
+<p>Each of the ten flags displayed is accompanied by a text input element for the user to offer their attempt at naming
+the nation to which the flag belongs.</p>
+
+<p>On clicking the submit button, the input elements are replaced with divs displaying either a tick icon for a correct answer or
+a cross icon for an incorrect answer. A message below the buttons also displays the user's score and an adaptive message depending on
+how well they did. The submit button also changes to a reveal button, and if that is clicked any crosses will be 
+replaced by the correct answer.</p>
+
+<img src="docs/images/flags-splash.png" alt="guess the flags game call to play">
+
+<img src="docs/images/flags-attempt.png" alt="guess the flags game questions attempted">
+
+<img src="docs/images/flags-score.png" alt="guess the flags game user's score given">
+
+<img src="docs/images/flags-revealed.png" alt="guess the flags game correct answers revealed">
+
+<img src="docs/images/flags-new-game.png" alt="guess the flags game new game loaded">
+
+<img src="docs/images/flags-mobile.png" alt="guess the flags game in mobile configuration">
+
+<img src="docs/images/flags-tablet.png" alt="guess the flags game in tabet configuration">
+
+<h4>User stories covered by this feature:</h4>
+<p>User story 2, as a player, I want games that are interactive.</p>
+<p>User story 5, as a player, I want to be able to test my general knowledge and memory.</p>
+<p>User story 7, player, I want games that give me feedback on my performance to encourage me to improve.</p>
+<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
+<p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 21, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
+<p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
 
 <h4>Feature 13: Custom 404 error message page</h4>
 
