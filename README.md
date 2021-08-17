@@ -582,12 +582,12 @@ Guess the Flags game.</li></ul>
 
 <h3 id="html-validation">HTML Validation</h3>
 
-<p>The <a href="https://validator.w3.org/">W3C Markup Validation Service</a> was used for HTML validation of the site. All pages passed with 0 errors. The Index and Contact Us pages have warnings for lack of section headings, which is a stylistic choice.</p>
+<p>The <a href="https://validator.w3.org/">W3C Markup Validation Service</a> was used for HTML validation of the site. All pages passed with zero errors or warnings.</p>
 
-<img src="docs/images/html-validation-index.png" alt="screenshot of HTML validation of home page">
-<img src="docs/images/html-validation-contact-us.png" alt="screenshot of HTML validation of contact us page">
-<img src="docs/images/html-validation-meet-the-team.png" alt="screenshot of HTML validation of meet the team page">
-<img src="docs/images/html-validation-our-services.png" alt="screenshot of HTML validation of our services page">
+<img src="docs/images/validation-html-home.png" alt="screenshot of HTML validation of home page">
+<img src="docs/images/validation-html-minesweeper.png" alt="screenshot of HTML validation of minesweeper page">
+<img src="docs/images/validation-html-spelling.png" alt="screenshot of HTML validation of spelling bee page">
+<img src="docs/images/validation-html-flags.png" alt="screenshot of HTML validation of guess the flags page">
 
 <h3 id="css-validation">CSS Validation</h3>
 
