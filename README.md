@@ -208,10 +208,10 @@ bee. Each page has its own fun and bespoke design.</p>
 <img src="docs/images/all_Titles.png" alt="all page titles">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 15: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
-<p>User story 17: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
-<p>User story 18: as a site owner, I want the website to be attractive to younger users and keen gamers in particular.</p>
-<p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
+<p>User story 14: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
+<p>User story 16: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
+<p>User story 17: as a site owner, I want the website to be attractive to younger users and keen gamers in particular.</p>
+<p>User story 21, as a site owner, I want the games to be responsive to every kind of device.</p>
 
 <h4>Feature 2: Navigation Bar for Desktop and Mobile</h4>
 
@@ -230,8 +230,8 @@ combination. The colour scheme is maintained, as well as the distance from other
 <p>User story 1: as a player, I want to be able to easily navigate to the game of my choosing.</p>
 <p>User story 9: as a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate for children.</p>
 <p>User story 10: as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
-<p>User story 15: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
-<p>User story 17: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
+<p>User story 14: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
+<p>User story 16: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
 
 <h4>Feature 3: Homepage Welcome Message</h4>
 
@@ -248,8 +248,8 @@ draw teh eye to the actual message. These images are foregone on smaller screens
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 8: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
-<p>User story 15: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
-<p>User story 17, as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
+<p>User story 14: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
+<p>User story 16, as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
 
 <h4>Feature 4: Page Footer with Social Media Links</h4>
 
@@ -261,8 +261,8 @@ with no more information than necessary. The object is to attractively enclose t
 <img src="docs/images/footers.png" alt="footers of every page">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 5: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
-<p>User story 8: as a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage with their users.</p>
+<p>User story 8: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
+<p>User story 11: as a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage with their users.</p>
 <p>User story 14, as a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for yooung users to play, and to be happy to recommend it to them.</p>
 
 <h4>Feature 5: Form for Submission of Users' Ideas</h4>
@@ -281,8 +281,8 @@ address is entered in that field.</p>
 <img src="docs/images/footer-home.png" alt="home page form">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 5, as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
-<p>User story 14, as a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us of their own volition.</p>
+<p>User story 8, as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
+<p>User story 18, as a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us of their own volition.</p>
 
 <h4>Feature 6: Minesweeper Difficulty Selector</h4>
 
@@ -298,10 +298,10 @@ throughout a round.</p>
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
 <p>User story 6, as a player, I want games that that are responsive to my abilities.</p>
-<p>User story 13, as a responsibe adult, I want the games to be responsive to the needs of the young people in my care.</p>
-<p>User sotry 14, as a responsible adult, I want the games to be rewarding and educational.</p>
-<p>User stroy 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
-<p>User story 21, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
+<p>User story 12, as a responsibe adult, I want the games to be responsive to the needs of the young people in my care.</p>
+<p>User sotry 13, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User stroy 15, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 20, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
 
 <h4>Feature 7: Minesweeper Grid of Squares</h4>
 
@@ -324,8 +324,8 @@ throughout a round.</p>
 <p>User story 2, as a player, I want games that are interactive.</p>
 <p>User story 6, as a player, I want games that that are responsive to my abilities.</p>
 <p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
-<p>User story 13, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
-<p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
+<p>User story 12, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
+<p>User story 21, as a site owner, I want the games to be responsive to every kind of device.</p>
 
 <h4>Feature 8: Minesweeper Game</h4>
 
@@ -352,9 +352,9 @@ the event is instead triggered by a long touch, of more than 300 milliseconds.</
 <p>User story 2, as a player, I want games that are interactive.</p>
 <p>User story 3, as a player, I want to be able to test my reasoning abilities.</p>
 <p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
-<p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
-<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
-<p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
+<p>User story 13, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User story 15, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 21, as a site owner, I want the games to be responsive to every kind of device.</p>
 
 <h4>Feature 9: Minesweeper End Games Sequences</h4>
 
@@ -383,7 +383,7 @@ they have 'won' the game.</p>
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
 <p>User story 7, as a player, I want games that give me feedback on my performance to econourage me to improve.</p>
-<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 15, as a site owner, I want players to find the games on the website fun and rewarding.</p>
 
 <h4>Feature 10: Spelling Bee Game Difficulty Selector</h4>
 
@@ -399,10 +399,10 @@ dictionaries of 200 words. These words then form the content of the quiz.</p>
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
 <p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
-<p>User story 13, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
-<p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
-<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
-<p>User story 21, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
+<p>User story 12, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
+<p>User story 13, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User story 15, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 20, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
 
 <h4>Feature 11: Spelling Bee Game</h4>
 
@@ -434,9 +434,9 @@ word in the array. This process repeats until all the words have been spoken to 
 <p>User story 2, as a player, I want games that are interactive.</p>
 <p>User story 4, as a player, I want to be able to test my spelling skills.</p>
 <p>User story 7, player, I want games that give me feedback on my performance to encourage me to improve.</p>
-<p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
-<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
-<p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
+<p>User story 13, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User story 17, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 21, as a site owner, I want the games to be responsive to every kind of device.</p>
 
 <h4>Feature 12: Spelling Bee Game Repeat and Hint Functions</h4>
 
@@ -456,10 +456,10 @@ subsequently submits a correct answer, only 0.5 points are added to their total 
 <p>User story 2, as a player, I want games that are interactive.</p>
 <p>User story 6, as a player, I want games that are responsive to my abilities</p>
 <p>User story 7, player, I want games that give me feedback on my performance to encourage me to improve.</p>
-<p>User story 13, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
-<p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
-<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
-<p>User story 21, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
+<p>User story 12, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
+<p>User story 13, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User story 15, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 20, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
 
 <h4>Feature 13: Guess the Flags Game</h4>
 
@@ -494,10 +494,10 @@ replaced by the correct answer.</p>
 <p>User story 5, as a player, I want to be able to test my general knowledge and memory.</p>
 <p>User story 7, player, I want games that give me feedback on my performance to encourage me to improve.</p>
 <p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
-<p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
-<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
-<p>User story 21, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
-<p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
+<p>User story 13, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User story 15, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 20, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
+<p>User story 21, as a site owner, I want the games to be responsive to every kind of device.</p>
 
 <h4>Feature 14: Custom 404 error message page</h4>
 
@@ -521,6 +521,7 @@ replaced by the correct answer.</p>
 <ul>
 <li>HTML5</li>
 <li>CSS3</li>
+<li>Javascript</li>
 </ul>
 
 <h3 id="frameworks-and-tools">Frameworks, libraries and other tools</h3>
@@ -532,7 +533,7 @@ replaced by the correct answer.</p>
 <ol start="2">
 <li>GitHub</li>
 </ol>
-<ul><li>GitHub was used as a repository to stroe the project code.</li></ul>
+<ul><li>GitHub was used as a repository to store the project code.</li></ul>
 <ol start="3">
 <li>Balsamiq</li>
 </ol>
@@ -544,31 +545,38 @@ replaced by the correct answer.</p>
 <ol start="5">
 <li>Google Fonts</li>
 </ol>
-<ul><li>Lato from font Awesome was used for the heading on each page, and the membership benefits table, and Quattrocento was used for the rest of the text on the site.</li></ul>
+<ul><li>Cairo from the Google Fonts library was the predominant font used on the website, while Roboto from Google Fonts was
+used to display the correct answers in the Guess the Flags game, and Press Start 2P from Google Fonts was used for the display
+element in the Spelling Bee game.</li></ul>
 <ol start="6">
-<li>Bootstrap v 4.13</li>
+<li>Bootstrap v 4.53</li>
 </ol>
-<ul><li>Bootstrap's grid system was used to aid layout and responsiveness on each page. I also used Bootstrap's navigation bar, carousel, and modal components.</li></ul>
+<ul><li>Bootstrap's grid system was used to aid layout and responsiveness on the Home page.</li></ul>
 <ol start="7">
 <li>Am I Responsive</li>
 </ol>
-<ul><li>Am I Resoinsive was used to create the multi-device mock-up image at the top of this README.</li></ul>
+<ul><li>Am I Responsive was used to create the multi-device mock-up image at the top of this README.</li></ul>
 <ol start="8">
-<li>ImageResizer.com</li>
+<li>Pinetools.com</li>
 </ol>
-<ul><li>ImageResizer.com was used to compress image files in order to reduce the load on browsers.</li></ul>
+<ul><li>Pinetools.com was used to combine multiple images into single .png files for this README.</li></ul>
 <ol start="9">
-<li>FreeConvert.com</li>
-</ol>
-<ul><li>FreeConvert.com was used to convert PNG image files to WEBP format to improve site performance.</li></ul>
-<ol start="10">
 <li>Visual Studio Code (VSCode)</li>
 </ol>
 <ul><li>VSCode was the IDE used for writing the project code.</li></ul>
-<ol start="11">
-<li>Google Maps</li>
+<ol start="10">
+<li>Email JS</li>
 </ol>
-<ul><li>I used Google Maps to create the map embedded on the Contact Us page.</li></ul>
+<ul><li>The Email JS API was used to send automatic emails on submission of the form on the home page.</li></ul>
+<ol start="11">
+<li>Responsive Voice</li>
+</ol>
+<ul><li>The Responsive Voice API was used to speak the questions for the Spelling Bee game.</li></ul>
+<ol start="12">
+<li>CountryFlags.io</li>
+</ol>
+<ul><li>The library of flag image urls at countryflags.io was accessed by Javascript code to display the sets of random flags for the
+Guess the Flags game.</li></ul>
 
 <h2 id="testing">Testing</h2>
 
