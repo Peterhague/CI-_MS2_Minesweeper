@@ -193,7 +193,7 @@
 
 @media screen and (min-width: 700px) and (max-width: 1000px) { /*e.g. Ipad*/
 
-    #welcomeMessage {
+    #welcomeMessageMobile {
         width: 60vw;
         padding-bottom: 2vh;
     }
