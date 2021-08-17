@@ -356,38 +356,87 @@ the event is instead triggered by a long touch, of more than 300 milliseconds.</
 <p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
 <p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
 
-<h4>Feature 9: News section with modal functionality</h4>
+<h4>Feature 9: Minesweeper End Games Sequences</h4>
 
-<p>The news section features three stories each accessible as a full screen modal via underlined "Read more" calls to action. The modals are Bootstrap components, and feature a white background as I decided that the pervasive dark containers of the website were not suitable for reading extended content. On mobile devices the modals require scrolling, so I added anchor elements with "up" arrow icons to allow users to instantly return to the top of the story, and therefore to be able to access the close button without scrolling.</p>
+<p>The Minesweeper game has two end of game sequences to feedback to the user and give them confirmation of their performance. One if the player
+clicks on a mined square and 'loses', another if the user manages to click on every unmined square, and 'wins'.</p>
 
-<img src="assets/images/home-page-news-section.png" alt="section for news stories">
+<p>The losing sequence consists of every square on the grid changing colour to either white, grey or black, randomly but in equal parts, one after another but
+in random order. The mined squares change their color property to red so their location can be seen. Finally the whole grid changes to black and every
+square has the 'skull' font awesome icon displayed, to clearly indicate the failure state!</p>
 
-<img src="assets/images/news-story-modal.png" alt="modal for display of news story">
+<p>The winning sequence works very similarly, but with bright colours and a joyful, 'laughing' emoji icon, again to clearly feed back to the player that
+they have 'won' the game.</p>
 
-<h4>User stories covered by this feature:</h4>
-<p>User story 11, as a current stakeholder, I want to see what the latest industry news is.</p>
-<p>User story 16, as a site owner, I want all users to as engaged with my business as possible, by reading our articles, signing up for services, and following us on social media.</p>
+<img src="docs/images/ms-loss-start.png" alt="Minesweeper losing sequence during change of squares">
 
-<h4>Feature 10: Newsletter call to action with form</h4>
+<img src="docs/images/ms-loss-mid.png" alt="Minesweeper losing sequence once all squares changed">
 
-<p>This component features a fully functional form that will not be submitted until all mandatory fields are completed in the appropriate format. The container is responsive for all screens and becomes centre-aligned on mobile devices.</p>
+<img src="docs/images/ms-loss-end.png" alt="Minesweeper losing sequence final state">
 
-<img src="assets/images/newsletter-sign-up-call-to-action.png" alt="section calling users to sign up for newsletter">
+<img src="docs/images/ms-win-start.png" alt="Minesweeper winning sequence during change of squares">
 
-<h4>User stories covered by this feature:</h4>
-<p>User story 10, as a current stakeholder, I want to be able to easily sign up for the firm's weekly newsletter.</p>
-<p>User story 16, as a site owner, I want all users to as engaged with my business as possible, by reading our articles, signing up for services, and following us on social media.</p>
+<img src="docs/images/ms-win-mid.png" alt="Minesweeper winning sequence once all squares changed">
 
-<h4>Feature 11: Portal registration call to action with form</h4>
-
-<p>This component includes a long, fully-functional form with various input types. It uses the standard Bootstrap grid system to align two columns cleanly. It displays differently on mobile screens but retains all the same fields. The buttons required granular editing for size and placement on the various screen sizes.</p>
-
-<img src="assets/images/portal-registration-form.png" alt="section calling users to sign up for the online portal">
+<img src="docs/images/ms-win-end.png" alt="Minesweeper winning sequence final state">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 8, as a current stakeholder, I want to be able to sign up to use the client portal.</p>
-<p>User story 15, as a site owner, I want existing clients to be able to register for and log in to our client portal.</p>
-<p>User story 16, a site owner, I want all users to as engaged with my business as possible, by reading our articles, signing up for services, and following us on social media.</p>
+<p>User story 2, as a player, I want games that are interactive.</p>
+<p>User story 7, as a player, I want games that give me feedback on my performance to econourage me to improve.</p>
+<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+
+<h4>Feature 10: Spelling Bee Game Difficulty Selector</h4>
+
+<p>The user is presented with a drop down selector with four difficulty levels to choose between before they click on the play button.</p>
+
+<p>Depending on the difficulty selected, the game will generate a random selection of ten words to test the user with from one of four
+dictionaries of 200 words. These words then form the content of the quiz.</p>
+
+<img src="docs/images/spelling-difficulty.png" alt="Spelling Bee game difficulty selector on desktop">
+
+<img src="docs/images/spelling-difficulty-mobile.png" alt="Spelling Bee game difficulty selector on mobile">
+
+<h4>User stories covered by this feature:</h4>
+<p>User story 2, as a player, I want games that are interactive.</p>
+<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
+<p>User story 13, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
+<p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 21, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
+
+<h4>Feature 11: Spelling Bee Game</h4>
+
+<p>Once the difficulty has been selected, a click on the play button will generate a random array of ten words from the relevant dictionary,
+and via a call to the Responsive Voice API, the device will enunciate the first word in the array.</p>
+
+<p>The page focus is then assigned to the user input element, prompting the user to attempt to spell the word.</p>
+
+<p>When the user either clicks on the Submit button or presses the Return key, the Javascript code checks the value of the input
+against the spelling stored in the variable. If the strings are identical (the code converts the user's input to lower case) the game's display
+element presents "correct!", and if not it presents "incorrect!".</p>
+
+<p>After a brief pause, the display then shows the subsequent question number, and the Responsive Voice API is called again to speak the next
+word in the array. This process repeats until all the words have been spoken to the user.</p>
+
+<p>After the tenth submission, and the display has presented either correct or incorrect, the display then presents the user's final score.</p>
+
+<img src="docs/images/spelling-correct.png" alt="spelling bee game feedback on submission of a correct answer">
+
+<img src="docs/images/spelling-incorrect.png" alt="spelling bee game feedback on submission of an incorrect answer">
+
+<img src="docs/images/spelling-next.png" alt="spelling bee game indication of the next question number">
+
+<img src="docs/images/spelling-score.png" alt="spelling bee game presentation of final score to user">
+
+<img src="docs/images/spelling-responsive.png" alt="spelling bee game in mobile configuration">
+
+<h4>User stories covered by this feature:</h4>
+<p>User story 2, as a player, I want games that are interactive.</p>
+<p>User story 4, as a player, I want to be able to test my spelling skills.</p>
+<p>User story 7, player, I want games that give me feedback on my performance to encourage me to improve.</p>
+<p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
 
 <h4>Feature 12: Table of Membership Programme benefits</h4>
 
@@ -396,8 +445,12 @@ the event is instead triggered by a long touch, of more than 300 milliseconds.</
 <img src="assets/images/membership-programme-table.png" alt="table detailing the benefits of membership across three different levels">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 3, as a potential stakeholder, I want to find out what the firm does and what it can offer me.</p>
-<p>User story 5, as a potential stakeholder, I want to find out about the firm's membership scheme and its benefits.</p>
+<p>User story 2, as a player, I want games that are interactive.</p>
+<p>User story 4, as a player, I want to be able to test my spelling skills.</p>
+<p>User story 7, player, I want games that give me feedback on my performance to encourage me to improve.</p>
+<p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story22, as a site owner, I want the games to be responsive to every kind of device.</p>
 
 <h4>Feature 13: Custom 404 error message page</h4>
 
