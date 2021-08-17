@@ -107,7 +107,7 @@ There are two main categories of user anticipated for the website: existing and 
 
 <h4>Responsible Adults</h4>
 
-<ol start="6">
+<ol start="9">
     <li>As a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate
     for children.</li>
     <li>As a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but
@@ -121,7 +121,7 @@ There are two main categories of user anticipated for the website: existing and 
 
 <h4>Site Owner</h4>
 
-<ol start="10">
+<ol start="15">
     <li>As a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</li>
     <li>As a site owner, I want players to find the games on the website fun and rewarding.</li>
     <li>As a site owner, I want players to feel at home on the website and to be happy spending time there.</li>
