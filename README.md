@@ -130,6 +130,7 @@ There are two main categories of user anticipated for the website: existing and 
     their own volition.</li>    
     <li>As a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for yooung
     users to play, and to be happy to recommend it to them.</li>
+    <li>As a site owner, I want games that are suitable for a range of ages and ability levels.</li>
 </ol>
 
 <h2 id="scope">Scope</h2>
@@ -296,8 +297,12 @@ throughout a round.</p>
 <img src="docs/images/minesweeper-difficulty-game.png" alt="difficulty selector available during the game">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 1, as a potential stakeholder, I want to know where the firm is located.</p>
-<p>User story 16, as a site owner, I want all users to as engaged with my business as possible, by reading our articles, signing up for services, and following us on social media.</p>
+<p>User story 2, as a player, I want games that are interactive.</p>
+<p>User story 6, as a player, I want games that that are responsive to my abilities.</p>
+<p>User story 13, as a responsibe adult, I want the games to be responsive to the needs of the young people in my care.</p>
+<p>User sotry 14, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User stroy 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 21, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
 
 <h4>Feature 7: Sign In modal</h4>
 
