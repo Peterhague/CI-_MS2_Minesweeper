@@ -549,7 +549,7 @@ replaced by the correct answer.</p>
 used to display the correct answers in the Guess the Flags game, and Press Start 2P from Google Fonts was used for the display
 element in the Spelling Bee game.</li></ul>
 <ol start="6">
-<li>Bootstrap v 4.53</li>
+<li>Bootstrap v 4.13</li>
 </ol>
 <ul><li>Bootstrap's grid system was used to aid layout and responsiveness on the Home page.</li></ul>
 <ol start="7">
@@ -577,6 +577,10 @@ element in the Spelling Bee game.</li></ul>
 </ol>
 <ul><li>The library of flag image urls at countryflags.io was accessed by Javascript code to display the sets of random flags for the
 Guess the Flags game.</li></ul>
+<ol start="13">
+<li>jQuery v3.6</li>
+</ol>
+<ul><li>JQuery was used for certain Javascript code to shorten certain expressions and to facilitate the right click event-handling for the Minesweeper game.</li></ul>
 
 <h2 id="testing">Testing</h2>
 
@@ -594,7 +598,10 @@ Guess the Flags game.</li></ul>
 <p>The <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a> was used for CSS validation of the site.</p>
 <p>The CSS passed with zero errors.</p>
 
-<img src="docs/images/css-validation.png" alt="screenshot of CSS validation">
+<img src="docs/images/validation-css-home.png" alt="screenshot of css validation of home page">
+<img src="docs/images/validation-css-minesweeper.png" alt="screenshot of css validation of minesweeper page">
+<img src="docs/images/validation-css-spelling.png" alt="screenshot of css validation of spelling bee page">
+<img src="docs/images/validation-css-flags.png" alt="screenshot of css validation of guess the flags page">
 
 <h3 id="accessibility">Accessibility</h3>
 
