@@ -325,11 +325,24 @@ throughout a round.</p>
 <p>User story 6, as a player, I want games that that are responsive to my abilities.</p>
 <p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
 <p>User story 13, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
-<p>User story 22, as a site owner, I want the games to be easily playable on every kind of device.</p>
+<p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
 
-<h4>Feature 8: Testimonials carousel</h4>
+<h4>Feature 8: Minesweeper Game</h4>
 
-<p>This has been produced by editing Bootstrap's carousel component, by resizing the data indicators for enhanced visibility. It features three different slides each displaying three testimonies from DJR's satisfied clients. It is displayed prominently on the home page as an attractive first impression for new users, as well as to provide an immediate advertisment of the firm's qualities.</p>
+<p>Once a difficulty has been selected and the grid generated, the Minesweeper game is then ready to be played.</p>
+
+<p>If the user left clicks on a square, the Javascript code will check if there is a 'mine' on that square, and if not, will run the code
+to count how many mines are on the squares that surround it on the grid. It then displays that number as the square's visible content, therefore 
+responding dynamically to user input. On mobile devices the click event becomes a touch event.</p>
+
+<p>If the square that the user clicks on has squares surrounding it that contain zero mines, then the Javascript code calls a click method to 
+automatically click on all of those squares, and to all subsequent squares that meet the same conditions. The player should therefore never
+have to click on any square that displays "0" as its content.</p>
+
+<p>If the user right clicks on a square, a 'flag' will be placed on that square, indicating that the user believes that a mine is on that square.
+The square's responsiveness is then changed: it can no longer be left clicked on to elicit a repsonse. If the user right clicks on a square that already
+contains a flag, the flag will be removed and the square returned to its original state. Hence, the right click acts as a flag on/off toggle. On mobile devices
+the event is instead triggered by a long touch, of more than 300 milliseconds.</p>
 
 <img src="assets/images/home-page-carousel.png" alt="carousel showing clients' testimonials">
 
