@@ -114,14 +114,13 @@ There are two main categories of user anticipated for the website: existing and 
     educational.</li>
     <li>As a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage
     with their users.</li>
-    <li>As a responsible adult, I want to be assured that they will not exploit or misuse their users' private information.</li>
     <li>As a responsible adult, I want the games to be responsive to the needs of the young people in my care.</li>
     <li>As a responsible adult, I want the games to be rewarding and educational.</li>  
 </ol>
 
 <h4>Site Owner</h4>
 
-<ol start="15">
+<ol start="14">
     <li>As a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</li>
     <li>As a site owner, I want players to find the games on the website fun and rewarding.</li>
     <li>As a site owner, I want players to feel at home on the website and to be happy spending time there.</li>
@@ -209,9 +208,10 @@ bee. Each page has its own fun and bespoke design.</p>
 <img src="docs/images/all_Titles.png" alt="all page titles">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 12: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
-<p>User story 14: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
-<p>User story 15: as a site owner, I want the website to be attractive to younger users and keen gamers in particular.</p>
+<p>User story 15: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
+<p>User story 17: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
+<p>User story 18: as a site owner, I want the website to be attractive to younger users and keen gamers in particular.</p>
+<p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
 
 <h4>Feature 2: Navigation Bar for Desktop and Mobile</h4>
 
@@ -228,10 +228,10 @@ combination. The colour scheme is maintained, as well as the distance from other
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 1: as a player, I want to be able to easily navigate to the game of my choosing.</p>
-<p>User story 6: as a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate for children.</p>
-<p>User story 7: as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
-<p>User story 12: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
-<p>User story 14: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
+<p>User story 9: as a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate for children.</p>
+<p>User story 10: as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
+<p>User story 15: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
+<p>User story 17: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
 
 <h4>Feature 3: Homepage Welcome Message</h4>
 
@@ -247,9 +247,9 @@ draw teh eye to the actual message. These images are foregone on smaller screens
 <img src="docs/images/homepage.png" alt="home page with welcome message">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 5: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
-<p>User story 10: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
-<p>User story 12, as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
+<p>User story 8: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
+<p>User story 15: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
+<p>User story 17, as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
 
 <h4>Feature 4: Page Footer with Social Media Links</h4>
 
