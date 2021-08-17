@@ -131,6 +131,7 @@ There are two main categories of user anticipated for the website: existing and 
     <li>As a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for yooung
     users to play, and to be happy to recommend it to them.</li>
     <li>As a site owner, I want games that are suitable for a range of ages and ability levels.</li>
+    <li>As a site owner, I want the games to be responsive to every kind of device.</li>
 </ol>
 
 <h2 id="scope">Scope</h2>
@@ -290,8 +291,6 @@ throughout a round.</p>
 
 <p>Each of the options has a predefined number of grid rows and mines, to increase or decrease the challenge as appropriate.</p>
 
-<p>The minesweeper grid size is dynamic to accommodate these changes, and adapts to all different screen sizes to display in full without scrolling.</p>
-
 <img src="docs/images/minesweeper-difficulty.png" alt="difficulty selector on load of page">
 
 <img src="docs/images/minesweeper-difficulty-game.png" alt="difficulty selector available during the game">
@@ -304,18 +303,29 @@ throughout a round.</p>
 <p>User stroy 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
 <p>User story 21, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
 
-<h4>Feature 7: Sign In modal</h4>
+<h4>Feature 7: Minesweeper Grid of Squares</h4>
 
-<p>This feature is accessed via Bootstrap data-toggle buttons, and displays a form requiring users to submit their login details. There is an optional additional modal for users who have forgotten their details, which works via Bootstrap's data-dismiss class. The modal content is responsive to all screen sizes and required some granular tuning of button size and placement for some of the smaller devices.</p>
+<p>When users click on the Minesweeper "play" button, a grid of square-shaped divs is generated, with the size dependent on the
+ difficulty selected.</p>
 
-<img src="assets/images/portal-login-modal.png" alt="modal for signing in to online portal">
+<p>The minesweeper grid size is dynamic to accommodate the difficulty selector, and adapts to all different screen sizes to display in full without scrolling.</p>
 
-<img src="assets/images/password-reminder-modal.png" alt="modal for requesting a password reminder">
+<p>The grid is styled to resemble a chekerboard/chess board, with alternate green and lighter green squares.</p>
+
+<img src="docs/images/grid-dtop-easy.png" alt="Minesweeper grid in easy mode">
+
+<img src="docs/images/grid-dtop-medium.png" alt="Minesweeper grid in medium mode">
+
+<img src="docs/images/grid-dtop-hard.png" alt="Minesweeper grid in hard mode">
+
+<img src="docs/images/grids-mobile.png" alt="Minesweeper grids on mobile">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 9, as a current stakeholder, I want to be able to qucikly and easily log in to the client portal.</p>
-<p>User story 15, as a site owner, I want existing clients to be able to register for and log in to our client portal.</p>
-<p>User story 16, as a site owner, I want all users to as engaged with my business as possible, by reading our articles, signing up for services, and following us on social media.</p>
+<p>User story 2, as a player, I want games that are interactive.</p>
+<p>User story 6, as a player, I want games that that are responsive to my abilities.</p>
+<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
+<p>User story 13, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
+<p>User story 22, as a site owner, I want the games to be easily playable on every kind of device.</p>
 
 <h4>Feature 8: Testimonials carousel</h4>
 
