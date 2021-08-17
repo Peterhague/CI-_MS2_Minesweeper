@@ -102,6 +102,14 @@
     border: solid;
 }
 
+#contact-form-desktop {
+    text-align: left;
+    background-color: #54c6f3;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid;
+}
+
 .contact-form-items {
     display: block;
     color: #f81ba3;
@@ -226,7 +234,7 @@
         margin-bottom: 10vh;
     }
 
-    #contact-form {
+    #contact-form-desktop {
         text-align: center;
     }
 
