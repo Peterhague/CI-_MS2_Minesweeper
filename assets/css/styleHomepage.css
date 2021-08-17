@@ -142,7 +142,28 @@
     border: solid black;
 }
 
+#contact-submit-desktop {
+    font-family: 'Cairo', sans-serif;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid black;
+}
+
 #contact-submit:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    border: solid;
+}
+
+#contact-submit-desktop:hover {
     cursor: pointer;
     background-color: white;
     color: black;
@@ -243,7 +264,7 @@
         font-size: 1.5em;
     }
 
-    #contact-submit {
+    #contact-submit-desktop {
         font-size: 1.5em;
     }
 }
