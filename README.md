@@ -344,12 +344,17 @@ The square's responsiveness is then changed: it can no longer be left clicked on
 contains a flag, the flag will be removed and the square returned to its original state. Hence, the right click acts as a flag on/off toggle. On mobile devices
 the event is instead triggered by a long touch, of more than 300 milliseconds.</p>
 
-<img src="assets/images/home-page-carousel.png" alt="carousel showing clients' testimonials">
+<img src="docs/images/grid-in-progress-dtop.png" alt="Half-solved Minesweeper grid on desktop">
+
+<img src="docs/images/grid-in-progress-mobile.png" alt="Half-solved Minesweeper grid on mobile">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 7, as a potential stakeholder, I want to know about the firm's competencies and how its existing clients view its services.</p>
-<p>User story 12, as a site owner, I want potential stakeholders to understand what my firm does and eoncourage them to become clients or employees.</p>
-<p>User story 13, as a site owner, I want potential stakeholders to understand that existing clients are happy and receive an excellent service.</p>
+<p>User story 2, as a player, I want games that are interactive.</p>
+<p>User story 3, as a player, I want to be able to test my reasoning abilities.</p>
+<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
+<p>User story 14, as a responsible adult, I want the games to be rewarding and educational.</p>
+<p>User story 16, as a site owner, I want players to find the games on the website fun and rewarding.</p>
+<p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
 
 <h4>Feature 9: News section with modal functionality</h4>
 
