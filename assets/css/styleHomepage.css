@@ -14,6 +14,22 @@
     border: solid black 3px;
     border-radius: 20px;
 }
+#welcomeMessageMobile {
+    height: 100%;
+    min-width: 260px;
+    background-color: #f81ba3;
+    color: white;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    display: inline-block;
+    padding-top: 3vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border: solid black 3px;
+    border-radius: 20px;
+}
 #welcomeMessageContainer{
     margin-top: 8vh;
 }
@@ -143,9 +159,13 @@
         font-size: 1em;
         width: 80%;
         padding: 3vh;
-    }
+    }/*
 
     #welcomeHeading {
+        font-size: 1.5em;
+        padding-bottom: 2vh;
+    }*/
+    #welcomeHeadingMobile {
         font-size: 1.5em;
         padding-bottom: 2vh;
     }

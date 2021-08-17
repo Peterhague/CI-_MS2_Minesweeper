@@ -541,7 +541,7 @@ replaced by the correct answer.</p>
 <ol start="4">
 <li>Font Awesome</li>
 </ol>
-<ul><li>All the icoons on the site were sourced from the Font Awesome library.</li></ul>
+<ul><li>All the icons on the site were sourced from the Font Awesome library.</li></ul>
 <ol start="5">
 <li>Google Fonts</li>
 </ol>
