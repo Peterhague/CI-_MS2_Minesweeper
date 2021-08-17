@@ -96,9 +96,12 @@ There are two main categories of user anticipated for the website: existing and 
 
 <ol>
     <li>As a player, I want to be able to easily navigate to the game of my choosing.</li>
+    <li>As a player, I want games that are interactive.</li>
     <li>As a player, I want to be able to test my reasoning abilities.</li>
     <li>As a player, I want to be able to test my spelling skills.</li>
     <li>As a player, I want to be able to test my general knowledge and memory.</li>
+    <li>As a player, I want games that that are responsive to my abilities.</li>
+    <li>As a player, I want games that give me feedback on my performance to encourage me to improve.</li>
     <li>As a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</li>
 </ol>
 
@@ -111,7 +114,9 @@ There are two main categories of user anticipated for the website: existing and 
     educational.</li>
     <li>As a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage
     with their users.</li>
-    <li>As a responsible adult, I want to be assured that they will not exploit or misuse their users' private information/</li> 
+    <li>As a responsible adult, I want to be assured that they will not exploit or misuse their users' private information.</li>
+    <li>As a responsible adult, I want the games to be responsive to the needs of the young people in my care.</li>
+    <li>As a responsible adult, I want the games to be rewarding and educational.</li>  
 </ol>
 
 <h4>Site Owner</h4>
@@ -258,47 +263,37 @@ with no more information than necessary. The object is to attractively enclose t
 <p>User story 8: as a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage with their users.</p>
 <p>User story 14, as a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for yooung users to play, and to be happy to recommend it to them.</p>
 
-<h4>Section 2: table summarising membership benefits</h4>
+<h4>Feature 5: Form for Submission of Users' Ideas</h4>
 
-<p>The table was also duplicated for mobile and tablet, simply in order to display on smaller screens as a fluid container spanning the entire viewport. This was sufficient for the table to display in a legible and uncluttered manner, viewable without scrolling on most mobile devices. Various media queries narrative contractions were made for some of the smaller and more unusual screen sizes and aspect ratios.</p>
+<p>The home page features a short form through which users can submit their suggestions for development of future games.</p>
 
-<p>The icons in the table were sourced from Font Awesome's library.</p>
-
-<img src="assets/images/membership-programme-table.png" alt="table explaining membership programme and the various benefits at each level">
-
-<h4>User stories covered by this feature:</h4>
-<p>User story 3: as a potential stakeholder, I want to find out what the firm does and what it can offer me.</p>
-<p>User story 5: as a potential stakeholder, I want to fidn out about the firm's membership scheme and its benefits.</p>
-<p>User story 8, as a potential stakeholder, I want to know about the firm's competencies and how its existing clients view its services.</p>
-<p>User story 9, as a current stakeholder, I want to be able to qucikly and easily log in to the client portal.</p>
-
-<h4>Feature 5: Navigation bar</h4>
-
-<p>The navigation bar is displayed across the four pages consistently, with some minor changes to colour scheme in order that text always contrasts fully with the backgrounds specific to each page.</p>
-
-<p>It uses the Bootstrap navbar component to leverage Javascript functionality to collapse the bar on mobile and tablet devices and replace with a "burger bar" toggle button.
+<p>It has fields for first and last name, email address, and then a textarea for the ideas and suggestions themselves.
 </p>
 
-<p>The desktop configuration also features a right-aligned (and therefore prominently isolated) "Sign In" call to action button. In mobile and tablet configurations, this button appears near the bottom of the viewport of each page's display on loading. This aids visibility, and also selection without the need to for users to obscure any of the page with their hand.</p>
+<p>The form calls the API emailJS to send an email to my account on submission of the form, and the emailJS template then also sends 
+and automatic reply to the user, employing the details they entered where appropriate.</p>
 
-<img src="assets/images/navigation-bar.png" alt="navigation bar on desktop devices">
+<p>The form is validated with Javascript code, and only submits when all fields are populated, and when a correctly constituted email
+address is entered in that field.</p>
 
-<img src="assets/images/navigation-bar-mobile.png" alt="navigation bar on mobile devices">
+<img src="docs/images/footer-home.png" alt="home page form">
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 9, as a current stakeholder, I want to be able to qucikly and easily log in to the client portal.</p>
-<p>User story 15, as a site owner, I want existing clients to be able to register for and log in to our client portal.</p>
+<p>User story 5, as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
+<p>User story 14, as a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us of their own volition.</p>
 
-<h4>Feature 6: Footer</h4>
+<h4>Feature 6: Minesweeper Difficulty Selector</h4>
 
-<p>The footer is displayed at the bottom of all the website's pages. It is fixed to the bottom of the viewport on desktop and tablet devices.
-The mobile configuration displays the items top to bottom, rather than left to right.</p>
+<p>The minesweeper game has a dropdown selector for three difficulty levels, prompted at the start of the game, and available at the top of the grid
+throughout a round.</p>
 
-<p>The footer displays mandatory statutory information related to the firm's professional registrations, its address, and social media links.</p>
+<p>Each of the options has a predefined number of grid rows and mines, to increase or decrease the challenge as appropriate.</p>
 
-<img src="assets/images/footer-desktop.png" alt="footer on desktop devices">
+<p>The minesweeper grid size is dynamic to accommodate these changes, and adapts to all different screen sizes to display in full without scrolling.</p>
 
-<img src="assets/images/footer-mobile.png" alt="footerr on mobile devices">
+<img src="docs/images/minesweeper-difficulty.png" alt="difficulty selector on load of page">
+
+<img src="docs/images/minesweeper-difficulty-game.png" alt="difficulty selector available during the game">
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 1, as a potential stakeholder, I want to know where the firm is located.</p>
