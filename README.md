@@ -1,6 +1,6 @@
 # GAMES Inc.
 
-<img src="assets/images/responsiveness.png" alt="screenshot of site in various screen configurations">
+<img src="docs/images/responsiveness.png" alt="screenshot of site in various screen configurations">
 
 <a href="https://peterhague.github.io/CI_MS2_Games_Inc./" target="_blank">View the deployed website</a>
 
@@ -192,7 +192,7 @@ from larger images and had their backgrounds removed with online software. There
 
 <h2 id="features">Features</h2>
 
-<p>The website has fifteen features across five pages (including a 404 error page).</p>
+<p>The website has fourteen features across five pages (including a 404 error page).</p>
 
 <h3>Current Features</h3>
 
@@ -206,7 +206,7 @@ bee. Each page has its own fun and bespoke design.</p>
 
 <p>This design is meant to be colourful and irreverent, appealing to younger users, and evocative of computer games in general.</p>
 
-<img src="assets/images/all_Titles.png" alt="all page titles">
+<img src="docs/images/all_Titles.png" alt="all page titles">
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 12: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
@@ -224,7 +224,7 @@ combination. The colour scheme is maintained, as well as the distance from other
 
 <p>The navigation bar is easily accessible and almost always present on screen on both mobile and desktop, to facilitate good user experience and fast navigation.</p>
 
-<img src="assets/images/navbar_comparison.png" alt="comparison of navigation bar on mobile and desktop">
+<img src="docs/images/navbar_comparison.png" alt="comparison of navigation bar on mobile and desktop">
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 1: as a player, I want to be able to easily navigate to the game of my choosing.</p>
@@ -244,7 +244,7 @@ combination. The colour scheme is maintained, as well as the distance from other
 <p>The main container is surrounded with decorative images that give visual representations of each of the games on offer. As well as being attractive, these
 draw teh eye to the actual message. These images are foregone on smaller screens to keep the design clean.</p>
 
-<img src="assets/images/homepage.png" alt="home page with welcome message">
+<img src="docs/images/homepage.png" alt="home page with welcome message">
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 5: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
@@ -258,7 +258,7 @@ draw teh eye to the actual message. These images are foregone on smaller screens
 <p>Each page's footer is coloured differently to tie in with the visual language of its page. The design has deliberately been kept simple, bold, and uncluttered,
 with no more information than necessary. The object is to attractively enclose the page's other content and push users towards the prominent social media links.</p>
 
-<img src="assets/images/footers.png" alt="footers of every page">
+<img src="docs/images/footers.png" alt="footers of every page">
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 5: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
@@ -499,11 +499,11 @@ replaced by the correct answer.</p>
 <p>User story 21, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
 <p>User story 22, as a site owner, I want the games to be responsive to every kind of device.</p>
 
-<h4>Feature 13: Custom 404 error message page</h4>
+<h4>Feature 14: Custom 404 error message page</h4>
 
 <p>This component directs any broken or missing links on the website to this explanatory error page, with the home page background, the normal title, and a prominent button inviting users to return to the home page.</p>
 
-<img src="assets/images/404-custom-page.png" alt="screenshot of the website's custom 404 error page">
+<img src="docs/images/404-custom-page.png" alt="screenshot of the website's custom 404 error page">
 
 <h4>Features for Future Releases</h4>
 
@@ -576,17 +576,17 @@ replaced by the correct answer.</p>
 
 <p>The <a href="https://validator.w3.org/">W3C Markup Validation Service</a> was used for HTML validation of the site. All pages passed with 0 errors. The Index and Contact Us pages have warnings for lack of section headings, which is a stylistic choice.</p>
 
-<img src="assets/images/html-validation-index.png" alt="screenshot of HTML validation of home page">
-<img src="assets/images/html-validation-contact-us.png" alt="screenshot of HTML validation of contact us page">
-<img src="assets/images/html-validation-meet-the-team.png" alt="screenshot of HTML validation of meet the team page">
-<img src="assets/images/html-validation-our-services.png" alt="screenshot of HTML validation of our services page">
+<img src="docs/images/html-validation-index.png" alt="screenshot of HTML validation of home page">
+<img src="docs/images/html-validation-contact-us.png" alt="screenshot of HTML validation of contact us page">
+<img src="docs/images/html-validation-meet-the-team.png" alt="screenshot of HTML validation of meet the team page">
+<img src="docs/images/html-validation-our-services.png" alt="screenshot of HTML validation of our services page">
 
 <h3 id="css-validation">CSS Validation</h3>
 
 <p>The <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a> was used for CSS validation of the site.</p>
 <p>The CSS passed with zero errors.</p>
 
-<img src="assets/images/css-validation.png" alt="screenshot of CSS validation">
+<img src="docs/images/css-validation.png" alt="screenshot of CSS validation">
 
 <h3 id="accessibility">Accessibility</h3>
 
