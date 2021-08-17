@@ -11,6 +11,7 @@ let scoreContainer = document.getElementById("score-container"); // gets the div
 let play = document.getElementById("play"); // gets the start game button from the html file
 //adds all event listeners to the play button
 function addPlayFunctions() {
+    play.addEventListener("click", scrollDown);
     play.addEventListener("click", stylingChanges);
     play.addEventListener("click", generatedGridRows);
     play.addEventListener("click", randomise);
@@ -25,6 +26,7 @@ function addPlayFunctions() {
 }
 //removes all event listeners from the play button, except stylingChanges
 function removePlayFunctions() {
+    play.removeEventListener("click", scrollDown);
     play.removeEventListener("click", generatedGridRows);
     play.removeEventListener("click", randomise);
     play.removeEventListener("click", newGame);
@@ -52,11 +54,12 @@ function variableVariables() {
         selectedRows = 20;
         selectedBombs = 99;
         selectedSquares = 400;
-    } else if (selectedDifficulty == "Custom") {
-        selectedRows = 16;
-        selectedBombs = 10;
-        selectedSquares = selectedRows*selectedRows;
     }
+}
+/*scrolls to div below grid to automatically display whole grid on click of play button*/
+function scrollDown() {
+    let scrollToBottom = document.getElementById("scrollToBottom");
+    scrollToBottom.click();
 }
 //code mainly changes CSS rules applied to various elements on load to what they should be during the game
 function stylingChanges() {    
