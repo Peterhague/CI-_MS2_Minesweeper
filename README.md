@@ -586,7 +586,7 @@ Guess the Flags game.</li></ul>
 
 <h3 id="html-validation">HTML Validation</h3>
 
-<p>The <a href="https://validator.w3.org/">W3C Markup Validation Service</a> was used for HTML validation of the site. All pages passed with zero errors or warnings.</p>
+<p>The <a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a> was used for HTML validation of the site. All pages passed with zero errors or warnings.</p>
 
 <img src="docs/images/validation-html-home.png" alt="screenshot of HTML validation of home page">
 <img src="docs/images/validation-html-minesweeper.png" alt="screenshot of HTML validation of minesweeper page">
@@ -595,7 +595,7 @@ Guess the Flags game.</li></ul>
 
 <h3 id="css-validation">CSS Validation</h3>
 
-<p>The <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validation Service</a> was used for CSS validation of the site.</p>
+<p>The <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validation Service</a> was used for CSS validation of the site.</p>
 <p>The CSS passed with zero errors.</p>
 
 <img src="docs/images/validation-css-home.png" alt="screenshot of css validation of home page">
@@ -605,23 +605,23 @@ Guess the Flags game.</li></ul>
 
 <h3 id="accessibility">Accessibility</h3>
 
-<p>The <a href="https://wave.webaim.org/">WAVE Webaim Accessibility Tool</a>was used for accessibility validation of the site.</p>
-<p>The website passed with zero errors or alerts. There were several warnings, due either to stylistic choices or duplicated links (eg more than one linkedin link on the Meet the Team page.</p>
+<p>The <a href="https://wave.webaim.org/" target="_blank">WAVE Webaim Accessibility Tool</a>was used for accessibility validation of the site.</p>
+<p>The website passed with zero errors or alerts.</p>
 
-<img src="assets/images/accessibility-validn-home.png" alt="screenshot of accessibility validation of home page">
-<img src="assets/images/accessibility-validn-cus.png" alt="screenshot of accessibility validation of contact us page">
-<img src="assets/images/accessibility-validn-mtt.png" alt="screenshot of accessibility validation of meet the team page">
-<img src="assets/images/accessibility-validn-os.png" alt="screenshot of accessibility validation of our services page">
+<img src="docs/images/validation-access-home.png" alt="screenshot of accessibility validation of home page">
+<img src="docs/images/validation-access-minesweeper.png" alt="screenshot of accessibility validation of minesweeper page">
+<img src="docs/images/validation-access-spelling.png" alt="screenshot of accessibility validation of spelling bee page">
+<img src="docs/images/validation-access-flags.png" alt="screenshot of accessibility validation of guess the flag page">
 
 <h3 id="performance">Performance</h3>
 
-<p>The <a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a> tool was used for performance validation of the site.</p>
-<p>All four pages of the website scored between 80 and 90 for overall performance.</p>
+<p>The <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google PageSpeed Insights</a> tool was used for performance validation of the site.</p>
+<p>All pages of the website scored 90 or above for overall performance, except the home page which scored 84.</p>
 
-<img src="assets/images/performance-validn-home.png" alt="screenshot of performance validation of home page">
-<img src="assets/images/performance-validn-cu.png" alt="screenshot of performance validation of contact us page">
-<img src="assets/images/performance-validn-mtt.png" alt="screenshot of performance validation of meet the team page">
-<img src="assets/images/performance-validn-os.png" alt="screenshot of performance validation of our services page">
+<img src="docs/images/validation-performance-home.png" alt="screenshot of performance validation of home page">
+<img src="docs/images/validation-performance-minesweeper.png" alt="screenshot of performance validation of minesweeper page">
+<img src="docs/images/validation-performance-spelling.png" alt="screenshot of performance validation of spelling bee page">
+<img src="docs/images/validation-performance-flags.png" alt="screenshot of performance validation of guess the flag page">
 
 <h3 id="device-testing">Performing tests on various devices</h3>
 <h4>Devices tested:</h4>
