@@ -33,6 +33,10 @@
 #welcomeMessageContainer{
     margin-top: 8vh;
 }
+
+h2 {
+    font-size: 1.5em;
+}
 .imageRows {
     height: 33%;
 }

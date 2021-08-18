@@ -606,7 +606,7 @@ Guess the Flags game.</li></ul>
 <h3 id="accessibility">Accessibility</h3>
 
 <p>The <a href="https://wave.webaim.org/">WAVE Webaim Accessibility Tool</a>was used for accessibility validation of the site.</p>
-<p>The website passed with no errors. There were several warnings, due either to stylistic choices or duplicated links (eg more than one linkedin link on the Meet the Team page.</p>
+<p>The website passed with zero errors or alerts. There were several warnings, due either to stylistic choices or duplicated links (eg more than one linkedin link on the Meet the Team page.</p>
 
 <img src="assets/images/accessibility-validn-home.png" alt="screenshot of accessibility validation of home page">
 <img src="assets/images/accessibility-validn-cus.png" alt="screenshot of accessibility validation of contact us page">
