@@ -206,11 +206,11 @@ bee. Each page has its own fun and bespoke design.</p>
 <p>This design is meant to be colourful and irreverent, appealing to younger users, and evocative of computer games in general.</p>
 
 <details>
-<summary>Click to expand!</summary>
+<summary>All page titles</summary>
 
 <img src="docs/images/all_Titles.png" alt="all page titles">
-</details>
 
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 14: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
@@ -229,7 +229,12 @@ combination. The colour scheme is maintained, as well as the distance from other
 
 <p>The navigation bar is easily accessible and almost always present on screen on both mobile and desktop, to facilitate good user experience and fast navigation.</p>
 
+<details>
+<summary>Navigation bar on mobile and desktop devices</summary>
+
 <img src="docs/images/navbar_comparison.png" alt="comparison of navigation bar on mobile and desktop">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 1: as a player, I want to be able to easily navigate to the game of my choosing.</p>
