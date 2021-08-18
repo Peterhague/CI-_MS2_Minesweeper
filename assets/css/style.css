@@ -221,10 +221,16 @@ header {
 
 .nav-items-hover:hover {
     color: #f81ba3;
+    text-decoration: none;
 }
 
 .nav-item-current {
     text-decoration: underline;
+    text-decoration-color: #f81ba3;
+}
+
+.nav-item-current:hover {
+    color: black;
     text-decoration-color: #f81ba3;
 }
 
