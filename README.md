@@ -1104,6 +1104,143 @@ button for repeated attempts and to gradually improve your scores by committing 
 </tr>
 </table>
 
+<p><em>17. As a site owner, I want the website to be attractive to younger users and keen gamers in particular.</em></p>
+<table>
+<tr>
+<th>Feature</th>
+<th>Action</th>
+<th>Expected result</th>
+<th>Actual result</th>
+</tr>
+<tr>
+<td>Pixel art titles</td>
+<td>Click on any of the links in the navigation bar and see the given page's title rendered in vibrant, retro, pixel-art
+aesthetic.</td>
+<td>Colourful and fun aesthetic that appeals to younger users and is evocative of gaming.</td>
+<td>Works as expected</td>
+</tr>
+</table>
+
+<p><em>18. As a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us of their own volition.</em></p>
+<table>
+<tr>
+<th>Feature</th>
+<th>Action</th>
+<th>Expected result</th>
+<th>Actual result</th>
+</tr>
+<tr>
+<td>Welcome message</td>
+<td>Click on 'home' in the navigation bar and read the welcome message encouraging users to contact the firm</td>
+<td>Engages the user and points them to the contact form, welcoming their input</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Form for submission of users' suggestions</td>
+<td>Click on the home link in the navigation bar and scroll down to the form, and fill in each field in turn before clicking submit</td>
+<td>Facilitates user engagement.</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Footer with social media links</td>
+<td>Click on any of the links in the navigation bar and scroll to the bottom of the page. Click on any of the prominent icons
+to navigate to the firm's relevant social media presence.</td>
+<td>Encourages voluntary engagement via social media interactivity</td>
+<td>Works as expected</td>
+</tr>
+</table>
+
+<p><em>19. As a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for young users to play, and to be happy to recommend it to them.</em></p>
+<table>
+<tr>
+<th>Feature</th>
+<th>Action</th>
+<th>Expected result</th>
+<th>Actual result</th>
+</tr>
+<tr>
+<td>Minesweeper game.</td>
+<td>Click on the Minesweeper link in the navigation bar, and press the game's play button.</td>
+<td>The simple interface allows easy testing of and navigation between the games.</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Spelling Bee game.</td>
+<td>Click on the Spelling Bee link in the navigation bar, and press the game's play button.</td>
+<td>The simple interface allows easy testing of and navigation between the games.</td>
+<td>works as exxpected.</td>
+</tr>
+<tr>
+<td>Guess the Flag game.</td>
+<td>Click on the Guess the Flag link in the navigation bar, and press the game's play button.</td>
+<td>The simple interface allows easy testing of and navigation between the games.</td>
+<td>works as exxpected.</td>
+</tr>
+</table>
+
+<p><em>20. As a site owner, I want games that are suitable for a range of ages and ability levels.</em></p>
+<table>
+<tr>
+<th>Feature</th>
+<th>Action</th>
+<th>Expected result</th>
+<th>Actual result</th>
+</tr>
+<tr>
+<td>Minesweeper game difficulty selector.</td>
+<td>Click on Minesweeper link in the navigation bar, and click on the drop down menu field. Click on one of the 3 options, then click the play
+button. The grid displayed will be easier or harder to complete depending on the seleciton made.</td>
+<td>Verify that the minesweeper game is responsive to different ability levels</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Spelling Bee game difficulty selector.</td>
+<td>Click on Spelling Bee link in the navigation bar, and click on the drop down menu field. Click on one of the 4 options, then click the play
+button. The words spoken as questions will be easier or harder depending on the selection made.</td>
+<td>Verify that the spelling bee game is responsive to different ability levels</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Spelling Bee game hint function.</td>
+<td>Click on Spelling Bee link in the navigation bar, and click the play button. After any word is spoken, click on the Hint button, and the correct
+answer will be displayed, but with alternate letters replaced with asterisks.</td>
+<td>Further verify that the spelling bee game is responsive to different ability levels.</td>
+<td>Works as expected</td>
+</tr>
+</table>
+
+<p><em>21. As a site owner, I want the games to be responsive to every kind of device.</em></p>
+<table>
+<tr>
+<th>Feature</th>
+<th>Action</th>
+<th>Expected result</th>
+<th>Actual result</th>
+</tr>
+<tr>
+<td>Minesweeper mobile and tablet configurations</td>
+<td>Click on the bomb icon in the navbar on a mobile or small tablet device. Touch the play button. Interact with the grid's squares
+by touching or long-touching them.</td>
+<td>Verify that the minesweeper game is fully playable on all devices.</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Spelling Bee mobile and tablet configurations</td>
+<td>Click on the wand icon in the navbar on a mobile or small tablet device. Touch the play button. Enter your attempt at spelling each
+word via the pop-up keyboard. Press return to submit your attempts.</td>
+<td>Verify that the spelling bee game is fully playable on all devices.</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Guess the Flag mobile and tablet configurations</td>
+<td>Click on the flag icon in the navbar on a mobile or small tablet device. Touch the play button. Enter your attempts at identifying
+each flag's nation via the pop-up keyborad. Close the keyboard by pressing your device's native 'back' button. Touch the submit button
+to receive your score.</td>
+<td>Verify that the Guess the Flag game is fully playable on all devices.</td>
+<td>Works as expected</td>
+</tr>
+</table>
+
 <p><a href="docs/user-stories/us16a.png">See User Story 16 steps 1 to 3 images</a></p>
 <p><a href="docs/user-stories/us16b.png">See User Story 16 steps 4 to 6 images</a></p>
 
