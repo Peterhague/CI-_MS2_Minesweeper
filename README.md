@@ -633,25 +633,59 @@ Guess the Flags game.</li></ul>
 </ul>
 <h4>Tests performed:</h4>
 <ol>
-<li>Page links in the navigation bar work as advertised, all links work correctly in the static navbar and the collapsible mobile configuration.</li>
-<li>The testimonials carousel displays appropriately, and the indicators are visible and work correctly.</li>
-<li>The news stories open in modals as intended, with no scrolling on larger screens and full screen display and scrolling on mobile. The "top of page" arrow button works correctly on these devices, and the close button dismisses the modal.</li>
-<li>The "Sign In" modal opens up correctly closes on a click outside the content or the cross button. The "forgotten details" link opens the subsequent modal and closes the first, as intended.</li>
-<li>The "Sign In" modal form blocks submission when a mandatory field has not been completed in the required format - error message displays as intended.</li>
-<li>Footer links to external websites work correctly, and open in new tabs.</li>
-<li>The footer content spans the screen on larger devices, and collapses to stack on mobiles, as intended.</li>
-<li>The newsletter sign up form container displays appropriately on all devices, remaining attractive and legible. The form blocks submission where any mandatory field is left unpopulated. An appropriate error message is displayed.</li>
-<li>The portal registration form displays in two columns on larger screens and a single column, as intended. Content is legible and uncluttered across all devices tested.</li>
-<li>The portal registration form will not submit unless all mandatory fields are completed. An error message displays as intended when triggered.</li>
-<li>The contact details container displays as two columns on larger devices and one column on mobile. The content is legible and uncluttered across devices.</li>
-<li>The staff profile containers display as intended on desktop, tablet, and mobile: there are three different layouts. This content needed to be resized on mobile layout to make it more legible.</li>
-<li>The services containers display as intended as side by side on desktop and tablet and columnar on mobile. The content and headings are legible and attractive in all configurations.</li>
-<li>The membership benefits table retains its integrity on mobile, with slightly contracted wording where required and the sacrifice of horizontal margins. Table on mobile remains legible and largely viewable without scrolling, as intended.</li>
-<li>Buttons have the intended softening in colour when hovered over, as intended.</li>
-<li>Page header redirects to home page on all pages</li>
+<li>Page links in the navigation bar work as advertised, all links work correctly in the desktop and mobile configurations. The links to other
+pages trun bright pink on hover, as intended.</li>
+<li>All the buttons across all pages repsond to hover events in some way, either with a small decrease in opacity or a reversal of their color and
+background-color properties.</li>
+<li>The welcome message displays as intended, on both desktop and mobile and tablet configurations. The images are not displayed on smaller screens, as intended.</li>
+<li>The form on the home page generates error messages when any field is missing required information. If everything is filled in correctly, a successful call to
+the emailJS API is made and the notifying email is received and the automatic reply is sent.</li>
+<li>The minesweeper difficulty selector works as intended, with a dropdown menu with the 3 difficulty options. The appropriate grid is then generated with a click
+of the play button.</li>
+<li>The three grid sizes all display as intended, across all devices tested. No scrolling is necessary at any point. On mobile devices, the biggest grid
+does become slightly difficult to interact with, but this can be solved by zooming in with the hardware functionality. This is perhaps less than ideal but
+perfectly workable.</li>
+<li>A left click on a minesweeper square elicits the desired response. Either the square is cleared and the number of adjacent mines is displayed, or the game over sequence
+begins.</li>
+<li>A left click on a minesweeper square with zero adjacent mines generates the intended response: all squares with zero adjacent mines are automatically clicked in a cascading fashion,
+until the code reaches squares with inner htmls of 1 or higher. No squares with a zero content need to be manually clicked.</li>
+<li>A touch on the minesweeper squares in mobile configuration generates a response equivalent to a left click in desktop mode, as intended.</li>
+<li>A right click on the minesweeper squares places a flag icon to signal the presense of a mine. With a flag in place, a left click on the square now returns zero response.
+Another right click removes the flag. Once it has been removed, the square responds to left clicks in the same manner it would have done before the first placement of the flag.</li>
+<li>A long touch on a minesweeper square in mobile configuration provides exactly the same funcitonality as a right click does in desktop configuration, as intended.</li>
+<li>The placement of a flag reduces the flags in hand counter at the top of the grid by one. Removing the flag increases the counter by one. All as intended.</li>
+<li>The game over sequence that is triggered on a left click of a mined square works as intended on all devices tested. A third of the squares turn white, a third, grey,
+and a third black. Which squares turn which colour is randomly assigned. The order in which any of the squares turn their eventual colour is also random.
+Squares changed colour one at a time, with a very small delay between each. Once all squares have changed colour, there is a small pause, and then all squares
+ turn black, with red text, again as intended.</li>
+<li>The game won sequence that is triggered on a left click of the last-cleared unmined square works as intended on all devices tested. A third of the squares turn yellow, a third, orange, and a third pink. Which squares turn which colour is randomly assigned. The order in which any of the squares turn their eventual colour is also random.
+Squares changed colour one at a time, with a very small delay between each. Once all squares have changed colour, there is a small pause, and then all squares turn white, with 
+light blue text, again as intended.</li>
+<li>The spelling bee game displays as intended across all devices tested. All key elements of the game are displayed at once across all devices, as intended.</li>
+<li>The spelling bee difficulty selector works as intended. The correct dictionary of words is selected from for each option.</li>
+<li>The spelling bee play button starts the game as intended. The input field is given focus. The game's display element displays the number 1 to
+signal the first question. The Responsive Voice API speaks the first word in the random array.</li>
+<li>During the game, a click on the Submit button works as intended, passing the value of the input field for testing. A correct or incorrect message is displayed
+as appropriate.</li>
+<li>The answer submission process then displays the next question's number in the display element, and after a brief pause, speaks the next word.</li>
+<li>The answer submission process can also be triggered by a press of the return key, as long as the input field has focus. This is as intended.</li>
+<li>After ten questions are asked, the display element presents the final score. The number of correct and incorrect answers are counted correctly.</li>
+<li>During the spelling bee game, a click on the Repeat button works as intended: the current question is spoken again by the Responsive Voice API.</li>
+<li>During the spelling bee game, a click on the Hint button works as intended: the current question's answer is dislplayed to the user, but with
+alternate letters replaced by aterisks.</li>
+<li>Answers submitted correctly following the display of a hint are correctly counted as only half a point towards the final score.</li>
+<li>The Guess the Flag (GTF) game loads correcly on all devices, with the large round Play button prominently displayed near the centre of all screens.
+The element responds to a cursor hover with the display of a lighter blue 'halo' effect, as intended.</li>
+<li>The GTF play button responds as intended: ten random flags are displayed with associated input fields to return answers. The first input field is provided focus.</li>
+<li>A click on the GTF Submit button checks all answers provided in the input fields. An incorrectly returned input field is replaced with a div displaying a red
+cross/times icon. A correctly returned input field is replaced with a div displaying a green tick icon.</li>
+<li>The click on the GTF Submit button displays the user's score, and a dynamic message dependent on that score.</li>
+<li>Finally, the click on the GTF submit button changes the button's wording to 'Reveal', as intended.</li>
+<li>A click on the GTF Reveal button replaces any red cross/times icon with the actual correct answer.</li>
+<li>A click on the GTF Play Again button returns all elements to their original state, and generates a new array of random flags.</li>
 </ol>
 
-<p>All pages worked as intended on all devices. The one major change necessitated was to move the sign in button up a little in mobile mode, as I had not accounted for the screen real estate taken up by the browser elements.</p>
+<p>All pages worked as intended on all devices.</p>
 
 <h3 id="browser-compatibility">Browser compatability</h3>
 <ul>
