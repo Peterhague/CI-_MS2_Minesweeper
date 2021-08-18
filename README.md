@@ -689,15 +689,15 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 
 <h3 id="browser-compatibility">Browser compatability</h3>
 <ul>
-<li><strong>Google Chrome:</strong>Website and user stories perform as intended.</li>
-<li><strong>Firefox:</strong>Website and user stories perform as intended</li>
-<li><strong>Opera:</strong>Website and user stories perform as intended</li>
-<li><strong>Samsung Internet Browser:</strong>Website and user stories perform as intended.</li>
+<li><strong>Google Chrome:</strong> Website and user stories perform as intended.</li>
+<li><strong>Firefox:</strong> Website and user stories perform as intended</li>
+<li><strong>Opera:</strong> Website and user stories perform as intended</li>
+<li><strong>Samsung Internet Browser:</strong> Website and user stories perform as intended.</li>
 </ul>
 
 <h3 id="testing-user-stories">Testing user stories</h3>
 
-<p><em>1. As a potential stakeholder, I want to know where the firm is located.</em></p>
+<p><em>1. As a player, I want to be able to easily navigate to the game of my choosing.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -706,16 +706,16 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Address and directions details on Contact Us page</td>
-<td>Click on 'Contact Us' in the navigation bar and scroll down to find the section.</td>
-<td>Find address and directions on Contact Us page</td>
-<td>works ass expected</td>
+<td>Navigation bar under every page's title</td>
+<td>Click on any of the links in the navigation bar</td>
+<td>Navigate to the linked page</td>
+<td>works as expected</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us1.png">See User Story 1 images</a></p>
 
-<p><em>2. As a potential stakeholder, I want to know how to contact the firm and its key management personnel ("KMP").</em></p>
+<p><em>2. As a player, I want games that are interactive.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -724,21 +724,27 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Contact details on Contact Us page</td>
-<td>Click on 'Contact Us' in the navigation bar and scroll down to find the section.</td>
-<td>Find contact details on Contact Us page</td>
+<td>Minesweeper game.</td>
+<td>Click on the Minesweeper link in the navigation bar, and press the game's play button.</td>
+<td>Experience games which respond to my inputs.</td>
 <td>Works as expected</td>
 </tr>
 <tr>
-<td>Links to KMP linkedin profiles on Meet the Team page</td>
-<td>Click on 'Meet the Team' in the navigation bar and find the linkedin icon next to the name of all key team members. Click on the icon to go to their linkedin profile.</td>
-<td>Find how to contact key management personnel.</td>
+<td>Spelling Bee game.</td>
+<td>Click on the Spelling Bee link in the navigation bar, and press the game's play button.</td>
+<td>Experience games which respond to my inputs.</td>
+<td>works as exxpected.</td>
+</tr>
+<tr>
+<td>Guess the Flag game.</td>
+<td>Click on the Guess the Flag link in the navigation bar, and press the game's play button.</td>
+<td>Experience games which respond to my inputs.</td>
 <td>works as exxpected.</td>
 </tr>
 </table>
 <p><a href="docs/user-stories/us2.png">See User Story 2 images</a></p>
 
-<p><em>3. As a potential stakeholder, I want to find out what the firm does and what it can offer me.</em></p>
+<p><em>3. As a player, I want to be able to test my reasoning abilities.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -747,16 +753,19 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Our Services page explaining the firm's services</td>
-<td>Click on 'Our Services' in the navigation bar and scroll down to discover each of four broad services categories. Scroll to the end to find details of the firm's membership programme.</td>
-<td>Find out what the firm offers.</td>
+<td>Minesweeper game</td>
+<td>Click on the Minesweeper link in the navigation bar, and press the game's play button. Click on one of the squares in the grid.
+The number represents the number of surrounding squares that contain a mine and therefore should not be clicked on. One can reason
+which squares have the highest probability of not having a mine by the combination of the displayed numbers from the accumulated
+clicks.</td>
+<td>Test my reasoning abilities.</td>
 <td>Works as expected.</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us3.png">See User Story 3 images</a></p>
 
-<p><em>4. As a potential stakeholder, I want to know who the KMP are, what their skills and experience are, and links to their social media presence.</em></p>
+<p><em>4. As a player, I want to be able to test my spelling skills.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -765,16 +774,17 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Links to KMP linkedin profiles on Meet the Team page</td>
-<td>Click on 'Meet the Team' in the navigation bar and find the linkedin icon next to the name of all key team members, along with a sumamry of professional history.</td>
-<td>Find out who the KMP are and what their experience is.</td>
-<td>works as expected.</td>
+<td>Spelling Bee game.</td>
+<td>Click on the Spelling Bee link in the navigation bar, and press the game's play button. The game will speak a word it wants you to spell.
+Type your attempt in the input field, and the game will display to you whether you were correct or incorrect.</td>
+<td>Test my spelling skills.</td>
+<td>Works as expected.</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us4.png">See User Story 4 images</a></p>
 
-<p><em>5. As a potential stakeholder, I want to find out about the firm's membership scheme and its benefits.</em></p>
+<p><em>5. As a player, I want to be able to test my general knowledge and memory.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -783,16 +793,18 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Table listing the benefits of membership across the 3 different levels</td>
-<td>Click on 'Our Services' in the navigation bar and scroll down to find the table.</td>
-<td>Find out about the membership scheme and its benefits</td>
+<td>Guess the Flag game.</td>
+<td>Click on the Guess the Flag link in the navigation bar, and press the game's play button. The game will display 10 random national flags, with associated
+input fields. Type your attempt into each field according to your general knowledge. Press the Submit button to see your score. Press the Play Again
+button for repeated attempts and to gradually improve your scores by committing the flags to memory.</td>
+<td>Test my general knowledge and memory</td>
 <td>Works as expected</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us5.png">See User Story 5 images</a></p>
 
-<p><em>6. As a potential stakeholder, I want to discover the firm's culture and the personalities of the KMP.</em></p>
+<p><em>6. As a player, I want games that that are responsive to my abilities.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -801,16 +813,31 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Staff biographies on Meet the Team page</td>
-<td>Click on 'Meet the Team' in the navigation bar and the appropriate section will be displayed. Scroll down to read each biography in turn.</td>
-<td>Find out about the firm's key team members' personalities and the culture of the firm.</td>
+<td>Minesweeper game difficulty selector.</td>
+<td>Click on Minesweeper link in the navigation bar, and click on the drop down menu field. Click on one of the 3 options, then click the play
+button. The grid displayed will be easier or harder to complete depending on the seleciton made.</td>
+<td>Find games that respond to my abiltiy level.</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Spelling Bee game difficulty selector.</td>
+<td>Click on Spelling Bee link in the navigation bar, and click on the drop down menu field. Click on one of the 4 options, then click the play
+button. The words spoken as questions will be easier or harder depending on the selection made.</td>
+<td>Find games that respond to my ability level.</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Spelling Bee game hint function.</td>
+<td>Click on Spelling Bee link in the navigation bar, and click the play button. After any word is spoken, click on the Hint button, and the correct
+answer will be displayed, but with alternate letters replaced with asterisks.</td>
+<td>Find games that respond to my ability level.</td>
 <td>Works as expected</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us6.png">See User Story 6 images</a></p>
 
-<p><em>7. As a potential stakeholder, I want to know about the firm's competencies and how its existing clients view its services.</em></p>
+<p><em>7. As a player, I want games that give me feedback on my performance to encourage me to improve.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -819,22 +846,31 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Our Services page explaining the firm's services</td>
-<td>Click on 'Our Services' in the navigation bar and scroll down to discover each of four broad services categories. Scroll to the end to find details of the firm's membership programme.</td>
-<td>Find out what the firm offers.</td>
+<td>Minesweeper end of game sequences</td>
+<td>Click on Minesweeper link on the navigation bar. Click on the play button. Click on the squares of the grid to play the game.
+If you successfully click on all unmined squares, the game will feed back to you that you have won. If you click on a mined square, the 
+game will feed back to you that you have lost.</td>
+<td>Receive feedback on my performance at the games</td>
 <td>Works as expected.</td>
 </tr>
 <tr>
-<td>Testimonials carousel on home page</td>
-<td>Click on 'home' in the navigation bar or on the title on any of the pages and the carousel will be immediately displayed.</td>
-<td>Find out how the firm's clients view its services</td>
+<td>Spelling Bee final score display</td>
+<td>Click on Spelling Bee link in the navigation bar and press the play button. Attempt to spell each spoken word in turn. After the 10th answer, 
+the game will display your score out of 10, with half marks where hints have been given.</td>
+<td>Receive feedback on my performance at the games</td>
+<td>Works as expected</td>
+</tr>
+<td>Guess the Flag final score display</td>
+<td>Click on Guess the Flag link in the navigation bar and press the play button. Attempt to identify each of the flags by typing in the fields
+provided. Press Submit button to check your answers, and your score out of 10 will be displayed.</td>
+<td>Receive feedback on my performance at the games</td>
 <td>Works as expected</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us7.png">See User Story 7 images</a></p>
 
-<p><em>8. As a current stakeholder, I want to be able to sign up to use the client portal.</em></p>
+<p><em>8. As a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -843,8 +879,8 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Registration form for client portal on Contact Us page</td>
-<td>Click on 'Contact Us' in the navigation bar and scroll down to the second container including the registration form.</td>
+<td>Home page form for submitting suggestions</td>
+<td>Click on the Home link in the navigation bar </td>
 <td>Find out how to sign up for the client portal</td>
 <td>Works as expected</td>
 </tr>
