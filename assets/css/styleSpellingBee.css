@@ -86,6 +86,10 @@
     padding-left: 5px;
 }
 
+.footerMarginSpelling {
+    height: 8vh;
+}
+
 /*----------------------------------------------------------------MEDIA QUERIES---------------------------------------------------------*/
 
 @media screen and (max-width: 550px) {
