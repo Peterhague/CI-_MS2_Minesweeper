@@ -205,7 +205,12 @@ bee. Each page has its own fun and bespoke design.</p>
 
 <p>This design is meant to be colourful and irreverent, appealing to younger users, and evocative of computer games in general.</p>
 
+<details>
+<summary>Click to expand!</summary>
+
 <img src="docs/images/all_Titles.png" alt="all page titles">
+</details>
+
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 14: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
