@@ -254,7 +254,12 @@ combination. The colour scheme is maintained, as well as the distance from other
 <p>The main container is surrounded with decorative images that give visual representations of each of the games on offer. As well as being attractive, these
 draw teh eye to the actual message. These images are foregone on smaller screens to keep the design clean.</p>
 
+<details>
+<summary>Home page with welcome message</summary>
+
 <img src="docs/images/homepage.png" alt="home page with welcome message">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 8: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
@@ -268,7 +273,12 @@ draw teh eye to the actual message. These images are foregone on smaller screens
 <p>Each page's footer is coloured differently to tie in with the visual language of its page. The design has deliberately been kept simple, bold, and uncluttered,
 with no more information than necessary. The object is to attractively enclose the page's other content and push users towards the prominent social media links.</p>
 
+<details>
+<summary>Footer on each of the pages</summary>
+
 <img src="docs/images/footers.png" alt="footers of every page">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 8: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
@@ -288,7 +298,12 @@ and automatic reply to the user, employing the details they entered where approp
 <p>The form is validated with Javascript code, and only submits when all fields are populated, and when a correctly constituted email
 address is entered in that field.</p>
 
-<img src="docs/images/footer-home.png" alt="home page form">
+<details>
+<summary>Home page form inviting user ideas</summary>
+
+<img src="docs/images/footer-home.png" alt="suggestions form on home page">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 8, as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
@@ -301,9 +316,14 @@ throughout a round.</p>
 
 <p>Each of the options has a predefined number of grid rows and mines, to increase or decrease the challenge as appropriate.</p>
 
+<details>
+<summary>Minesweeper difficulty selectors, pre-game and mid-game</summary>
+
 <img src="docs/images/minesweeper-difficulty.png" alt="difficulty selector on load of page">
 
 <img src="docs/images/minesweeper-difficulty-game.png" alt="difficulty selector available during the game">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
@@ -322,6 +342,9 @@ throughout a round.</p>
 
 <p>The grid is styled to resemble a chekerboard/chess board, with alternate green and lighter green squares.</p>
 
+<details>
+<summary>Minesweeper grid in each difficulty and in mobile configuration</summary>
+
 <img src="docs/images/grid-dtop-easy.png" alt="Minesweeper grid in easy mode">
 
 <img src="docs/images/grid-dtop-medium.png" alt="Minesweeper grid in medium mode">
@@ -329,6 +352,8 @@ throughout a round.</p>
 <img src="docs/images/grid-dtop-hard.png" alt="Minesweeper grid in hard mode">
 
 <img src="docs/images/grids-mobile.png" alt="Minesweeper grids on mobile">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
@@ -354,9 +379,14 @@ The square's responsiveness is then changed: it can no longer be left clicked on
 contains a flag, the flag will be removed and the square returned to its original state. Hence, the right click acts as a flag on/off toggle. On mobile devices
 the event is instead triggered by a long touch, of more than 300 milliseconds.</p>
 
+<details>
+<summary>Minesweeper grid half-solved in desktop and mobile configurations</summary>
+
 <img src="docs/images/grid-in-progress-dtop.png" alt="Half-solved Minesweeper grid on desktop">
 
 <img src="docs/images/grid-in-progress-mobile.png" alt="Half-solved Minesweeper grid on mobile">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
@@ -378,17 +408,27 @@ square has the 'skull' font awesome icon displayed, to clearly indicate the fail
 <p>The winning sequence works very similarly, but with bright colours and a joyful, 'laughing' emoji icon, again to clearly feed back to the player that
 they have 'won' the game.</p>
 
+<details>
+<summary>Minesweeper game over sequence</summary>
+
 <img src="docs/images/ms-loss-start.png" alt="Minesweeper losing sequence during change of squares">
 
 <img src="docs/images/ms-loss-mid.png" alt="Minesweeper losing sequence once all squares changed">
 
 <img src="docs/images/ms-loss-end.png" alt="Minesweeper losing sequence final state">
 
+</details>
+
+<details>
+<summary>Minesweeper game won sequence</summary>
+
 <img src="docs/images/ms-win-start.png" alt="Minesweeper winning sequence during change of squares">
 
 <img src="docs/images/ms-win-mid.png" alt="Minesweeper winning sequence once all squares changed">
 
 <img src="docs/images/ms-win-end.png" alt="Minesweeper winning sequence final state">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
@@ -402,9 +442,14 @@ they have 'won' the game.</p>
 <p>Depending on the difficulty selected, the game will generate a random selection of ten words to test the user with from one of four
 dictionaries of 200 words. These words then form the content of the quiz.</p>
 
+<details>
+<summary>Spelling Bee difficulty selector on desktop and mobile devices</summary>
+
 <img src="docs/images/spelling-difficulty.png" alt="Spelling Bee game difficulty selector on desktop">
 
 <img src="docs/images/spelling-difficulty-mobile.png" alt="Spelling Bee game difficulty selector on mobile">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
@@ -430,15 +475,30 @@ word in the array. This process repeats until all the words have been spoken to 
 
 <p>After the tenth submission, and the display has presented either correct or incorrect, the display then presents the user's final score.</p>
 
+<details>
+<summary>Spelling Bee correct and incorrect answer messages</summary>
+
 <img src="docs/images/spelling-correct.png" alt="spelling bee game feedback on submission of a correct answer">
 
 <img src="docs/images/spelling-incorrect.png" alt="spelling bee game feedback on submission of an incorrect answer">
+
+</details>
+
+<details>
+<summary>Spelling Bee next question message and final score presentation</summary>
 
 <img src="docs/images/spelling-next.png" alt="spelling bee game indication of the next question number">
 
 <img src="docs/images/spelling-score.png" alt="spelling bee game presentation of final score to user">
 
+</details>
+
+<details>
+<summary>Spelling Bee game in mobile configuration</summary>
+
 <img src="docs/images/spelling-responsive.png" alt="spelling bee game in mobile configuration">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
@@ -458,9 +518,14 @@ word in the array. This process repeats until all the words have been spoken to 
 replaced with an asterisk. The fact that the player has asked for a hint is stored in the variable, so that if the user 
 subsequently submits a correct answer, only 0.5 points are added to their total score, rather than 1 point.</p>
 
+<details>
+<summary>Spelling Bee hint presentation, and final score with half mark awarded</summary>
+
 <img src="docs/images/spelling-hint.png" alt="spelling bee game hint offered to player">
 
 <img src="docs/images/spelling-hinted.png" alt="spelling bee game final score with half a point deducted for a hint given">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
@@ -485,6 +550,9 @@ a cross icon for an incorrect answer. A message below the buttons also displays 
 how well they did. The submit button also changes to a reveal button, and if that is clicked any crosses will be 
 replaced by the correct answer.</p>
 
+<details>
+<summary>Guess the Flag game in various stages of progress</summary>
+
 <img src="docs/images/flags-splash.png" alt="guess the flags game call to play">
 
 <img src="docs/images/flags-attempt.png" alt="guess the flags game questions attempted">
@@ -495,9 +563,16 @@ replaced by the correct answer.</p>
 
 <img src="docs/images/flags-new-game.png" alt="guess the flags game new game loaded">
 
+</details>
+
+<details>
+<summary>Guess the Flag game mobile and tablet configurations</summary>
+
 <img src="docs/images/flags-mobile.png" alt="guess the flags game in mobile configuration">
 
 <img src="docs/images/flags-tablet.png" alt="guess the flags game in tabet configuration">
+
+</details>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
@@ -513,7 +588,12 @@ replaced by the correct answer.</p>
 
 <p>This component directs any broken or missing links on the website to this explanatory error page, with the home page background, the normal title, and a prominent button inviting users to return to the home page.</p>
 
+<details>
+<summary>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx placeholder for 404</summary>
+
 <img src="docs/images/404-custom-page.png" alt="screenshot of the website's custom 404 error page">
+
+</details>
 
 <h4>Features for Future Releases</h4>
 
@@ -598,40 +678,60 @@ Guess the Flags game.</li></ul>
 
 <p>The <a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a> was used for HTML validation of the site. All pages passed with zero errors or warnings.</p>
 
+<details>
+<summary>W3C HTML validation of each page with no errors or alerts</summary>
+
 <img src="docs/images/validation-html-home.png" alt="screenshot of HTML validation of home page">
 <img src="docs/images/validation-html-minesweeper.png" alt="screenshot of HTML validation of minesweeper page">
 <img src="docs/images/validation-html-spelling.png" alt="screenshot of HTML validation of spelling bee page">
 <img src="docs/images/validation-html-flags.png" alt="screenshot of HTML validation of guess the flags page">
+
+</details>
 
 <h3 id="css-validation">CSS Validation</h3>
 
 <p>The <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validation Service</a> was used for CSS validation of the site.</p>
 <p>The CSS passed with zero errors.</p>
 
+<details>
+<summary>W3C CSS validation of each page with no errors</summary>
+
 <img src="docs/images/validation-css-home.png" alt="screenshot of css validation of home page">
 <img src="docs/images/validation-css-minesweeper.png" alt="screenshot of css validation of minesweeper page">
 <img src="docs/images/validation-css-spelling.png" alt="screenshot of css validation of spelling bee page">
 <img src="docs/images/validation-css-flags.png" alt="screenshot of css validation of guess the flags page">
+
+</details>
 
 <h3 id="accessibility">Accessibility</h3>
 
 <p>The <a href="https://wave.webaim.org/" target="_blank">WAVE Webaim Accessibility Tool</a>was used for accessibility validation of the site.</p>
 <p>The website passed with zero errors or alerts.</p>
 
+<details>
+<summary>WAVE Webaim accessibility validation of each page with no errors or alerts</summary>
+
 <img src="docs/images/validation-access-home.png" alt="screenshot of accessibility validation of home page">
 <img src="docs/images/validation-access-minesweeper.png" alt="screenshot of accessibility validation of minesweeper page">
 <img src="docs/images/validation-access-spelling.png" alt="screenshot of accessibility validation of spelling bee page">
 <img src="docs/images/validation-access-flags.png" alt="screenshot of accessibility validation of guess the flag page">
+
+</details>
 
 <h3 id="performance">Performance</h3>
 
 <p>The <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google PageSpeed Insights</a> tool was used for performance validation of the site.</p>
 <p>All pages of the website scored 90 or above for overall performance, except the home page which scored 84.</p>
 
+<details>
+<summary>Google PageSpeed Insights performance validation of each page</summary>
+
 <img src="docs/images/validation-performance-home.png" alt="screenshot of performance validation of home page">
 <img src="docs/images/validation-performance-minesweeper.png" alt="screenshot of performance validation of minesweeper page">
 <img src="docs/images/validation-performance-spelling.png" alt="screenshot of performance validation of spelling bee page">
 <img src="docs/images/validation-performance-flags.png" alt="screenshot of performance validation of guess the flag page">
+
+</details>
 
 <h3 id="device-testing">Performing tests on various devices</h3>
 <h4>Devices tested:</h4>
@@ -723,7 +823,12 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 </tr>
 </table>
 
+<details>
+<summary>Image walking through testing of User Story 1</summary>
+
 <img src="docs/images/user-stories/userstory1.png" alt="image walking through testing of user story 1">
+
+</details>
 
 <p><a href="docs/user-stories/us1.png">See User Story 1 images</a></p>
 
@@ -755,7 +860,12 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 2</summary>
+
 <img src="docs/images/user-stories/userstory2.png" alt="images walking through testing of user story 2">
+
+</details>
 
 <p><a href="docs/user-stories/us2.png">See User Story 2 images</a></p>
 
@@ -778,7 +888,12 @@ clicks.</td>
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 3</summary>
+
 <img src="docs/images/user-stories/userstory3.png" alt="images walking through testing of user story 3">
+
+</details>
 
 <p><a href="docs/user-stories/us3.png">See User Story 3 images</a></p>
 
@@ -799,7 +914,12 @@ Type your attempt in the input field, and the game will display to you whether y
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 4</summary>
+
 <img src="docs/images/user-stories/userstory4.png" alt="images walking through testing of user story 4">
+
+</details>
 
 <p><a href="docs/user-stories/us4.png">See User Story 4 images</a></p>
 
@@ -821,7 +941,12 @@ button for repeated attempts and to gradually improve your scores by committing 
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 5</summary>
+
 <img src="docs/images/user-stories/userstory5.png" alt="images walking through testing of user story 5">
+
+</details>
 
 <p><a href="docs/user-stories/us5.png">See User Story 5 images</a></p>
 
@@ -856,7 +981,12 @@ answer will be displayed, but with alternate letters replaced with asterisks.</t
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 6</summary>
+
 <img src="docs/images/user-stories/userstory6.png" alt="images walking through testing of user story 6">
+
+</details>
 
 <p><a href="docs/user-stories/us6.png">See User Story 6 images</a></p>
 
@@ -891,7 +1021,12 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 7</summary>
+
 <img src="docs/images/user-stories/userstory7.png" alt="images walking through testing of user story 7">
+
+</details>
 
 <p><a href="docs/user-stories/us7.png">See User Story 7 images</a></p>
 
@@ -919,7 +1054,12 @@ navigate to the relevant page.</td>
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 8</summary>
+
 <img src="docs/images/user-stories/userstory8.png" alt="images walking through testing of user story 8">
+
+</details>
 
 <p><a href="docs/user-stories/us8.png">See User Story 8 images</a></p>
 
@@ -937,7 +1077,12 @@ navigate to the relevant page.</td>
 <td>works as expected</td>
 </table>
 
+<details>
+<summary>Image walking through testing of User Story 9</summary>
+
 <img src="docs/images/user-stories/userstory9.png" alt="image walking through testing of user story 9">
+
+</details>
 
 <p><a href="docs/user-stories/us9.png">See User Story 9 images</a></p>
 
@@ -969,7 +1114,12 @@ navigate to the relevant page.</td>
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 10</summary>
+
 <img src="docs/images/user-stories/userstory10.png" alt="images walking through testing of user story 10">
+
+</details>
 
 <p><a href="docs/user-stories/us10.png">See User Story 10 images</a></p>
 
@@ -990,7 +1140,12 @@ navigate to the relevant page.</td>
 </tr>
 </table>
 
+<details>
+<summary>Image walking through testing of User Story 11</summary>
+
 <img src="docs/images/user-stories/userstory11.png" alt="image walking through testing of user story 11">
+
+</details>
 
 <p><a href="docs/user-stories/us11.png">See User Story 11 images</a></p>
 
@@ -1025,7 +1180,12 @@ answer will be displayed, but with alternate letters replaced with asterisks.</t
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 12</summary>
+
 <img src="docs/images/user-stories/userstory12.png" alt="images walking through testing of user story 12">
+
+</details>
 
 <p><a href="docs/user-stories/us12.png">See User Story 12 images</a></p>
 
@@ -1063,7 +1223,12 @@ button for repeated attempts and to gradually improve your scores by committing 
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 13</summary>
+
 <img src="docs/images/user-stories/userstory13.png" alt="images walking through testing of user story 13">
+
+</details>
 
 <p><a href="docs/user-stories/us13.png">See User Story 13 images</a></p>
 
@@ -1084,7 +1249,12 @@ call to try them.</td>
 </tr>
 </table>
 
+<details>
+<summary>Image walking through testing of User Story 14</summary>
+
 <img src="docs/images/user-stories/userstory14.png" alt="image walking through testing of user story 14">
+
+</details>
 
 <p><a href="docs/user-stories/us14.png">See User Story 14 images</a></p>
 
@@ -1124,7 +1294,12 @@ button for repeated attempts and to gradually improve your scores by committing 
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 15</summary>
+
 <img src="docs/images/user-stories/userstory15.png" alt="images walking through testing of user story 15">
+
+</details>
 
 <p><a href="docs/user-stories/us15a.png">See User Story 15 steps 1 to 2 images</a></p>
 <p><a href="docs/user-stories/us15b.png">See User Story 15 steps 3 to 5 images</a></p>
@@ -1145,7 +1320,12 @@ button for repeated attempts and to gradually improve your scores by committing 
 </tr>
 </table>
 
+<details>
+<summary>Image walking through testing of User Story 16</summary>
+
 <img src="docs/images/user-stories/userstory16.png" alt="image walking through testing of user story 16">
+
+</details>
 
 <p><em>17. As a site owner, I want the website to be attractive to younger users and keen gamers in particular.</em></p>
 <table>
@@ -1164,7 +1344,12 @@ aesthetic.</td>
 </tr>
 </table>
 
+<details>
+<summary>Image walking through testing of User Story 17</summary>
+
 <img src="docs/images/user-stories/userstory17.png" alt="image walking through testing of user story 17">
+
+</details>
 
 <p><em>18. As a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us of their own volition.</em></p>
 <table>
@@ -1195,7 +1380,12 @@ to navigate to the firm's relevant social media presence.</td>
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 18</summary>
+
 <img src="docs/images/user-stories/userstory18.png" alt="images walking through testing of user story 18">
+
+</details>
 
 <p><em>19. As a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for young users to play, and to be happy to recommend it to them.</em></p>
 <table>
@@ -1225,7 +1415,12 @@ to navigate to the firm's relevant social media presence.</td>
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 19</summary>
+
 <img src="docs/images/user-stories/userstory19.png" alt="images walking through testing of user story 19">
+
+</details>
 
 <p><em>20. As a site owner, I want games that are suitable for a range of ages and ability levels.</em></p>
 <table>
@@ -1258,7 +1453,12 @@ answer will be displayed, but with alternate letters replaced with asterisks.</t
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 20</summary>
+
 <img src="docs/images/user-stories/userstory20.png" alt="images walking through testing of user story 20">
+
+</details>
 
 <p><em>21. As a site owner, I want the games to be responsive to every kind of device.</em></p>
 <table>
@@ -1292,7 +1492,12 @@ to receive your score.</td>
 </tr>
 </table>
 
+<details>
+<summary>Images walking through testing of User Story 21</summary>
+
 <img src="docs/images/user-stories/userstory21.png" alt="images walking through testing of user story 21">
+
+</details>
 
 <p><a href="docs/user-stories/us16a.png">See User Story 16 steps 1 to 3 images</a></p>
 <p><a href="docs/user-stories/us16b.png">See User Story 16 steps 4 to 6 images</a></p>
