@@ -880,15 +880,23 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 </tr>
 <tr>
 <td>Home page form for submitting suggestions</td>
-<td>Click on the Home link in the navigation bar </td>
-<td>Find out how to sign up for the client portal</td>
+<td>Click on the Home link in the navigation bar and scroll down to the form. Fill in each field as indicated, and enter your suggestions
+in the text box. Click the submit button to send the information to the developers.</td>
+<td>Contact the developers with my ideas.</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Footer on each page with links to the firm's social media pages</td>
+<td>On any page, if necessary scroll to the bottom of the page, and click on one of the social media icons to open a new tab and
+navigate to the relevant page.</td>
+<td>Engage with the developers on social media.</td>
 <td>Works as expected</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us8.png">See User Story 8 images</a></p>
 
-<p><em>9. As a current stakeholder, I want to be able to qucikly and easily log in to the client portal.</em></p>
+<p><em>9. As a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate for children.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -896,23 +904,15 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 <th>Expected result</th>
 <th>Actual result</th>
 </tr>
-<tr>
-<td>Sign in button for the client portal in the navigation bar</td>
-<td>Click on the 'Sign In' button to the right of the navigation bar and fill in the fields of the form in the modal that is triggered.</td>
-<td>Find out how to log in to the client portal</td>
-<td>Works as expected</td>
-</tr>
-<tr>
-<td>Sign in button for the client portal displayed prominently on page load (mpbile and tablet)</td>
-<td>Click on the 'Sign In' button displayed near the bottom of all pages on load and fill in the fields of the form in the modal that is triggered.</td>
-<td>Find out how to log in to the client portal</td>
-<td>Works as expected</td>
-</tr>
+<td>Navigation bar under every page's title</td>
+<td>Click on any of the links in the navigation bar</td>
+<td>Navigate to the linked page</td>
+<td>works as expected</td>
 </table>
 
 <p><a href="docs/user-stories/us9.png">See User Story 9 images</a></p>
 
-<p><em>10. As a current stakeholder, I want to be able to easily sign up for the firm's weekly newsletter.</em></p>
+<p><em>10. As a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -921,16 +921,28 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Newsletter sign up form on Contact Us page</td>
-<td>Click on 'Contact Us' in the navigation bar and the container including the newsletter sign up form is prominently displayed</td>
-<td>Find out how to sign up for the firm's newsletter</td>
+<td>Minesweeper game.</td>
+<td>Click on the Minesweeper link in the navigation bar, and press the game's play button.</td>
+<td>Test the game quickly and easily for appropriate and valuable content.</td>
 <td>Works as expected</td>
+</tr>
+<tr>
+<td>Spelling Bee game.</td>
+<td>Click on the Spelling Bee link in the navigation bar, and press the game's play button.</td>
+<td>Test the game quickly and easily for appropriate and valuable content.</td>
+<td>works as exxpected.</td>
+</tr>
+<tr>
+<td>Guess the Flag game.</td>
+<td>Click on the Guess the Flag link in the navigation bar, and press the game's play button.</td>
+<td>Test the game quickly and easily for appropriate and valuable content.</td>
+<td>works as exxpected.</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us10.png">See User Story 10 images</a></p>
 
-<p><em>11. As a current stakeholder, I want to see what the latest industry news is.</em></p>
+<p><em>11. As a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage with their users.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -939,40 +951,17 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Latest Industry News section on home page</td>
-<td>Click on 'home' in the navigation bar or on the title on any of the pages and scroll down to find the news section</td>
-<td>Find out the latest industry news</td>
+<td>Footer on each page with links to the firm's social media pages</td>
+<td>On any page, if necessary scroll to the bottom of the page, and click on one of the social media icons to open a new tab and
+navigate to the relevant page.</td>
+<td>Access firm's social media pages to verify the quality of their engagement with users.</td>
 <td>Works as expected</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us11.png">See User Story 11 images</a></p>
 
-<p><em>12. As a site owner, I want potential stakeholders to understand what my firm does and encourage them to become clients or employees.</em></p>
-<table>
-<tr>
-<td>Our Services page explaining the firm's services</td>
-<td>Click on 'Our Services' in the navigation bar and scroll down to discover each of four broad services categories. Scroll to the end to find details of the firm's membership programme.</td>
-<td>Find out what the firm doess.</td>
-<td>Works as expected.</td>
-</tr>
-<tr>
-<td>Testimonials carousel on home page</td>
-<td>Click on 'home' in the navigation bar or on the title on any of the pages and the carousel will be immediately displayed.</td>
-<td>Encourage potential clients to sign up</td>
-<td>Works as expected</td>
-</tr>
-<tr>
-<td>Staff profiles on Meet the Team page</td>
-<td>Click on 'Meet the Team' in the navigation bar and find the linkedin icon next to the name of all key team members, along with a sumamry of professional history.</td>
-<td>Encourage potential employees to consider working for the firm</td>
-<td>works as expected.</td>
-</tr>
-</table>
-
-<p><a href="docs/user-stories/us12.png">See User Story 12 images</a></p>
-
-<p><em>13. As a site owner, I want potential stakeholders to understand that existing clients are happy and receive an excellent service.</em></p>
+<p><em>12. As a responsible adult, I want the games to be responsive to the needs of the young people in my care.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -981,16 +970,67 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Testimonials carousel on home page</td>
-<td>Click on 'home' in the navigation bar or on the title on any of the pages and the carousel will be immediately displayed.</td>
-<td>Assure potential clients that existing clients are satisfied</td>
+<td>Minesweeper game difficulty selector.</td>
+<td>Click on Minesweeper link in the navigation bar, and click on the drop down menu field. Click on one of the 3 options, then click the play
+button. The grid displayed will be easier or harder to complete depending on the seleciton made.</td>
+<td>Verify that the games are responsive to the needs of their users</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Spelling Bee game difficulty selector.</td>
+<td>Click on Spelling Bee link in the navigation bar, and click on the drop down menu field. Click on one of the 4 options, then click the play
+button. The words spoken as questions will be easier or harder depending on the selection made.</td>
+<td>Verify that the games are responsive to the needs of their users</td>
+<td>Works as expected</td>
+</tr>
+<tr>
+<td>Spelling Bee game hint function.</td>
+<td>Click on Spelling Bee link in the navigation bar, and click the play button. After any word is spoken, click on the Hint button, and the correct
+answer will be displayed, but with alternate letters replaced with asterisks.</td>
+<td>Verify that the games are responsive to the needs of their users</td>
+<td>Works as expected</td>
+</tr>
+</table>
+
+<p><a href="docs/user-stories/us12.png">See User Story 12 images</a></p>
+
+<p><em>13. As a responsible adult, I want the games to be rewarding and educational.</em></p>
+<table>
+<tr>
+<th>Feature</th>
+<th>Action</th>
+<th>Expected result</th>
+<th>Actual result</th>
+</tr>
+<tr>
+<td>Minesweeper game</td>
+<td>Click on the Minesweeper link in the navigation bar, and press the game's play button. Click on one of the squares in the grid.
+The number represents the number of surrounding squares that contain a mine and therefore should not be clicked on. One can reason
+which squares have the highest probability of not having a mine by the combination of the displayed numbers from the accumulated
+clicks.</td>
+<td>Verify that the games are rewarding and educational.</td>
+<td>Works as expected.</td>
+</tr>
+<tr>
+<td>Spelling Bee game.</td>
+<td>Click on the Spelling Bee link in the navigation bar, and press the game's play button. The game will speak a word it wants you to spell.
+Type your attempt in the input field, and the game will display to you whether you were correct or incorrect.</td>
+<td>Verify that the games are rewarding and educational.</td>
+<td>Works as expected.</td>
+</tr>
+<tr>
+<td>Guess the Flag game.</td>
+<td>Click on the Guess the Flag link in the navigation bar, and press the game's play button. The game will display 10 random national flags, with associated
+input fields. Type your attempt into each field according to your general knowledge. Press the Submit button to see your score. Press the Play Again
+button for repeated attempts and to gradually improve your scores by committing the flags to memory.</td>
+<td>Verify that the games are rewarding and educational.</td>
 <td>Works as expected</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us13.png">See User Story 13 images</a></p>
 
-<p><em>14. As a site owner, I want potential and existing stakeholders to understand that my firm plays an active part in the local business community and that its main specialism is agribusiness.</em></p>
+<p><em>14. As a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -999,22 +1039,17 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Testimonials carousel on home page</td>
-<td>Click on 'home' in the navigation bar or on the title on any of the pages and the carousel will be immediately displayed.</td>
-<td>Show potential clients that we play an active roles in the business community</td>
-<td>Works as expected</td>
-</tr>
-<tr>
-<td>Biography of Phil De Jong, specialist in Agribusiness</td>
-<td>Click on 'Meet the Team' in the navigation bar and the biography is displayed immediately</td>
-<td>Show potential clients that the firm's main specialism is agribusiness</td>
+<td>Welcome message home page</td>
+<td>Click on 'home' in the navigation bar and read the welcome message describing the games available and be inspired by the 
+call to try them.</td>
+<td>Explain the nature of the games and encourage users to try them.</td>
 <td>Works as expected</td>
 </tr>
 </table>
 
 <p><a href="docs/user-stories/us14.png">See User Story 14 images</a></p>
 
-<p><em>15. As a site owner, I want existing clients to be able to register for and log in to our client portal.</em></p>
+<p><em>15. As a site owner, I want players to find the games on the website fun and rewarding.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -1024,21 +1059,28 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 </tr>
 </tr>
 <tr>
-<td>Sign in button for the client portal in the navigation bar</td>
-<td>Click on the 'Sign In' button to the right of the navigation bar and fill in the fields of the form in the modal that is triggered.</td>
-<td>Allows clients to easily log in to the client portal</td>
-<td>Works as expected</td>
+<td>Minesweeper game</td>
+<td>Click on the Minesweeper link in the navigation bar, and press the game's play button. Click on one of the squares in the grid.
+The number represents the number of surrounding squares that contain a mine and therefore should not be clicked on. One can reason
+which squares have the highest probability of not having a mine by the combination of the displayed numbers from the accumulated
+clicks. Keep reasoning and clicking until you win, or try again.</td>
+<td>Verify that the games are fun and rewarding.</td>
+<td>Works as expected.</td>
 </tr>
 <tr>
-<td>Sign in button for the client portal displayed prominently on page load (mpbile and tablet)</td>
-<td>Click on the 'Sign In' button displayed near the bottom of all pages on load and fill in the fields of the form in the modal that is triggered.</td>
-<td>Allows clients to easily log in to the client portal</td>
-<td>Works as expected</td>
+<td>Spelling Bee game.</td>
+<td>Click on the Spelling Bee link in the navigation bar, and press the game's play button. The game will speak a word it wants you to spell.
+Type your attempt in the input field, and the game will display to you whether you were correct or incorrect. Keep making attempts
+until you receive a final score.</td>
+<td>Verify that the games are fun and rewarding</td>
+<td>Works as expected.</td>
 </tr>
 <tr>
-<td>Registration form for client portal on Contact Us page</td>
-<td>Click on 'Contact Us' in the navigation bar and scroll down to the second container including the registration form.</td>
-<td>Allows clients to register to use the client portal</td>
+<td>Guess the Flag game.</td>
+<td>Click on the Guess the Flag link in the navigation bar, and press the game's play button. The game will display 10 random national flags, with associated
+input fields. Type your attempt into each field according to your general knowledge. Press the Submit button to see your score. Press the Play Again
+button for repeated attempts and to gradually improve your scores by committing the flags to memory.</td>
+<td>Verify that the games are fun and rewarding.</td>
 <td>Works as expected</td>
 </tr>
 </table>
@@ -1046,7 +1088,7 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 <p><a href="docs/user-stories/us15a.png">See User Story 15 steps 1 to 2 images</a></p>
 <p><a href="docs/user-stories/us15b.png">See User Story 15 steps 3 to 5 images</a></p>
 
-<p><em>16. As a site owner, I want all users to as engaged with my business as possible, by reading our articles, signing up for services, and following us on social media.</em></p>
+<p><em>16. As a site owner, I want players to feel at home on the website and to be happy spending time there.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -1055,21 +1097,9 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 <th>Actual result</th>
 </tr>
 <tr>
-<td>Latest Industry News section on home page</td>
-<td>Click on 'home' in the navigation bar or on the title on any of the pages and scroll down to find the news section</td>
-<td>Encourages stakeholder engagement by providing an up-to-date news section</td>
-<td>Works as expected</td>
-</tr>
-<tr>
-<td>Newsletter and portal sign up forms on Contact Us page</td>
-<td>Click on 'Contact Us' in the navigation form. Newsletter form is immediately displayed; scroll down for form enabling sign up to the portal</td>
-<td>Encourages stakeholder engagement by allowing them to sign up for services</td>
-<td>Works as expected</td>
-</tr>
-<tr>
-<td>Social media links in footer section of every page</td>
-<td>Load any page by clicking the links in the navigation bar and the footer and the social media links will be displayed on desktop and tablet. Scroll to the bottom on mobile</td>
-<td>Encourages stakeholder engagement by prompting them to interact with the firm's social media presence</td>
+<td>Welcome message</td>
+<td>Click on 'home' in the navigation bar and read the welcome message prominently displayed</td>
+<td>Warmly welcomes the player and encourages them to spend their time at the site</td>
 <td>Works as expected</td>
 </tr>
 </table>
