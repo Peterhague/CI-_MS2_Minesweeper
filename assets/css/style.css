@@ -326,6 +326,10 @@ header {
     #title-row9 {
         display: none;
     }
+
+    #errorMessagePara, #errorLink {
+        font-size: 1.2em;
+    }
 }
 
 @media screen and (min-width: 551px) {
