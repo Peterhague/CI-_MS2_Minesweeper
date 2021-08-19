@@ -1608,16 +1608,6 @@ Flag game.</li>
 <p><a target="_blank" href="https://www.flickr.com/photos/letscommunicate/5066054716/">User's Flickr account</a></a></li></p>
 <p><a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/2.0/">Details of usage rights</a></a></li></p>
 
-<li>The staff profile images were selected for size, content, and the black and white format. Their sources are as follows:
-<ul>
-<li><strong>"Phil De Jong"</strong>: Taken from <a href="https://fuller-roper.co.uk/contact-us/">Fuller & Roper Chartered Accountants</a></li>
-<li><strong>"Liz Read"</strong>: Taken from <a href="https://www.oneplusoneaccountants.co.uk/meet-the-team/">Oneplusone Accountants</a></li>
-<li><strong>"Natalie Jenkins"</strong>: Taken from <a href="https://www.heartofenglandcf.co.uk/michelle-vincent/">Heart of England</a></li>
-<li><strong>"Richard Travers"</strong>: Taken from <a href="https://www.dains.com/our-people/adam-longmore">Dains Accountants</a></li>
-<li><strong>"George Roberts"</strong>: Taken from <a href="https://www.hamlyns.com/About-Us/Partners-and-Managers/Jonathan-Graham">Hamlyns LLP Chartered Accountants</a></li>
-</ul>
-</li>
-
 </ul>
 
 <h3 id="acknowledgements">Acknowledgements</h3>
