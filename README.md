@@ -1470,51 +1470,51 @@ to receive your score.</td>
 <h2 id="bugs">Bugs found and resolved during development</h2>
 
 <ul>
-<li><strong>Bug:</strong>Guess the Flag: used a for loop to try to populate an array of 10 unique random numbers, was falling short when numbers duplicated</li>
-<li><strong>Fix:</strong>Used a while loop instead, so the loop was infinite until the array's length was 10</li>
-<li><strong>Bug:</strong>Guess the Flag: the new game button swaps out the answer div elements for input fields, but this presented as a very brief 'spasm'
+<li><strong>Bug:</strong> Guess the Flag: used a for loop to try to populate an array of 10 unique random numbers, was falling short when numbers duplicated</li>
+<li><strong>Fix:</strong> Used a while loop instead, so the loop was infinite until the array's length was 10</li>
+<li><strong>Bug:</strong> Guess the Flag: the new game button swaps out the answer div elements for input fields, but this presented as a very brief 'spasm'
 effect on screen, with the content being pulled down to the bottom of the page.</li>
-<li><strong>Fix:</strong>Used an overlaying blank div that would display instead with a breif timeout, so that the effect was hidden by a simple blank screen.</li>
-<li><strong>Bug:</strong>Minesweeper: struggled to get the right click event working with normal Javascript.</li>
-<li><strong>Fix:</strong>Used Jquery mousedown method and a swtich case with case 3 being the right mouse button.</li>
-<li><strong>Bug:</strong>Minesweeper: the squares were still not clickable as the default event was generating the normal menu</li>
-<li><strong>Fix:</strong>Added oncontext menu attribute to #grid element to prevent the behaviour.</li>
-<li><strong>Bug:</strong>Minesweeper: the squares' inner html (ie the numbers to be displayed on a click) could be displayed by dragging the cursor across them
+<li><strong>Fix:</strong> Used an overlaying blank div that would display instead with a breif timeout, so that the effect was hidden by a simple blank screen.</li>
+<li><strong>Bug:</strong> Minesweeper: struggled to get the right click event working with normal Javascript.</li>
+<li><strong>Fix:</strong> Used Jquery mousedown method and a swtich case with case 3 being the right mouse button.</li>
+<li><strong>Bug:</strong> Minesweeper: the squares were still not clickable as the default event was generating the normal menu</li>
+<li><strong>Fix:</strong> Added oncontext menu attribute to #grid element to prevent the behaviour.</li>
+<li><strong>Bug:</strong> Minesweeper: the squares' inner html (ie the numbers to be displayed on a click) could be displayed by dragging the cursor across them
 and highlighting the text.</li>
-<li><strong>Fix:</strong>Added CSS property of user-select: none to each square</li>
-<li><strong>Bug:</strong>Minesweeper: tried to replace the right click event with a long click event for touch screen devices, but the code did not work.</li>
-<li><strong>Fix:</strong>Used touchstart and touchend events instead.</li>
-<li><strong>Bug:</strong>Minesweeper: the long touch event was interfering with the normal touch event, and was often triggering the latter as well as the former.</li>
-<li><strong>Fix:</strong>Used a setTimeout function to remove the regular touch event handler for a very brief period after a long touch event had been triggered.</li>
-<li><strong>Bug:</strong>Minesweeper: the code to automatically click on squares with an inner HMTL of '0' was creating an infinite loop and crashing the browser.</li>
-<li><strong>Fix:</strong>The function was clicking on squares with a certain identifying class forever, so for each simulated click I added a new class to the clicked
+<li><strong>Fix:</strong> Added CSS property of user-select: none to each square</li>
+<li><strong>Bug:</strong> Minesweeper: tried to replace the right click event with a long click event for touch screen devices, but the code did not work.</li>
+<li><strong>Fix:</strong> Used touchstart and touchend events instead.</li>
+<li><strong>Bug:</strong> Minesweeper: the long touch event was interfering with the normal touch event, and was often triggering the latter as well as the former.</li>
+<li><strong>Fix:</strong> Used a setTimeout function to remove the regular touch event handler for a very brief period after a long touch event had been triggered.</li>
+<li><strong>Bug:</strong> Minesweeper: the code to automatically click on squares with an inner HMTL of '0' was creating an infinite loop and crashing the browser.</li>
+<li><strong>Fix:</strong> The function was clicking on squares with a certain identifying class forever, so for each simulated click I added a new class to the clicked
 element and added a condition to the main click event handler to only run if 'this' did not have a class list that contained that newly-assigned class name.</li>
-<li><strong>Bug:</strong>Minesweeper: the automating code was clicking on all the squares with the class 'clciked-square-radius', which was actually all the 
+<li><strong>Bug:</strong> Minesweeper: the automating code was clicking on all the squares with the class 'clciked-square-radius', which was actually all the 
 squares surrounding every square that had already been clicked on.</li>
-<li><strong>Fix:</strong>On each new click of a square, removed the class 'clicked-square-radius' from ALL squares, so that only the squares surrounding the last-clicked
+<li><strong>Fix:</strong> On each new click of a square, removed the class 'clicked-square-radius' from ALL squares, so that only the squares surrounding the last-clicked
 square would be addressed by the automating code.</li>
-<li><strong>Bug:</strong>Minesweeper: removing the 'clicked-square-radius' class from each square meant that only the first of any of the surrounding squares was being
+<li><strong>Bug:</strong> Minesweeper: removing the 'clicked-square-radius' class from each square meant that only the first of any of the surrounding squares was being
 automatically clicked on, because the 'memory' of which squares to click was being lost on each simulated click.</li>
-<li><strong>Fix:</strong>In place of the general 'clicked-square-radius' class, used a template literal to add a class to each surrounding square that referred to 
+<li><strong>Fix:</strong> In place of the general 'clicked-square-radius' class, used a template literal to add a class to each surrounding square that referred to 
 the clicked square's id, and redirected the automating code to click on squares with classes that contain its id.</li>
-<li><strong>Bug:</strong>Spelling Bee: the game was not iterating through the array of words but was speaking the first word repeatedly</li>
-<li><strong>Fix:</strong>On each submission of an answer, increased the value of the currentQuestion variable by 1 and passed it as a parameter
+<li><strong>Bug:</strong> Spelling Bee: the game was not iterating through the array of words but was speaking the first word repeatedly</li>
+<li><strong>Fix:</strong> On each submission of an answer, increased the value of the currentQuestion variable by 1 and passed it as a parameter
 to the speak function, to stand for the iteration of the randomWords array to be passed to the Responsive Voice API.</li>
-<li><strong>Bug:</strong>Spelling Bee: the Hint function was not displaying the answer as intended, with aternate letters replaced by askterisks.</li>
-<li><strong>Fix:</strong>Used the split method to convert the answers into arrays that can be iterated over.</li>
-<li><strong>Bug:</strong>Spelling Bee: difficulty selector was not working</li>
-<li><strong>Fix:</strong>Added a "change" event listener to the select element, and to generate a new list of random words on each change.</li>
-<li><strong>Bug:</strong>Home page: the images decorating the welcome message and form were distorting the layout in various configurations.</li>
-<li><strong>Fix:</strong>Rewrote the html to utilise the Bootstrap grid system to provide a much more robust layout across all device types.</li>
-<li><strong>Bug:</strong>Home page: the form was submitting and calling emailJS even if the names submitted contained numbers and special characters.</li>
-<li><strong>Fix:</strong>Added the letters variable to define which characters were considered valid, and then used the match method to verify that
+<li><strong>Bug:</strong> Spelling Bee: the Hint function was not displaying the answer as intended, with aternate letters replaced by askterisks.</li>
+<li><strong>Fix:</strong> Used the split method to convert the answers into arrays that can be iterated over.</li>
+<li><strong>Bug:</strong> Spelling Bee: difficulty selector was not working</li>
+<li><strong>Fix:</strong> Added a "change" event listener to the select element, and to generate a new list of random words on each change.</li>
+<li><strong>Bug:</strong> Home page: the images decorating the welcome message and form were distorting the layout in various configurations.</li>
+<li><strong>Fix:</strong> Rewrote the html to utilise the Bootstrap grid system to provide a much more robust layout across all device types.</li>
+<li><strong>Bug:</strong> Home page: the form was submitting and calling emailJS even if the names submitted contained numbers and special characters.</li>
+<li><strong>Fix:</strong> Added the letters variable to define which characters were considered valid, and then used the match method to verify that
 the values of those inputs adhered to that varaible.</li>
-<li><strong>Bug:</strong>Home page: the footer had very small gutters at either side so wasn't quite spanning the whole viewport.</li>
-<li><strong>Fix:</strong>Wrote a CSS rule for the body element, with a min-width property of 100vw</li>
-<li><strong>Bug:</strong>Validation: had several duplicated id attributes on home page caused by the duplication of code for the mobile/tablet layout.</li>
-<li><strong>Fix:</strong>Assigned a 'mobile' suffix to the appropriate ids and updated the CSS code as necessary.</li>
-<li><strong>Bug:</strong>Validation: had lots of missing text content for links where icons had been used.</li>
-<li><strong>Fix:</strong>Assigned the anchor elements with text inside spans, and assigned the spans CSS of display:none.</li>
+<li><strong>Bug:</strong> Home page: the footer had very small gutters at either side so wasn't quite spanning the whole viewport.</li>
+<li><strong>Fix:</strong> Wrote a CSS rule for the body element, with a min-width property of 100vw</li>
+<li><strong>Bug:</strong> Validation: had several duplicated id attributes on home page caused by the duplication of code for the mobile/tablet layout.</li>
+<li><strong>Fix:</strong> Assigned a 'mobile' suffix to the appropriate ids and updated the CSS code as necessary.</li>
+<li><strong>Bug:</strong> Validation: had lots of missing text content for links where icons had been used.</li>
+<li><strong>Fix:</strong> Assigned the anchor elements with text inside spans, and assigned the spans CSS of display:none.</li>
 </ul>
 
 <h2 id="deployment">Deployment</h2>

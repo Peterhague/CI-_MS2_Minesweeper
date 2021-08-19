@@ -6,7 +6,6 @@ function sendMail(contactForm) {
         "email_address": contactForm.emailAddress.value,
         "message": contactForm.suggestion.value,
     })
-    console.log("pass thru working");
     return false;    
 }
 /*function to validate the form for user idea submissions.
