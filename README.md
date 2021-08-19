@@ -187,7 +187,7 @@ from larger images and had their backgrounds removed with online software. There
 
 <h2 id="wireframes">Wireframes</h2>
 
-<p>Wireframes: <a href="docs/wireframes/home-wireframe.png">Home</a><a href="docs/wireframes/contact-us-wireframe.png"> Contact Us</a><a href="docs/wireframes/meet-the-team-wireframe.png"> Meet the Team</a><a href="docs/wireframes/our-services-wireframe.png"> Our Services</a></p>
+<p>Wireframes: <a href="docs/wireframes/wireframe-home.png">Home</a><a href="docs/wireframes/wireframe-ms.png"> Minesweeper</a><a href="docs/wireframes/wireframe-spelling.png"> Spelling Bee</a><a href="docs/wireframes/wireframe-flags.png"> Guess the Flag</a></p>
 
 <h2 id="features">Features</h2>
 
@@ -1581,7 +1581,7 @@ working.</li>
 <li><strong>Freecodecamp.org</strong> - the forum was used for help with mouseup events to understand how to write the code for the long touch 
 event listener for the Minesweeper game, but no actual code was replicated. Also helped with navigating the array of objects for the Guess the 
 Flag game.</li>
-<li><strong>w3resource.com</strong> - for the code that stands for 'letters only' used to validate the form inputs on the Home page.</li>
+<li><strong>w3resource.com</strong> - for the code that stands for 'letters only' used to validate the form inputs on the Home page and the email-validating expression for the email input.</li>
 <li><strong>Developer.mozilla.org</strong> - for help with correctly splicing and joining arrays to produce the hints in the Spelling Bee game.</li>
 <li><strong>Codegrepper.com</strong> - again, for help with correctly splicing and joining arrays to produce the hints in the Spelling Bee game.</li>
 </ul>
