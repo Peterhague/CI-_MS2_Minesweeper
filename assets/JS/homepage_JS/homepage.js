@@ -1,3 +1,6 @@
+(function() {
+    emailjs.init("user_TnGv5LfOGP5Nqwj1AQR0U");
+  })();
 /*passes the emailJS API the necessary inputs to send the automated email*/
 function sendMail(contactForm) {
     emailjs.send("service_epz8iti", "contact_form", {
