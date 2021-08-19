@@ -64,5 +64,3 @@ function formValidation(that) {
         return false;
     }
 }
-
-console.log("form changed y");
