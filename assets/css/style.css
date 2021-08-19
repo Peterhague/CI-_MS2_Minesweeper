@@ -245,6 +245,12 @@ header {
     padding-bottom: 1.5vmin;
 }
 
+.errorFooter {
+    position: absolute;
+    bottom: 0;
+    min-width: 100vw;
+}
+
 .footerMargin {
     height: 20vh;
 }
