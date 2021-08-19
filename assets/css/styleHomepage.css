@@ -86,13 +86,13 @@ h2 {
     margin-bottom: 6vh;
 }
 #formImageLeft{
-    background-image: url("../images/rodinthink.jpg");
+    background-image: url("../images/lightbulb.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 #formImageRight{
-    background-image: url("../images/rodinthinkflipped.jpg");
+    background-image: url("../images/lightbulb.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

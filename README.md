@@ -183,7 +183,7 @@ used for the "display" in the Spelling game, to give an old-fashioned monitor ef
 <h3>Imagery</h3>
 
 <p>The images on the website take the form of large icons on the homepage to represent the 3 available games. They were taken
-from larger images and had their backgrounds removed with online software. There are also cartoons of Rodin's The Thinker statue to decorate the call to get in touch on the homepage, and to focus the user on the form. The images on the website do not form a major part of the aesthetic and are used for emphasis of the prevailing design language.</p>
+from larger images and had their backgrounds removed with online software. There are also two cartoon light bulb images to decorate the call to get in touch on the homepage, and to focus the user on the form. The images on the website do not form a major part of the aesthetic and are used for emphasis of the prevailing design language.</p>
 
 <h2 id="wireframes">Wireframes</h2>
 
@@ -1603,10 +1603,9 @@ Flag game.</li>
 <p><a target="_blank" href="https://www.vhv.rs/viewpic/TimohT_cartoon-bomb-png-transparent-png/">Relevant vhv.rs page with statement of usage rights</a></a></li></p>
 </p>
 
-<li>Our Services page background image: I was able to trace this to a Flickr account, with permission for non-commercial sharing, with no image transformation. 
+<li>Cartoon light bulb used on Home page. Sourced from openclipart.org, which is entirely public domain: 
 
-<p><a target="_blank" href="https://www.flickr.com/photos/letscommunicate/5066054716/">User's Flickr account</a></a></li></p>
-<p><a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/2.0/">Details of usage rights</a></a></li></p>
+<p><a target="_blank" href="https://openclipart.org/detail/213322/light-bulb-lit">Relevant openclipart.org page</a></a></li></p>
 
 </ul>
 
