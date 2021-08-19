@@ -1,5 +1,7 @@
 # GAMES Inc.
 
+<img src="docs/images/responsiveness.png" alt="screenshot of site in various screen configurations">
+
 <a href="https://peterhague.github.io/CI_MS2_Games_Inc./" target="_blank">View the deployed website</a>
 
 
