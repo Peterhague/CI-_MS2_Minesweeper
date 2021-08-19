@@ -276,7 +276,10 @@ with no more information than necessary. The object is to attractively enclose t
 <details>
 <summary>Footer on each of the pages</summary>
 
-<img src="docs/images/features/footers.png" alt="footers of every page">
+<img src="docs/images/features/footer_home.png" alt="home page footer">
+<img src="docs/images/features/footer_ms.png" alt="minesweeper page footer">
+<img src="docs/images/features/footer_spelling.png" alt="spelling bee page footer">
+<img src="docs/images/features/footer_flags.png" alt="guess the flag page footer">
 
 </details>
 
@@ -301,7 +304,7 @@ address is entered in that field.</p>
 <details>
 <summary>Home page form inviting user ideas</summary>
 
-<img src="docs/images/features/footer-home.png" alt="suggestions form on home page">
+<img src="docs/images/features/footer_home.png" alt="suggestions form on home page">
 
 </details>
 
@@ -1071,7 +1074,7 @@ navigate to the relevant page.</td>
 <details>
 <summary>Image walking through testing of User Story 9</summary>
 
-<img src="docs/images/user-stories-testing/userstory9.png" alt="image walking through testing of user story 9">
+<img src="docs/images/user-stories-testing/userstory1.png" alt="image walking through testing of user story 9">
 
 </details>
 
@@ -1299,7 +1302,7 @@ button for repeated attempts and to gradually improve your scores by committing 
 <details>
 <summary>Image walking through testing of User Story 16</summary>
 
-<img src="docs/images/user-stories-testing/userstory16.png" alt="image walking through testing of user story 16">
+<img src="docs/images/user-stories-testing/userstory14.png" alt="image walking through testing of user story 16">
 
 </details>
 
@@ -1359,7 +1362,7 @@ to navigate to the firm's relevant social media presence.</td>
 <details>
 <summary>Images walking through testing of User Story 18</summary>
 
-<img src="docs/images/user-stories-testing/userstory18.png" alt="images walking through testing of user story 18">
+<img src="docs/images/user-stories-testing/userstory8.png" alt="images walking through testing of user story 18">
 
 </details>
 
