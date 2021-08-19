@@ -21,9 +21,12 @@ and ugly 'bounce' effect. This code just hides that by displaying a completely b
 the reload takes place*/
 function hideResetProcess() {
     let mainContainer = document.getElementById("mainContainer");
+    let footer = document.getElementById("flagsFooter");
     mainContainer.classList.add("hide");
+    footer.classList.add("hide");
     setTimeout(function() {                
         mainContainer.classList.remove("hide");
+        footer.classList.remove("hide");
         setFocus();
     }, 300);
 }

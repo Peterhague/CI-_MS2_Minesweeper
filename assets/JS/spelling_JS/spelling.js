@@ -67,7 +67,7 @@ function startGame() {
     speak(randomWords, 0); 
   }, 600);
 }
-// calls the RV API and asks it to speak the next iteraton of the randomWords array
+/* calls the Responsive Voice API and asks it to speak the next iteraton of the randomWords array*/
 function speak(randomWords, iteration) {
   output = randomWords[iteration];
   responsiveVoice.speak(randomWords[iteration]);
