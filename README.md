@@ -830,8 +830,6 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 
 </details>
 
-<p><a href="docs/user-stories/us1.png">See User Story 1 images</a></p>
-
 <p><em>2. As a player, I want games that are interactive.</em></p>
 <table>
 <tr>
@@ -867,8 +865,6 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 
 </details>
 
-<p><a href="docs/user-stories/us2.png">See User Story 2 images</a></p>
-
 <p><em>3. As a player, I want to be able to test my reasoning abilities.</em></p>
 <table>
 <tr>
@@ -895,8 +891,6 @@ clicks.</td>
 
 </details>
 
-<p><a href="docs/user-stories/us3.png">See User Story 3 images</a></p>
-
 <p><em>4. As a player, I want to be able to test my spelling skills.</em></p>
 <table>
 <tr>
@@ -920,8 +914,6 @@ Type your attempt in the input field, and the game will display to you whether y
 <img src="docs/images/user-stories/userstory4.png" alt="images walking through testing of user story 4">
 
 </details>
-
-<p><a href="docs/user-stories/us4.png">See User Story 4 images</a></p>
 
 <p><em>5. As a player, I want to be able to test my general knowledge and memory.</em></p>
 <table>
@@ -947,8 +939,6 @@ button for repeated attempts and to gradually improve your scores by committing 
 <img src="docs/images/user-stories/userstory5.png" alt="images walking through testing of user story 5">
 
 </details>
-
-<p><a href="docs/user-stories/us5.png">See User Story 5 images</a></p>
 
 <p><em>6. As a player, I want games that that are responsive to my abilities.</em></p>
 <table>
@@ -988,8 +978,6 @@ answer will be displayed, but with alternate letters replaced with asterisks.</t
 
 </details>
 
-<p><a href="docs/user-stories/us6.png">See User Story 6 images</a></p>
-
 <p><em>7. As a player, I want games that give me feedback on my performance to encourage me to improve.</em></p>
 <table>
 <tr>
@@ -1028,8 +1016,6 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 
 </details>
 
-<p><a href="docs/user-stories/us7.png">See User Story 7 images</a></p>
-
 <p><em>8. As a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</em></p>
 <table>
 <tr>
@@ -1061,8 +1047,6 @@ navigate to the relevant page.</td>
 
 </details>
 
-<p><a href="docs/user-stories/us8.png">See User Story 8 images</a></p>
-
 <p><em>9. As a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate for children.</em></p>
 <table>
 <tr>
@@ -1083,8 +1067,6 @@ navigate to the relevant page.</td>
 <img src="docs/images/user-stories/userstory9.png" alt="image walking through testing of user story 9">
 
 </details>
-
-<p><a href="docs/user-stories/us9.png">See User Story 9 images</a></p>
 
 <p><em>10. As a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</em></p>
 <table>
@@ -1121,8 +1103,6 @@ navigate to the relevant page.</td>
 
 </details>
 
-<p><a href="docs/user-stories/us10.png">See User Story 10 images</a></p>
-
 <p><em>11. As a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage with their users.</em></p>
 <table>
 <tr>
@@ -1146,8 +1126,6 @@ navigate to the relevant page.</td>
 <img src="docs/images/user-stories/userstory11.png" alt="image walking through testing of user story 11">
 
 </details>
-
-<p><a href="docs/user-stories/us11.png">See User Story 11 images</a></p>
 
 <p><em>12. As a responsible adult, I want the games to be responsive to the needs of the young people in my care.</em></p>
 <table>
@@ -1186,8 +1164,6 @@ answer will be displayed, but with alternate letters replaced with asterisks.</t
 <img src="docs/images/user-stories/userstory12.png" alt="images walking through testing of user story 12">
 
 </details>
-
-<p><a href="docs/user-stories/us12.png">See User Story 12 images</a></p>
 
 <p><em>13. As a responsible adult, I want the games to be rewarding and educational.</em></p>
 <table>
@@ -1230,8 +1206,6 @@ button for repeated attempts and to gradually improve your scores by committing 
 
 </details>
 
-<p><a href="docs/user-stories/us13.png">See User Story 13 images</a></p>
-
 <p><em>14. As a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</em></p>
 <table>
 <tr>
@@ -1255,8 +1229,6 @@ call to try them.</td>
 <img src="docs/images/user-stories/userstory14.png" alt="image walking through testing of user story 14">
 
 </details>
-
-<p><a href="docs/user-stories/us14.png">See User Story 14 images</a></p>
 
 <p><em>15. As a site owner, I want players to find the games on the website fun and rewarding.</em></p>
 <table>
