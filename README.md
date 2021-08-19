@@ -586,12 +586,15 @@ replaced by the correct answer.</p>
 
 <h4>Feature 14: Custom 404 error message page</h4>
 
-<p>This component directs any broken or missing links on the website to this explanatory error page, with the home page background, the normal title, and a prominent button inviting users to return to the home page.</p>
+<p>This component directs any broken or missing links on the website to this explanatory error page, with a prominent error message and 'Return to Home page'
+call to action, presented in sympathetic retro font.</p>
 
 <details>
-<summary>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx placeholder for 404</summary>
+<summary>Images of 404 page in desktop and mobile configurations</summary>
 
-<img src="docs/images/404-custom-page.png" alt="screenshot of the website's custom 404 error page">
+<img src="docs/images/features/404page.png" alt="screenshot of the website's custom 404 error page in desktop configuration">
+
+<img src="docs/images/features/404page-mobile.png" alt="screenshot of the website's custom 404 error page in mobile configuration">
 
 </details>
 
