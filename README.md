@@ -674,6 +674,10 @@ Guess the Flags game.</li></ul>
 <li>jQuery v3.6</li>
 </ol>
 <ul><li>JQuery was used for certain Javascript code to shorten certain expressions and to facilitate the right click event-handling for the Minesweeper game.</li></ul>
+<ol start="14">
+<li>Remove.bg</li>
+</ol>
+<ul><li>The online software at remove.bg was used to remove the backgrounds from the images used on the Home page.</li></ul>
 
 <h2 id="testing">Testing</h2>
 
@@ -1563,9 +1567,14 @@ This website has been deployed using GitHub pages. The process is as follows:
 
 <h3 id="code">Code</h3>
 <ul>
-<li><strong>Code Institute</strong> - for general instruction and inspiration for the background/text colour scheme from the "Love Running" project</li>
-<li><strong>Stack Overflow</strong> - for general help with various queries, especially around positioning content. Also used for advice on how to achieve the skew effect on the Meet the Team page.</li>
-<li><strong>Bootstrap</strong> - for the grid layouts on each page, the carousel component, the navigation bar, and the various modals.</li>
+<li><strong>Code Institute</strong> - for general instruction in Javascript and Jquery.</li>
+<li><strong>Stack Overflow</strong> - for general help with various queries, especially with the right click event handling.</li>
+<li><strong>Bootstrap</strong> - for the grid layouts on the Home page.</li>
+<li><strong>Jquery</strong> - to shorten certain Javascript expressions and to simplify the process of getting the right click event handling
+working.</li>
+<li><strong>Responsive Voice API</strong> - for the enuniciation of the questions in the Spelling Bee game.</li>
+<li><strong>Email JS</strong> - for the automated emailing on submission of the form on the Home page.</li>
+<li><strong>Countryflags.io</strong> - for the library of flag image urls accessed by the Guess the Flag game.</li>
 </ul>
 
 <h3 id="media">Media</h3>
