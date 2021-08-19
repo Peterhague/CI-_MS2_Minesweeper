@@ -16,10 +16,11 @@ function formValidation(that) {
     let fName = document.forms["ideasForm"]["firstName"].value;
     let lName = document.forms["ideasForm"]["lastName"].value;
     let email = document.forms["ideasForm"]["emailAddress"].value;
+    let suggestion = document.forms["ideasForm"]["suggestion"].value;
     let errormsg = document.getElementById("formErrorMessage");
     let showMessage = document.getElementById("navigateToFooter");
     let letters = /^[A-Za-z]+$/;
-    let emailContent = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let emailContent = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (fName == "") {
         errormsg.innerHTML = "**Please enter your first name**";
         errormsg.classList.add("text-red");
@@ -38,13 +39,17 @@ function formValidation(that) {
         errormsg.classList.remove("text-green");
         showMessage.click();
         return false;
-    }  else if (!email.match(emailContent)) {
-        errormsg.innerHTML = "**Please enter a valid email address**";
+    } else if (suggestion == "") {
+        errormsg.innerHTML = "**Please enter your message**";
         errormsg.classList.add("text-red");
         errormsg.classList.remove("text-green");
         showMessage.click();
         return false;
-    }else if (fName.match(letters) && lName.match(letters)) {
+    } else if (!fName.match(letters) || !lName.match(letters)) {        
+        errormsg.innerHTML = "**The name fields should only contain characters A-Z**";
+        showMessage.click();
+        return false;
+    }  else if (email.match(emailContent)) {
         sendMail(that);
         errormsg.innerHTML = `Thanks for getting in touch!<br>We'll get back to you soon <i class="far fa-smile"></i>`
         errormsg.classList.remove("text-red");
@@ -52,8 +57,12 @@ function formValidation(that) {
         showMessage.click();
         return false;
     }  else {
-        errormsg.innerHTML = "**The name fields should only contain characters A-Z**";
+        errormsg.innerHTML = "**Please enter a valid email address**";
+        errormsg.classList.add("text-red");
+        errormsg.classList.remove("text-green");
         showMessage.click();
         return false;
     }
 }
+
+console.log("form changed y");
