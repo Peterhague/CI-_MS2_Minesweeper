@@ -252,17 +252,17 @@ header {
 }
 
 #errorMesssage {
-    margin-top: 25vh;
+    margin-top: 18vh;
 }
 
 #errorMessagePara {
     font-family: 'Press Start 2P', cursive;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 #errorLink {
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Press Start 2P', cursive;
 }
 
