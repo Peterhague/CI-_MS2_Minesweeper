@@ -251,7 +251,7 @@ header {
     min-width: 100vw;
 }
 
-#errorMessage {
+#errorMessagePara {
     font-family: 'Press Start 2P', cursive;
     font-size: 2em;
 }
@@ -259,6 +259,7 @@ header {
 #errorLink {
     text-decoration: none;
     font-size: 2em;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .footerMargin {
