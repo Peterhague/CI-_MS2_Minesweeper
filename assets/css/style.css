@@ -251,6 +251,10 @@ header {
     min-width: 100vw;
 }
 
+#errorMessage {
+    margin-top: 25vh;
+}
+
 #errorMessagePara {
     font-family: 'Press Start 2P', cursive;
     font-size: 2em;
