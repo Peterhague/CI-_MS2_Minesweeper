@@ -102,7 +102,8 @@ There are two main categories of user anticipated for the website: existing and 
     <li>As a player, I want to be able to test my general knowledge and memory.</li>
     <li>As a player, I want games that that are responsive to my abilities.</li>
     <li>As a player, I want games that give me feedback on my performance to encourage me to improve.</li>
-    <li>As a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</li>
+    <li>As a player, I want to be able to contact the developers with my ideas, and receive confirmation that my
+    contact has been received, and to engage with them on social media.</li>
 </ol>
 
 <h4>Responsible Adults</h4>
@@ -111,7 +112,7 @@ There are two main categories of user anticipated for the website: existing and 
     <li>As a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate
     for children.</li>
     <li>As a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but
-    educational.</li>
+    educational and provide ample feedback.</li>
     <li>As a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage
     with their users.</li>
     <li>As a responsible adult, I want the games to be responsive to the needs of the young people in my care.</li>
@@ -125,8 +126,7 @@ There are two main categories of user anticipated for the website: existing and 
     <li>As a site owner, I want players to find the games on the website fun and rewarding.</li>
     <li>As a site owner, I want players to feel at home on the website and to be happy spending time there.</li>
     <li>As a site owner, I want the website to be attractive to younger users and keen gamers in particular.</li>
-    <li>As a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us of
-    their own volition.</li>    
+    <li>As a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us, receiving confirmation of their contact. Their contact should be subject to validation.</li>    
     <li>As a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for yooung
     users to play, and to be happy to recommend it to them.</li>
     <li>As a site owner, I want games that are suitable for a range of ages and ability levels.</li>
@@ -239,7 +239,8 @@ combination. The colour scheme is maintained, as well as the distance from other
 <h4>User stories covered by this feature:</h4>
 <p>User story 1: as a player, I want to be able to easily navigate to the game of my choosing.</p>
 <p>User story 9: as a responsible adult, I want to be able to navigate the website easily to check that all its content is appropriate for children.</p>
-<p>User story 10: as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
+<p>User story 10: as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but
+    educational and provide ample feedback.</p>
 <p>User story 14: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
 <p>User story 16: as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
 
@@ -262,7 +263,8 @@ draw teh eye to the actual message. These images are foregone on smaller screens
 </details>
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 8: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
+<p>User story 8: as a player, I want to be able to contact the developers with my ideas, and receive confirmation that my
+    contact has been received, and to engage with them on social media.</p>
 <p>User story 14: as a site owner, I want players to understand what kind of games my website offers and to encourage them to try them.</p>
 <p>User story 16, as a site owner, I want players to feel at home on the website and to be happy spending time there.</p>
 
@@ -284,7 +286,8 @@ with no more information than necessary. The object is to attractively enclose t
 </details>
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 8: as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
+<p>User story 8: as a player, I want to be able to contact the developers with my ideas, and receive confirmation that my
+    contact has been received, and to engage with them on social media.</p>
 <p>User story 11: as a responsible adult, I want to be able to access the firm's social media pages to get a sense of how they engage with their users.</p>
 <p>User story 14, as a site owner, I want responsible adults to feel assured that my website is a safe and rewarding place for yooung users to play, and to be happy to recommend it to them.</p>
 
@@ -309,8 +312,9 @@ address is entered in that field.</p>
 </details>
 
 <h4>User stories covered by this feature:</h4>
-<p>User story 8, as a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</p>
-<p>User story 18, as a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us of their own volition.</p>
+<p>User story 8, as a player, I want to be able to contact the developers with my ideas, and receive confirmation that my
+    contact has been received, and to engage with them on social media.</p>
+<p>User story 18, as a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us, receiving confirmation of their contact. Their contact should be subject to validation.</p>
 
 <h4>Feature 6: Minesweeper Difficulty Selector</h4>
 
@@ -361,7 +365,8 @@ throughout a round.</p>
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
 <p>User story 6, as a player, I want games that that are responsive to my abilities.</p>
-<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
+<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but
+    educational and provide ample feedback.</p>
 <p>User story 12, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
 <p>User story 21, as a site owner, I want the games to be responsive to every kind of device.</p>
 
@@ -394,7 +399,8 @@ the event is instead triggered by a long touch, of more than 300 milliseconds.</
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
 <p>User story 3, as a player, I want to be able to test my reasoning abilities.</p>
-<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
+<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but
+    educational and provide ample feedback.</p>
 <p>User story 13, as a responsible adult, I want the games to be rewarding and educational.</p>
 <p>User story 15, as a site owner, I want players to find the games on the website fun and rewarding.</p>
 <p>User story 21, as a site owner, I want the games to be responsive to every kind of device.</p>
@@ -456,7 +462,8 @@ dictionaries of 200 words. These words then form the content of the quiz.</p>
 
 <h4>User stories covered by this feature:</h4>
 <p>User story 2, as a player, I want games that are interactive.</p>
-<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
+<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but
+    educational and provide ample feedback.</p>
 <p>User story 12, as a responsible adult, I want the games to be responsive to the needs of the young people in my care.</p>
 <p>User story 13, as a responsible adult, I want the games to be rewarding and educational.</p>
 <p>User story 15, as a site owner, I want players to find the games on the website fun and rewarding.</p>
@@ -581,7 +588,8 @@ replaced by the correct answer.</p>
 <p>User story 2, as a player, I want games that are interactive.</p>
 <p>User story 5, as a player, I want to be able to test my general knowledge and memory.</p>
 <p>User story 7, player, I want games that give me feedback on my performance to encourage me to improve.</p>
-<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</p>
+<p>User story 10, as a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but
+    educational and provide ample feedback.</p>
 <p>User story 13, as a responsible adult, I want the games to be rewarding and educational.</p>
 <p>User story 15, as a site owner, I want players to find the games on the website fun and rewarding.</p>
 <p>User story 20, as a site owner, I want games that are suitable for a range of ages and ability levels.</p>
@@ -1026,7 +1034,8 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 
 </details>
 
-<p><em>8. As a player, I want to be able to contact the developers with my ideas and to engage with them on social media.</em></p>
+<p><em>8. As a player, I want to be able to contact the developers with my ideas, and receive confirmation that my
+    contact has been received, and to engage with them on social media.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -1078,7 +1087,8 @@ navigate to the relevant page.</td>
 
 </details>
 
-<p><em>10. As a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but educational.</em></p>
+<p><em>10. As a responsible adult, I want to be able to test the games quickly and easily to make sure they are engaging but
+    educational and provide ample feedback.</em></p>
 <table>
 <tr>
 <th>Feature</th>
@@ -1330,7 +1340,7 @@ aesthetic.</td>
 
 </details>
 
-<p><em>18. As a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us of their own volition.</em></p>
+<p><em>18. As a site owner, I want players and responsible adults to feel engaged with my firm and to want to interact with us, receiving confirmation of their contact. Their contact should be subject to validation.</em></p>
 <table>
 <tr>
 <th>Feature</th>
