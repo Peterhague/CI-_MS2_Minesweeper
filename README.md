@@ -594,6 +594,8 @@ call to action, presented in sympathetic retro font.</p>
 
 <img src="docs/images/features/404page.png" alt="screenshot of the website's custom 404 error page in desktop configuration">
 
+<img src="docs/images/features/404page-mobile.png" alt="screenshot of the website's custom 404 error page in mobile configuration">
+
 </details>
 
 <h4>Features for Future Releases</h4>
