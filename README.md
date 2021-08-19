@@ -208,7 +208,7 @@ bee. Each page has its own fun and bespoke design.</p>
 <details>
 <summary>All page titles</summary>
 
-<img src="docs/images/all_Titles.png" alt="all page titles">
+<img src="docs/images/features/all_Titles.png" alt="all page titles">
 
 </details>
 
@@ -232,7 +232,7 @@ combination. The colour scheme is maintained, as well as the distance from other
 <details>
 <summary>Navigation bar on mobile and desktop devices</summary>
 
-<img src="docs/images/navbar_comparison.png" alt="comparison of navigation bar on mobile and desktop">
+<img src="docs/images/features/navbar_comparison.png" alt="comparison of navigation bar on mobile and desktop">
 
 </details>
 
@@ -257,7 +257,7 @@ draw teh eye to the actual message. These images are foregone on smaller screens
 <details>
 <summary>Home page with welcome message</summary>
 
-<img src="docs/images/homepage.png" alt="home page with welcome message">
+<img src="docs/images/features/homepage.png" alt="home page with welcome message">
 
 </details>
 
@@ -276,7 +276,7 @@ with no more information than necessary. The object is to attractively enclose t
 <details>
 <summary>Footer on each of the pages</summary>
 
-<img src="docs/images/footers.png" alt="footers of every page">
+<img src="docs/images/features/footers.png" alt="footers of every page">
 
 </details>
 
@@ -301,7 +301,7 @@ address is entered in that field.</p>
 <details>
 <summary>Home page form inviting user ideas</summary>
 
-<img src="docs/images/footer-home.png" alt="suggestions form on home page">
+<img src="docs/images/features/footer-home.png" alt="suggestions form on home page">
 
 </details>
 
@@ -319,9 +319,9 @@ throughout a round.</p>
 <details>
 <summary>Minesweeper difficulty selectors, pre-game and mid-game</summary>
 
-<img src="docs/images/minesweeper-difficulty.png" alt="difficulty selector on load of page">
+<img src="docs/images/features/minesweeper-difficulty.png" alt="difficulty selector on load of page">
 
-<img src="docs/images/minesweeper-difficulty-game.png" alt="difficulty selector available during the game">
+<img src="docs/images/features/minesweeper-difficulty-game.png" alt="difficulty selector available during the game">
 
 </details>
 
@@ -345,13 +345,13 @@ throughout a round.</p>
 <details>
 <summary>Minesweeper grid in each difficulty and in mobile configuration</summary>
 
-<img src="docs/images/grid-dtop-easy.png" alt="Minesweeper grid in easy mode">
+<img src="docs/images/features/grid-dtop-easy.png" alt="Minesweeper grid in easy mode">
 
-<img src="docs/images/grid-dtop-medium.png" alt="Minesweeper grid in medium mode">
+<img src="docs/images/features/grid-dtop-medium.png" alt="Minesweeper grid in medium mode">
 
-<img src="docs/images/grid-dtop-hard.png" alt="Minesweeper grid in hard mode">
+<img src="docs/images/features/grid-dtop-hard.png" alt="Minesweeper grid in hard mode">
 
-<img src="docs/images/grids-mobile.png" alt="Minesweeper grids on mobile">
+<img src="docs/images/features/grids-mobile.png" alt="Minesweeper grids on mobile">
 
 </details>
 
@@ -382,9 +382,9 @@ the event is instead triggered by a long touch, of more than 300 milliseconds.</
 <details>
 <summary>Minesweeper grid half-solved in desktop and mobile configurations</summary>
 
-<img src="docs/images/grid-in-progress-dtop.png" alt="Half-solved Minesweeper grid on desktop">
+<img src="docs/images/features/grid-in-progress-dtop.png" alt="Half-solved Minesweeper grid on desktop">
 
-<img src="docs/images/grid-in-progress-mobile.png" alt="Half-solved Minesweeper grid on mobile">
+<img src="docs/images/features/grid-in-progress-mobile.png" alt="Half-solved Minesweeper grid on mobile">
 
 </details>
 
@@ -411,22 +411,22 @@ they have 'won' the game.</p>
 <details>
 <summary>Minesweeper game over sequence</summary>
 
-<img src="docs/images/ms-loss-start.png" alt="Minesweeper losing sequence during change of squares">
+<img src="docs/images/features/ms-loss-start.png" alt="Minesweeper losing sequence during change of squares">
 
-<img src="docs/images/ms-loss-mid.png" alt="Minesweeper losing sequence once all squares changed">
+<img src="docs/images/features/ms-loss-mid.png" alt="Minesweeper losing sequence once all squares changed">
 
-<img src="docs/images/ms-loss-end.png" alt="Minesweeper losing sequence final state">
+<img src="docs/images/features/ms-loss-end.png" alt="Minesweeper losing sequence final state">
 
 </details>
 
 <details>
 <summary>Minesweeper game won sequence</summary>
 
-<img src="docs/images/ms-win-start.png" alt="Minesweeper winning sequence during change of squares">
+<img src="docs/images/features/ms-win-start.png" alt="Minesweeper winning sequence during change of squares">
 
-<img src="docs/images/ms-win-mid.png" alt="Minesweeper winning sequence once all squares changed">
+<img src="docs/images/features/ms-win-mid.png" alt="Minesweeper winning sequence once all squares changed">
 
-<img src="docs/images/ms-win-end.png" alt="Minesweeper winning sequence final state">
+<img src="docs/images/features/ms-win-end.png" alt="Minesweeper winning sequence final state">
 
 </details>
 
@@ -445,9 +445,9 @@ dictionaries of 200 words. These words then form the content of the quiz.</p>
 <details>
 <summary>Spelling Bee difficulty selector on desktop and mobile devices</summary>
 
-<img src="docs/images/spelling-difficulty.png" alt="Spelling Bee game difficulty selector on desktop">
+<img src="docs/images/features/spelling-difficulty.png" alt="Spelling Bee game difficulty selector on desktop">
 
-<img src="docs/images/spelling-difficulty-mobile.png" alt="Spelling Bee game difficulty selector on mobile">
+<img src="docs/images/features/spelling-difficulty-mobile.png" alt="Spelling Bee game difficulty selector on mobile">
 
 </details>
 
@@ -478,25 +478,25 @@ word in the array. This process repeats until all the words have been spoken to 
 <details>
 <summary>Spelling Bee correct and incorrect answer messages</summary>
 
-<img src="docs/images/spelling-correct.png" alt="spelling bee game feedback on submission of a correct answer">
+<img src="docs/images/features/spelling-correct.png" alt="spelling bee game feedback on submission of a correct answer">
 
-<img src="docs/images/spelling-incorrect.png" alt="spelling bee game feedback on submission of an incorrect answer">
+<img src="docs/images/features/spelling-incorrect.png" alt="spelling bee game feedback on submission of an incorrect answer">
 
 </details>
 
 <details>
 <summary>Spelling Bee next question message and final score presentation</summary>
 
-<img src="docs/images/spelling-next.png" alt="spelling bee game indication of the next question number">
+<img src="docs/images/features/spelling-next.png" alt="spelling bee game indication of the next question number">
 
-<img src="docs/images/spelling-score.png" alt="spelling bee game presentation of final score to user">
+<img src="docs/images/features/spelling-score.png" alt="spelling bee game presentation of final score to user">
 
 </details>
 
 <details>
 <summary>Spelling Bee game in mobile configuration</summary>
 
-<img src="docs/images/spelling-responsive.png" alt="spelling bee game in mobile configuration">
+<img src="docs/images/features/spelling-responsive.png" alt="spelling bee game in mobile configuration">
 
 </details>
 
@@ -521,9 +521,9 @@ subsequently submits a correct answer, only 0.5 points are added to their total 
 <details>
 <summary>Spelling Bee hint presentation, and final score with half mark awarded</summary>
 
-<img src="docs/images/spelling-hint.png" alt="spelling bee game hint offered to player">
+<img src="docs/images/features/spelling-hint.png" alt="spelling bee game hint offered to player">
 
-<img src="docs/images/spelling-hinted.png" alt="spelling bee game final score with half a point deducted for a hint given">
+<img src="docs/images/features/spelling-hinted.png" alt="spelling bee game final score with half a point deducted for a hint given">
 
 </details>
 
@@ -553,24 +553,24 @@ replaced by the correct answer.</p>
 <details>
 <summary>Guess the Flag game in various stages of progress</summary>
 
-<img src="docs/images/flags-splash.png" alt="guess the flags game call to play">
+<img src="docs/images/features/flags-splash.png" alt="guess the flags game call to play">
 
-<img src="docs/images/flags-attempt.png" alt="guess the flags game questions attempted">
+<img src="docs/images/features/flags-attempt.png" alt="guess the flags game questions attempted">
 
-<img src="docs/images/flags-score.png" alt="guess the flags game user's score given">
+<img src="docs/images/features/flags-score.png" alt="guess the flags game user's score given">
 
-<img src="docs/images/flags-revealed.png" alt="guess the flags game correct answers revealed">
+<img src="docs/images/features/flags-revealed.png" alt="guess the flags game correct answers revealed">
 
-<img src="docs/images/flags-new-game.png" alt="guess the flags game new game loaded">
+<img src="docs/images/features/flags-new-game.png" alt="guess the flags game new game loaded">
 
 </details>
 
 <details>
 <summary>Guess the Flag game mobile and tablet configurations</summary>
 
-<img src="docs/images/flags-mobile.png" alt="guess the flags game in mobile configuration">
+<img src="docs/images/features/flags-mobile.png" alt="guess the flags game in mobile configuration">
 
-<img src="docs/images/flags-tablet.png" alt="guess the flags game in tabet configuration">
+<img src="docs/images/features/flags-tablet.png" alt="guess the flags game in tabet configuration">
 
 </details>
 
@@ -681,10 +681,10 @@ Guess the Flags game.</li></ul>
 <details>
 <summary>W3C HTML validation of each page with no errors or alerts</summary>
 
-<img src="docs/images/validation-html-home.png" alt="screenshot of HTML validation of home page">
-<img src="docs/images/validation-html-minesweeper.png" alt="screenshot of HTML validation of minesweeper page">
-<img src="docs/images/validation-html-spelling.png" alt="screenshot of HTML validation of spelling bee page">
-<img src="docs/images/validation-html-flags.png" alt="screenshot of HTML validation of guess the flags page">
+<img src="docs/images/validation/validation-html-home.png" alt="screenshot of HTML validation of home page">
+<img src="docs/images/validation/validation-html-minesweeper.png" alt="screenshot of HTML validation of minesweeper page">
+<img src="docs/images/validation/validation-html-spelling.png" alt="screenshot of HTML validation of spelling bee page">
+<img src="docs/images/validation/validation-html-flags.png" alt="screenshot of HTML validation of guess the flags page">
 
 </details>
 
@@ -696,10 +696,10 @@ Guess the Flags game.</li></ul>
 <details>
 <summary>W3C CSS validation of each page with no errors</summary>
 
-<img src="docs/images/validation-css-home.png" alt="screenshot of css validation of home page">
-<img src="docs/images/validation-css-minesweeper.png" alt="screenshot of css validation of minesweeper page">
-<img src="docs/images/validation-css-spelling.png" alt="screenshot of css validation of spelling bee page">
-<img src="docs/images/validation-css-flags.png" alt="screenshot of css validation of guess the flags page">
+<img src="docs/images/validation/validation-css-home.png" alt="screenshot of css validation of home page">
+<img src="docs/images/validation/validation-css-minesweeper.png" alt="screenshot of css validation of minesweeper page">
+<img src="docs/images/validation/validation-css-spelling.png" alt="screenshot of css validation of spelling bee page">
+<img src="docs/images/validation/validation-css-flags.png" alt="screenshot of css validation of guess the flags page">
 
 </details>
 
@@ -711,10 +711,10 @@ Guess the Flags game.</li></ul>
 <details>
 <summary>WAVE Webaim accessibility validation of each page with no errors or alerts</summary>
 
-<img src="docs/images/validation-access-home.png" alt="screenshot of accessibility validation of home page">
-<img src="docs/images/validation-access-minesweeper.png" alt="screenshot of accessibility validation of minesweeper page">
-<img src="docs/images/validation-access-spelling.png" alt="screenshot of accessibility validation of spelling bee page">
-<img src="docs/images/validation-access-flags.png" alt="screenshot of accessibility validation of guess the flag page">
+<img src="docs/images/validation/validation-access-home.png" alt="screenshot of accessibility validation of home page">
+<img src="docs/images/validation/validation-access-minesweeper.png" alt="screenshot of accessibility validation of minesweeper page">
+<img src="docs/images/validation/validation-access-spelling.png" alt="screenshot of accessibility validation of spelling bee page">
+<img src="docs/images/validation/validation-access-flags.png" alt="screenshot of accessibility validation of guess the flag page">
 
 </details>
 
@@ -726,10 +726,10 @@ Guess the Flags game.</li></ul>
 <details>
 <summary>Google PageSpeed Insights performance validation of each page</summary>
 
-<img src="docs/images/validation-performance-home.png" alt="screenshot of performance validation of home page">
-<img src="docs/images/validation-performance-minesweeper.png" alt="screenshot of performance validation of minesweeper page">
-<img src="docs/images/validation-performance-spelling.png" alt="screenshot of performance validation of spelling bee page">
-<img src="docs/images/validation-performance-flags.png" alt="screenshot of performance validation of guess the flag page">
+<img src="docs/images/validation/validation-performance-home.png" alt="screenshot of performance validation of home page">
+<img src="docs/images/validation/validation-performance-minesweeper.png" alt="screenshot of performance validation of minesweeper page">
+<img src="docs/images/validation/validation-performance-spelling.png" alt="screenshot of performance validation of spelling bee page">
+<img src="docs/images/validation/validation-performance-flags.png" alt="screenshot of performance validation of guess the flag page">
 
 </details>
 
@@ -826,7 +826,7 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 <details>
 <summary>Image walking through testing of User Story 1</summary>
 
-<img src="docs/images/user-stories/userstory1.png" alt="image walking through testing of user story 1">
+<img src="docs/images/user-stories-testing/userstory1.png" alt="image walking through testing of user story 1">
 
 </details>
 
@@ -861,7 +861,7 @@ cross/times icon. A correctly returned input field is replaced with a div displa
 <details>
 <summary>Images walking through testing of User Story 2</summary>
 
-<img src="docs/images/user-stories/userstory2.png" alt="images walking through testing of user story 2">
+<img src="docs/images/user-stories-testing/userstory2.png" alt="images walking through testing of user story 2">
 
 </details>
 
@@ -887,7 +887,7 @@ clicks.</td>
 <details>
 <summary>Images walking through testing of User Story 3</summary>
 
-<img src="docs/images/user-stories/userstory3.png" alt="images walking through testing of user story 3">
+<img src="docs/images/user-stories-testing/userstory3.png" alt="images walking through testing of user story 3">
 
 </details>
 
@@ -911,7 +911,7 @@ Type your attempt in the input field, and the game will display to you whether y
 <details>
 <summary>Images walking through testing of User Story 4</summary>
 
-<img src="docs/images/user-stories/userstory4.png" alt="images walking through testing of user story 4">
+<img src="docs/images/user-stories-testing/userstory4.png" alt="images walking through testing of user story 4">
 
 </details>
 
@@ -936,7 +936,7 @@ button for repeated attempts and to gradually improve your scores by committing 
 <details>
 <summary>Images walking through testing of User Story 5</summary>
 
-<img src="docs/images/user-stories/userstory5.png" alt="images walking through testing of user story 5">
+<img src="docs/images/user-stories-testing/userstory5.png" alt="images walking through testing of user story 5">
 
 </details>
 
@@ -974,7 +974,7 @@ answer will be displayed, but with alternate letters replaced with asterisks.</t
 <details>
 <summary>Images walking through testing of User Story 6</summary>
 
-<img src="docs/images/user-stories/userstory6.png" alt="images walking through testing of user story 6">
+<img src="docs/images/user-stories-testing/userstory6.png" alt="images walking through testing of user story 6">
 
 </details>
 
@@ -1012,7 +1012,7 @@ provided. Press Submit button to check your answers, and your score out of 10 wi
 <details>
 <summary>Images walking through testing of User Story 7</summary>
 
-<img src="docs/images/user-stories/userstory7.png" alt="images walking through testing of user story 7">
+<img src="docs/images/user-stories-testing/userstory7.png" alt="images walking through testing of user story 7">
 
 </details>
 
@@ -1043,7 +1043,7 @@ navigate to the relevant page.</td>
 <details>
 <summary>Images walking through testing of User Story 8</summary>
 
-<img src="docs/images/user-stories/userstory8.png" alt="images walking through testing of user story 8">
+<img src="docs/images/user-stories-testing/userstory8.png" alt="images walking through testing of user story 8">
 
 </details>
 
@@ -1064,7 +1064,7 @@ navigate to the relevant page.</td>
 <details>
 <summary>Image walking through testing of User Story 9</summary>
 
-<img src="docs/images/user-stories/userstory9.png" alt="image walking through testing of user story 9">
+<img src="docs/images/user-stories-testing/userstory9.png" alt="image walking through testing of user story 9">
 
 </details>
 
@@ -1099,7 +1099,7 @@ navigate to the relevant page.</td>
 <details>
 <summary>Images walking through testing of User Story 10</summary>
 
-<img src="docs/images/user-stories/userstory10.png" alt="images walking through testing of user story 10">
+<img src="docs/images/user-stories-testing/userstory10.png" alt="images walking through testing of user story 10">
 
 </details>
 
@@ -1123,7 +1123,7 @@ navigate to the relevant page.</td>
 <details>
 <summary>Image walking through testing of User Story 11</summary>
 
-<img src="docs/images/user-stories/userstory11.png" alt="image walking through testing of user story 11">
+<img src="docs/images/user-stories-testing/userstory11.png" alt="image walking through testing of user story 11">
 
 </details>
 
@@ -1161,7 +1161,7 @@ answer will be displayed, but with alternate letters replaced with asterisks.</t
 <details>
 <summary>Images walking through testing of User Story 12</summary>
 
-<img src="docs/images/user-stories/userstory12.png" alt="images walking through testing of user story 12">
+<img src="docs/images/user-stories-testing/userstory12.png" alt="images walking through testing of user story 12">
 
 </details>
 
@@ -1202,7 +1202,7 @@ button for repeated attempts and to gradually improve your scores by committing 
 <details>
 <summary>Images walking through testing of User Story 13</summary>
 
-<img src="docs/images/user-stories/userstory13.png" alt="images walking through testing of user story 13">
+<img src="docs/images/user-stories-testing/userstory13.png" alt="images walking through testing of user story 13">
 
 </details>
 
@@ -1226,7 +1226,7 @@ call to try them.</td>
 <details>
 <summary>Image walking through testing of User Story 14</summary>
 
-<img src="docs/images/user-stories/userstory14.png" alt="image walking through testing of user story 14">
+<img src="docs/images/user-stories-testing/userstory14.png" alt="image walking through testing of user story 14">
 
 </details>
 
@@ -1269,12 +1269,9 @@ button for repeated attempts and to gradually improve your scores by committing 
 <details>
 <summary>Images walking through testing of User Story 15</summary>
 
-<img src="docs/images/user-stories/userstory15.png" alt="images walking through testing of user story 15">
+<img src="docs/images/user-stories-testing/userstory15.png" alt="images walking through testing of user story 15">
 
 </details>
-
-<p><a href="docs/user-stories/us15a.png">See User Story 15 steps 1 to 2 images</a></p>
-<p><a href="docs/user-stories/us15b.png">See User Story 15 steps 3 to 5 images</a></p>
 
 <p><em>16. As a site owner, I want players to feel at home on the website and to be happy spending time there.</em></p>
 <table>
@@ -1295,7 +1292,7 @@ button for repeated attempts and to gradually improve your scores by committing 
 <details>
 <summary>Image walking through testing of User Story 16</summary>
 
-<img src="docs/images/user-stories/userstory16.png" alt="image walking through testing of user story 16">
+<img src="docs/images/user-stories-testing/userstory16.png" alt="image walking through testing of user story 16">
 
 </details>
 
@@ -1319,7 +1316,7 @@ aesthetic.</td>
 <details>
 <summary>Image walking through testing of User Story 17</summary>
 
-<img src="docs/images/user-stories/userstory17.png" alt="image walking through testing of user story 17">
+<img src="docs/images/user-stories-testing/userstory17.png" alt="image walking through testing of user story 17">
 
 </details>
 
@@ -1355,7 +1352,7 @@ to navigate to the firm's relevant social media presence.</td>
 <details>
 <summary>Images walking through testing of User Story 18</summary>
 
-<img src="docs/images/user-stories/userstory18.png" alt="images walking through testing of user story 18">
+<img src="docs/images/user-stories-testing/userstory18.png" alt="images walking through testing of user story 18">
 
 </details>
 
@@ -1390,7 +1387,7 @@ to navigate to the firm's relevant social media presence.</td>
 <details>
 <summary>Images walking through testing of User Story 19</summary>
 
-<img src="docs/images/user-stories/userstory19.png" alt="images walking through testing of user story 19">
+<img src="docs/images/user-stories-testing/userstory19.png" alt="images walking through testing of user story 19">
 
 </details>
 
@@ -1428,7 +1425,7 @@ answer will be displayed, but with alternate letters replaced with asterisks.</t
 <details>
 <summary>Images walking through testing of User Story 20</summary>
 
-<img src="docs/images/user-stories/userstory20.png" alt="images walking through testing of user story 20">
+<img src="docs/images/user-stories-testing/userstory20.png" alt="images walking through testing of user story 20">
 
 </details>
 
@@ -1467,13 +1464,9 @@ to receive your score.</td>
 <details>
 <summary>Images walking through testing of User Story 21</summary>
 
-<img src="docs/images/user-stories/userstory21.png" alt="images walking through testing of user story 21">
+<img src="docs/images/user-stories-testing/userstory21.png" alt="images walking through testing of user story 21">
 
 </details>
-
-<p><a href="docs/user-stories/us16a.png">See User Story 16 steps 1 to 3 images</a></p>
-<p><a href="docs/user-stories/us16b.png">See User Story 16 steps 4 to 6 images</a></p>
-
 <h2 id="bugs">Bugs found and resolved during development</h2>
 
 <ul>
