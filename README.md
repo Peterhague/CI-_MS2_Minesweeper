@@ -1585,22 +1585,22 @@ Flag game.</li>
 
 <h3 id="media">Media</h3>
 
-<p>All the images on the website were sourced by Google Image search, and then those selected were investigated for any reseravtions of rights. The images are as follows, with as much attribution as possible:</p>
+<p>All the images on the website were sourced by Google Image search, and then those selected were investigated for any reservations of rights. The images are as follows, with as much attribution as possible:</p>
 
 <ul>
-<li>Home page background image: appears across numerous websites, I was unable to find an original source. This is the image url used to conduct this search:
+<li>Cartoon bee image on home page. Sourced from pngtree.com: the page states "You can use it in your daily design, your own artwork and your team project.":
 
-<p><a target="_blank" href="https://www.google.com/search?tbs=sbi:AMhZZiuvauIX0LsEu1ODNV1dAkAKFrR2sUuTXpVjVgPU8XvlHn15Y7K4OYVOdYE3UboGhHiPaGSLenSsEifZDzrC1vbo8F81Le02xv0c7lbC0xyer6yTqueUoWO3earzUZiV9EAHsbPdGaIQ6Hw5YpvYQO7s-MLkBOEaRIsr_1I7qlWn_159cwdxgPv4VlzkbOjvzfjPY3Qc6AbtEoJOgdttDyzAC2g7XscIVA238sqGy71InkDz29H1hf80Q96a623J2pCrhEe1bcpi7yD6S0oBi1_1OmZOVnZOyrEYqXv9dNEHLbo7GZn2PIfjIRoOptnmqrAQMoj057O_1M1Qsoakil1zbACtM6wMVQ&btnG=Search%20by%20image&hl=en">Homepage background image url for Google search</a>
-</p>
+<p><a target="_blank" href="https://pngtree.com/freepng/cute-cartoon-bees_4178980.html">Relevant pngtree.com page with statement of usage rights</a></a></li></p>
+
 </li>
-<li>Contact Us page background image: appears across numerous websites, I was unable to find an original source. This is the url used to conduct this search:
+<li>Cartoon Union Jack flag image on Home page. Sourced from clipart-library.com, licensed for personal use:
 
-<p><a target="_blank"  href="https://www.google.com/search?tbs=sbi:AMhZZitSsOJO4kaDTc5dgBUR7ZXDbOJ8V2MYI5aJsb9ph5ggtizArRqV1nIIjkN_1OG8cYx1JYcZe0xuyZw_1GX-Si8eKltENAMxIlMow6HJzvpjHwYYU6GuKOEuuw4MA5Q31qqnSRqOG4eHTmsa0Um8aBcCq5UDOJCL9qLYQEQmD97ewVamKZZOuSIKfFGvDxXGHxmETOzxZkYnCfXKq0ezok3JbyQDaWwubvOQqjCcOWxz0W3Rt4npse5pvildvAqnDtv7j-5r0U5yqlCauRlT4iip9-JEaSOZ-H-nHKGz_1K67GkbouR7UrwOZr-1y1ZVGMig8xPFAngQV8vCFC91IDPDrW2ZpQc_1w&btnG=Search%20by%20image&hl=en-GB">Contact Us background image url for Google search</a></li>
+<p><a target="_blank" href="http://clipart-library.com/clipart/6ipo648BT.htm">Relevant clipart-library.com page with statement of usage rights</a></a></li></p>
 </p>
 
-<li>Meet the Team page background image: appears across numerous websites, I was unable to find an original source. This is the url used to conduct this search:
+<li>Cartoon bomb image used on Home and Minesweeper pages. Sourced from vhv.rs, licenses for personal use:
 
-<p><a target="_blank"  href="https://www.google.com/search?tbs=sbi:AMhZZivQZsl459SS1nD515M0xiVYMRAUMlJdXQLvTH9qV7oEy8QwkhKdhSZYsm0Dtm-qfrISCyLk7gCHsOcCMefkr9Is_1ARwRqI33IAVohzEYOup0dYnLKojj0F21JG9jFfPEE_1SD-DJMDNDfZO1eNzy8MpvRALwNYdMiPRr6BAWuAJSKjT0S3trAU-khRDLYwFov2W0yNCv7mio14XVg0ylfDZwgv9AKiwjcZZ-_12dSVhkN7_1kWronG65bJ5OHpUyVnqUAbnbKzHc3-wZIZRmRp0OKobVg7HlOxyG5n7GfQVbPtIX4rWSqvPwP88WK1drMsRl9_1QD7Ng0OJCxu0-OcDGU1_1x4qBVQ&btnG=Search%20by%20image&hl=en-GB">Meet the Team background image url for Google search</a></li>
+<p><a target="_blank" href="https://www.vhv.rs/viewpic/TimohT_cartoon-bomb-png-transparent-png/">Relevant vhv.rs page with statement of usage rights</a></a></li></p>
 </p>
 
 <li>Our Services page background image: I was able to trace this to a Flickr account, with permission for non-commercial sharing, with no image transformation. 
