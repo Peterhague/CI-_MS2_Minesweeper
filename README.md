@@ -1575,6 +1575,12 @@ working.</li>
 <li><strong>Responsive Voice API</strong> - for the enuniciation of the questions in the Spelling Bee game.</li>
 <li><strong>Email JS</strong> - for the automated emailing on submission of the form on the Home page.</li>
 <li><strong>Countryflags.io</strong> - for the library of flag image urls accessed by the Guess the Flag game.</li>
+<li><strong>Freecodecamp.org</strong> - the forum was used for help with mouseup events to understand how to write the code for the long touch 
+event listener for the Minesweeper game, but no actual code was replicated. Also helped with navigating the array of objects for the Guess the 
+Flag game.</li>
+<li><strong>w3resource.com</strong> - for the code that stands for 'letters only' used to validate the form inputs on the Home page.</li>
+<li><strong>Developer.mozilla.org</strong> - for help with correctly splicing and joining arrays to produce the hints in the Spelling Bee game.</li>
+<li><strong>Codegrepper.com</strong> - again, for help with correctly splicing and joining arrays to produce the hints in the Spelling Bee game.</li>
 </ul>
 
 <h3 id="media">Media</h3>
