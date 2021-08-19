@@ -75,7 +75,7 @@
   </div>
     <h1 class="hide">Home page</h1>      
     <div id="container-form" class="d-lg-none">
-      <form id="contact-form" onsubmit="return sendMail(this);">
+      <form id="contact-form" onsubmit="return sendMail(this);" novalidate>
         <label class="hide" for="firstName">First Name</label>
         <input type="text" name="firstName" id="firstName" placeholder="First Name" class="contact-form-items">
         <label class="hide" for="lastName">Last Name</label>
@@ -91,7 +91,7 @@
       <div class="row">
         <div id="formImageLeft" class="col-xl-4 col-lg-3"></div>
         <div class="col-xl-4 col-lg-6">
-          <form name="ideasForm" id="contact-form-desktop" onsubmit="return formValidation(this)">
+          <form name="ideasForm" id="contact-form-desktop" onsubmit="return formValidation(this)" novalidate>
             <label class="hide" for="firstNameDesktop">First Name</label>
             <input type="text" name="firstName" id="firstNameDesktop" placeholder="First Name" class="contact-form-items">
             <label class="hide" for="lastNameDesktop">Last Name</label>

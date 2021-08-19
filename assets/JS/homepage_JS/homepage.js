@@ -19,6 +19,7 @@ function formValidation(that) {
     let errormsg = document.getElementById("formErrorMessage");
     let showMessage = document.getElementById("navigateToFooter");
     let letters = /^[A-Za-z]+$/;
+    let emailContent = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (fName == "") {
         errormsg.innerHTML = "**Please enter your first name**";
         errormsg.classList.add("text-red");
@@ -37,7 +38,13 @@ function formValidation(that) {
         errormsg.classList.remove("text-green");
         showMessage.click();
         return false;
-    } else if (fName.match(letters) && lName.match(letters)) {
+    }  else if (!email.match(emailContent)) {
+        errormsg.innerHTML = "**Please enter a valid email address**";
+        errormsg.classList.add("text-red");
+        errormsg.classList.remove("text-green");
+        showMessage.click();
+        return false;
+    }else if (fName.match(letters) && lName.match(letters)) {
         sendMail(that);
         errormsg.innerHTML = `Thanks for getting in touch!<br>We'll get back to you soon <i class="far fa-smile"></i>`
         errormsg.classList.remove("text-red");
