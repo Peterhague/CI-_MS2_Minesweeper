@@ -1470,20 +1470,22 @@ to receive your score.</td>
 <h2 id="bugs">Bugs found and resolved during development</h2>
 
 <ul>
-<li><strong>Bug:</strong>The indciators on the testimonials carousel were not very visible against the background</li>
-<li><strong>Fix:</strong>Created style rules for the previous and next icons and gave them larger width and height properties</li>
-<li><strong>Bug:</strong>The carousel text was overflowing the container on smaller screens</li>
-<li><strong>Fix:</strong>Created multiple media queries to adjust the container size and font-size on smaller devices</li>
-<li><strong>Bug:</strong>The sign in button was not clickable</li>
-<li><strong>Fix:</strong>After significant investigation, this turned out to be a z-index issue, with the button being 'behind' the background. Assigned the background a negative z-index property</li>
-<li><strong>Bug:</strong>The modals that were edited for a dark backgorund had 'cross' close buttons that were no longer contrasted with the background and had poor visibility</li>
-<li><strong>Fix:</strong>Searched Google for the issue and discovered that this can be solved by assigning the elements a CSS property of filter and a value of invert(100%)</li>
-<li><strong>Bug:</strong>The text in the password reminder modal was encroaching on the submit button on mobile devices</li>
-<li><strong>Fix:</strong>Inserted a br element in the text with a Bootstrap classe "d-md-none" to display the text on two lines on small and extra small devices</li>
-<li><strong>Bug:</strong>The reset and submit buttons on the sign in modal were poorly aligned with the input fields on smaller screens</li>
-<li><strong>Fix:</strong>Wrote various media queries for different screen sizes to fine tune the alignment</li>
-<li><strong>Bug:</strong>The lack of labels on the newsletter form (by design) failed WAVE accessibility standards</li>
-<li><strong>Fix:</strong>Created labels but declared that they should not be displayed, so still there for screen readers etc</li>
+<li><strong>Bug:</strong>Guess the Flag: used a for loop to try to populate an array of 10 unique random numbers, was falling short when numbers duplicated</li>
+<li><strong>Fix:</strong>Used a while loop instead, so the loop was infinite until the its length was 10</li>
+<li><strong>Bug:</strong>Guess the Flag: the new game button swaps out the answer div elements for input fields, but this presented as a very brief 'spasm'
+effect on screen, with the content being pulled down to the bottom of the page.</li>
+<li><strong>Fix:</strong>Used an overlaying blank div that would display instead with a breif timeout, so that the effect was hidden by a simple blank screen.</li>
+<li><strong>Bug:</strong>Minesweeper: struggled to get the right click event working with normal Javascript.</li>
+<li><strong>Fix:</strong>Used Jquery mousedown method and a swtich case with case 3 being the right mouse button.</li>
+<li><strong>Bug:</strong>Minesweeper: the squares were still not clickable as the default event was generating the normal menu</li>
+<li><strong>Fix:</strong>Added oncontext menu attribute to #grid element to prevent the behaviour.</li>
+<li><strong>Bug:</strong>Minesweeper: the squares' inner html (ie the numbers to be displayed on a click) could be displayed by dragging the cursor across them
+and highlighting the text.</li>
+<li><strong>Fix:</strong>Added CSS property of user-select: none to each square</li>
+<li><strong>Bug:</strong>Minesweeper: tried to replace the right click event with a long click event for touch screen devices, but the code did not work.</li>
+<li><strong>Fix:</strong>Used touchstart and touchend events instead.</li>
+<li><strong>Bug:</strong>Minesweeper: the long touch event was interfering with the normal touch event, and was often triggering the latter as well as the former.</li>
+<li><strong>Fix:</strong>Used a setTimeout function to remove the regular touch event handler for a very brief period after a long touch event had been triggered.</li>
 <li><strong>Bug:</strong>The input fields on the portal registration form were of inconsistent heights</li>
 <li><strong>Fix:</strong>This was caused by the different input types defaulting inconsistently. Wrote CSS rule with a specific height to override the defaults.</li>
 <li><strong>Bug:</strong>The staff photos were overflowing their containers on very large screens (tested on 1920 x 1080px)</li>
