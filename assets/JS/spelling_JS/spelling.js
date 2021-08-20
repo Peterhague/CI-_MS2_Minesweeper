@@ -23,7 +23,7 @@ repeat.addEventListener("click", repeatQuestion);
 repeat.addEventListener("click", setFocus);
 let hint = document.getElementById("hint");
 hint.addEventListener("click", giveHint);
-hint.addEventListener("click", setFocus);
+hint.addEventListener("click", removeFocus);
 let inputTwo = document.getElementById("input-two");
 //code allows submission of the answer on press of return key as well as click of submit button
 inputTwo.addEventListener('keypress', function (e) {
@@ -50,6 +50,11 @@ function generateQuestions() {
 // sets the focus on the user input field
 function setFocus() {
   inputTwo.focus();
+}
+// removes teh focus from the user input field
+function removeFocus() {
+  console.log("test");
+  inputTwo.blur();
 }
 /* adds events listeners to submit button and sets the question number to be displayed in UI. Also calls the responsiveVoice
 API and tells it to speak the first of the random words*/

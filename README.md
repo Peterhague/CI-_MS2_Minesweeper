@@ -51,8 +51,8 @@
 The business goals of Games Inc. are as follows:
 <ul>
 <li>To provide an online resource of educational games to its target market of 8 to 14 year olds</li>
-<li>To provide an selection of different games to test various aspects of users' cognitive functioning</li>
-<li>Provide a means of users contacting them with their suggestions for new games</li>
+<li>To provide a selection of different games to test various aspects of users' cognitive functioning</li>
+<li>Provide a means of user contact to communicate their suggestions for new games</li>
 <li>Encourage users to get in touch and provide their contact details, to build a database of engaged customers</li>
 <li>Provide links to the firm's social media presence</li>
 </ul>
@@ -62,29 +62,28 @@ The user goals:
 <li>To test their reasoning faculties via the Minesweeper game</li>
 <li>To test their spelling ability via the Spelling Bee game</li>
 <li>To test their general knowledge and memory via the Guess the Flags game</li>
-<li>To be able to find out more about Games Inc. and keep in touch with them via their social media presence</li>
+<li>To be able to find out more about Games Inc. and keep in touch with them via their social media accounts</li>
 <li>To be able to get in touch with Games Inc. and contact them with their feedback</li>
 </ul>
 
 <h2 id="user-experience">User Experience</h2>
 
 <p>The website is primarily designed for use on mobile and tablet devices, with a simple, clean layout with plenty of white
-space. It is anticipated that the site's users will largely be under 16 and will tend access it via such devices. Where
-images and additional graphics have been added for larger screens, these have been deployed mainly to break up some of that
-white space created by the additional pixels, and where the feel had slipped from 'clean' to slightly 'empty'.</p>
+space. It is anticipated that the site's users will largely be under 16 and will tend to access it via such devices. Where
+images and additional graphics have been added for larger screens, this has mainly been done to break up some of the
+white space created by the additional pixels, and where the aesthetic had slipped from 'clean' to slightly 'empty'.</p>
 <p>The main goals of the user experience design are to make clear immediately that this is a website offering educational
  games and to tempt users to play the games.</p>
 <p>The first goal is achieved via the simple title advertising the Games Inc brand, in a typical "pixel art" style that 
-users recognise as part of the gaming design language, as well as the prominent welcome message. The second is via bright, strong colours and cartoony imagery,
- designed to be attractive to younger users in particular, and a very clear, pared-down navigation bar offering clear access
- to the various games.</p>
+users recognise as part of gaming design language, as well as the prominent welcome message. The second is achieved via bright, strong colours and cartoony imagery, 
+attractive to younger users in particular, and a very clear, pared-down navigation bar offering clear access to the various games.</p>
 
 <h3 id="target-audience">Target Audience</h3>
 
 <ul>
     <li>Existing users in target market</li>
     <li>Potential users in target market</li>
-    <li>Parents and care providers of potential users</li>
+    <li>Parents and care-providers of potential users</li>
 </ul>
 
 <h3 id="user-stories">User Stories</h3>
@@ -102,7 +101,7 @@ There are two main categories of user anticipated for the website: existing and 
     <li>As a player, I want to be able to test my general knowledge and memory.</li>
     <li>As a player, I want games that that are responsive to my abilities.</li>
     <li>As a player, I want games that give me feedback on my performance to encourage me to improve.</li>
-    <li>As a player, I want to be able to contact the developers with my ideas, and receive confirmation that my
+    <li>As a player, I want to be able to contact the developers with my ideas, receive confirmation that my
     contact has been received, and to engage with them on social media.</li>
 </ol>
 
@@ -144,12 +143,12 @@ of the new message and automatically sending the user a response.</li>
 colourful call to action to play the game. The pixel art title is decorated with different randomly coloured tiles to recall the 
 appearance of a minsweeper grid, and to add vibrancy and contrast with the white space.</li>
 <li>"Spelling Bee" page with a spelling contest game, with 3 selectable difficulty levels. This page accesses the Responsive 
-Voice API, to "speak" the words that the user has to attempt to spell. The elements are arranged to resemble and old-fashioned
-computer monitor, with the game's messages displayed as if they were the monitor's text. The whole page is decorated in a 
+Voice API, to "speak" the words that the user has to attempt to spell. The elements are arranged to resemble an old-fashioned
+computer monitor, with the game's messages displayed as if they were the monitor's output. The whole page is decorated in a 
 yellow and black "bee" aesthetic, as a pun on the spelling bee title.</li>
 <li>"Guess the Flag" page with a game quizzing players on their knowledge of world flags. This page uses the Country Flags API
 to access a library of flag images that is randomised and displayed on each click of the play button. Each flag has a user input
-for the player to type their guess at each flag's country. The page uses a blue and green "globe" aesthetic to match the flags theme, and the title has a fun flags motif with miniature flags adorning its letters.</li>
+for the player to type their guess at each flag's country. The page uses a blue and green "Earth" aesthetic to match the flags theme, and the title has a fun flags motif with miniature flags adorning its letters.</li>
 <li>A custom 404 "page does not exist" error page, with an error message and a prominent link to return to the home page.</li>
 </ul>
 
