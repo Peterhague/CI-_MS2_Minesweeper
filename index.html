@@ -19,7 +19,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>   
+    <script src="assets/JS/homepage_JS/homepage.js"></script>
 </head>
 <body>
   <header>
@@ -97,16 +98,16 @@
     <div class="row">
       <div id="formImageLeft" class="col-xl-4 col-lg-3"></div>
       <div class="col-xl-4 col-lg-6">
-        <form name="ideasForm" id="contact-form-desktop" onsubmit="return formValidation(this)" novalidate>
+        <form name="ideasFormDesktop" id="contact-form-desktop" onsubmit="return formValidation(this)" novalidate>
           <label class="hide" for="firstNameDesktop">First Name</label>
-          <input type="text" name="firstName" id="firstNameDesktop" placeholder="First Name" class="contact-form-items">
+          <input type="text" name="firstNameDesktop" id="firstNameDesktop" placeholder="First Name" class="contact-form-items">
           <label class="hide" for="lastNameDesktop">Last Name</label>
-          <input type="text" name="lastName" id="lastNameDesktop" placeholder="Last Name" class="contact-form-items">
+          <input type="text" name="lastNameDesktop" id="lastNameDesktop" placeholder="Last Name" class="contact-form-items">
           <label class="hide" for="emailAddressDesktop">Email Address</label>
-          <input type="email" name="emailAddress" id="emailAddressDesktop" placeholder="Your Email Address" class="contact-form-items">
+          <input type="email" name="emailAddressDesktop" id="emailAddressDesktop" placeholder="Your Email Address" class="contact-form-items">
           <label class="hide" for="suggestionDesktop">Your suggestions</label>  
-          <textarea name="suggestion" id="suggestionDesktop" placeholder="Suggest a game we should make!" class="contact-form-items" rows="4" required></textarea>    
-          <button id="contact-submit-desktop" type="submit">Submit</button>
+          <textarea name="suggestionDesktop" id="suggestionDesktop" placeholder="Suggest a game we should make!" class="contact-form-items" rows="4" required></textarea>
+          <button id="contact-submit" type="submit">Submit</button><a id="navigateToFooter" class="hide" href="#footer"><span class="hide">link to bottom of page</span></a>
         </form>
       </div>
       <div id="formImageRight" class="col-xl-4 col-lg-3"></div>
@@ -125,7 +126,6 @@
       <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram text-white socialMedia"></i><span class="hide">Follow us on Instagram</span></a>        
     </div>
   </footer>      
-  <script src="assets/JS/title_JS/title-home.js"></script>   
-  <script src="assets/JS/homepage_JS/homepage.js"></script>
+  <script src="assets/JS/title_JS/title-home.js"></script>
 </body>
 </html>
