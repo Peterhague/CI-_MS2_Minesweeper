@@ -23,6 +23,7 @@
   <header>
     <div id="heading-container" class="center">
     </div> 
+    <!-----------------------------------------------------------navigation bar for desktop and large tablets---------------------------------------------->
     <div class="navigation-container">
       <nav id="navigation-bar">
         <a class="nav-items nav-item-current" href="index.html">Home</a>
@@ -31,6 +32,7 @@
         <a class="nav-items nav-items-hover" href="guess-the-flag.html">Guess the Flag</a>
       </nav>
     </div> 
+    <!-----------------------------------------------------------navigation bar for mobiles and small tablets---------------------------------------------->
     <div class="navigation-container-mobile">
       <nav id="navigation-bar-mobile">
         <a class="nav-items nav-item-current" href="index.html"><i class="fas fa-home text-pink"></i><span class="hide">Link to home page</span></a>
@@ -40,6 +42,7 @@
       </nav>
     </div>
   </header>
+  <!-----------------------------------------Welcome message container for desktop and large tablets (includes images either side)--------------------------------->
   <div class="container-fluid margin-top-medium d-none d-lg-block">
     <div class="row">
       <div class="col-2 d-lg-none d-xl-block"></div>
@@ -64,6 +67,7 @@
       <div class="col-2 d-lg-none d-xl-block"></div>
     </div>
   </div>
+  <!-------------------------------------Welcome message container for mobiles and small tablets (no images displayed)----------------------------------------->
   <div id="welcomeMessageContainer" class="d-lg-none center">
     <div id="welcomeMessageMobile">
       <h1 id="welcomeHeadingMobile">Welcome to GAMES INC!</h1>
@@ -72,51 +76,54 @@
       <h2>Have fun!!</h2>
     </div>
   </div>
-    <h1 class="hide">Home page</h1>      
-    <div id="container-form" class="d-lg-none">
-      <form id="contact-form" onsubmit="return sendMail(this);" novalidate>
-        <label class="hide" for="firstName">First Name</label>
-        <input type="text" name="firstName" id="firstName" placeholder="First Name" class="contact-form-items">
-        <label class="hide" for="lastName">Last Name</label>
-        <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="contact-form-items">
-        <label class="hide" for="emailAddress">Email Address</label>
-        <input type="email" name="emailAddress" id="emailAddress" placeholder="Your Email Address" class="contact-form-items">
-        <label class="hide" for="suggestion">Your suggestions</label>
-        <textarea name="suggestion" id="suggestion" placeholder="Suggest a game we should make!" class="contact-form-items" rows="4"></textarea>      
-        <button id="contact-submit" type="submit">Submit</button><a id="navigateToFooter" class="hide" href="#footer"><span class="hide">link to bottom of page</span></a>
-      </form>
-    </div>
-    <div class="container d-none d-lg-block" id="containerFormDesktop">
-      <div class="row">
-        <div id="formImageLeft" class="col-xl-4 col-lg-3"></div>
-        <div class="col-xl-4 col-lg-6">
-          <form name="ideasForm" id="contact-form-desktop" onsubmit="return formValidation(this)" novalidate>
-            <label class="hide" for="firstNameDesktop">First Name</label>
-            <input type="text" name="firstName" id="firstNameDesktop" placeholder="First Name" class="contact-form-items">
-            <label class="hide" for="lastNameDesktop">Last Name</label>
-            <input type="text" name="lastName" id="lastNameDesktop" placeholder="Last Name" class="contact-form-items">
-            <label class="hide" for="emailAddressDesktop">Email Address</label>
-            <input type="email" name="emailAddress" id="emailAddressDesktop" placeholder="Your Email Address" class="contact-form-items">
-            <label class="hide" for="suggestionDesktop">Your suggestions</label>  
-            <textarea name="suggestion" id="suggestionDesktop" placeholder="Suggest a game we should make!" class="contact-form-items" rows="4" required></textarea>    
-            <button id="contact-submit-desktop" type="submit">Submit</button>
-          </form>
-        </div>
-        <div id="formImageRight" class="col-xl-4 col-lg-3"></div>
+  <!-------------------------------------User suggestions form for mobiles and small tablets (no images displayed)-------------------------------------------->
+  <div id="container-form" class="d-lg-none">
+    <form id="contact-form" onsubmit="return sendMail(this);" novalidate>
+      <label class="hide" for="firstName">First Name</label>
+      <input type="text" name="firstName" id="firstName" placeholder="First Name" class="contact-form-items">
+      <label class="hide" for="lastName">Last Name</label>
+      <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="contact-form-items">
+      <label class="hide" for="emailAddress">Email Address</label>
+      <input type="email" name="emailAddress" id="emailAddress" placeholder="Your Email Address" class="contact-form-items">
+      <label class="hide" for="suggestion">Your suggestions</label>
+      <textarea name="suggestion" id="suggestion" placeholder="Suggest a game we should make!" class="contact-form-items" rows="4"></textarea>      
+      <button id="contact-submit" type="submit">Submit</button><a id="navigateToFooter" class="hide" href="#footer"><span class="hide">link to bottom of page</span></a>
+    </form>
+  </div>
+  <!-------------------------------------User suggestions form for desktop and large tablets (with image eiter side)-------------------------------------------->
+  <div class="container d-none d-lg-block" id="containerFormDesktop">
+    <div class="row">
+      <div id="formImageLeft" class="col-xl-4 col-lg-3"></div>
+      <div class="col-xl-4 col-lg-6">
+        <form name="ideasForm" id="contact-form-desktop" onsubmit="return formValidation(this)" novalidate>
+          <label class="hide" for="firstNameDesktop">First Name</label>
+          <input type="text" name="firstName" id="firstNameDesktop" placeholder="First Name" class="contact-form-items">
+          <label class="hide" for="lastNameDesktop">Last Name</label>
+          <input type="text" name="lastName" id="lastNameDesktop" placeholder="Last Name" class="contact-form-items">
+          <label class="hide" for="emailAddressDesktop">Email Address</label>
+          <input type="email" name="emailAddress" id="emailAddressDesktop" placeholder="Your Email Address" class="contact-form-items">
+          <label class="hide" for="suggestionDesktop">Your suggestions</label>  
+          <textarea name="suggestion" id="suggestionDesktop" placeholder="Suggest a game we should make!" class="contact-form-items" rows="4" required></textarea>    
+          <button id="contact-submit-desktop" type="submit">Submit</button>
+        </form>
       </div>
-    </div>   
-    <div id="formErrorMessageContainer" class="center">
-      <div id="formErrorMessage" class="text-red cairo"></div>
+      <div id="formImageRight" class="col-xl-4 col-lg-3"></div>
     </div>
-    <footer class="margin-top-medium">
-      <div id="footer" class="bg-pink center text-white">
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f text-white socialMedia"></i><span class="hide">Join our Facebook group</span></a>
-        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter text-white socialMedia"></i><span class="hide">Follow us on Twitter</span></a>
-        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in text-white socialMedia"></i><span class="hide">Follow us on linked in</span></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram text-white socialMedia"></i><span class="hide">Follow us on Instagram</span></a>        
-      </div>
-    </footer>      
-    <script src="assets/JS/title_JS/title-home.js"></script>   
-    <script src="assets/JS/homepage_JS/homepage.js"></script>
+  </div> 
+  <!-------------------------------------div for display of messages related to form inputs: various errors and one for successful submission--------------------->  
+  <div id="formErrorMessageContainer" class="center">
+    <div id="formErrorMessage" class="text-red cairo"></div>
+  </div>
+  <!-----------------------------------------------------------------------------footer with social media links-------------------------------------------------->
+  <footer class="margin-top-medium">
+    <div id="footer" class="bg-pink center text-white">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f text-white socialMedia"></i><span class="hide">Join our Facebook group</span></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter text-white socialMedia"></i><span class="hide">Follow us on Twitter</span></a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in text-white socialMedia"></i><span class="hide">Follow us on linked in</span></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram text-white socialMedia"></i><span class="hide">Follow us on Instagram</span></a>        
+    </div>
+  </footer>      
+  <script src="assets/JS/title_JS/title-home.js"></script>   
+  <script src="assets/JS/homepage_JS/homepage.js"></script>
 </body>
 </html>
