@@ -10,6 +10,13 @@ function sendMailMobile(contactForm) {
         "email_address": contactForm.emailAddress.value,
         "message": contactForm.suggestion.value,
     })
+    .then(
+        function(resposne) {
+            console.log("success, response");
+        },
+        function(error) {
+            console.log("Failed", error)
+        });
     return false;    
 }
 /*passes the emailJS API the necessary inputs to send the automated email when in desktop configuration*/
@@ -33,7 +40,6 @@ If all the conditions are met then the sendMail function is called and an email 
 */
 function formValidation(that) {
     if (that.id === "contact-form-desktop") {
-        console.log("hello");
         let fName = document.forms["ideasFormDesktop"]["firstNameDesktop"].value;
         let lName = document.forms["ideasFormDesktop"]["lastNameDesktop"].value;
         let email = document.forms["ideasFormDesktop"]["emailAddressDesktop"].value;
@@ -85,7 +91,6 @@ function formValidation(that) {
             return false;
         }   
     } else {
-        console.log("hello mobile");
         let fName = document.forms["ideasForm"]["firstName"].value;
         let lName = document.forms["ideasForm"]["lastName"].value;
         let email = document.forms["ideasForm"]["emailAddress"].value;
