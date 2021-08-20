@@ -42,31 +42,33 @@
           </nav>
         </div>
     </header>
-    <div class="margin-top-small marginBottomMedium center">
-      <div id="container-game">
-        <div id="answer-box-container"><!--the main "display" element of the game, ie what mimics an old fashioned monitor-->
-          <div id="answer-box"></div><!--container for the display's various messages-->
+    <section><!-----------------------------------------------------------Spelling Bee game elements------------------------------------------------------------>
+      <div class="margin-top-small marginBottomMedium center">
+        <div id="container-game">
+          <div id="answer-box-container"><!--the main "display" element of the game, ie what mimics an old fashioned monitor-->
+            <div id="answer-box"></div><!--container for the display's various messages-->
+          </div>
+          <div id="difficulty-container-spelling">
+            <label class="hide" for="difficulty-spelling">spelling bee game difficulty selector</label>
+            <select id="difficulty-spelling"> <!--Dropdown selector for difficulty level-->
+              <option>Easy</option>
+              <option>Medium</option>
+              <option>Hard</option>
+              <option>Very Hard</option>
+            </select>
+            <button id="play-button"><i class="fas fa-play play-spelling"></i><span class="hide">play game</span></button>
+          </div>
+          <div id="input-spelling"><!--user input field for answering each question-->
+            <label class="hide" for="input-two">answer input field</label>
+            <input id="input-two" type="text">
+          </div>
+          <button id="repeat" class="buttons-spelling">Repeat</button>
+          <button id="hint" class="buttons-spelling">Hint</button>
+          <button id="submit" class="buttons-spelling">Submit</button>
         </div>
-        <div id="difficulty-container-spelling">
-          <label class="hide" for="difficulty-spelling">spelling bee game difficulty selector</label>
-          <select id="difficulty-spelling"> <!--Dropdown selector for difficulty level-->
-            <option>Easy</option>
-            <option>Medium</option>
-            <option>Hard</option>
-            <option>Very Hard</option>
-          </select>
-          <button id="play-button"><i class="fas fa-play play-spelling"></i><span class="hide">play game</span></button>
-        </div>
-        <div id="input-spelling"><!--user input field for answering each question-->
-          <label class="hide" for="input-two">answer input field</label>
-          <input id="input-two" type="text">
-        </div>
-        <button id="repeat" class="buttons-spelling">Repeat</button>
-        <button id="hint" class="buttons-spelling">Hint</button>
-        <button id="submit" class="buttons-spelling">Submit</button>
       </div>
-    </div>
-    <div class="footerMarginSpelling"></div>
+      <div class="footerMarginSpelling"></div>
+    </section>
     <!-----------------------------------------------------------------------------footer with social media links-------------------------------------------------->
     <footer class="footerContainer">
       <div id="footerSpelling" class="bg-yellow center">

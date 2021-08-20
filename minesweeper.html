@@ -43,41 +43,43 @@
       </nav>
     </div>
     </header>
-    <div id="outer-container" class="margin-top-medium">
-      <!--------------------------------------------------images above the difficulty selector and Play button elements-------------------------------->
-      <div id="overlineBombs" class="center bombsMotif">
-        <div class="imageUnderlineBombs inlineBlock"></div>
-        <div class="imageUnderlineBombs inlineBlock"></div>
-        <div class="imageUnderlineBombs inlineBlock"></div>
-      </div>
-      <div id="container-game"><!--outer container for the minesweeper games elements, including the grid when generated-->
-        <div id="score-bar">
-          <div id="selector-start" class="min-width selector-start-onload">
-            <label class="hide" for="difficulty">difficulty selector</label>
-            <select id="difficulty" class ="cairo text-medium bg-green"> <!--Dropdown selector for difficulty level-->
-              <option>Easy</option>
-              <option>Medium</option>
-              <option>Hard</option>
-            </select>
-            <button id="play" class="bg-greenyellow"><i id="play-icon" class="fas fa-play text-big bg-greenyellow"></i><span class="hide">play game</span></button> <!--Start game button-->  
-            <a id="scrollToBottom" href="#minesweeperBottom"><span class="hide">scroll to bottom</span></a>
-          </div>
-          <div id="score-flag-container">
-            <div id="flag-container" class="fas fa-flag invisible-text"></div>
-            <div id="score-container"></div> <!--container for the number of flags the player has in hand-->        
-          </div>
+    <section>
+      <div id="outer-container" class="margin-top-medium">
+        <!--------------------------------------------------images above the difficulty selector and Play button elements-------------------------------->
+        <div id="overlineBombs" class="center bombsMotif">
+          <div class="imageUnderlineBombs inlineBlock"></div>
+          <div class="imageUnderlineBombs inlineBlock"></div>
+          <div class="imageUnderlineBombs inlineBlock"></div>
         </div>
-        <div id="grid" oncontextmenu="return false;"></div> <!--main div for the minesweeper grid to be populated by-->
+        <div id="container-game"><!--outer container for the minesweeper games elements, including the grid when generated-->
+          <div id="score-bar">
+            <div id="selector-start" class="min-width selector-start-onload">
+              <label class="hide" for="difficulty">difficulty selector</label>
+              <select id="difficulty" class ="cairo text-medium bg-green"> <!--Dropdown selector for difficulty level-->
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+              </select>
+              <button id="play" class="bg-greenyellow"><i id="play-icon" class="fas fa-play text-big bg-greenyellow"></i><span class="hide">play game</span></button> <!--Start game button-->  
+              <a id="scrollToBottom" href="#minesweeperBottom"><span class="hide">scroll to bottom</span></a>
+            </div>
+            <div id="score-flag-container">
+              <div id="flag-container" class="fas fa-flag invisible-text"></div>
+              <div id="score-container"></div> <!--container for the number of flags the player has in hand-->        
+            </div>
+          </div>
+          <div id="grid" oncontextmenu="return false;"></div> <!--main div for the minesweeper grid to be populated by-->
+        </div>
+        <div id="call-to-play">LET'S MINESWEEP!</div>
+        <!--------------------------------------------------images beneath the difficulty selector and Play button elements-------------------------------->
+        <div id="underlineBombs" class="center bombsMotif">
+          <div class="imageUnderlineBombs inlineBlock"></div>
+          <div class="imageUnderlineBombs inlineBlock"></div>
+          <div class="imageUnderlineBombs inlineBlock"></div>
+        </div>
       </div>
-      <div id="call-to-play">LET'S MINESWEEP!</div>
-      <!--------------------------------------------------images beneath the difficulty selector and Play button elements-------------------------------->
-      <div id="underlineBombs" class="center bombsMotif">
-        <div class="imageUnderlineBombs inlineBlock"></div>
-        <div class="imageUnderlineBombs inlineBlock"></div>
-        <div class="imageUnderlineBombs inlineBlock"></div>
-      </div>
-    </div>
-    <div id="minesweeperBottom"></div><!--div used to scroll to bottom of page on generation of new minesweeper grid so whole grid is always displayed-->
+      <div id="minesweeperBottom"></div><!--div used to scroll to bottom of page on generation of new minesweeper grid so whole grid is always displayed-->
+    </section>
     <!---------------------------------------------------------------------------footer with social media link---------------------------------------------->
     <footer class="margin-top-medium footerContainer">
       <div id="footerMS" class="center">
