@@ -51,10 +51,12 @@ function generateQuestions() {
 function setFocus() {
   inputTwo.focus();
 }
-// removes the focus from the user input field
+// removes the focus from the user input field to temporarily remove the keyboard from touch device screens to display feedback
 function removeFocus() {
-  console.log("tested");
   inputTwo.blur();
+  setTimeout(function() {
+    setFocus();
+  }, 3500);
 }
 /* adds events listeners to submit button and sets the question number to be displayed in UI. Also calls the responsiveVoice
 API and tells it to speak the first of the random words*/
@@ -85,8 +87,9 @@ If the spelling is correct a 'correct' message is displayed. The code then check
 that question, and if so, adds half a point to their score. If not, it adds a full point.
 */
 function spellcheck () {
+  setTimeout (function() {
   if (output.toLowerCase() === inputTwo.value.toLowerCase()) {
-    answerBox.innerHTML = "correct!";
+      answerBox.innerHTML = "correct!";
     if (answerBox.classList.contains("hinted")) {
       addOne += 0.5;
       answerBox.classList.remove("hinted");
@@ -100,6 +103,7 @@ function spellcheck () {
     answerBox.classList.remove("hinted");
     questionsCorrect(addOne);
   }
+    }, 1000);   
 }
 //resets the user input and the displayed answer to blank, with a 2.5s delay for the answer
 function clearAnswer() {
@@ -116,10 +120,11 @@ function questionCounter() {
   currentQuestion += 1;
   setTimeout(function() {            
     speak(randomWords, currentQuestion); 
-  }, 2000);
+  }, 3000);
   setTimeout(function() {            
     answerBox.innerHTML = currentQuestion+1; 
-  }, 1000);
+  }, 2000);
+  console.log("timed3");
 }
 // event handler for the repeat button, simply repeats the current question
 function repeatQuestion() {
