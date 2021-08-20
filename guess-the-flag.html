@@ -19,7 +19,8 @@
 <body>
     <header>
       <h1 class="hide">Guess the Flag</h1>
-        <div id="heading-container" class="center"></div>  
+        <div id="heading-container" class="center"></div>
+        <!-----------------------------------------------------------navigation bar for desktop and large tablets---------------------------------------------->  
         <div class="navigation-container">
             <nav id="navigation-bar">
               <a class="nav-items nav-items-hover" href="index.html">Home</a>
@@ -27,7 +28,8 @@
               <a class="nav-items nav-items-hover" href="spelling-bee.html">Spelling Bee</a>
               <a class="nav-items nav-item-current" href="guess-the-flag.html">Guess the Flag</a>
             </nav>
-        </div>
+        </div>  
+        <!-----------------------------------------------------------navigation bar for mobiles and small tablets---------------------------------------------->
         <div class="navigation-container-mobile">
           <nav id="navigation-bar-mobile">
             <a class="nav-items nav-item-current" href="index.html"><i class="fas fa-home"></i><span class="hide">Link to home page</span></a>
@@ -39,8 +41,9 @@
       </header>
       <div id="mainContainer">
         <div>
+          <!------------------------------------two rows of 5 divs, one for each flag to be displayed and associated user input field--------------------------->
           <div id="flagsRowOne" class="center hide">
-            <div class="inlineBlock flagContainersOuter">
+            <div class="inlineBlock flagContainersOuter"><!--flag div 1-->
               <div data-input="0" id="flagOne" class="inlineBlock flagContainers"></div>            
               <div class="inputContainer">
                 <div class="answerDiv hide" data-input="0"></div>
@@ -48,7 +51,7 @@
                 <input data-input="0" id="flagOneInput" class="flagInputs hide" type="text">
               </div>
             </div>
-            <div class="inlineBlock flagContainersOuter">
+            <div class="inlineBlock flagContainersOuter"><!--flag div 2-->
               <div data-input="1" id="flagTwo" class="inlineBlock flagContainers"></div>
               <div class="inputContainer">
                 <div class="answerDiv hide" data-input="1"></div>
@@ -56,7 +59,7 @@
                 <input data-input="1" id="flagTwoInput" class="flagInputs hide" type="text">
               </div>
             </div>
-            <div class="inlineBlock flagContainersOuter">
+            <div class="inlineBlock flagContainersOuter"><!--flag div 3-->
               <div data-input="2" id="flagThree" class="inlineBlock flagContainers"></div>
               <div class="inputContainer">
                 <div class="answerDiv hide" data-input="2"></div>
@@ -64,7 +67,7 @@
                 <input data-input="2" id="flagThreeInput" class="flagInputs hide" type="text">
               </div> 
             </div>
-            <div class="inlineBlock flagContainersOuter">
+            <div class="inlineBlock flagContainersOuter"><!--flag div 4-->
               <div data-input="3" id="flagFour" class="inlineBlock flagContainers"></div>
               <div class="inputContainer">
                 <div class="answerDiv hide" data-input="3"></div>
@@ -72,7 +75,7 @@
                 <input data-input="3" id="flagFourInput" class="flagInputs hide" type="text">
               </div>
             </div>
-            <div class="inlineBlock flagContainersOuter">
+            <div class="inlineBlock flagContainersOuter"><!--flag div 5-->
               <div data-input="4" id="flagFive" class="inlineBlock flagContainers"></div>
               <div class="inputContainer">
                 <div class="answerDiv hide" data-input="4"></div>
@@ -82,7 +85,7 @@
             </div>
           </div>
           <div id="flagsRowTwo" class="center hide">
-            <div class="inlineBlock flagContainersOuter">
+            <div class="inlineBlock flagContainersOuter"><!--flag div 6-->
               <div data-input="5" id="flagSix" class="inlineBlock flagContainers"></div>
               <div class="inputContainer">              
                 <div class="answerDiv hide" data-input="5"></div>
@@ -90,7 +93,7 @@
                 <input data-input="5" id="flagSixInput" class="flagInputs hide" type="text">
               </div>
             </div>
-            <div class="inlineBlock flagContainersOuter">
+            <div class="inlineBlock flagContainersOuter"><!--flag div 7-->
               <div data-input="6" id="flagSeven" class="inlineBlock flagContainers"></div>
               <div class="inputContainer">
                 <div class="answerDiv hide" data-input="6"></div>
@@ -98,7 +101,7 @@
                 <input data-input="6" id="flagSevenInput" class="flagInputs hide" type="text">
               </div>
             </div>
-            <div class="inlineBlock flagContainersOuter">
+            <div class="inlineBlock flagContainersOuter"><!--flag div 8-->
               <div data-input="7" id="flagEight" class="inlineBlock flagContainers"></div>
               <div class="inputContainer">
                 <div class="answerDiv hide" data-input="7"></div>
@@ -106,7 +109,7 @@
                 <input data-input="7" id="flagEightInput" class="flagInputs hide" type="text">
               </div>
             </div>
-            <div class="inlineBlock flagContainersOuter">
+            <div class="inlineBlock flagContainersOuter"><!--flag div 9-->
               <div data-input="8" id="flagNine" class="inlineBlock flagContainers"></div>
               <div class="inputContainer">
                 <div class="answerDiv hide" data-input="8"></div>
@@ -114,7 +117,7 @@
                 <input data-input="8" id="flagNineInput" class="flagInputs hide" type="text">
               </div>
             </div>
-            <div class="inlineBlock flagContainersOuter">
+            <div class="inlineBlock flagContainersOuter"><!--flag div 10-->
               <div data-input="9" id="flagTen" class="inlineBlock flagContainers"></div>
               <div class="inputContainer">
                 <div class="answerDiv hide" data-input="9"></div>
@@ -131,6 +134,7 @@
         <div id="flagsDisplayBox" class="center margin-top-vsmall">Let's learn about World flags!</div>
       </div> 
       <div class="footerMargin"></div>
+      <!----------------------------------------------------------------footer with social media links----------------------------------------------->
       <footer id="flagsFooter" class="footerContainer">
         <div id="footerFlags" class="bg-blue center text-white">
           <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f text-white socialMedia"></i><span class="hide">Join our Facebook group</span></a>
