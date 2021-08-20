@@ -610,10 +610,10 @@ call to action, presented in sympathetic retro font.</p>
 <h4>Features for Future Releases</h4>
 
 <ol>
-<li>A section on the homepage with case studies of work done for clients, detailing how specific problems were solved.</li>
-<li>A button in the navigation bar allowing users to book appointments with different team members, via a live calendar.</li>
-<li>A dynamic landing page which would load once on the first visit to the website in any one session, with animated elements giving a welcome and a brief summary of the firm and its unique offerings.</li>
-<li>A section about the firm's trainees and more junior staff, providing updates on their qualification progress and the support the firm offers, partly to further familiarise users with all aspects of the firm and partly to encourage prospective trainees to join the firm.</li>
+<li>A section on the homepage with news about upcoming projects.</li>
+<li>A custom version of the minesweeper game, with users able to select the number of rows and mines.</li>
+<li>A timer on the minesweeper game showing the seconds elapsed since the start of the game.</li>
+<li>The ability for users to sign up and log in, so they can keep track of their scores and look at live leaderboards.</li>
 </ol>
 
 <h2 id="technologies-used">Technologies Used</h2>
