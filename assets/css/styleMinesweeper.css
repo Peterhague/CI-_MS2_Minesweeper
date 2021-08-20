@@ -242,11 +242,17 @@
 }
   
 @media screen and (max-width: 320px) {/*further tune grid squares for very narrow mobiles*/
+    .squaresBig {
+        width: 11vw;
+        font-size: 10vw;
+    }
     .squaresMedium {
-        width: 20px;
+        width: 6vw;
+        font-size: 5.5vw;
     }
     .squaresSmall {
         width: 4.9vw;
+        font-size: 4.5vw;
         padding-top: 1px;
     }
     .margin-top-small {
