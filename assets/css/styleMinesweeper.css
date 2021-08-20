@@ -17,7 +17,7 @@
     cursor: pointer;
 }
 
-#score-container {
+#score-container {/*display of flags in hand during game*/
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
     color: red;
@@ -63,7 +63,7 @@
     padding-top: 4px;
 }
 
-.imageUnderlineBombs {
+.imageUnderlineBombs {/*bomb images on page load, decorating play button etc*/
     background-image: url("../images/bomb.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@
 }
 
 
-#score-bar {
+#score-bar {/*bar on top of minesweeper grid*/
     position: relative;
     padding-bottom: 6px;
 }
@@ -88,13 +88,13 @@
     background-color: hsla(0, 0%, 83%, 0.89);
 }
 
-#selector-start {
+#selector-start {/*difficulty selector and play button mid-game*/
     display: inline-block;
     left: 4px;
     top: 6px;
 }
 
-.selector-start-onload {
+.selector-start-onload {/*difficulty selector and play button pre-game*/
     background-color: greenyellow;
     padding-top: 8px;
     height: 50px;
@@ -163,7 +163,7 @@
         margin-right: 1vw;
         margin-left: 1vw;
     }
-
+    /*fine-tune size of minesweeper grid squares on mobile*/
     .squaresMedium {
         width: 22px;
         font-size: 15px;
@@ -171,7 +171,7 @@
 
     .squaresSmall {
         width: 16px;
-        font-size: 14px;
+        font-size: 12px;
         padding-top: 2px;
     }
 }
@@ -181,6 +181,7 @@
     #outer-container {
         margin-top: 10vh;
     }
+    /*fine-tune size of minesweeper grid squares on tablet*/
     .squaresBig {
         width: 40px;
         font-size: 28px;
@@ -210,6 +211,7 @@
         margin-right: 1vw;
         margin-left: 1vw;
     }
+    /*fine-tune size of minesweeper grid squares on large tablets*/
     .squaresMedium {
         width: 40px;
         font-size: 32px;
@@ -239,7 +241,7 @@
     }
 }
   
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {/*further tune grid squares for very narrow mobiles*/
     .squaresMedium {
         width: 20px;
     }
