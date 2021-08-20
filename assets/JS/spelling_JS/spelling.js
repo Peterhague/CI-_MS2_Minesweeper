@@ -151,7 +151,7 @@ function finalScore(totalCorrect) {
     submit.removeEventListener("click", questionCounter);
     setTimeout(function() {
       answerBox.innerHTML = `You scored ${totalCorrect} out of 10!`;
-    }, 1000);
+    }, 3000);
     inputTwo.value = "";    
   }
 }

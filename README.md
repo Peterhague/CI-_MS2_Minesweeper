@@ -166,7 +166,7 @@ for the player to type their guess at each flag's country. The page uses a blue 
 <p>The general aesthetic is colourful, retro, pixel art. It is meant to evoke 1980s video games as well as provide lots of
 strong colours to appeal to younger users.</p>
 
-<p>This design language influences every element of the site, from the bold, "pixelalted" titles, to the simple and virbant footers, to the content of the games themselves. Almost all the colours on the website are bright and vividly contrasting with each other. Images are used sparingly, but where considered necessary to aid visual flow, have been chosen for their strong colours and cartoon aesthetic to sustain the overall appearance.</p>
+<p>This design language influences every element of the site, from the bold, "pixelalted" titles, to the simple and vibrant footers, to the content of the games themselves. Almost all the colours on the website are bright and vividly contrasting with each other. Images are used sparingly - but where considered necessary to aid visual flow - have been chosen for their strong colours and cartoon aesthetic to sustain the overall appearance.</p>
 
 <h3>Colour Scheme</h3>
 
@@ -176,12 +176,11 @@ strong colours to appeal to younger users.</p>
 
 <h3>Typography</h3>
 
-<p>Cairo from Google Fonts is used for most of the text on the website, as it seemed to mesh well with the retro style of much of the site, while itself being readable but still pleasantly informal. Roboto from Google Fonts is used for the answers in the Flags game as it used less screen space than Cairo while maintaining a similar aesthetic. Press Start 2P from Google Fonts was 
-used for the "display" in the Spelling game, to give an old-fashioned monitor effect.</p>
+<p>Cairo from Google Fonts is used for most of the text on the website, as it seemed to mesh well with the retro style of much of the site, while itself being readable but still pleasantly informal. Roboto from Google Fonts is used for the answers in the Flags game as it used less screen space than Cairo while maintaining a similar aesthetic. Press Start 2P from Google Fonts was used for the "display" in the Spelling game, to give an old-fashioned monitor effect.</p>
 
 <h3>Imagery</h3>
 
-<p>The images on the website take the form of large icons on the homepage to represent the 3 available games. They were taken
+<p>The images on the website take the form of large icons on the Home page to represent the 3 available games. They were taken
 from larger images and had their backgrounds removed with online software. There are also two cartoon light bulb images to decorate the call to get in touch on the homepage, and to focus the user on the form. The images on the website do not form a major part of the aesthetic and are used for emphasis of the prevailing design language.</p>
 
 <h2 id="wireframes">Wireframes</h2>
@@ -252,7 +251,7 @@ combination. The colour scheme is maintained, as well as the distance from other
 <p>This is an easy and unmissable introduction to the site, easily digestible for younger users.</p>
 
 <p>The main container is surrounded with decorative images that give visual representations of each of the games on offer. As well as being attractive, these
-draw teh eye to the actual message. These images are foregone on smaller screens to keep the design clean.</p>
+draw the eye to the actual message. These images are foregone on smaller screens to keep the design clean.</p>
 
 <details>
 <summary>Home page with welcome message</summary>
@@ -272,7 +271,7 @@ draw teh eye to the actual message. These images are foregone on smaller screens
 <p>Every page has a brightly coloured footer with links to Game Inc.'s social media pages.</p>
 
 <p>Each page's footer is coloured differently to tie in with the visual language of its page. The design has deliberately been kept simple, bold, and uncluttered,
-with no more information than necessary. The object is to attractively enclose the page's other content and push users towards the prominent social media links.</p>
+with no more information than necessary. The object is to attractively bookend the page's other content and push users towards the prominent social media links.</p>
 
 <details>
 <summary>Footer on each of the pages</summary>
@@ -298,7 +297,7 @@ with no more information than necessary. The object is to attractively enclose t
 </p>
 
 <p>The form calls the API emailJS to send an email to my account on submission of the form, and the emailJS template then also sends 
-and automatic reply to the user, employing the details they entered where appropriate.</p>
+an automatic reply to the user, employing the details they entered where appropriate.</p>
 
 <p>The form is validated with Javascript code, and only submits when all fields are populated, and when a correctly constituted email
 address is entered in that field.</p>
@@ -411,7 +410,7 @@ clicks on a mined square and 'loses', another if the user manages to click on ev
 
 <p>The losing sequence consists of every square on the grid changing colour to either white, grey or black, randomly but in equal parts, one after another but
 in random order. The mined squares change their color property to red so their location can be seen. Finally the whole grid changes to black and every
-square has the 'skull' font awesome icon displayed, to clearly indicate the failure state!</p>
+square has the 'skull' font awesome icon displayed, to unambiguously indicate the failure state.</p>
 
 <p>The winning sequence works very similarly, but with bright colours and a joyful, 'laughing' emoji icon, again to clearly feed back to the player that
 they have 'won' the game.</p>
