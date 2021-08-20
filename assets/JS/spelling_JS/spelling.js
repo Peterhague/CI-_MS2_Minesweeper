@@ -67,7 +67,10 @@ function startGame() {
     speak(randomWords, 0); 
   }, 600);
 }
-/* calls the Responsive Voice API and asks it to speak the next iteraton of the randomWords array*/
+/* calls the Responsive Voice API and asks it to speak the next iteraton of the randomWords array
+@param randomWords [array of 10 random words]
+@param iteration [iteration of randomWords to speak]
+*/
 function speak(randomWords, iteration) {
   output = randomWords[iteration];
   responsiveVoice.speak(randomWords[iteration]);
@@ -118,13 +121,17 @@ function repeatQuestion() {
   speak(randomWords, currentQuestion);
 }
 /* called by the spellcheck function, defines a totalCorrect variable and calls the finalScore function and passes that as its
-argument*/
+argument
+@param addOne [# of correct answers so far]
+*/
 function questionsCorrect(addOne) {
   let totalCorrect = 0+addOne;
   finalScore(totalCorrect);
 }
 /* checks whether the current question is the last one of the 10 in each game, and if so presents the user with their final
-score and removes the then-redundant event listeners*/
+score and removes the then-redundant event listeners
+@param totalCorrect [final number of correct answers]
+*/
 function finalScore(totalCorrect) {
   if (currentQuestion === 9) {    
     submit.removeEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
