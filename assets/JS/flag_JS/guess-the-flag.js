@@ -2,7 +2,10 @@ let flagContainers = document.getElementsByClassName("flagContainers");
 let playFlags = document.getElementById("playFlags");
 /*This function is called on user clicking the play button, and creates a random
 list of 10 unique numbers, between 0 and 192. It then calls the next 3 functions in
-the play game process.*/
+the play game process.
+@param displayFlags [function to call to display flags]
+@param displayInputs [function to call to display input fields]
+*/
 function randomiseFlags(displayFlags, displayInputs) {
     let randomFlags = [];
     while (randomFlags.length < 10) {
@@ -39,6 +42,7 @@ at the appropriate location to access the flag image stored with that code.
 belongs, to check against the user's answer.
 3. each container is given an optional alt-names attribute, which some of the objects in the library have where countries 
 have multiple commonly used names, eg USA and United States.
+@param randomFlags [random array of 10 unique numbers 0 - 192]
 */
 function displayFlags(randomFlags) {
     for (let i = 0; i < 10; i++) {
@@ -50,7 +54,8 @@ function displayFlags(randomFlags) {
     submitFlagsAnswer.addEventListener("click", checkAnswers);
 }
 /*function runs on click of new game and displays some of the elements defined in the html by removing
-their display: none CSS attributes.
+their 'display: none' CSS attributes.
+@param stylingChanges [function to call to adjust CSS on new game]
 */
 function displayInputs(stylingChanges) {
     let flagsRowOne = document.getElementById("flagsRowOne");
@@ -88,7 +93,10 @@ function stylingChanges() {
     setFocus();
 }
 /*this code just runs more of the styling changes on trigger of a new game, but where it's necessary to iterate over multiple
-elements. Effectively it hides the divs that display the answers and shows the divs containing the input divs.*/
+elements. Effectively it hides the divs that display the answers and shows the divs containing the input divs.
+@param answerDivs [divs to show correct/incorrect answer]
+@param flagInputs [input fields to type answers]
+*/
 function stylingChangesLoops(answerDivs, flagInputs) {
     for (div of answerDivs) {
         div.classList.add("hide");
@@ -131,7 +139,11 @@ below the flag: effectively, are the input and flag associated?) AND if the answ
 data-flag-name attribute, OR if it's the same as the flag container's data-flag-alt-names attribute, THEN the answer is
 correct.
 If this condition is met, then the associated answerDivs are assigned the tick icon and green text, and 1 is added
-to the value of the correctAnswers variable.*/ 
+to the value of the correctAnswers variable.
+@param correctAnswers [accumulated correct answers when fn called]
+@param flagInputs [input fields to type answers]
+@param answerDivs [divs to present answers to user]
+*/ 
 function iterateCorrectAnswers(correctAnswers, flagInputs, answerDivs) {
     for (input of flagInputs) {
         input.classList.remove("inlineBlock");
@@ -152,7 +164,9 @@ function iterateCorrectAnswers(correctAnswers, flagInputs, answerDivs) {
     displayCorrectAnswers(correctAnswers);
 }
 /*simple function to determine which score message to display based on how many correct answers (ie value of correctAnswers
-variable)*/
+variable)
+@param correctAnswers [total correct answers submitted]
+*/
 function displayCorrectAnswers(correctAnswers) {
     if (correctAnswers < 4) {        
         flagsDisplayBox.innerHTML = `Unlucky! You scored ${correctAnswers} out of 10<br><i class="far fa-frown scoreSmileys"></i>`;
