@@ -2,7 +2,9 @@
 'cleared' and if not, then distinguishes between flags that already have a flag (following a previous right click) and those
 that are 'even' squares and 'odd' squares. The former is to allow a right click to toggle the placement of the flag and the latter
 allows the code to 'remember' the square's previous state, so it can return to that if the flag is then toggled off.
-Once these conditions are defined the appropriate function is callled and passed the necessary arguments.*/
+Once these conditions are defined the appropriate function is callled and passed the necessary arguments.
+CREDIT: Jquery v3.6 used in below code, to facilitate the right click event handling
+*/
 function addFlags() {
     let squares = document.getElementsByClassName("squares");
     $(squares).mousedown(function(event) {

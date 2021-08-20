@@ -1,4 +1,7 @@
-/*initialises the emailJS interface*/
+/*initialises the emailJS interface
+CREDIT: significant help provided by Code Institute walkthrough instruction of emailJS integration.
+CREDIT: EmailJS API code, for the sending of automated emails
+*/
 (function() {
     emailjs.init("user_TnGv5LfOGP5Nqwj1AQR0U");
   })();

@@ -616,6 +616,31 @@ call to action, presented in sympathetic retro font.</p>
 <li>The ability for users to sign up and log in, so they can keep track of their scores and look at live leaderboards.</li>
 </ol>
 
+<h2 id="Game Instructions"></h2>
+
+<ul>
+<li>Minesweeper
+<li>Choose a difficulty from the dropdown menu presented when the page loads</li>
+<li>Click on the Play icon to generate the Minesweeper grid</li>
+<li>You need to discover which squares have mines hidden beneath them and which don't</li>
+<li>If you left-click on a square with a mine beneath it, it's game over</li>
+<li>However, you need to left click on one of the squares to start the game, so pick one and take your chances</li>
+<li>If you click on a square with no mine beneath it, you will be shown a number. This number represents how many of that 
+square's surrounding squares contain mines. By comparing that to the number of squares you have already discover with and 
+without mines, you can start 'clearing' the squares.</li>
+<li>Where you are sure there is a mine, you can right click on the mouse to lay a flag as a marker. This will also prevent
+you from being able to left-click on that square by accident. If you make a mistake, you can right-click on that square again
+to remove the flag.</li>
+<li>If you clear all the unmined squares, you win!</li>
+</li>
+<ul>
+</ul>
+<li>Spelling Bee</li>
+<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+<li>Guess the Flag</li>
+<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+</ul>
+
 <h2 id="technologies-used">Technologies Used</h2>
 
 <h3 id="languages">Languages</h3>
@@ -1594,6 +1619,16 @@ This website has been deployed using GitHub pages. The process is as follows:
 <li>Follow the steps to receive your Javascript code including the API key.</li>
 <li>Paste the code into the spelling-bee.html file to replace the existing script at line 79.</li>
 </ol>
+
+<h3>External Libraries</h3>
+
+<h4>Bootstrap v4.13</h4>
+<p>Bootstrap's grid system was used to facilitate a robust and responsive layout for the Home page, because
+exact positioning of the images in three rows either side of the welcome message was proving difficult with my own CSS rules.</p>
+
+<h4>Jquery v3.6</h4>
+<p>Jquery was used to facilitate the right click event handling for the Minesweeper game, as doing so with ordinary Javascript
+was proving difficult.</p>
 
 <h2 id="credits">Credits</h2>
 

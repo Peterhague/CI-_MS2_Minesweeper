@@ -43,6 +43,7 @@ belongs, to check against the user's answer.
 3. each container is given an optional alt-names attribute, which some of the objects in the library have where countries 
 have multiple commonly used names, eg USA and United States.
 @param randomFlags [random array of 10 unique numbers 0 - 192]
+CREDIT: countryflags.io for its library of flag image urls accessed by the below code
 */
 function displayFlags(randomFlags) {
     for (let i = 0; i < 10; i++) {

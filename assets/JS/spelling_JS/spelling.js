@@ -77,6 +77,7 @@ function startGame() {
 /* calls the Responsive Voice API and asks it to speak the next iteraton of the randomWords array
 @param randomWords [array of 10 random words]
 @param iteration [iteration of randomWords to speak]
+CREDIT: Responsive Voice API for the code to 'speak' the words posed by the game as questions
 */
 function speak(randomWords, iteration) {
   output = randomWords[iteration];
