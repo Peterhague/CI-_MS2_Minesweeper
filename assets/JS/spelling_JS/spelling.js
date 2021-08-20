@@ -51,9 +51,9 @@ function generateQuestions() {
 function setFocus() {
   inputTwo.focus();
 }
-// removes teh focus from the user input field
+// removes the focus from the user input field
 function removeFocus() {
-  console.log("test");
+  console.log("tested");
   inputTwo.blur();
 }
 /* adds events listeners to submit button and sets the question number to be displayed in UI. Also calls the responsiveVoice
@@ -62,7 +62,7 @@ function startGame() {
   submit.addEventListener("click", spellcheck);// checks the given user input is the same as the dictionary spelling
   submit.addEventListener("click", questionCounter);
   submit.addEventListener("click", clearAnswer);// clears the answer input after each submission
-  submit.addEventListener("click", setFocus);
+  submit.addEventListener("click", removeFocus);
   answerBox.innerHTML = 1;
   setTimeout(function() {            
     answerBox.innerHTML = ""; 
