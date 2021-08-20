@@ -32,7 +32,10 @@ function addFlags() {
 its styling and replaces it with a nominal class of even/oddReserved, so that the distinction between odd and even can be accessed
 by JS later on if the flag needs to be replaced and the original styling reinstated.
 It also replaces the square's inner html (ie the number of mines in its surrounding squares) with a flag icon and stores the 
-information about the # of mines in a cutom attribute 'data-id', again so this can potentially be retrieved later.*/
+information about the # of mines in a cutom attribute 'data-id', again so this can potentially be retrieved later.
+@param that [minseweeper grid square right clicked]
+@param evenOrOdd [even or odd square for checkerboard styling]
+*/
 function squareFlagged(that, evenOrOdd) {
     $(that).removeClass(`${evenOrOdd}-squares`);
     $(that).removeClass("hovered-squares");
@@ -42,7 +45,10 @@ function squareFlagged(that, evenOrOdd) {
     $(that).html(`<i class="fas fa-flag"></i>`); // square displays the flag icon
     scoreContainer.innerHTML = scoreContainer.innerHTML - 1; // reduces the display of number of flags in hand by 1
 }
-//literally reverses the process of the squareFlagged function to remove the flags on a second right click on a square
+/*literally reverses the process of the squareFlagged function to remove the flags on a second right click on a square
+@param that [minseweeper grid square right clicked]
+@param evenOrOdd [even or odd square for checkerboard styling]
+*/
 function squareUnflagged(that, evenOrOdd) {
     $(that).removeClass("flagged");
     $(that).removeClass(`${evenOrOdd}Reserved`);
@@ -72,7 +78,9 @@ function longPressUp() {
         addFlagsLong(this);
     }
 }
-//essentially the same code as the addFlags function but reinstates the event listeners 200ms after the touchend event
+/*essentially the same code as the addFlags function but reinstates the event listeners 200ms after the touchend event
+@param that [square touched]
+*/
 function addFlagsLong(that) {
     if (!that.classList.contains("selected")) {
         // ie if the square hasn't already been left-clicked on to reveal no mine
@@ -115,7 +123,10 @@ function minesweep() {
     }      
 }
 /*determines where the square is in the grid and therefore which squares' ids relative to its own will be identified as belonging
-to squares that 'surround' it in terms of what the user actually sees on the grid*/
+to squares that 'surround' it in terms of what the user actually sees on the grid
+@param that [minesweeper grid square clicked]
+@param squares [square divs constituting minesweeper grid]
+*/
 function minesweepRoutineDetector(that, squares) {
     if (that.classList.contains("right-edge")) {
         minesweepRight(squares, that);
@@ -140,7 +151,9 @@ function minesweepRoutineDetector(that, squares) {
         automatedClick(that);
     }
 }
-//called from the minesweep function, and assigns each square a text color depending on its inner html
+/*called from the minesweep function, and assigns each square a text color depending on its inner html
+@param that [minesweeper grid square clicked]
+*/
 function colorByNumber(that) {
     if (that.innerHTML == 1) {
         that.classList.add("text-blue");

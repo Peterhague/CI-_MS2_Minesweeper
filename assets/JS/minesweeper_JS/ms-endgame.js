@@ -10,7 +10,11 @@ function counter() {
 }
 /*called from counter fn: checks the length of the clearedSquares variable. If it's greater than the total number of
 squares, less than the total amount of 'mine' squares, then all non-mine squares have been successfully cleared.
-The code then calls the various 'victory' functions to indicate success*/
+The code then calls the various 'victory' functions to indicate success
+@param randomSquaresAll [array of all grid squares in random order]
+@param squares [square divs constituting minesweeper grid]
+@param clearedSquares [all squares clicked to this point]
+*/
 function gameOverClassifier(randomSquaresAll, squares, clearedSquares) {
     if (clearedSquares.length > (selectedSquares - selectedBombs - 1)) {
         victorySquaresSmiley(squares);
@@ -21,7 +25,9 @@ function gameOverClassifier(randomSquaresAll, squares, clearedSquares) {
     }
 }
 /* on winning the game: all event listeners removed from the squares, inner html changed to a smiley icon,
-and their colour changed to 'invisible' text.*/
+and their colour changed to 'invisible' text.
+@param squares [square divs constituting minesweeper grid]
+*/
 function victorySquaresSmiley(squares) {
     for (square of squares) {
         square.style.color = "rgba(0,0,0,0.0)";
@@ -33,7 +39,10 @@ function victorySquaresSmiley(squares) {
     }
 }
 /* generates an array of unique random numbers between 0 and the # of squares on the grid, until it's the same
-length as the number of squares on the grid (ie a random list of the square's ids).*/
+length as the number of squares on the grid (ie a random list of the square's ids).
+@param emptyArray [literally an empty array]
+@param arrayLength [number of minesweeper grid squares]
+*/
 function generateArrayRandomSquares(emptyArray, arrayLength) {
     while (emptyArray.length < arrayLength) {
         let x = Math.floor(Math.random()*arrayLength);
@@ -50,7 +59,11 @@ victory 'animation'. It then applies a test to determine what the square's backg
 3 roughly equal groups of squares: those divisible by 3; those not divisble by 3 but divisible by 2, ie the remaining even numbers; and
 then the remainder, ie those not divisible by 2 or 3. Each of these 3 groups are assigned a different background color to create
 random patterns. Finally, this process is separated by 7ms for each assignment by the containing setTimeout function. This 
-creates a randomised 'colouring in' effect. */
+creates a randomised 'colouring in' effect. 
+@param j [iteration of for loop length = # of squares on grid]
+@param randomSquaresAll [array of all grid squares in random order]
+@param squares [square divs constituting minesweeper grid]
+*/
 function victoryStyleSquaresSequentially(j, randomSquaresAll, squares) {      
     setTimeout(function() {
         squares[randomSquaresAll[j]].classList.remove("selected", "hovered-squares", "even-squares", "odd-squares", "flagged");
@@ -68,7 +81,9 @@ function victoryStyleSquaresSequentially(j, randomSquaresAll, squares) {
     }, 7 * j);
     victorySquaresSmileysWhite(squares);
 } 
-// function changes all squares to their final 'victory' state following the previous cascade of colours
+/* function changes all squares to their final 'victory' state following the previous cascade of colours
+@param squares [square divs constituting minesweeper grid]
+*/
 function victorySquaresSmileysWhite(squares) {
     setTimeout(function() {            
         for (square of squares) {
@@ -92,7 +107,10 @@ function gameOverOne() {
         }
     }          
 }
-// on defeat, all squares assigned invisible text
+/* on defeat, all squares assigned invisible text
+@param squares [square divs constituting minesweeper grid]
+@param flaggedSquares [squares right clicked, "flagged"]
+*/
 function defeatStyleBombs(squares, flaggedSquares) {
     for (square of squares) {
         square.classList.add("invisible-text");
@@ -104,7 +122,11 @@ function defeatStyleBombs(squares, flaggedSquares) {
         }
     }
 }
-// on game over assigns all mined squares red text in random order
+/* on game over assigns all mined squares assigned red text in random order
+@param j [iteration of for loop, length = # of bombs on grid]
+@param bombs [minesweeper squares with bombs/mines]
+@param randomSquaresBombs [array of variable bombs in random order]
+*/
 function defeatStyleBombSquaresSequentially(j, bombs, randomSquaresBombs) {
     setTimeout(function() {
         bombs[randomSquaresBombs[j]].classList.add("text-red");
@@ -132,7 +154,11 @@ function gameOverTwo() {
     }  
 }
 /*called from gameOverTwo, when the player clicks on a mine. Square background colour is changed to either white, black, or
-grey in the same random fashion as for a victory sequence as per the victoryStyleSquaresSequentially function*/
+grey in the same random fashion as for a victory sequence as per the victoryStyleSquaresSequentially function
+@param j [iteration of for loop, length = # squares on grid]
+@param squares [square divs constituting minesweeper grid]
+@ param randomSquaresAll [array of all grid squares in random order]
+*/
 function defeatStyleSquaresSequentially(j, squares, randomSquaresAll) {
     setTimeout(function() {
         squares[randomSquaresAll[j]].classList.remove("hovered-squares", "even-squares", "odd-squares", "blue");
@@ -146,7 +172,9 @@ function defeatStyleSquaresSequentially(j, squares, randomSquaresAll) {
         squares[j].removeEventListener("click", minesweep);                    
     }, 5 * j);
 }
-// changes the grid to black with red skull icons on each square as the final defeat state for each game
+/* changes the grid to black with red skull icons on each square as the final defeat state for each game
+@param squares [square divs constituting minesweeper grid]
+*/
 function defeatStyleChangesFinal(squares) {
     setTimeout(function() {            
         for (square of squares) {

@@ -21,7 +21,10 @@ function assignHTML() {
         }        
     }
 }
-//counts the surrounding squares for mines and assigns HTML if the square is on the right edge of the grid
+/*counts the surrounding squares for mines and assigns HTML if the square is on the right edge of the grid
+@param squares [divs, minesweeper grid squares]
+@param inputSquare [square clicked on]
+*/
 function assignHTMLRight(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
@@ -44,7 +47,10 @@ function assignHTMLRight(squares, inputSquare) {
     }
     inputSquare.innerHTML = total;
 }
-//counts the surrounding squares for mines and assigns HTML if the square is on the left edge of the grid
+/*counts the surrounding squares for mines and assigns HTML if the square is on the left edge of the grid
+@param squares [divs, minesweeper grid squares]
+@param inputSquare [square clicked on]
+*/
 function assignHTMLLeft(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
@@ -67,7 +73,10 @@ function assignHTMLLeft(squares, inputSquare) {
     } 
     inputSquare.innerHTML = total;
 }
-//counts the surrounding squares for mines and assigns HTML if the square is in the bottom left corner of the grid
+/*counts the surrounding squares for mines and assigns HTML if the square is in the bottom left corner of the grid
+@param squares [divs, minesweeper grid squares]
+@param inputSquare [square clicked on]
+*/
 function assignHTMLBottomLeft(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
@@ -84,7 +93,10 @@ function assignHTMLBottomLeft(squares, inputSquare) {
     } 
     inputSquare.innerHTML = total;
 }
-//counts the surrounding squares for mines and assigns HTML if the square is in the bottom right corner of the grid
+/*counts the surrounding squares for mines and assigns HTML if the square is in the bottom right corner of the grid
+@param squares [divs, minesweeper grid squares]
+@param inputSquare [square clicked on]
+*/
 function assignHTMLBottomRight(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
@@ -101,7 +113,10 @@ function assignHTMLBottomRight(squares, inputSquare) {
     } 
     inputSquare.innerHTML = total;
 }
-//counts the surrounding squares for mines and assigns HTML if the square is in the top left corner of the grid
+/*counts the surrounding squares for mines and assigns HTML if the square is in the top left corner of the grid
+@param squares [divs, minesweeper grid squares]
+@param inputSquare [square clicked on]
+*/
 function assignHTMLTopLeft(squares, inputSquare) {
     let total = 0;
     for (squareTarget of squares) {
@@ -119,8 +134,8 @@ function assignHTMLTopLeft(squares, inputSquare) {
     inputSquare.innerHTML = total;
 }
 /*counts the surrounding squares for mines and assigns HTML if the square is anywhere in the middle of the grid
-@param squares []
-@param inputSquare [] 
+@param squares [divs, minesweeper grid squares]
+@param inputSquare [square clicked on]
 */
 function assignHTMLMiddle(squares, inputSquare) {
     let total = 0;
