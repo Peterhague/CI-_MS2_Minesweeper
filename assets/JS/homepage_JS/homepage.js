@@ -1,3 +1,4 @@
+/*initialises the emailJS interface*/
 (function() {
     emailjs.init("user_TnGv5LfOGP5Nqwj1AQR0U");
   })();
