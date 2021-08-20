@@ -4,7 +4,7 @@
     min-width: 180px;
 }
 
-.flagInputs {
+.flagInputs {/*user input fields below each flag*/
     width: 100px;
     background-color: #d3d3d3;
     border: solid 2px;
@@ -13,7 +13,7 @@
     font-weight: 500;
 }
 
-.playFlagsInitial {
+.playFlagsInitial {/*styling of play button on page load - rudimentary 'Earth' effect, blue bg and green button etc*/
     border: none;
     width: 10vmax;
     height: 10vmax;
@@ -26,12 +26,12 @@
     border: solid white 4px;
 }
 
-.playFlagsInitial:hover {
+.playFlagsInitial:hover {/*so that hover over the globe element gives a nice halo effect*/
     cursor: pointer;
     border: solid rgb(134, 233, 240) 4px;
 }
 
-.playFlagsSubsequent {
+.playFlagsSubsequent {/*styling of Play button once game is in progress - switch between classes via JS*/
     color: white;
     background-color: rgb(54, 68, 228);
     border: none;
@@ -68,7 +68,7 @@
     font-size: 1.5em;
 }
 
-.answerDiv {
+.answerDiv {/*divs below flags where a tick or cross is displayed on submission of answers*/
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
 }
@@ -85,7 +85,7 @@
 
 @media screen and (max-width: 550px) {
 
-    .playFlagsInitial {
+    .playFlagsInitial {/*fine-tuning of the Earth-style play button for mobile devices*/
         border: none;
         width: 15vmax;
         height: 15vmax;
@@ -101,7 +101,7 @@
 
 @media screen and (min-width: 700px) and (max-width: 1000px) { /*e.g. Ipad*/
 
-    .playFlagsInitial {
+    .playFlagsInitial {/*fine-tuning of the Earth-style play button for smaller tablets*/
         border: none;
         width: 20vmax;
         height: 20vmax;
@@ -120,7 +120,7 @@
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {/* ie Ipad Pro*/
 
-    .playFlagsInitial {
+    .playFlagsInitial {/*fine-tuning of the Earth-style play button for larger tablets*/
         border: none;
         width: 18vmax;
         height: 18vmax;
@@ -140,7 +140,7 @@
         margin-top: 8vh;
         margin-bottom: 8vh;
     }
-    #flagsRowOne {
+    #flagsRowOne {/*to eaxpand game layout for the larger tablets, achieve a more balanced look*/
         margin-top: 10vh;
     }
     .playFlagsSubsequent, #flagsSubmitAnswer {
