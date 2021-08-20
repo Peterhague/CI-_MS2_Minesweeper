@@ -80,7 +80,7 @@
   </div>
   <!-------------------------------------User suggestions form for mobiles and small tablets (no images displayed)-------------------------------------------->
   <div id="container-form" class="d-lg-none">
-    <form id="contact-form" onsubmit="return sendMail(this);" novalidate>
+    <form name="ideasForm" id="contact-form" onsubmit="return formValidation(this);" novalidate>
       <label class="hide" for="firstName">First Name</label>
       <input type="text" name="firstName" id="firstName" placeholder="First Name" class="contact-form-items">
       <label class="hide" for="lastName">Last Name</label>
