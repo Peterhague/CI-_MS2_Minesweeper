@@ -34,43 +34,43 @@
     margin-top: 8vh;
 }
 
-h2 {
+h2 {/* the Have fun!! text in welcome message*/
     font-size: 1.25em;
 }
 .imageRows {
     height: 33%;
 }
-#imageLeftOne {
+#imageLeftOne {/*top left image around welcome message*/
     background-image: url("../images/bee.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-#imageRightOne {
+#imageRightOne {/*top right image around welcome message*/
     background-image: url("../images/bombflipped.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-#imageLeftTwo {
+#imageLeftTwo {/*middle left image around welcome message*/
     background-image: url("../images/unionjack.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-#imageRightTwo {
+#imageRightTwo {/*middle right image around welcome message*/
     background-image: url("../images/unionjackflipped.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-#imageLeftThree {
+#imageLeftThree {/*bottom left image around welcome message*/
     background-image: url("../images/bomb.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-#imageRightThree {
+#imageRightThree {/*bottom right image around welcome message*/
     background-image: url("../images/beeflipped.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -85,13 +85,13 @@ h2 {
     margin-top: 20vh;
     margin-bottom: 6vh;
 }
-#formImageLeft{
+#formImageLeft{/*image to left of form*/
     background-image: url("../images/lightbulb.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-#formImageRight{
+#formImageRight{/*image to right of form*/
     background-image: url("../images/lightbulb.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -114,7 +114,7 @@ h2 {
     border: solid;
 }
 
-.contact-form-items {
+.contact-form-items {/*contact form inputs*/
     display: block;
     color: #f81ba3;
     background-color: black;
@@ -128,12 +128,12 @@ h2 {
     padding-left: 10px;
 }
 
-.contact-form-items::placeholder {
+.contact-form-items::placeholder {/*style of placeholder text in contact form*/
     color: white;
     opacity: 1;
 }
 
-#contact-submit {
+#contact-submit {/*form submit button for mobile*/
     font-family: 'Cairo', sans-serif;
     background-color: black;
     color: white;
@@ -146,7 +146,7 @@ h2 {
     border: solid black;
 }
 
-#contact-submit-desktop {
+#contact-submit-desktop {/*form submit button desktop*/
     font-family: 'Cairo', sans-serif;
     background-color: black;
     color: white;
@@ -175,7 +175,7 @@ h2 {
     border: solid;
 }
 
-#formErrorMessage {
+#formErrorMessage {/*div below the form for feeding back javascript validation result*/
     font-weight: 700;
     margin-bottom: 10vh;
     font-size: 1.3em;
@@ -188,7 +188,7 @@ h2 {
 
 @media screen and (max-width: 550px) {
 
-    #welcomeMessageMobile {
+    #welcomeMessageMobile {/*make message wider, leave minimal white space on mobile*/
         font-size: 1em;
         width: 80%;
         padding: 3vh;
@@ -199,13 +199,13 @@ h2 {
         padding-bottom: 2vh;
     }
 
-    #contact-form {
+    #contact-form {/*make message wider, leave minimal white space on mobile*/
         width: 80%;
         text-align: center;
         display: inline-block;
     }
 
-    .contact-form-items {
+    .contact-form-items {/*adjust form elements for wider mobile configuration*/
         display: inline-block;
         color: #f81ba3;
         background-color: black;
@@ -222,11 +222,11 @@ h2 {
 
 @media screen and (min-width: 700px) and (max-width: 1000px) { /*e.g. Ipad*/
 
-    #welcomeMessageMobile {
+    #welcomeMessageMobile {/*make form somewhat wider on smaller tablets (no images to display)*/
         width: 60vw;
         padding-bottom: 2vh;
     }
-    #welcomeMessageContainer {
+    #welcomeMessageContainer {/*smaller margin, facilitate dsiplay of all content on page load*/
         margin-top: 6vh;
     }
     #container-form {
