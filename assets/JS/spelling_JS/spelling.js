@@ -87,9 +87,10 @@ If the spelling is correct a 'correct' message is displayed. The code then check
 that question, and if so, adds half a point to their score. If not, it adds a full point.
 */
 function spellcheck () {
-  setTimeout (function() {
   if (output.toLowerCase() === inputTwo.value.toLowerCase()) {
+    setTimeout(function() {
       answerBox.innerHTML = "correct!";
+    }, 1000);
     if (answerBox.classList.contains("hinted")) {
       addOne += 0.5;
       answerBox.classList.remove("hinted");
@@ -99,11 +100,12 @@ function spellcheck () {
       questionsCorrect(addOne);
     }
   } else {
-    answerBox.innerHTML = "incorrect!";
+    setTimeout(function() {
+      answerBox.innerHTML = "incorrect!";
+    }, 1000);
     answerBox.classList.remove("hinted");
     questionsCorrect(addOne);
   }
-    }, 1000);   
 }
 //resets the user input and the displayed answer to blank, with a 2.5s delay for the answer
 function clearAnswer() {
