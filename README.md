@@ -755,9 +755,9 @@ Guess the Flags game.</li></ul>
 <h4>Devices tested:</h4>
 <ul>
 <li>Samsung Galaxy A7</li>
-<li>HP laptop</li>
-<li>Motorolla</li>
-<li>Ipad Pro</li>
+<li>HP 250 G7 laptop</li>
+<li>Apple Iphone X</li>
+<li>Apple Ipad Pro</li>
 </ul>
 <h4>Tests performed:</h4>
 <ol>
@@ -1574,6 +1574,27 @@ This website has been deployed using GitHub pages. The process is as follows:
 <li>Type 'git clone' and then paste the URL in your IDE's terminal</li>
 <li>Press Return</li>
 <li>The local clone should now have been created</li>
+</ol>
+
+<h3>API access</h3>
+
+<h4>Email JS</h4>
+
+<ol>
+<li>Create an account at <a href="https://www.emailjs.com/" target="_blank">emailjs.com</a></li>
+<li>When logged in, navigate to the Integration section via the sidebar link, and note your User ID.</li>
+<li>Navigate to the Email Services section via the sidebar link, and follow the steps to create an email service. Note the Service ID.</li>
+<li>Navigate to the Email Templates section via the sidebar link, and follow the instructions to create an email template. Note the Template ID.</li>
+<li>Update the Javascript at line 3 of homepage.js with your User ID.</li>
+<li>Update the Javascript at line 7 of homepage.js with your Service ID and Template ID respectively.</li>
+</ol>
+
+<h4>Responsive Voice</h4>
+
+<ol>
+<li>Create an account at <a href="https://responsivevoice.org/" target="_blank">responsivevoice.com</a></li>
+<li>Follow the steps to receive your Javascript code including the API key.</li>
+<li>Paste the code into the spelling-bee.html file to replace the existing script at line 79.</li>
 </ol>
 
 <h2 id="credits">Credits</h2>
