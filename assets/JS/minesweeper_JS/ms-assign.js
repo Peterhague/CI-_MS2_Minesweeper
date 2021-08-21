@@ -168,7 +168,7 @@ function assignRelativePosition() {
         if (sqid === 0) {//if square is top left corner
             square.classList.add("top-left");
         } else if (sqid > 0 && sqid < (selectedRows -1)) {//if square has id between 1 and the number of squares in each row -1
-            square.classList.add("top-edge")//ie it's on top row but not left corner and not right corner
+            square.classList.add("top-edge");//ie it's on top row but not left corner and not right corner
         } else if (sqid === selectedRows -1) {//if square has id = to number of squares in each row, -1
             square.classList.add("top-right");
         } else if (sqid > 0 && sqid % selectedRows === 0 && sqid != (selectedSquares - selectedRows)) {//if it's not top left,

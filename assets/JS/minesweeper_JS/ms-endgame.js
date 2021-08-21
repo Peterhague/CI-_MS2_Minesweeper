@@ -89,7 +89,7 @@ function victorySquaresSmileysWhite(squares) {
         for (square of squares) {
             square.style.backgroundColor = "white";
             square.style.color = "rgb(17, 231, 238)";
-        };
+        }
     }, 2000);
 }
 /*if the square clicked on contains a mine, generates a random array of all mined squares and passes it to the next function
@@ -99,7 +99,7 @@ function gameOverOne() {
     let bombs = document.getElementsByClassName("bomb");
     if (this.classList.contains("bomb") && !this.classList.contains("flagged")) {
         for (bomb of bombs) {
-            bomb.innerHTML = `<i class="fas fa-skull"></i>`
+            bomb.innerHTML = `<i class="fas fa-skull"></i>`;
         }
         generateArrayRandomSquares(randomSquaresBombs,selectedBombs);
         for (let j = 0; j < selectedBombs; j++) {
@@ -181,6 +181,6 @@ function defeatStyleChangesFinal(squares) {
             square.style.backgroundColor = "black";
             square.style.color = "red";
             square.innerHTML = `<i class="fas fa-skull"></i>`;
-        };
+        }
     }, (selectedRows * 100) + 500);
 }

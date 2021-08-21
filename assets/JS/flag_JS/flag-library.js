@@ -63,4 +63,4 @@ let flagObjects = [{'code': 'ad', 'name': 'Andorra'},{'code': 'ae', 'name': 'Uni
 {'code': 've', 'name': 'Venezuela'},{'code': 'vn', 'name': 'Vietnam'},{'code': 'vu', 'name': 'Vanuatu'},
 {'code': 'ye', 'name': 'Yemen'},{'code': 'za', 'name': 'South Africa'},{'code': 'zm', 'name': 'Zambia'},
 {'code': 'zw', 'name': 'Zimbabwe'}
-]
+];

@@ -38,7 +38,7 @@ let titlePixelsColored = ["pixel802","pixel702","pixel803","pixel804","pixel805"
 "pixel492","pixel392","pixel292","pixel194","pixel193","pixel195","pixel195","pixel893","pixel894","pixel895","pixel896","pixel493","pixel494", "pixel571", "pixel280",
 "pixel576","pixel577","pixel578","pixel879","pixel567","pixel572","pixel776","pixel676","pixel476","pixel376","pixel276","pixel487","pixel785","pixel685","pixel585",
 "pixel385","pixel285","pixel189","pixel889","pixel197","pixel293","pixel393","pixel495","pixel593","pixel693","pixel793","pixel897","pixel579","pixel480","pixel381",
-"pixel281","pixel180","pixel880","pixel781","pixel681"]
+"pixel281","pixel180","pixel880","pixel781","pixel681"];
 let pixelsBlack = ["pixel202","pixel302","pixel702","pixel802","pixel105","pixel106","pixel606","pixel706","pixel806","pixel805","pixel605","pixel505","pixel111",
 "pixel211","pixel311","pixel411","pixel511","pixel611","pixel711","pixel811","pixel512","pixel412","pixel212","pixel112","pixel515","pixel415","pixel215","pixel115",
 "pixel216","pixel316","pixel416","pixel121","pixel221","pixel321","pixel421","pixel521","pixel621","pixel721","pixel821","pixel822","pixel422","pixel122","pixel125",
@@ -50,7 +50,7 @@ let pixelsBlack = ["pixel202","pixel302","pixel702","pixel802","pixel105","pixel
 "pixel280","pixel380","pixel480","pixel381","pixel281","pixel681","pixel681","pixel681","pixel680","pixel780","pixel880","pixel781","pixel185","pixel285","pixel385",
 "pixel485","pixel585","pixel685","pixel785","pixel885","pixel886","pixel486","pixel186","pixel189","pixel889","pixel193","pixel194","pixel293","pixel393","pixel494",
 "pixel493","pixel593","pixel693","pixel793","pixel893","pixel894","pixel897","pixel197","pixel155","pixel255","pixel355","pixel455","pixel555","pixel655","pixel755",
-"pixel855"]
+"pixel855"];
 let titlePixels = document.getElementsByClassName("title-pixels");
 /*assigns background color to the title divs based on their position to spell out a title, and colours them yellow.*/
 for (pixel of titlePixels) {

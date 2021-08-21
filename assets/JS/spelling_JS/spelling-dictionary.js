@@ -75,4 +75,4 @@ let dictionary = [["asian","banana","based","beastly","beehive","believe","bobca
 "plenipotent","nudnik","oligopoly","obnubilate","lackadaisical","machinate","equanimity","polliniferous","exonumia","sumpsimus",
 "celluloid","olfactory","specious","pandiculation","propinquity","putative","phlegmatic","bricolage","campestral","effulgent",
 "matzo"]
-]
+];

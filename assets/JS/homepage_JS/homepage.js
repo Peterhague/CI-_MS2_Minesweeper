@@ -18,7 +18,7 @@ function sendMailMobile(contactForm) {
             console.log("success, response");
         },
         function(error) {
-            console.log("Failed", error)
+            console.log("Failed", error);
         });
     return false;    
 }
@@ -29,7 +29,7 @@ function sendMailDesktop(contactForm) {
         "last_name": contactForm.lastNameDesktop.value,
         "email_address": contactForm.emailAddressDesktop.value,
         "message": contactForm.suggestionDesktop.value,
-    })
+    });
     return false;    
 }
 /*function to validate the form for user idea submissions.
@@ -87,7 +87,7 @@ function formValidation(that) {
             return false;
         } else {
             sendMailDesktop(that);
-            errormsg.innerHTML = `Thanks for getting in touch!<br>We'll get back to you soon <i class="far fa-smile"></i>`
+            errormsg.innerHTML = `Thanks for getting in touch!<br>We'll get back to you soon <i class="far fa-smile"></i>`;
             errormsg.classList.remove("text-red");
             errormsg.classList.add("text-green");
             showMessage.click();
@@ -138,7 +138,7 @@ function formValidation(that) {
             return false;
         } else {
             sendMailMobile(that);
-            errormsg.innerHTML = `Thanks for getting in touch!<br>We'll get back to you soon <i class="far fa-smile"></i>`
+            errormsg.innerHTML = `Thanks for getting in touch!<br>We'll get back to you soon <i class="far fa-smile"></i>`;
             errormsg.classList.remove("text-red");
             errormsg.classList.add("text-green");
             showMessage.click();

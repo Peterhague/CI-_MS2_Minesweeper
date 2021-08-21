@@ -31,6 +31,7 @@
 <ol>
 <li><a href="#html-validation">HTML Validation</a></li>
 <li><a href="#css-validation">CSS Validation</a></li>
+<li><a href="#javascript-validation">Javascript Validation</a></li>
 <li><a href="#accessibility">Accessibility</a></li>
 <li><a href="#performance">Performance</a></li>
 <li><a href="#device-testing">Device testing</a></li>
@@ -777,6 +778,56 @@ Guess the Flags game.</li></ul>
 <img src="docs/images/validation/validation-css-minesweeper.png" alt="screenshot of css validation of minesweeper page">
 <img src="docs/images/validation/validation-css-spelling.png" alt="screenshot of css validation of spelling bee page">
 <img src="docs/images/validation/validation-css-flags.png" alt="screenshot of css validation of guess the flags page">
+
+</details>
+
+<h3 id="javascript-validation">Javascript Validation</h3>
+
+<p>The <a href="https://jshint.com/" target="_blank">JSHint validator</a> was used for Javascript validation of the site. All files passed with zero errors.
+Each file returned multiple warning, but almost all were related to using 'let' instead of 'var', the use of template literals, or undefined variables
+in 'for of' loops and such.</p>
+
+<details>
+<summary>JSHint validation of files relating to the website's headers</summary>
+
+<img src="docs/images/validation/jshint-title-home-js.png" alt="screenshot of Javascript validation of title-home.js file">
+<img src="docs/images/validation/jshint-title-ms-js.png" alt="screenshot of Javascript validation of title-ms.js file">
+<img src="docs/images/validation/jshint-title-spelling-js.png" alt="screenshot of Javascript validation of title-spelling.js file">
+<img src="docs/images/validation/jshint-title-flags-js.png" alt="screenshot of Javascript validation of title-flags.js file">
+
+</details>
+
+<details>
+<summary>JSHint validation of files relating to the Home page</summary>
+
+<img src="docs/images/validation/jshint-homepage-js.png" alt="screenshot of Javascript validation of homepage.js file">
+
+</details>
+
+<details>
+<summary>JSHint validation of files relating to the Minesweeper page</summary>
+
+<img src="docs/images/validation/jshint-ms-assign.png" alt="screenshot of Javascript validation of ms-assign.js file">
+<img src="docs/images/validation/jshint-ms-automation.png" alt="screenshot of Javascript validation of ms-automation.js file">
+<img src="docs/images/validation/jshint-ms-endgame-js.png" alt="screenshot of Javascript validation of ms-endgame.js file">
+<img src="docs/images/validation/jshint-ms-global-js.png" alt="screenshot of Javascript validation of ms-global.js file">
+<img src="docs/images/validation/jshint-ms-squares-functions-js.png" alt="screenshot of Javascript validation of ms-squares-functions.js file">
+
+</details>
+
+<details>
+<summary>JSHint validation of files relating to the Spelling Bee page</summary>
+
+<img src="docs/images/validation/jshint-spelling-dictionary-js.png" alt="screenshot of Javascript validation of spelling-dictionary.js file">
+<img src="docs/images/validation/jshint-spelling-js.png" alt="screenshot of Javascript validation of spelling.js file">
+
+</details>
+
+<details>
+<summary>JSHint validation of files relating to the Guess the Flag page</summary>
+
+<img src="docs/images/validation/jshint-flag-library-js.png" alt="screenshot of Javascript validation of flag-library.js file">
+<img src="docs/images/validation/jshint-guess-the-flag-js.png" alt="screenshot of Javascript validation of guess-the-flag.js file">
 
 </details>
 

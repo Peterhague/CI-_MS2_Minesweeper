@@ -79,7 +79,7 @@ function stylingChanges() {
     let scoreBar = document.getElementById("score-bar");
     scoreBar.classList.add("score-bar-bg");
     let play = document.getElementById("play");
-    play.classList.add("score-bar-bg")
+    play.classList.add("score-bar-bg");
     let flagContianer = document.getElementById("flag-container");
     flagContianer.classList.remove("invisible-text");
     flagContianer.classList.add("text-red");
@@ -94,7 +94,7 @@ function generatedGridRows() {
     grid.innerHTML = "";
     for (i = 0; i < selectedRows; i++) {
         gridRow = document.createElement("div");
-        gridRow.classList.add("grid-rows", `grid-row-${i}`) 
+        gridRow.classList.add("grid-rows", `grid-row-${i}`);
         grid.appendChild(gridRow);
     } 
 }

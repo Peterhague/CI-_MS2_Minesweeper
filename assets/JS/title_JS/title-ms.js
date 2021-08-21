@@ -41,7 +41,7 @@ let titlePixelsColored = ["pixel102", "pixel103", "pixel202", "pixel302", "pi
  "pixel492", "pixel592", "pixel591", "pixel691", "pixel791", "pixel892", "pixel891", "pixel792", "pixel692", "pixel193", "pixel194", "pixel195", "pixel295",
  "pixel296", "pixel396", "pixel397", "pixel496", "pixel495", "pixel595", "pixel594", "pixel594", "pixel593", "pixel695", "pixel696", "pixel796", "pixel797",
  "pixel897", "pixel141", "pixel836", "pixel137", "pixel128", "pixel828", "pixel157", "pixel857", "pixel865", "pixel165", "pixel173", "pixel183", "pixel883",
- "pixel144", "pixel154", "pixel549", "pixel124", "pixel225", "pixel236", "pixel898"]
+ "pixel144", "pixel154", "pixel549", "pixel124", "pixel225", "pixel236", "pixel898"];
 let titlePixels = document.getElementsByClassName("title-pixels");
 /*assigns background color to the title divs based on their position to spell out a title, and coloured at random*/
 for (pixel of titlePixels) {

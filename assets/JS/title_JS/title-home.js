@@ -33,7 +33,7 @@ let titlePixelsColored = ["pixel112","pixel113","pixel114","pixel115","pixel116"
 "pixel780","pixel781","pixel785","pixel786","pixel788","pixel789","pixel811","pixel812","pixel813","pixel814","pixel815","pixel816","pixel817","pixel821",
 "pixel822","pixel828","pixel829","pixel832","pixel833","pixel839","pixel840","pixel844","pixel845","pixel846","pixel847","pixel848","pixel851","pixel852",
 "pixel853","pixel854","pixel855","pixel864","pixel865","pixel868","pixel869","pixel875","pixel876","pixel881","pixel882","pixel883","pixel884","pixel885",
-"pixel888","pixel889","pixel251","pixel134"]
+"pixel888","pixel889","pixel251","pixel134"];
 let titlePixels = document.getElementsByClassName("title-pixels");
 /*assigns background color to the title divs based on their position to spell out a title, and coloured blue*/
 for (pixel of titlePixels) {

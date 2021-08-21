@@ -117,7 +117,7 @@ function automatedClick(that) {
     for (square of clickedSquareRadius) {
         square.classList.add(`csr-${that.id}`);
     }   
-    let automatedClickers = document.getElementsByClassName(`csr-${that.id}`)
+    let automatedClickers = document.getElementsByClassName(`csr-${that.id}`);
     for (clicker of automatedClickers) {   
         clicker.click();
         clicker.classList.add("automaticallyClicked");

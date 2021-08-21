@@ -38,7 +38,7 @@ let titlePixelsColored = ["pixel500","pixel600","pixel700","pixel701","pixel601"
 "pixel489","pixel384","pixel284","pixel285","pixel388","pixel288","pixel287","pixel185","pixel186","pixel187","pixel492","pixel392","pixel592",
 "pixel692","pixel792","pixel793","pixel693","pixel593","pixel493","pixel393","pixel794","pixel893","pixel894","pixel895","pixel896","pixel897",
 "pixel898","pixel798","pixel698","pixel699","pixel799","pixel899","pixel597","pixel598","pixel599","pixel293","pixel294","pixel194","pixel195",
-"pixel196","pixel197","pixel198","pixel199","pixel299", "pixel142","pixel837","pixel829","pixel134"]
+"pixel196","pixel197","pixel198","pixel199","pixel299", "pixel142","pixel837","pixel829","pixel134"];
 let titlePixels = document.getElementsByClassName("title-pixels-flags");
 /*assigns background color to the title divs based on their position to spell out a title. The divs in the titlePixelsColored
 array are the ones spelling out the words. Additionally, certain divs are coloured differently in order to create the effect

@@ -150,9 +150,9 @@ function iterateCorrectAnswers(correctAnswers, flagInputs, answerDivs) {
         input.classList.remove("inlineBlock");
         input.classList.add("hide");
         for (container of flagContainers) {
-            if (input.getAttribute("data-input") == container.getAttribute("data-input") && (input.value.toLowerCase()
-             === container.getAttribute("data-flag-name").toLowerCase() || input.value.toLowerCase() === 
-             container.getAttribute("data-flag-alt-names").toLowerCase())) {
+            if (input.getAttribute("data-input") == container.getAttribute("data-input") && 
+            (input.value.toLowerCase() === container.getAttribute("data-flag-name").toLowerCase() || 
+            input.value.toLowerCase() === container.getAttribute("data-flag-alt-names").toLowerCase())) {
                 for (div of answerDivs) {
                     if (div.getAttribute("data-input") === input.getAttribute("data-input")) {
                         div.innerHTML = `<i class="fas fa-check text-green"></i>`;
@@ -190,7 +190,7 @@ function changeButton() {
 /* function displays the correct answer by getting the answerDiv's parent's previous sibling element (ie the flag) and accessing
 its stored country name in the data-flag-name attribute and displaying it to the user as the answer*/
 function revealAnswers() {
-    let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer")
+    let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.removeEventListener("click", revealAnswers);
     setFocusPlay();
     let answerDivs = document.getElementsByClassName("answerDiv");
