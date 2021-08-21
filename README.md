@@ -807,8 +807,8 @@ in 'for of' loops and such.</p>
 <details>
 <summary>JSHint validation of files relating to the Minesweeper page</summary>
 
-<img src="docs/images/validation/jshint-ms-assign.png" alt="screenshot of Javascript validation of ms-assign.js file">
-<img src="docs/images/validation/jshint-ms-automation.png" alt="screenshot of Javascript validation of ms-automation.js file">
+<img src="docs/images/validation/jshint-ms-assign-js.png" alt="screenshot of Javascript validation of ms-assign.js file">
+<img src="docs/images/validation/jshint-ms-automation-js.png" alt="screenshot of Javascript validation of ms-automation.js file">
 <img src="docs/images/validation/jshint-ms-endgame-js.png" alt="screenshot of Javascript validation of ms-endgame.js file">
 <img src="docs/images/validation/jshint-ms-global-js.png" alt="screenshot of Javascript validation of ms-global.js file">
 <img src="docs/images/validation/jshint-ms-squares-functions-js.png" alt="screenshot of Javascript validation of ms-squares-functions.js file">
