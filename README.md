@@ -20,6 +20,7 @@
 </ol>
 </li>
 <li><a href="#features">Features</a></li>
+<li><a href="#game-instructions">Game Instructions</a></li>
 <li><a href="#technologies-used">Technologies Used</a>
 <ol>
 <li><a href="#languages">Languages</a></li>
@@ -185,7 +186,15 @@ from larger images and had their backgrounds removed with online software. There
 
 <h2 id="wireframes">Wireframes</h2>
 
-<p>Wireframes: <a href="docs/wireframes/wireframe-home.png">Home</a><a href="docs/wireframes/wireframe-ms.png"> Minesweeper</a><a href="docs/wireframes/wireframe-spelling.png"> Spelling Bee</a><a href="docs/wireframes/wireframe-flags.png"> Guess the Flag</a></p>
+<details>
+<summary>Expand to view wireframes for each page of the website</summary>
+
+<img src="docs/wireframes/wireframe-home.png" alt="Home page wireframes">
+<img src="docs/wireframes/wireframe-ms.png" alt="Minesweeper page wireframes">
+<img src="docs/wireframes/wireframe-spelling.png" alt="Spelling Bee page wireframes">
+<img src="docs/wireframes/wireframe-flags.png" alt="Guess the Flag page wireframes">
+
+</details>
 
 <h2 id="features">Features</h2>
 
@@ -616,10 +625,11 @@ call to action, presented in sympathetic retro font.</p>
 <li>The ability for users to sign up and log in, so they can keep track of their scores and look at live leaderboards.</li>
 </ol>
 
-<h2 id="Game Instructions"></h2>
+<h2 id="game-instructions">Game Instructions</h2>
 
 <ul>
 <li>Minesweeper
+<ul>
 <li>Choose a difficulty from the dropdown menu presented when the page loads</li>
 <li>Click on the Play icon to generate the Minesweeper grid</li>
 <li>You need to discover which squares have mines hidden beneath them and which don't</li>
@@ -630,15 +640,41 @@ square's surrounding squares contain mines. By comparing that to the number of s
 without mines, you can start 'clearing' the squares.</li>
 <li>Where you are sure there is a mine, you can right click on the mouse to lay a flag as a marker. This will also prevent
 you from being able to left-click on that square by accident. If you make a mistake, you can right-click on that square again
-to remove the flag.</li>
+to remove the flag. If you are playing on a touchscreen device, touch the square for a little longer than usual to effect
+this flag place/remove toggle.</li>
 <li>If you clear all the unmined squares, you win!</li>
+</ul>
 </li>
 <ul>
 </ul>
 <li>Spelling Bee</li>
-<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+<ul>
+<li>Choose a difficulty from the dropdown menu presented when the page loads</li>
+<li>Click on the Play icon to start the game</li>
+<li>The game will speak ten words for each round. You need to enter your attempt at spelling each one by typing in the input
+field below the difficulty selector.</li>
+<li>When you are happy with your attempt, click on the Submit button to send it for marking. The display element will
+return either 'correct!' or 'incorrect!', and then the game will proceed to the following question.</li>
+<li>Repeat this process until the ten questions have been asked, and your final score will be presented to you.</li>
+<li>If you wish to hear any of the questions again, click on the Repeat button.</li>
+<li>If you would like some help with a question, click on the Hint button. The answer will be shown to you but with alternate letters
+repalced by asterisks. Unfortunately, you will only receive half a mark for a subsequent correct answer.</li>
+</ul>
+</li>
+<ul>
+</ul>
 <li>Guess the Flag</li>
-<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+<ul>
+<li>Click on the Play icon to start the game</li>
+<li>The game will present you with ten images of national flags, with an input field below each one.</li>
+<li>Attempt to identify which country each one belongs to by typing the input field below each flag.</li>
+<li>When you are happy with your answers, press the Submit button to have them marked. Do not press the button
+until you are happy with all your answers, as the game marks all of them at once.</li>
+<li>Press the Reveal button to be shown the correct answers to all of the flags you didn't identify correctly.</li>
+</ul>
+</li>
+<ul>
+</ul>
 </ul>
 
 <h2 id="technologies-used">Technologies Used</h2>
