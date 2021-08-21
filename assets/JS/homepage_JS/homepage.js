@@ -14,10 +14,10 @@ function sendMailMobile(contactForm) {
         "message": contactForm.suggestion.value,
     })
     .then(
-        function(response) {
+        function (response) {
             console.log("success", response);
         },
-        function(error) {
+        function (error) {
             console.log("Failed", error);
         });
     return false;    
