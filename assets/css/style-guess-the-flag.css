@@ -1,10 +1,10 @@
-.flagContainersOuter {
+.flag-containers-outer {
     position: relative;
     min-height: 150px;
     min-width: 180px;
 }
 
-.flagInputs {/*user input fields below each flag*/
+.flag-inputs {/*user input fields below each flag*/
     width: 100px;
     background-color: #d3d3d3;
     border: solid 2px;
@@ -13,7 +13,7 @@
     font-weight: 500;
 }
 
-.playFlagsInitial {/*styling of play button on page load - rudimentary 'Earth' effect, blue bg and green button etc*/
+.play-flags-initial {/*styling of play button on page load - rudimentary 'Earth' effect, blue bg and green button etc*/
     border: none;
     width: 10vmax;
     height: 10vmax;
@@ -26,12 +26,12 @@
     border: solid white 4px;
 }
 
-.playFlagsInitial:hover {/*so that hover over the globe element gives a nice halo effect*/
+.play-flags-initial:hover {/*so that hover over the globe element gives a nice halo effect*/
     cursor: pointer;
     border: solid rgb(134, 233, 240) 4px;
 }
 
-.playFlagsSubsequent {/*styling of Play button once game is in progress - switch between classes via JS*/
+.play-flags-subsequent {/*styling of Play button once game is in progress - switch between classes via JS*/
     color: white;
     background-color: rgb(54, 68, 228);
     border: none;
@@ -53,7 +53,7 @@
     font-size: 1.1em;
 }
 
-.playFlagsSubsequent:hover, #flagsSubmitAnswer:hover {
+.play-flags-subsequent:hover, #flagsSubmitAnswer:hover {
     opacity: 0.8;
     cursor: pointer;
 }
@@ -64,20 +64,20 @@
     font-size: 1.4em;
 }
 
-.scoreSmileys {
+.score-smileys {
     font-size: 1.5em;
 }
 
-.answerDiv {/*divs below flags where a tick or cross is displayed on submission of answers*/
+.answer-div {/*divs below flags where a tick or cross is displayed on submission of answers*/
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
 }
 
-.answerDiv, .inputContainer {
+.answer-div, .input-container {
     height: 15px;
 }
 
-.inputContainer {
+.input-container {
     text-align: center;
 }
 
@@ -85,7 +85,7 @@
 
 @media screen and (max-width: 550px) {
 
-    .playFlagsInitial {/*fine-tuning of the Earth-style play button for mobile devices*/
+    .play-flags-initial {/*fine-tuning of the Earth-style play button for mobile devices*/
         border: none;
         width: 15vmax;
         height: 15vmax;
@@ -101,7 +101,7 @@
 
 @media screen and (min-width: 700px) and (max-width: 1000px) { /*e.g. Ipad*/
 
-    .playFlagsInitial {/*fine-tuning of the Earth-style play button for smaller tablets*/
+    .play-flags-initial {/*fine-tuning of the Earth-style play button for smaller tablets*/
         border: none;
         width: 20vmax;
         height: 20vmax;
@@ -120,7 +120,7 @@
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {/* ie Ipad Pro*/
 
-    .playFlagsInitial {/*fine-tuning of the Earth-style play button for larger tablets*/
+    .play-flags-initial {/*fine-tuning of the Earth-style play button for larger tablets*/
         border: none;
         width: 18vmax;
         height: 18vmax;
@@ -143,7 +143,7 @@
     #flagsRowOne {/*to eaxpand game layout for the larger tablets, achieve a more balanced look*/
         margin-top: 10vh;
     }
-    .playFlagsSubsequent, #flagsSubmitAnswer {
+    .play-flags-subsequent, #flagsSubmitAnswer {
         font-size: 1.5em;
         min-width: 130px;
     }

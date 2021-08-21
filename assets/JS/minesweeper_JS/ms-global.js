@@ -83,7 +83,7 @@ function stylingChanges() {
     let flagContianer = document.getElementById("flag-container");
     flagContianer.classList.remove("invisible-text");
     flagContianer.classList.add("text-red");
-    let bombsMotif = document.getElementsByClassName("bombsMotif");
+    let bombsMotif = document.getElementsByClassName("bombs-motif");
     for (item of bombsMotif) {
         item.classList.add("hide");
     }
@@ -142,11 +142,11 @@ function squareSize() {
     let selectedDifficulty = difficulty.value;
     for (square of squares) {
         if (selectedDifficulty == "Easy") {
-            square.classList.add("squaresBig");   
+            square.classList.add("squares-big");   
         } else if (selectedDifficulty == "Medium") {
-            square.classList.add("squaresMedium") ;   
+            square.classList.add("squares-medium") ;   
         } else {
-            square.classList.add("squaresSmall");   
+            square.classList.add("squares-small");   
         }
     }
 }

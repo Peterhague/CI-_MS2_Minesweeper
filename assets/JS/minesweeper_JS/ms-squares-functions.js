@@ -18,10 +18,10 @@ function addFlags() {
                 } else if (this.classList.contains("odd-squares")) {
                     // same process as above but for "odd-squares"
                     squareFlagged(this, "odd");
-                } else if (this.classList.contains("flagged") && this.classList.contains("evenReserved")) {
+                } else if (this.classList.contains("flagged") && this.classList.contains("even-reserved")) {
                     // reverses the process when an even square already has a flag
                     squareUnflagged(this, "even");
-                } else if (this.classList.contains("flagged") && this.classList.contains("oddReserved")) {
+                } else if (this.classList.contains("flagged") && this.classList.contains("odd-reserved")) {
                     // reverses the process when an odd square already has a flag
                     squareUnflagged(this, "odd");
                 }
@@ -41,7 +41,7 @@ information about the # of mines in a cutom attribute 'data-id', again so this c
 function squareFlagged(that, evenOrOdd) {
     $(that).removeClass(`${evenOrOdd}-squares`);
     $(that).removeClass("hovered-squares");
-    $(that).addClass(`${evenOrOdd}Reserved`);
+    $(that).addClass(`${evenOrOdd}-reserved`);
     $(that).addClass("flagged");
     $(that).attr("data-id", that.innerHTML);
     $(that).html(`<i class="fas fa-flag"></i>`); // square displays the flag icon
@@ -53,7 +53,7 @@ function squareFlagged(that, evenOrOdd) {
 */
 function squareUnflagged(that, evenOrOdd) {
     $(that).removeClass("flagged");
-    $(that).removeClass(`${evenOrOdd}Reserved`);
+    $(that).removeClass(`${evenOrOdd}-reserved`);
     $(that).addClass(`${evenOrOdd}-squares`);
     $(that).addClass("hovered-squares");
     $(that).html($(that).attr("data-id"));
@@ -90,9 +90,9 @@ function addFlagsLong(that) {
             squareFlagged(that, "even");
         } else if (that.classList.contains("odd-squares")) {
             squareFlagged(that, "odd");
-        } else if (that.classList.contains("flagged") && that.classList.contains("evenReserved")) {
+        } else if (that.classList.contains("flagged") && that.classList.contains("even-reserved")) {
             squareUnflagged(that, "even");
-        } else if (that.classList.contains("flagged") && that.classList.contains("oddReserved")) {
+        } else if (that.classList.contains("flagged") && that.classList.contains("odd-reserved")) {
             squareUnflagged(that, "odd");
         } 
     } 
@@ -108,7 +108,7 @@ are changed in colour to signify that they've been cleared, and assigned a text 
 them, and then the signifying class 'clicked-square-radius' is removed from all other squares, to facilitate the autoamted clicking
 code that will be triggered in certain cases. The function minesweepRoutineDetector is then called.*/
 function minesweep() {
-    if (!this.classList.contains("flagged") && !this.classList.contains("automaticallyClicked")) {
+    if (!this.classList.contains("flagged") && !this.classList.contains("automatically-clicked")) {
         this.classList.remove("hovered-squares");// removes the highlight effect from clicked squares
         this.classList.remove("even-squares", "odd-squares");
         this.classList.add("selected");// adds identifier to clicked squares

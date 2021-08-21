@@ -14,8 +14,8 @@ function sendMailMobile(contactForm) {
         "message": contactForm.suggestion.value,
     })
     .then(
-        function(resposne) {
-            console.log("success, response");
+        function(response) {
+            console.log("success", response);
         },
         function(error) {
             console.log("Failed", error);

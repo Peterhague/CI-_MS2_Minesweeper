@@ -120,7 +120,7 @@ function automatedClick(that) {
     let automatedClickers = document.getElementsByClassName(`csr-${that.id}`);
     for (clicker of automatedClickers) {   
         clicker.click();
-        clicker.classList.add("automaticallyClicked");
+        clicker.classList.add("automatically-clicked");
     }
 }
 

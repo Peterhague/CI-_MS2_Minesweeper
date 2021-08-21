@@ -155,15 +155,15 @@
     margin-top: 8vh;
 }
 
-.marginBottomSmall {
+.margin-bottom-small {
     margin-bottom: 5vh;
 }
 
-.marginBottomMedium {
+.margin-bottom-medium {
     margin-bottom: 10vh;
 }
 /*------------------------------------------------display classes-----------------------------*/
-.inlineBlock {
+.inline-block {
     display: inline-block;
 }
 
@@ -236,7 +236,7 @@ header {
     text-decoration-color: #f81ba3;
 }
 /*------------------------------------footer elements--------------------------------------*/
-.footerContainer {
+.footer-container {
     position: absolute;
     bottom: 0;
     min-width: 100%;
@@ -247,13 +247,13 @@ header {
     padding-bottom: 1.5vmin;
 }
 
-.errorFooter {
+.error-footer {
     position: absolute;
     bottom: 0;
     min-width: 100vw;
 }
 
-.footerMargin {
+.footer-margin {
     height: 20vh;
 }
 
@@ -270,7 +270,7 @@ header {
 }
 
 
-.socialMedia {
+.social-media {
     font-size: 2em;
     margin-left: 5vmin;
     margin-right: 5vmin;

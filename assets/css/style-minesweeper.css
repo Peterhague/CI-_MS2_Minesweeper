@@ -24,7 +24,7 @@
     display: inline-block;
 }
 
-.squaresMedium { /*targets the individual squares of the minesweeper grid*/
+.squares-medium { /*targets the individual squares of the minesweeper grid*/
     width: 28px;
     display: inline-block;
     font-size: 20px;
@@ -37,7 +37,7 @@
     padding-top: 4px;
 }
 
-.squaresSmall { /*targets the individual squares of the minesweeper grid*/
+.squares-small { /*targets the individual squares of the minesweeper grid*/
     width: 25px;
     display: inline-block;
     font-size: 18px;
@@ -50,7 +50,7 @@
     padding-top: 4px;
 }
 
-.squaresBig { /*targets the individual squares of the minesweeper grid*/
+.squares-big { /*targets the individual squares of the minesweeper grid*/
     width: 32px;
     display: inline-block;
     font-size: 22px;
@@ -63,7 +63,7 @@
     padding-top: 4px;
 }
 
-.imageUnderlineBombs {/*bomb images on page load, decorating play button etc*/
+.image-underline-bombs {/*bomb images on page load, decorating play button etc*/
     background-image: url("../images/bomb.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -157,19 +157,19 @@
 
 @media screen and (max-width: 550px) {
 
-    .imageUnderlineBombs {
+    .image-underline-bombs {
         width: 15vw;
         height: 15vw;
         margin-right: 1vw;
         margin-left: 1vw;
     }
     /*fine-tune size of minesweeper grid squares on mobile*/
-    .squaresMedium {
+    .squares-medium {
         width: 22px;
         font-size: 15px;
     }
 
-    .squaresSmall {
+    .squares-small {
         width: 4.9vw;
         font-size: 4.5vw;
         padding-top: 2px;
@@ -182,19 +182,19 @@
         margin-top: 10vh;
     }
     /*fine-tune size of minesweeper grid squares on tablet*/
-    .squaresBig {
+    .squares-big {
         width: 40px;
         font-size: 28px;
     }
-    .squaresMedium {
+    .squares-medium {
         width: 36px;
         font-size: 27px;
     }
-    .squaresSmall {
+    .squares-small {
         width: 32px;
         font-size: 25px;
     }
-    .imageUnderlineBombs {
+    .image-underline-bombs {
         width: 15vw;
         height: 15vw;
         margin-right: 1vw;
@@ -204,23 +204,22 @@
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 1200px ) {/* ie Ipad Pro*/
 
-
-    .imageUnderlineBombs {
+    .image-underline-bombs {
         width: 15vw;
         height: 15vw;
         margin-right: 1vw;
         margin-left: 1vw;
     }
     /*fine-tune size of minesweeper grid squares on large tablets*/
-    .squaresMedium {
+    .squares-medium {
         width: 40px;
         font-size: 32px;
     }
-    .squaresSmall {
+    .squares-small {
         width: 40px;
         font-size: 32px;
     }
-    .squaresBig {
+    .squares-big {
         width: 60px;
         font-size: 45px;
     }
@@ -242,15 +241,15 @@
 }
   
 @media screen and (max-width: 320px) {/*further tune grid squares for very narrow mobiles*/
-    .squaresBig {
+    .squares-big {
         width: 11vw;
         font-size: 10vw;
     }
-    .squaresMedium {
+    .squares-medium {
         width: 6vw;
         font-size: 5.5vw;
     }
-    .squaresSmall {
+    .squares-small {
         width: 4.9vw;
         font-size: 4.5vw;
         padding-top: 1px;

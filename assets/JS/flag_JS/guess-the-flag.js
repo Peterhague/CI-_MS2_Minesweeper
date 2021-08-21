@@ -1,4 +1,4 @@
-let flagContainers = document.getElementsByClassName("flagContainers");
+let flagContainers = document.getElementsByClassName("flag-containers");
 let playFlags = document.getElementById("playFlags");
 /*This function is called on user clicking the play button, and creates a random
 list of 10 unique numbers, between 0 and 192. It then calls the next 3 functions in
@@ -47,7 +47,7 @@ CREDIT: countryflags.io for its library of flag image urls accessed by the below
 */
 function displayFlags(randomFlags) {
     for (let i = 0; i < 10; i++) {
-        flagContainers[i].innerHTML = `<img class="flagImages" style="width: 96px;" src="https://www.countryflags.io/${flagObjects[randomFlags[i]].code}/flat/64.png"></img>`;
+        flagContainers[i].innerHTML = `<img class="flag-images" style="width: 96px;" src="https://www.countryflags.io/${flagObjects[randomFlags[i]].code}/flat/64.png"></img>`;
         flagContainers[i].setAttribute("data-flag-name", flagObjects[randomFlags[i]].name);
         flagContainers[i].setAttribute("data-flag-alt-names", flagObjects[randomFlags[i]].altNames);
     }
@@ -64,7 +64,7 @@ function displayInputs(stylingChanges) {
     let flagsRowTwo = document.getElementById("flagsRowTwo");
     flagsRowTwo.classList.remove("hide");
     let controlsDiv = document.getElementById("controlsDiv");
-    let inputContainers = document.getElementsByClassName("inputContainer");
+    let inputContainers = document.getElementsByClassName("input-container");
     for (container of inputContainers) {
         container.classList.remove("hide");
     }
@@ -80,11 +80,11 @@ and then sets the focus on the first flag answer input via the setFocus function
 function stylingChanges() {
     let mainContainer = document.getElementById("mainContainer");
     mainContainer.classList.add("margin-top-small");
-    let answerDivs = document.getElementsByClassName("answerDiv");
-    let flagInputs = document.getElementsByClassName("flagInputs");
+    let answerDivs = document.getElementsByClassName("answer-div");
+    let flagInputs = document.getElementsByClassName("flag-inputs");
     let playFlags = document.getElementById("playFlags");
-    playFlags.classList.remove("playFlagsInitial");
-    playFlags.classList.add("playFlagsSubsequent");
+    playFlags.classList.remove("play-flags-initial");
+    playFlags.classList.add("play-flags-subsequent");
     playFlags.innerHTML = "Play Again";
     let flagsDisplayBox = document.getElementById("flagsDisplayBox");
     flagsDisplayBox.innerHTML = `Click Submit to check your answers<br><i class="fas fa-smile invisible-text"></i>`;
@@ -104,7 +104,7 @@ function stylingChangesLoops(answerDivs, flagInputs) {
         div.innerHTML = "";
     }
     for (input of flagInputs) {
-        input.classList.add("inlineBlock");
+        input.classList.add("inline-block");
         input.classList.remove("hide");
         input.value = "";
     }
@@ -123,8 +123,8 @@ function setFocusPlay() {
 showing a tick or cross). Assigns each div an "incorrect" state by default (ie red text and the cross icon).
 Calls a further 2 functions.*/
 function checkAnswers() {
-    let flagInputs = document.getElementsByClassName("flagInputs");    
-    let answerDivs = document.getElementsByClassName("answerDiv");
+    let flagInputs = document.getElementsByClassName("flag-inputs");    
+    let answerDivs = document.getElementsByClassName("answer-div");
     for (div of answerDivs) {
         div.classList.remove("hide");
         div.innerHTML = `<i class="fas fa-times text-red"></i>`;
@@ -147,7 +147,7 @@ to the value of the correctAnswers variable.
 */ 
 function iterateCorrectAnswers(correctAnswers, flagInputs, answerDivs) {
     for (input of flagInputs) {
-        input.classList.remove("inlineBlock");
+        input.classList.remove("inline-block");
         input.classList.add("hide");
         for (container of flagContainers) {
             if (input.getAttribute("data-input") == container.getAttribute("data-input") && 
@@ -170,13 +170,13 @@ variable)
 */
 function displayCorrectAnswers(correctAnswers) {
     if (correctAnswers < 4) {        
-        flagsDisplayBox.innerHTML = `Unlucky! You scored ${correctAnswers} out of 10<br><i class="far fa-frown scoreSmileys"></i>`;
+        flagsDisplayBox.innerHTML = `Unlucky! You scored ${correctAnswers} out of 10<br><i class="far fa-frown score-smileys"></i>`;
     } else if (correctAnswers > 3 && correctAnswers < 7) {
-        flagsDisplayBox.innerHTML = `Not bad, you scored ${correctAnswers} out of 10<br><i class="far fa-meh scoreSmileys"></i>`;
+        flagsDisplayBox.innerHTML = `Not bad, you scored ${correctAnswers} out of 10<br><i class="far fa-meh score-smileys"></i>`;
     } else if (correctAnswers > 6 && correctAnswers < 10) {
-        flagsDisplayBox.innerHTML = `Well done! You scored ${correctAnswers} out of 10<br><i class="far fa-smile scoreSmileys"></i>`;
+        flagsDisplayBox.innerHTML = `Well done! You scored ${correctAnswers} out of 10<br><i class="far fa-smile score-smileys"></i>`;
     } else if (correctAnswers === 10) {
-        flagsDisplayBox.innerHTML = `Perfect! You scored ${correctAnswers} out of 10!!<br><i class="far fa-laugh-squint scoreSmileys"></i>`;
+        flagsDisplayBox.innerHTML = `Perfect! You scored ${correctAnswers} out of 10!!<br><i class="far fa-laugh-squint score-smileys"></i>`;
     }
 }
 /*code changes the wording of the submit answers button once pressed, to 'reveal', and changes the event listener
@@ -193,7 +193,7 @@ function revealAnswers() {
     let submitFlagsAnswer = document.getElementById("flagsSubmitAnswer");
     submitFlagsAnswer.removeEventListener("click", revealAnswers);
     setFocusPlay();
-    let answerDivs = document.getElementsByClassName("answerDiv");
+    let answerDivs = document.getElementsByClassName("answer-div");
     for (div of answerDivs) {
         if (div.innerHTML == `<i class="fas fa-times text-red"></i>`) {
             div.innerHTML = div.parentNode.previousElementSibling.getAttribute("data-flag-name");
